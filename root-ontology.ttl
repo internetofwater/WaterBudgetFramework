@@ -1,0 +1,207 @@
+@prefix : <http://wescml.org/def/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix glos: <http://purl.org/iow/Glossary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://wescml.org/def/> .
+
+<http://wescml.org/def/> rdf:type owl:Ontology ;
+                          owl:imports <http://www.w3.org/2004/02/skos/core> ;
+                          owl:versionInfo "Water and Energy Supply and Consumption Vocabulary"^^xsd:string ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> ""^^xsd:string .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/iow/Glossary#hasDataSource
+glos:hasDataSource rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty ;
+                   rdfs:domain glos:Parameters ;
+                   rdfs:range glos:DataResources ;
+                   rdfs:label "hasDataSource"@en .
+
+
+###  http://purl.org/iow/Glossary#hasEstimationMethod
+glos:hasEstimationMethod rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf owl:topObjectProperty ;
+                         rdfs:domain glos:WaterBudgetComponent ;
+                         rdfs:range glos:EstimationMethods ;
+                         rdfs:label "hasEstimationMethod"@en ;
+                         <http://www.w3.org/2004/02/skos/core#scopeNote> "A property relating Water Budget Components to their Estimation Methods"^^xsd:string .
+
+
+###  http://purl.org/iow/Glossary#hasParameter
+glos:hasParameter rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain glos:EstimationMethods ;
+                  rdfs:range glos:Parameters ;
+                  rdfs:label "hasParameter"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/iow/Glossary#DataResources
+glos:DataResources rdf:type owl:Class ;
+                   rdfs:label "Data Resources"@en .
+
+
+###  http://purl.org/iow/Glossary#EstimationMethods
+glos:EstimationMethods rdf:type owl:Class ;
+                       rdfs:label "Estimation Methods"@en .
+
+
+###  http://purl.org/iow/Glossary#Parameters
+glos:Parameters rdf:type owl:Class ;
+                rdfs:label "Parameters"@en .
+
+
+###  http://purl.org/iow/Glossary#WaterBudgetComponent
+glos:WaterBudgetComponent rdf:type owl:Class ;
+                          rdfs:label "Water Budget Component"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/iow/Glossary#WaterBudgetCompnent
+glos:WaterBudgetCompnent rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos/core#Collection> ,
+                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                         rdfs:label "Water Budget Component"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Flows of water into, out of, or within a hydrologic unit accounted for by a water budgeting framework"^^xsd:string .
+
+
+###  http://purl.org/iow/Glossary#precip
+glos:precip rdf:type owl:NamedIndividual ;
+            rdfs:label "precip"@en .
+
+
+###  http://purl.org/iow/Glossary#AppliedWater%28CA%29
+<http://purl.org/iow/Glossary#AppliedWater%28CA%29> rdf:type owl:NamedIndividual ,
+                                                             glos:WaterBudgetComponent ,
+                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                    rdfs:label "Applied Water (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#AppliedWaterReuse%2FRecycledWater%28CA%29
+<http://purl.org/iow/Glossary#AppliedWaterReuse%2FRecycledWater%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                                  glos:WaterBudgetComponent ,
+                                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                                         rdfs:label "Applied Water Reuse/Recycled Water (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#CaliforniaWaterBudgetFramework%28CA%29
+<http://purl.org/iow/Glossary#CaliforniaWaterBudgetFramework%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                               <http://www.w3.org/2004/02/skos/core#Collection> ;
+                                                                      <http://www.w3.org/2004/02/skos/core#member> <http://purl.org/iow/Glossary#AppliedWater%28CA%29> ,
+                                                                                                                   <http://purl.org/iow/Glossary#AppliedWaterReuse%2FRecycledWater%28CA%29> ,
+                                                                                                                   <http://purl.org/iow/Glossary#Evapotranspiration%28CA%29> ,
+                                                                                                                   <http://purl.org/iow/Glossary#GroundwaterExtraction%28CA%29> ;
+                                                                      rdfs:label "California Water Budget Framework (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#Evapotranspiration%28CA%29
+<http://purl.org/iow/Glossary#Evapotranspiration%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                   glos:WaterBudgetComponent ,
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                          rdfs:label "Evapotranspiration (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#GroundwaterExtraction%28CA%29
+<http://purl.org/iow/Glossary#GroundwaterExtraction%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                      glos:WaterBudgetComponent ,
+                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                             rdfs:label "Groundwater Extraction (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#ImportedWater%28CA%29
+<http://purl.org/iow/Glossary#ImportedWater%28CA%29> rdf:type owl:NamedIndividual ,
+                                                              glos:WaterBudgetComponent ,
+                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                     rdfs:label "Imported Water (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#ManagedAquiferRecharge%28CA%29
+<http://purl.org/iow/Glossary#ManagedAquiferRecharge%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                       glos:WaterBudgetComponent ,
+                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                              rdfs:label "Managed Aquifer Recharge (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#Precipitation%28CA%29
+<http://purl.org/iow/Glossary#Precipitation%28CA%29> rdf:type owl:NamedIndividual ,
+                                                              glos:WaterBudgetComponent ,
+                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                     rdfs:label "Precipitation (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#PrecipitationOnLakes%28CA%29
+<http://purl.org/iow/Glossary#PrecipitationOnLakes%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                     glos:WaterBudgetComponent ,
+                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                            rdfs:label "Precipitation on Lakes (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#RechargeOfAppliedWater%28CA%29
+<http://purl.org/iow/Glossary#RechargeOfAppliedWater%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                       glos:WaterBudgetComponent ,
+                                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                              rdfs:label "Recharge of Applied Water (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#RechargeOfPrecipitation%28CA%29
+<http://purl.org/iow/Glossary#RechargeOfPrecipitation%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                        glos:WaterBudgetComponent ,
+                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                               rdfs:label "Recharge of Precipitation (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#RecycledWaterExport%28CA%29
+<http://purl.org/iow/Glossary#RecycledWaterExport%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                    glos:WaterBudgetComponent ,
+                                                                    <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                           rdfs:label "Recycled Water Export (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#ReturnFlow%28CA%29
+<http://purl.org/iow/Glossary#ReturnFlow%28CA%29> rdf:type owl:NamedIndividual ,
+                                                           glos:WaterBudgetComponent ,
+                                                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                  rdfs:label "Return Flow (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#Runoff%28CA%29
+<http://purl.org/iow/Glossary#Runoff%28CA%29> rdf:type owl:NamedIndividual ,
+                                                       glos:WaterBudgetComponent ,
+                                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                              rdfs:label "Runoff (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#StoredWaterExtraction%28CA%29
+<http://purl.org/iow/Glossary#StoredWaterExtraction%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                      glos:WaterBudgetComponent ,
+                                                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                             rdfs:label "Stored Water Extraction (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#StreamInflow%28CA%29
+<http://purl.org/iow/Glossary#StreamInflow%28CA%29> rdf:type owl:NamedIndividual ,
+                                                             glos:WaterBudgetComponent ,
+                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                    rdfs:label "Stream Inflow (CA)"@en .
+
+
+###  http://purl.org/iow/Glossary#SurfaceWaterDelivery%28CA%29
+<http://purl.org/iow/Glossary#SurfaceWaterDelivery%28CA%29> rdf:type owl:NamedIndividual ,
+                                                                     glos:WaterBudgetComponent ,
+                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                            rdfs:label "Surface Water Delivery (CA)"@en .
+
+
+###  Generated by the OWL API (version 4.5.10) https://github.com/owlcs/owlapi
