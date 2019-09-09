@@ -1,6 +1,13 @@
 ## IoW Water Budget Framworks
 
-Here is the code for out water budget framework work.
+Here is the code for out water budget framework work. We aim to compare the water budget frameworks of
+
+1. California DWR
+2. USGS
+3. Utah DWR 
+4. New Mexico [Dynamic Statewide Water Budget]
+5. Colorado [StateWB]
+6. Australia [National Water Accounts]
 
 ### Ontologies
 
