@@ -1,6 +1,8 @@
-## IoW Water Budget Framworks
+## IoW Water Budget Framework
 
-Here is the code for out water budget framework work. We aim to compare the water budget frameworks of
+This is the repository describing the Water Budget Framework (WBF) project. A Water Budget (sometimes called Water Account or Water Balance) is 
+
+The WBF is a mapping of
 
 1. California DWR
 2. USGS
