@@ -2,6 +2,10 @@
 
 This is the repository describing the Water Budget Framework (WBF) project. A Water Budget (sometimes called Water Account or Water Balance) is ["...an accounting of the rates of water movement and the change in water storage in all or parts of the atmosphere, land surface, and subsurface."](https://water.usgs.gov/watercensus/AdHocComm/Background/WaterBudgets-FoundationsforEffectiveWater-ResourcesandEnvironmentalManagement.pdf)
 
+Water Budgets generally track water within a ZONE, where the basic equation is 
+
+Change in Storage = Outflows - Inflows
+
 The WBF is a mapping of
 
 1. California DWR [Water Budget Handbook With or Without Models]
