@@ -28,3 +28,15 @@ We host ontologies which are managed in WebProtege. Go here to make an account a
 
 
 ### How our ontology works
+
+Our ontology tracks 4 basic aspects of water budgets and relates them together. Let's see all four in action with an important element of most water budgets: Evapotranspiration.
+
+1. Components: These are the flows and/or changes in volumes of water within a zone. For example: Evapotranspiration
+
+[![Component properties encoded in our WBF ontology](https://raw.githubusercontent.com/internetofwater/waterbudgetframework/master/Blank%20Diagram.png)]
+
+2. Estimation Methods: These are the models, which include 1 or more systems of 1 or more equations used to estimate the volumes of components. For example, the [Penman-Montieth equation](http://www.fao.org/3/X0490E/x0490e06.htm) estimates Referance Evapotranspiration.
+
+3. Parameters: The individual elements of Estimation Methods. For example, R<sub>n</sub>  is a parameter for "Net Radiation", one of many terms in the Penman-Montieth Equation.
+
+4. Data Sources: The data sources reccomended and/or approved for use in a given Water Budgeting Framework for a given parameter. For example, one jurisdication's WBF might reccomend the [NASA FlashFlux Daily Solar Radiation dataset](https://neo.sci.gsfc.nasa.gov/view.php?datasetId=CERES_NETFLUX_D&date=2019-12-01) for the "Net Radiation" parameter.
