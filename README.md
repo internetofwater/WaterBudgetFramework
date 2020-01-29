@@ -1,28 +1,28 @@
-## IoW Water Budget Framework
+# IoW Water Budget Framework
 
-This is the repository describing the Water Budget Framework (WBF) project. A Water Budget (sometimes called Water Account or Water Balance) is 
+This is the repository describing the Water Budget Framework (WBF) project. A Water Budget (sometimes called Water Account or Water Balance) is ["...an accounting of the rates of water movement and the change in water storage in all or parts of the atmosphere, land surface, and subsurface."](https://water.usgs.gov/watercensus/AdHocComm/Background/WaterBudgets-FoundationsforEffectiveWater-ResourcesandEnvironmentalManagement.pdf)
 
 The WBF is a mapping of
 
-1. California DWR
-2. USGS
-3. Utah DWR 
-4. New Mexico [Dynamic Statewide Water Budget]
-5. Colorado [StateWB]
-6. Australia [National Water Accounts]
+1. California DWR [Water Budget Handbook With or Without Models]
+2. USGS [Colorado River Basin Specifically](https://www.usgs.gov/mission-areas/water-resources/science/colorado-river-basin-focus-area-study?qt-science_center_objects=0#qt-science_center_objects)
+3. Utah DWR [Water Budget Model](https://www.westernstateswater.org/utah-division-of-water-resources-water-budget-program-methods-description/)
+4. New Mexico [Dynamic Statewide Water Budget](https://nmwrri.nmsu.edu/new-mexico-dynamic-statewide-water-budget/)
+5. Colorado [StateWB](https://www.colorado.gov/pacific/cdss/statewb)
+6. Australia [National Water Accounts](http://www.bom.gov.au/water/nwa/2018/)
 
-### Ontologies
+The documentation describing each of this water budgeting frameworks are in the folders in this repository. Some water budegting frameworks are integrated models that run on one computer program (e.g. Utah, Colorado). Some are ensemble models (e.g. California, New Mexico)
 
+## Ontology
+
+The intermediate product will be an ontology. Watch this video for a brief into to ontologies.
+
+[![What is an Ontology?](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=jfUPLuPLHo "Everything Is AWESOME")
+
+
+
+
+### Ontology Management
 We host ontologies which are managed in WebProtege!
 
-### Navigator
 
-We visualize the ontology in an R shiny app and have the code here!
-
-
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/internetofwater/WaterBudgetFramework/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
