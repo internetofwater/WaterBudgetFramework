@@ -20,7 +20,7 @@ The intermediate product will be an ontology. Watch this video for a brief into 
 [![What is an Ontology?](https://img.youtube.com/vi/StTqXEQ2l-Y/0.jpg)](https://www.youtube.com/watch?v=jfUPLuPLHo "Everything Is AWESOME")
 
 
-
+[![What is an Ontology?](https://img.youtube.com/watch?v=jfUPLuPL3Ho-Y/0.jpg)](https://www.youtube.com/watch?v=jfUPLuPL3Ho-Y "What is an Ontology")
 
 ### Ontology Management
 We host ontologies which are managed in WebProtege!
