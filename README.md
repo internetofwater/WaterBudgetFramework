@@ -31,7 +31,7 @@ We host ontologies which are managed in WebProtege. Go here to make an account a
 
 Our ontology tracks 4 basic aspects of water budgets and relates them together. Let's see all four in action with an important element of most water budgets: Evapotranspiration.
 
-1. Components: These are the flows and/or changes in volumes of water within a zone. For example: Evapotranspiration
+1. Components: These are the flows and/or changes in volumes of water within a zone. For example: Evapotranspiration. The diagram below shows all of the properties of Components that we can track so far in the WebProtege ontology. Diagrams for the other four components are pending.
 
 [![Component properties encoded in our WBF ontology](https://raw.githubusercontent.com/internetofwater/waterbudgetframework/master/Blank%20Diagram.png)]
 
