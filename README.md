@@ -11,7 +11,7 @@ The WBF is a mapping of
 5. Colorado [StateWB](https://www.colorado.gov/pacific/cdss/statewb)
 6. Australia [National Water Accounts](http://www.bom.gov.au/water/nwa/2018/)
 
-The documentation describing each of this water budgeting frameworks are in the folders in this repository. Some water budegting frameworks are integrated models that run on one computer program (e.g. Utah, Colorado). Some are ensemble models (e.g. California, New Mexico)
+The documentation describing each of this water budgeting frameworks are in the folders in this repository. Some water budegting frameworks are integrated models that run on one computer program (e.g. Colorado). Some are ensemble models (e.g. New Mexico). Some will vary by region (e.g. USGS, California, Australia).
 
 ## Ontology
 
@@ -20,6 +20,7 @@ The intermediate product will be an ontology. Watch this video for a brief into 
 [![What is an Ontology?](https://i.ytimg.com/vi/jfUPLuPL3Ho/hqdefault.jpg)](https://www.youtube.com/watch?v=jfUPLuPL3Ho-Y "What is an Ontology")
 
 ### Ontology Management
-We host ontologies which are managed in WebProtege!
+We host ontologies which are managed in WebProtege. Go here to make an account and log in [WebProtege Link](https://webprotege.stanford.edu)
 
 
+### How our ontology works
