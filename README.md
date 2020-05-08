@@ -9,8 +9,10 @@ The WBF projis a mapping of
 2. USGS [Colorado River Basin Specifically](https://www.usgs.gov/mission-areas/water-resources/science/colorado-river-basin-focus-area-study?qt-science_center_objects=0#qt-science_center_objects)
 3. Utah DWR [Water Budget Model](https://www.westernstateswater.org/utah-division-of-water-resources-water-budget-program-methods-description/)
 4. New Mexico [Dynamic Statewide Water Budget](https://nmwrri.nmsu.edu/new-mexico-dynamic-statewide-water-budget/)
-5. Colorado [StateWB](https://www.colorado.gov/pacific/cdss/statewb)
+5. Colorado [StateWB](https://www.colorado.gov/pacific/cdss/statewb) and its contributors StateMod (surface water model) and StateCU (consumptive use)
 6. Australia [National Water Accounts](http://www.bom.gov.au/water/nwa/2018/)
+7. Wyoming
+8. USBR LCRAS
 
 The documentation describing each of this water budgeting frameworks are in the folders in this repository. Some water budegting frameworks are integrated models that run on one computer program (e.g. Utah, Colorado). Some are ensemble models (e.g. California, New Mexico)
 
