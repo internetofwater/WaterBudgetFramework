@@ -14,7 +14,9 @@ The WBF projis a mapping of
 7. Wyoming
 8. USBR LCRAS
 
-The documentation describing each of this water budgeting frameworks are in the folders in this repository. Some water budegting frameworks are integrated models that run on one computer program (e.g. Utah, Colorado). Some are ensemble models (e.g. California, New Mexico)
+The documentation describing each of this water budgeting frameworks are in the folders in this repository. Some water budegting frameworks are integrated models that run on one computer program (e.g. Utah, Colorado). Some are ensemble models (e.g. California, New Mexico). 
+
+For a good high-level introduction to the concept of water budgeting, read Chapters 1 and 2 of the California Water Budget Handbook in detail.
 
 ## Ontology
 
@@ -36,3 +38,12 @@ Ontologies are represented in a paradigm called the "Resource Description Framew
  - [A tidyverse lover's intro to RDF](https://cran.r-project.org/web/packages/rdflib/vignettes/rdf_intro.html)
  - [The Data Lake and Schema on Read](https://docs.ropensci.org/rdflib/articles/articles/data-lake.html)
 
+## Tool
+
+This common tool will serve as a way to quickly visualize the components associated with each State’s water budgeting framework, and the possible estimation methods, data inputs, data transformation methods, and raw data sources composing each component. There will be an underlying relational database model linking all of these together. There will also be an interactive tool that will allow users to drill down into their components of choice, for example like this:
+
+ https://github.com/metrumresearchgroup/d3Tree
+
+Perhaps with a guided interface like this: 
+
+https://carlganz.shinyapps.io/rintrojsexample/
