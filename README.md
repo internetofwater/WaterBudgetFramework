@@ -26,6 +26,8 @@ The intermediate product will be an ontology. Watch this video for a brief into 
 
 
 ### Ontology Management
-We host ontologies which are managed in WebProtege!
+We host ontologies which are managed in [WebProtege](https://webprotege.stanford.edu)! 
+
+##
 
 
