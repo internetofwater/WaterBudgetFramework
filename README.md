@@ -28,6 +28,11 @@ The intermediate product will be an ontology. Watch this video for a brief into 
 ### Ontology Management
 We host ontologies which are managed in [WebProtege](https://webprotege.stanford.edu)! 
 
-##
+### The Resource Description Framework
 
+Ontologies are represented in a paradigm called the "Resource Description Framework", using
+ OWL (Web Ontology Language). RDF data can be queried using SPARQL (Protocal and RDF Query Language). These two resources are good introductions to RDF and SPARQL for R users:
+ 
+ - [A tidyverse lover's intro to RDF](https://cran.r-project.org/web/packages/rdflib/vignettes/rdf_intro.html)
+ - [The Data Lake and Schema on Read](https://docs.ropensci.org/rdflib/articles/articles/data-lake.html)
 
