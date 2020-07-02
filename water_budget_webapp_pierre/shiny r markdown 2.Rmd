@@ -1,0 +1,73 @@
+---
+title: "shiny r markdown"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+```
+
+```{r echo = FALSE}
+library(tidyverse)
+library(rdflib)
+library(jsonlite)
+library(d3r)
+```
+
+```{r echo = FALSE}
+file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
+
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+ SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
+   ?c wb:usedBy ?j.
+   ?j rdfs:label ?jL.
+   ?c rdfs:label ?cL.
+   ?c wb:hasEstimationMethod ?em.
+   ?em rdfs:label ?emL.
+   ?em wb:hasParameter ?p.
+   ?p rdfs:label ?pL.
+   ?p wb:hasDataSource ?ds.
+   ?ds rdfs:label ?dsL.
+  
+ }"
+
+results <- rdf_query(file, query)
+df <- as.data.frame(results)
+df <- arrange(df, cL, emL, pL, dsL)# each column in ascending order
+df$cL <- gsub("-[A-Z][A-Z]"," ", df$cL)#remove state initials from components
+nested_json <- d3_nest(data = df, root = "States")
+#nested_json <- toJSON(df)
+```
+
+
+```{r}
+# send_df_to_js <- function(){
+#   cat(
+#     paste(
+#       '<h1>
+#         ', "hello",';
+#       </h1>'
+#       , sep="")
+#     )
+# }
+```
+
+```{r results = "asis"}
+
+# send_df_to_js()
+
+```
+
+```{r setup}
+library(r2d3)
+nested_json <- d3_nest(data = df, root = "States")
+r2d3(data = nested_json, script = "www/index v4.js", d3_version = "5")
+```
+
+
+

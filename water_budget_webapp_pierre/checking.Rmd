@@ -1,0 +1,33 @@
+---
+title: "Getting R and D3.js to play nicely in your .Rmd files"
+author: "@becausealice2"
+date: "December 7, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r data-var-R}
+head(cars)
+```
+
+
+```{r vectors-to-json, echo=FALSE, results="asis"}
+library("jsonlite")
+cat(
+  paste(
+  '<script>
+    var data = ',toJSON(cars),';
+  </script>'
+  , sep="")
+)
+```
+
+<h1> yoooooooooooooooooo </h1>
+<script src="https://d3js.org/d3.v5.min.js"></script> 
+
+<div id="plot"></div>
+
+<script src = "www/checking.js"> </script>

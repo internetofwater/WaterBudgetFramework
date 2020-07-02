@@ -1,0 +1,42 @@
+jL,cL,emL,pL,dsL
+CO,Municipal and Industrial Consumptive Use-CO,CO Municipal and Industrial Method,Population,Colorado Census Bureau
+CO,Livestock Consumptive Use-CO,CO Livestock Method,Livestock Count,State Agricultural Statistics
+CO,Livestock Consumptive Use-CO,CO Livestock Method,Average Use Rate,"Midwest Plan Service Structures and Environmental Handbook, 1977"
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle with ET Elevation Adjustment,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Original Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle with ET Elevation Adjustment,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Modified Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Vapor Pressure,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily Penman-Monteith,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily Modified Hargreaves,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily Modified Hargreaves,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily Modified Hargreaves,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily Modified Hargreaves,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily Modified Hargreaves,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily Modified Hargreaves,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Vapor Pressure,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use-CO,Daily ASCE Standardized Penman-Monteith,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
