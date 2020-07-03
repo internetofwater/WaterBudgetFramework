@@ -13,7 +13,7 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL WHERE {
+SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL ?scL ?pscL ?exmL WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -21,19 +21,33 @@ SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL WHERE {
     OPTIONAL{
     ?c wb:flowSource ?fsource.
     ?fsource rdfs:label ?fsourceL.
-    
+    }
+    OPTIONAL{
     ?c wb:flowSink ?fsink.
     ?fsink rdfs:label ?fsinkL.
-    
+    }
+    OPTIONAL{
     ?c wb:isFlowType ?ftype.
     ?ftype rdfs:label ?ftypeL.
+    }
+    OPTIONAL{
+    ?c wb:isSubComponentOf ?sc.
+    ?sc rdfs:label ?scL.
+    }
+    OPTIONAL{
+    ?c wb:isPartialSubComponentOf ?psc.
+    ?psc rdfs:label ?pscL.
+    }
+    OPTIONAL{
+    ?c wb:isExactMatch ?exm.
+    ?exm rdfs:label ?exmL.
     }
 }
 "
 
 results1 <- rdf_query(file, query1)
 df1 <- as.data.frame(results1)
-df1 <- arrange(df1, jL, cL, fsourceL, fsinkL, ftypeL)
+df1 <- arrange(df1, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
 df1$cL <- gsub("-[A-Z][A-Z]","", df1$cL)
 
 
@@ -108,7 +122,9 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                               label = "",
                               icon = icon("check"))
                  )),
-        tags$body(tags$div(id = "search_summary"),
+        tags$body(tags$div(id = "search_summary", 
+                           tags$h3(textOutput("component_title")), 
+                           tags$p(textOutput("summary"))),
                   tags$div(id = "search_container"))
       ),
               
@@ -137,6 +153,34 @@ ui <- fluidPage(id = "page", theme = "styles.css",
   ))
 
 server <- function(input, output, session){
+  
+  output$component_title <- renderText(input$components)
+  
+  output$summary <- renderText({
+    
+    component_info <- df1 %>%
+      filter(jL %in% input$states1) %>%
+      filter(cL %in% input$components)
+    
+    print(component_info)
+    
+    flow_source <- c(unique(component_info$fsourceL))
+    flow_sink <- c(unique(component_info$fsinkL))
+    flow_type <- c(unique(component_info$ftypeL))
+    subcomponent <- c(unique(component_info$scL))
+    p_subcomponent <- c(unique(component_info$pscL))
+    exact_match <- c(unique(component_info$exmL))
+      
+    paste("Flow source:", flow_source,
+          "Flow sink:", flow_sink, 
+          "Flow type:", flow_type, 
+          "Sub-component of:", subcomponent, 
+          "Partial sub-component of:", p_subcomponent, 
+          "Exact match:", exact_match)
+    
+  })
+  
+  
 # Update component choices based on states you select
   observe({
     choices_components <- df2 %>%
@@ -148,6 +192,9 @@ server <- function(input, output, session){
   })
     
   observeEvent(input$runButton1,{
+    
+    #insert renderText here
+    
     selection_df_1 <- df2 %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%

@@ -186,27 +186,35 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL ?scL ?pscL WHERE {
+SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL ?scL ?pscL ?exmL WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
     
-  OPTIONAL {  
-    ?c wb:isSubComponentOf ?sc.
-    ?sc rdfs:label ?scL.
-    
-    ?c wb:isPartialSubComponentOf ?psc.
-    ?psc rdfs:label ?pscL.
-    
+  OPTIONAL{
     ?c wb:flowSource ?fsource.
     ?fsource rdfs:label ?fsourceL.
-    
+    }
+    OPTIONAL{
     ?c wb:flowSink ?fsink.
     ?fsink rdfs:label ?fsinkL.
-    
+    }
+    OPTIONAL{
     ?c wb:isFlowType ?ftype.
     ?ftype rdfs:label ?ftypeL.
-  }
+    }
+    OPTIONAL{
+    ?c wb:isSubComponentOf ?sc.
+    ?sc rdfs:label ?scL.
+    }
+    OPTIONAL{
+    ?c wb:isPartialSubComponentOf ?psc.
+    ?psc rdfs:label ?pscL.
+    }
+    OPTIONAL{
+    ?c wb:isExactMatch ?exm.
+    ?exm rdfs:label ?exmL.
+    }
 }
 "
 
@@ -214,10 +222,97 @@ res4 <- rdf_query(file, query4)
 
 df4 <- as.data.frame(res4)
 
+properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:", 
+                 "Subcomponent:", "Partial Subcomponent:","Exact Match:")
 
+abc <- data.frame()
 
+hello_list <- list()
+hello_list <- c(summary_flow_source, "summary_flow_sink", "summary_flow_type")
 
+for (i in 1:length(properties_display)) {
+  assign(paste0("abc", "$", properties[i]), paste(paste(properties_display[i], 
+                                                      hello_list[1])))
+}
 
+output$flow_source <- renderText(paste("Flow Source:", 
+                                       summary_flow_source))
+
+hello <- paste("Flow Sink:", summary_flow_sink)
+# abc <- df4[which(df4$cL == 'Conveyance Seepage-CA'),]
+# abc <- as.data.frame(abc)
+# 
+# flow_source <- c(unique(abc$fsourceL))
+# subcomponent <- unique(abc$scL)
+# 
+# length <- length(subcomponent)
+# for (n in subcomponent){
+#   cat(paste(n, collapse=","))
+# }
+# cat(paste(subcomponent, collapse=", "))
+# print(abc)
+# length(unique(abc$scL))
+# abc2 <- paste(c(unique(abc$scL)), collapse =", ")
+
+# creating for loop for app
+#abc
+
+##cat(paste("summary", "title", sep="_"))
+ abc <- df4[which(df4$cL == 'Conveyance Seepage-CA'),]
+# properties <- c("flow_source", "flow_sink", "flow_type", "subcomponent", "p_subcomponent","exact_match")
+#col_names <- c(fsourceL, "abc$fsinkL", "abc$ftypeL", "abc$scL", "abc$pscL", "abc$exmL")
+
+baba <- paste("summary", properties, sep="_")
+
+get(baba[3])
+
+for (i in 1:length(properties)) {
+   
+   baba[i] <- paste(unlist(unique(abc[i+2]), use.names = FALSE), collapse=", ")
+  #print (i)
+} 
+
+# lhs <- paste("summary", properties, sep="_")
+# rhs <- paste(abc[3:length(abc)])
+# #rhs <- lapply(rhs, unique)
+# eq   <- paste(paste(lhs, rhs, sep="<-"), collapse = ";")
+# eval(parse(text=eq))
+
+#a <- unlist(unique(abc[4+2]), use.names = FALSE)
+# 
+# component_info <- df1 %>%
+#   filter(jL %in% "CA") %>%
+#   filter(cL %in% "Conveyance Evaporation") %>%
+#   select(3:length(df1))
+
+# for (i in 1:length(properties)) {
+#   cat(paste("summary", properties[i], sep="_")) 
+#   if (i == 1){
+#     break}
+# } 
+# 
+# def <- abc[3:8]
+# 
+# for (i in 1:length(properties)) {
+#   cat(paste(c(unique(abc[i+2])), collapse = ","))  
+#   if (i == 1){
+#     break}
+# } 
+
+# summary_title <- paste(input$components, input$states1, 
+#                        sep = "-")
+# summary_flow_source <- paste(c(unique(component_info$fsourceL)),
+#                              collapse =", ")
+# summary_flow_sink <- paste(c(unique(component_info$fsinkL)),
+#                            collapse =", ")
+# summary_flow_type <- paste(c(unique(component_info$ftypeL)),
+#                            collapse =", ")
+# summary_subcomponent <- paste(c(unique(component_info$scL)),
+#                               collapse =", ")
+# summary_p_subcomponent <- paste(c(unique(component_info$pscL)),
+#                                 collapse =", ")
+# summary_exact_match <- paste(c(unique(component_info$exmL)),
+#                              collapse =", ")
 
 
 
