@@ -4,12 +4,13 @@
     position: relative;
     margin-top: 25px;
     margin-bottom: 25px;
+    color: #555555;
 }
 
 /* IoW logo and title in same line */
 .header {
     overflow: auto; 
-    padding-bottom: 25px;
+    margin-bottom: 25px;
 }
 
 /* Logo placement */
@@ -22,11 +23,12 @@
 .header h1 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding-right: 75px;
-    font-size: 24px;
+    padding-top: 10px;
+    padding-right: 100px;
+    font-size: 20px;
     font-weight: bold;
     color: #555555;
-    letter-spacing: 1px;
+    
   }
 
 /* Remove navbar border and extra space upon collapsing window */
@@ -107,6 +109,7 @@ ul.nav.navbar-nav li {
 }
 
 /*--------------Tab Content - States------------- */
+/*--------------btn and col styles also applies to search tab ------------- */
 
 /* Deafult button attributes */
 .btn {
@@ -136,7 +139,7 @@ ul.nav.navbar-nav li {
     position: relative;
     padding-right: 15px;
     padding-left: 15px;
-    padding-bottom: 0px;
+    padding-bottom: 15px;
 }
 
 
@@ -164,7 +167,7 @@ ul.nav.navbar-nav li {
 #state_sticky svg {
     background: white;
     position: relative;
-    margin-top: 20px;
+    margin-top: -10px;
     text-align: center;
 }
 
@@ -175,6 +178,7 @@ ul.nav.navbar-nav li {
     }
 }
 
+/* Align the chart box to the center */
 #state_container {
     text-align: center;
 }
@@ -183,6 +187,24 @@ ul.nav.navbar-nav li {
 Tab - Search
 ***************************************************************************/
 
+/* Align the chart box to the center */
 #search_container{
     text-align: center;
+}
+
+#search_summary {
+    overflow: hidden;
+    background: #F8F8F8;
+    width: 1050px;
+    margin: auto;
+    border-radius: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding: 10px 0px 20px 30px;
+    line-height: 2;
+}
+
+#component_title {
+    padding-bottom: 10px;
+    
 }

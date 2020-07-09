@@ -313,14 +313,15 @@ function (message) {
         // Enter any new nodes at the parent's previous position
         var nodeEnter = node.enter().append('g')
             .attr('class', 'node')
-            .attr('transform', d => { return "translate(" + source.y0 + "," + source.x0 + ")"})
-            .on('click', click); //defined function 'click' below
+            .attr('transform', d => { return "translate(" + source.y0 + "," + source.x0 + ")"});
+             //defined function 'click' below
         
         // add circle for the nodes
         nodeEnter.append('circle')
             .attr('class', 'node')
+            .on('click', click)
             .attr('r', 0) // before merging
-            .style("fill", "#E55E69" )
+            .style("fill", "#E55E69" );
             //.style("fill", d => {return d._children ? "blue" : "#fff";}) //before merging
 
         // ADD LABELS FOR THE NODES

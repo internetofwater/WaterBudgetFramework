@@ -32,7 +32,7 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?jL ?cL ?emL ?pL ?dsL ?type WHERE {
+SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?type WHERE {
     ?c wb:usedBy ?j.
     ?c rdf:type ?t.
     ?t rdfs:label ?type.
@@ -54,11 +54,28 @@ res <- rdf_query(file, query)
 df <- as.data.frame(res)
 df <- df[which(df$type == 'Component'),]
 df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
-df$cL <- gsub("-[A-Z][A-Z]"," ", df$cL)#remove state initials from components
-#df_colorado <- df[which(df$jL == 'CO'),]
-#df_colorado <- select(df, -jL)
+df$cL <- gsub("-[A-Z][A-Z]","", df$cL)#remove state initials from components
+df <- df[which(df$jL == 'CO'),]
+#df <- select(df, -jL)
+df <- select(df, -type)
+#df_table <- cat(format_csv(df))
+write.table(df, file = "./www/hyperlink.csv", sep = ",",
+                        qmethod = "double", quote=FALSE)
 #df_colorado <- # SORT by components
 #write_csv(df, "water_budget_june8.csv")
+
+################### WORK ON THIS
+# treemap(
+#   df,
+#   index=c("jL", "cL", "emL", "pL", "dsL"),
+#   vSize="population",
+#   vColor="GNI",
+#   type="value",
+#   draw=FALSE
+# ) %>%
+#   {.$tm} %>%
+#   select(continent,iso3,color,vSize) %>%
+#   d3_nest(value_cols = c("color", "vSize"))
 
 # checking
 # state <- "CO"
@@ -79,7 +96,7 @@ nested_json <- d3_nest(data = df, root = "States");
 
 #nested_json_colorado <- d3_nest(df_colorado, root = "CO")
 
-write(nested_json, "../sample_json.json")
+write(nested_json, "./www/sample_json_v2.json")
 #write(nested_json, "../sample_json_full.json") # edit query to use prefLabel to remove state name
 #write(nested_json_colorado, "../sample_json_colorado.json")
 
@@ -314,6 +331,32 @@ for (i in 1:length(properties)) {
 # summary_exact_match <- paste(c(unique(component_info$exmL)),
 #                              collapse =", ")
 
+
+# output$component_title <- renderText(input$components)
+# 
+# output$summary <- renderText({
+#   
+#   component_info <- df1 %>%
+#     filter(jL %in% input$states1) %>%
+#     filter(cL %in% input$components)
+#   
+#   print(component_info)
+#   
+#   flow_source <- c(unique(component_info$fsourceL))
+#   flow_sink <- c(unique(component_info$fsinkL))
+#   flow_type <- c(unique(component_info$ftypeL))
+#   subcomponent <- c(unique(component_info$scL))
+#   p_subcomponent <- c(unique(component_info$pscL))
+#   exact_match <- c(unique(component_info$exmL))
+#     
+#   paste("Flow source:", flow_source,
+#         "Flow sink:", flow_sink, 
+#         "Flow type:", flow_type, 
+#         "Sub-component of:", subcomponent, 
+#         "Partial sub-component of:", p_subcomponent, 
+#         "Exact match:", exact_match)
+#   
+# })
 
 
 #### ----------------------------- Developing and exploring SPARQL queries

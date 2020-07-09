@@ -29,6 +29,7 @@ while (scrollCount < 2) {
 
 function loadData(data) {
 
+    console.log(data)
     // assigning initial value to level labels for deactivating transition
     var label_level_1, label_level_2, label_level_3, label_level_4,label_level_5;
     label_level_1 = label_level_2 = label_level_3 = label_level_4 = label_level_5 = 1;
