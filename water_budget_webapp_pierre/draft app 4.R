@@ -93,16 +93,16 @@ component_choices <- c(unique(df1$cL))
 # Shiny app
 ui <- fluidPage(id = "page", theme = "styles.css",
     useShinyjs(),
-    tags$head(tags$link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap",
+    tags$head(tags$link(href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap",
                         rel="stylesheet"),
               tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
-              tags$script(src = "index_v7.js")),
+              tags$script(src = "index_v8.js")),
     tags$body(HTML('<link rel="icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
     tags$div(class = "header",
-             tags$img(src = "iow_logo.png", width = 55),
+             tags$img(src = "iow_logo.png", width = 60),
              tags$h1("IoW Water Budget Tool"),
              titlePanel(title="", windowTitle = "IoW Water Budget App")),
     navbarPage(title = "",
@@ -224,7 +224,7 @@ server <- function(input, output, session){
     selection_json_1 <- d3_nest(data = selection_df_1, root = "")
     leaf_nodes_1 <- nrow(selection_df_1)
     session$sendCustomMessage(type = "search_height", leaf_nodes_1)
-    session$sendCustomMessage(type = "json", selection_json_1)
+    session$sendCustomMessage(type = "search_json", selection_json_1)
   })
   
 # State charts on State tabs
@@ -235,8 +235,8 @@ server <- function(input, output, session){
     selection_df_2 <- select(selection_df_2, -jL)
     selection_json_2 <- d3_nest(data = selection_df_2, root = input$states2)
     leaf_nodes_2 <- nrow(selection_df_2)
-    session$sendCustomMessage(type = "canvas_height", leaf_nodes_2)
-    session$sendCustomMessage(type = "nested_json", selection_json_2)
+    session$sendCustomMessage(type = "state_height", leaf_nodes_2)
+    session$sendCustomMessage(type = "state_json", selection_json_2)
   })
 }
 

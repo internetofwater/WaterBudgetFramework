@@ -54,8 +54,8 @@ res <- rdf_query(file, query)
 df <- as.data.frame(res)
 df <- df[which(df$type == 'Component'),]
 df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
-df$cL <- gsub("-[A-Z][A-Z]","", df$cL)#remove state initials from components
-df <- df[which(df$jL == 'CO'),]
+#df$cL <- gsub("-[A-Z][A-Z]","", df$cL)#remove state initials from components
+#df <- df[which(df$jL == 'CO'),]
 #df <- select(df, -jL)
 df <- select(df, -type)
 #df_table <- cat(format_csv(df))

@@ -108,9 +108,9 @@ d3.csv("hyperlink.csv").then(function(data) {
         // }
 
         // Below came out true
-        if (hyp_data[0]['cL'] === data.children[0].children[0].name + '-' + data.children[0].name) {
-            data.children[0].children[0].url = hyp_data[0]['c']
-        } 
+        // if (hyp_data[0]['cL'] === data.children[0].children[0].name + '-' + data.children[0].name) {
+        //     data.children[0].children[0].url = hyp_data[0]['c']
+        // } 
 
         var j_uri = [];
         var j_uri_unique = [];
@@ -123,144 +123,181 @@ d3.csv("hyperlink.csv").then(function(data) {
         var ds_uri = [];
         var ds_uri_unique = [];
 
-        // Extract j and jL into j_uri
-        hyp_data.forEach((item) => {
-            j_uri.push({
-                'jL': item['jL'],
-                'j': item['j']
+        ///////Function to store each level elements in an array
+        function createArray(array, uri, label) {
+            hyp_data.forEach(item => {
+                var innerObj = {};
+                innerObj[label] = item[label];
+                innerObj[uri] = item[uri];
+                array.push(innerObj);
             })
-        })
+        }
 
-        // Extract c and cL into c_uri
-        hyp_data.forEach((item) => {
-            c_uri.push({
-                'cL': item['cL'],
-                'c': item['c']
-            })
-        })
+        createArray(j_uri, 'j', 'jL');
+        createArray(c_uri, 'c', 'cL');
+        createArray(em_uri, 'em', 'emL');
+        createArray(p_uri, 'p', 'pL');
+        createArray(ds_uri, 'ds', 'dsL');
+        
+        // // Extract j and jL into j_uri
+        // hyp_data.forEach((item) => {
+        //     j_uri.push({
+        //         'jL': item['jL'],
+        //         'j': item['j']
+        //     })
+        // })
 
-        // Extract em and emL into em_uri
-        hyp_data.forEach((item) => {
-            em_uri.push({
-                'emL': item['emL'],
-                'em': item['em']
-            })
-        })
+        // // Extract c and cL into c_uri
+        // hyp_data.forEach((item) => {
+        //     c_uri.push({
+        //         'cL': item['cL'],
+        //         'c': item['c']
+        //     })
+        // })
 
-        // Extract p and pL into p_uri
-        hyp_data.forEach((item) => {
-            p_uri.push({
-                'pL': item['pL'],
-                'p': item['p']
-            })
-        })
+        // // Extract em and emL into em_uri
+        // hyp_data.forEach((item) => {
+        //     em_uri.push({
+        //         'emL': item['emL'],
+        //         'em': item['em']
+        //     })
+        // })
 
-        // Extract ds and dsL into ds_uri
-        hyp_data.forEach((item) => {
-            ds_uri.push({
-                'dsL': item['dsL'],
-                'ds': item['ds']
-            })
-        })
+        // // Extract p and pL into p_uri
+        // hyp_data.forEach((item) => {
+        //     p_uri.push({
+        //         'pL': item['pL'],
+        //         'p': item['p']
+        //     })
+        // })
 
-        // Extract unique j and jL into j_uri_unique
-        const j_map = new Map();
-        for (const item of j_uri) {
-            if(!j_map.has(item['jL'])){
-                j_map.set(item['jL'], true);
-                j_uri_unique.push({
-                    'jL': item['jL'],
-                    'j': item['j']
-                });
+        // // Extract ds and dsL into ds_uri
+        // hyp_data.forEach((item) => {
+        //     ds_uri.push({
+        //         'dsL': item['dsL'],
+        //         'ds': item['ds']
+        //     })
+        // })
+
+        var j_map, c_map, em_map, p_map, ds_map;
+        function createUniqueArray(array, unique_array, uri, label, map){
+            map = new Map();
+            for (const item of array){
+                if(!map.has(item[label])){
+                    map.set(item[label], true);
+                    var innerObj = {};
+                    innerObj[label] = item[label];
+                    innerObj[uri] = item[uri];
+                    unique_array.push(innerObj);
+                }
             }
         }
 
-        // Extract unique c and cL into c_uri_unique
-        const c_map = new Map();
-        for (const item of c_uri) {
-            if(!c_map.has(item['cL'])){
-                c_map.set(item['cL'], true);
-                c_uri_unique.push({
-                    'cL': item['cL'],
-                    'c': item['c']
-                });
-            }
-        }
+        createUniqueArray(j_uri, j_uri_unique, 'j', 'jL', j_map);
+        createUniqueArray(c_uri, c_uri_unique, 'c', 'cL', c_map);
+        createUniqueArray(em_uri, em_uri_unique, 'em', 'emL', em_map);
+        createUniqueArray(p_uri, p_uri_unique, 'p', 'pL', p_map);
+        createUniqueArray(ds_uri, ds_uri_unique, 'ds', 'dsL', ds_map);
 
-        // Extract unique em and emL into em_uri_unique
-        const em_map = new Map();
-        for (const item of em_uri) {
-            if(!em_map.has(item['emL'])){
-                em_map.set(item['emL'], true);
-                em_uri_unique.push({
-                    'emL': item['emL'],
-                    'em': item['em']
-                });
-            }
-        }
+        //////// Extract unique j and jL into j_uri_unique
+        // const j_map = new Map();
+        // for (const item of j_uri) {
+        //     if(!j_map.has(item['jL'])){
+        //         j_map.set(item['jL'], true);
+        //         j_uri_unique.push({
+        //             'jL': item['jL'],
+        //             'j': item['j']
+        //         });
+        //     }
+        // }
+        
+        // // Extract unique c and cL into c_uri_unique
+        // const c_map = new Map();
+        // for (const item of c_uri) {
+        //     if(!c_map.has(item['cL'])){
+        //         c_map.set(item['cL'], true);
+        //         c_uri_unique.push({
+        //             'cL': item['cL'],
+        //             'c': item['c']
+        //         });
+        //     }
+        // }
 
-        // Extract unique p and pL into c_uri_unique
-        const p_map = new Map();
-        for (const item of p_uri) {
-            if(!p_map.has(item['pL'])){
-                p_map.set(item['pL'], true);
-                p_uri_unique.push({
-                    'pL': item['pL'],
-                    'p': item['p']
-                });
-            }
-        }
+        // // Extract unique em and emL into em_uri_unique
+        // const em_map = new Map();
+        // for (const item of em_uri) {
+        //     if(!em_map.has(item['emL'])){
+        //         em_map.set(item['emL'], true);
+        //         em_uri_unique.push({
+        //             'emL': item['emL'],
+        //             'em': item['em']
+        //         });
+        //     }
+        // }
 
-        // Extract unique ds and dsL into c_uri_unique
-        const ds_map = new Map();
-        for (const item of ds_uri) {
-            if(!ds_map.has(item['dsL'])){
-                ds_map.set(item['dsL'], true);
-                ds_uri_unique.push({
-                    'dsL': item['dsL'],
-                    'ds': item['ds']
-                });
-            }
-        }
+        // // Extract unique p and pL into c_uri_unique
+        // const p_map = new Map();
+        // for (const item of p_uri) {
+        //     if(!p_map.has(item['pL'])){
+        //         p_map.set(item['pL'], true);
+        //         p_uri_unique.push({
+        //             'pL': item['pL'],
+        //             'p': item['p']
+        //         });
+        //     }
+        // }
+
+        // // Extract unique ds and dsL into c_uri_unique
+        // const ds_map = new Map();
+        // for (const item of ds_uri) {
+        //     if(!ds_map.has(item['dsL'])){
+        //         ds_map.set(item['dsL'], true);
+        //         ds_uri_unique.push({
+        //             'dsL': item['dsL'],
+        //             'ds': item['ds']
+        //         });
+        //     }
+        // }
 
 
         //console.log(em_uri_unique[5]['emL'])
 
-        function add_url(array, uri, label, item, index){
+        //creating url as a property to add to each children node
+        function add_uri(array, uri, label, item, index){
             if (uri === 'c'){
                 for (const level_name in array){
                     if (array[level_name][label] === item["name"] + '-' + data.children[index].name) {
-                        item["url"] = array[level_name][uri]
+                        item["uri"] = array[level_name][uri]
                     }
                 }
             } else {
                 for (const level_name in array){
                     if (array[level_name][label] === item["name"]){
-                        item["url"] = array[level_name][uri]
+                        item["uri"] = array[level_name][uri]
                     }
                 }
             }  
         }
 
-
+        //adding url as a property to each children node
         data.children.forEach((item1, index) => {
-            add_url(j_uri_unique, 'j', 'jL', item1);
+            add_uri(j_uri_unique, 'j', 'jL', item1);
             item1.children.forEach(item2 => {
-                add_url(c_uri_unique, 'c', 'cL', item2, parseInt(index));
-                console.log(index);
+                add_uri(c_uri_unique, 'c', 'cL', item2, parseInt(index));
+                //console.log(index);
                 item2.children.forEach(item3 =>{
-                    add_url(em_uri_unique, 'em', 'emL', item3);
+                    add_uri(em_uri_unique, 'em', 'emL', item3);
                     item3.children.forEach(item4 => {
-                        add_url(p_uri_unique, 'p', 'pL', item4);
+                        add_uri(p_uri_unique, 'p', 'pL', item4);
                         item4.children.forEach(item5 => {
-                            add_url(ds_uri_unique, 'ds', 'dsL', item5);
+                            add_uri(ds_uri_unique, 'ds', 'dsL', item5);
                         })
                     })
                 })
             })
         })
 
-        //adding url as a property to each children node
+        
         // data.children.forEach(item1 => {
         //     for (const j in j_uri_unique){
         //         if (j_uri_unique[j]['jL'] === item1['name']){

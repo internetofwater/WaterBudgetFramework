@@ -1,16 +1,23 @@
+/*----------------Global--------------- */
+
+div.selectize-input,
+div.selectize-dropdown{
+    color:#555555;
+}
+
+
 /*----------------Header & Navbar--------------- */
 /* setting margin */
 #page {
     position: relative;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    padding-top: 10px;
     color: #555555;
 }
 
 /* IoW logo and title in same line */
 .header {
     overflow: auto; 
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 /* Logo placement */
@@ -22,11 +29,11 @@
 
 /* Title attributes */
 .header h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     text-align: center;
     padding-top: 5px;
     padding-right: 100px;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: bold;
     color: #555555;
     
@@ -112,7 +119,9 @@ ul.nav.navbar-nav li {
     min-width: 0;
 }
 
-/*--------------Tab Content - States------------- */
+/***************************************************************************
+Tab - State
+***************************************************************************/
 /*--------------btn and col styles also applies to search tab ------------- */
 
 /* Deafult button attributes */
@@ -166,23 +175,25 @@ ul.nav.navbar-nav li {
 #state_sticky {
     position: sticky;
     top: -50px;
+    text-align: center;
 }
  
 #state_sticky svg {
     background: white;
     position: relative;
-    margin-top: -10px;
-    text-align: center;
+    margin-top: -9px;
+    
 }
 
 @media (max-width: 766px) {
     #state_sticky {
         position: sticky;
-        top: 20px;
+        top: 50px;
     }
+
 }
 
-/* Align the chart box to the center */
+/* Align the chart rectangular box to the center */
 #state_container {
     text-align: center;
 }
