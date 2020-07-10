@@ -25,7 +25,7 @@ file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
  #  
  # }"
 
-# Everything
+# Everything (including url)
 query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
@@ -60,7 +60,8 @@ df <- df[which(df$jL == 'CO'),]
 df <- select(df, -type)
 #df_table <- cat(format_csv(df))
 write.table(df, file = "./www/hyperlink.csv", sep = ",",
-                        qmethod = "double", quote=FALSE)
+                        qmethod = "double", quote=FALSE, 
+            row.name = FALSE)
 #df_colorado <- # SORT by components
 #write_csv(df, "water_budget_june8.csv")
 
@@ -90,6 +91,39 @@ write.table(df, file = "./www/hyperlink.csv", sep = ",",
 # )
 
 #data_json_example <- d3_nest(data)
+# Everything (excluding url)
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?jL ?cL ?emL ?pL ?dsL ?type WHERE {
+    ?c wb:usedBy ?j.
+    ?c rdf:type ?t.
+    ?t rdfs:label ?type.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    OPTIONAL {
+    ?c wb:hasEstimationMethod ?em.
+    ?em rdfs:label ?emL.
+    ?em wb:hasParameter ?p.
+    ?p rdfs:label ?pL.
+    ?p wb:hasDataSource ?ds.
+    ?ds rdfs:label ?dsL.
+    }
+} "
+
+res <- rdf_query(file, query)
+
+# Exporting as dataframe
+df <- as.data.frame(res)
+df <- df[which(df$type == 'Component'),]
+df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
+df$cL <- gsub("-[A-Z][A-Z]","", df$cL)#remove state initials from components
+df <- df[which(df$jL == 'CO'),]
+#df <- select(df, -jL)
+df <- select(df, -type)
 
 nested_json <- d3_nest(data = df, root = "States");
 

@@ -93,14 +93,16 @@ component_choices <- c(unique(df1$cL))
 # Shiny app
 ui <- fluidPage(id = "page", theme = "styles.css",
     useShinyjs(),
-    tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
+    tags$head(tags$link(href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap",
+                        rel="stylesheet"),
+              tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
               tags$script(src = "index_v7.js")),
     tags$body(HTML('<link rel="icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
     tags$div(class = "header",
-             tags$img(src = "iow_logo.png", width = 65),
+             tags$img(src = "iow_logo.png", width = 55),
              tags$h1("IoW Water Budget Tool"),
              titlePanel(title="", windowTitle = "IoW Water Budget App")),
     navbarPage(title = "",
