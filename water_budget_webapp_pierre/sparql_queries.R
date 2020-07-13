@@ -201,10 +201,10 @@ SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL ?emL ?pL ?dsL ?type WHERE {
     ?c wb:flowSource ?ftype.
     ?ftype rdfs:label ?ftypeL.
     }
-    OPTIONAL {
+  #  OPTIONAL {
     ?c wb:hasEstimationMethod ?em.
     ?em rdfs:label ?emL.
-    }
+ #   }
     OPTIONAL {
     ?em wb:hasParameter ?p.
     ?p rdfs:label ?pL.
@@ -237,7 +237,7 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL ?scL ?pscL ?exmL WHERE {
+SELECT ?jL ?cL ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?pscL ?psc ?exmL ?exm WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -273,23 +273,23 @@ res4 <- rdf_query(file, query4)
 
 df4 <- as.data.frame(res4)
 
-properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:", 
-                 "Subcomponent:", "Partial Subcomponent:","Exact Match:")
+# properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:", 
+ #                "Subcomponent:", "Partial Subcomponent:","Exact Match:")
 
-abc <- data.frame()
+# abc <- data.frame()
+# 
+# hello_list <- list()
+# hello_list <- c(summary_flow_source, "summary_flow_sink", "summary_flow_type")
+# 
+# for (i in 1:length(properties_display)) {
+#   assign(paste0("abc", "$", properties[i]), paste(paste(properties_display[i], 
+#                                                       hello_list[1])))
+# }
+# 
+# output$flow_source <- renderText(paste("Flow Source:", 
+#                                        summary_flow_source))
 
-hello_list <- list()
-hello_list <- c(summary_flow_source, "summary_flow_sink", "summary_flow_type")
-
-for (i in 1:length(properties_display)) {
-  assign(paste0("abc", "$", properties[i]), paste(paste(properties_display[i], 
-                                                      hello_list[1])))
-}
-
-output$flow_source <- renderText(paste("Flow Source:", 
-                                       summary_flow_source))
-
-hello <- paste("Flow Sink:", summary_flow_sink)
+# hello <- paste("Flow Sink:", summary_flow_sink)
 # abc <- df4[which(df4$cL == 'Conveyance Seepage-CA'),]
 # abc <- as.data.frame(abc)
 # 
@@ -309,19 +309,19 @@ hello <- paste("Flow Sink:", summary_flow_sink)
 #abc
 
 ##cat(paste("summary", "title", sep="_"))
- abc <- df4[which(df4$cL == 'Conveyance Seepage-CA'),]
+# abc <- df4[which(df4$cL == 'Conveyance Seepage-CA'),]
 # properties <- c("flow_source", "flow_sink", "flow_type", "subcomponent", "p_subcomponent","exact_match")
 #col_names <- c(fsourceL, "abc$fsinkL", "abc$ftypeL", "abc$scL", "abc$pscL", "abc$exmL")
 
-baba <- paste("summary", properties, sep="_")
+# baba <- paste("summary", properties, sep="_")
 
-get(baba[3])
+# get(baba[3]) #it is looking for object, after removing quotes
 
-for (i in 1:length(properties)) {
+# for (i in 1:length(properties)) {
    
-   baba[i] <- paste(unlist(unique(abc[i+2]), use.names = FALSE), collapse=", ")
+#   baba[i] <- paste(unlist(unique(abc[i+2]), use.names = FALSE), collapse=", ") #i+2 because we dont want cL and jL
   #print (i)
-} 
+# } 
 
 # lhs <- paste("summary", properties, sep="_")
 # rhs <- paste(abc[3:length(abc)])
@@ -391,6 +391,45 @@ for (i in 1:length(properties)) {
 #         "Exact match:", exact_match)
 #   
 # })
+
+########## Testing hyperlink feature for search summary
+abc_no_uri <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),] %>%
+  select(c(seq(3, length(colnames(df4)), 2)))
+
+abc_w_uri <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),]
+
+properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:", 
+                        "Subcomponent:", "Partial Subcomponent:","Exact Match:")
+
+properties <- c("flow_source", "flow_sink", "flow_type",
+                "subcomponent", "p_subcomponent","exact_match")
+
+summary_list <- paste("summary", properties, sep="_")
+
+# assigning summary_list_flowstufffs (there are 5 total)
+for (i in 1:length(properties)) {
+  assign(paste(summary_list[i]), 
+         paste(unlist(unique(abc_no_uri[i]), use.names = FALSE), collapse=", "))
+} 
+
+for (i in 1:length(summary_list)){
+  #split all characters
+  split_property <- strsplit(get(summary_list[i]), "")[[1]]
+  #check if there is a comma
+  if ("," %in% split_property){
+    #if ya then split by comma
+    split_value <- unlist(strsplit(get(summary_list[i]), "[,]")) %>%
+      trimws()
+    paste(properties_display[i],
+          split_value[1], 
+          split_value[2])
+  }
+}
+
+paste(properties_display[i],
+      get(split_value[1]), 
+      get(split_value[2]))
+# see if there is a comma. If there is, then split the string into a list with multiple values. 
 
 
 #### ----------------------------- Developing and exploring SPARQL queries

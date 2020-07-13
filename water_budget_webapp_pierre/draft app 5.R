@@ -14,7 +14,7 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL ?scL ?pscL ?exmL WHERE {
+SELECT ?jL ?cL ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?pscL ?psc ?exmL ?exm WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -47,9 +47,10 @@ SELECT ?jL ?cL ?fsourceL ?fsinkL ?ftypeL ?scL ?pscL ?exmL WHERE {
 "
 
 results_search <- rdf_query(file, query_search)
-df_search <- as.data.frame(results_search)
-df_search <- arrange(df_search, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
-df_search$cL <- gsub("-[A-Z][A-Z]","", df_search$cL)
+df_search_full <- as.data.frame(results_search)
+df_search_full <- arrange(df_search_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
+df_search_full$cL <- gsub("-[A-Z][A-Z]","", df_search_full$cL)
+df_search_flow <- df_search_full[c(1,2,(seq(3,length(colnames(df_search_full)), 2)))]
 
 
 # ---- 2. creating dataframe state-wise info ---- #
@@ -185,12 +186,20 @@ server <- function(input, output, session){
     # Show summary div
     show("search_summary")
     
-    #Summary 
-    component_info <- df_search %>%
+    #Summary information 
+    component_info <- df_search_flow %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
-      select(3:length(df_search)) %>% #dropping jL, cL columns
+      select(3:length(df_search_flow)) %>% #dropping jL, cL columns
       as.data.frame()
+    
+    # #Summary URIs
+    # uri <- df_search_full %>%
+    #   filter(jL %in% input$states1) %>%
+    #   filter(cL %in% input$components) %>%
+    #   select(3:length(df_search_flow)) %>% #dropping jL, cL columns
+    #   as.data.frame()
+    
     # Property names based on UI textOutput
     properties <- c("flow_source", "flow_sink", "flow_type",
                     "subcomponent", "p_subcomponent","exact_match")
@@ -200,19 +209,58 @@ server <- function(input, output, session){
     summary_title <- paste(input$components, input$states1, 
                            sep = "-")
     summary_list <- paste("summary", properties, sep="_")
+    
     for (i in 1:length(properties)) {
       assign(paste(summary_list[i]), 
              paste(unlist(unique(component_info[i]), use.names = FALSE), collapse=", "))
-    } 
+    }
+    
+    # storing multiple values as a list (to hyperlink each of them separately)
+    
+    
+    # Create a list of uris
+    
     
     # Render output
     output$component_title <- renderText(paste(summary_title))
     properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:",
                      "Subcomponent of:", "Partial Subcomponent of:","Exact Match:")
-    lapply(1:length(properties_display), function(i){ 
-      output[[properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>", get(summary_list[i])))
-    }) #FOR loop cannot be used with render options
-  })
+    
+    ##### Take care of URIs
+    uri_link <- "http://www.google.com"
+    
+    # if an attribute has multiple values, it would add 1 hyperlink
+    # to all values
+    # so first we split each value and see if it has a comma
+    # if it does then we assign split it by comma and store each value as a list in
+    # a signle variable
+    # then we run two different render options depending if a field has  a
+    # single value or multiple value
+    lapply(1:length(summary_list), function(i){
+      split_property <- strsplit(get(summary_list[i]), "")[[1]]
+      if ("," %in% split_property){
+        split_value <- unlist(strsplit(get(summary_list[i]), "[,]")) %>%
+          trimws()
+        output[[properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
+                                              '<a href=', uri_link,'target="_blank">',
+                                              split_value[1], "</a>", 
+                                              '<a href=', uri_link,'target="_blank">',
+                                              ",",
+                                              split_value[2], "</a>"))
+      } else {
+        output[[properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
+                                                    '<a href=', uri_link,'target="_blank">',
+                                                    get(summary_list[i]), "</a>"))
+      }
+    })
+    
+    # lapply(1:length(properties_display), function(i){ 
+    #   output[[properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
+    #                                               '<a href=', uri_link,'target="_blank">',
+    #                                               get(summary_list[i]), "</a>"))
+#    }) #FOR loop cannot be used with render options
+
+})
 
 # Chart by component on search tab
   observeEvent(input$runButton1,{
