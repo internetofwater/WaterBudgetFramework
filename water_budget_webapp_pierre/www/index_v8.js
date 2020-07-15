@@ -1,7 +1,8 @@
 /////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////// sending nested json from R
+////////////////////////////////////////////////////// COMPONENT TAB
 /////////////////////////////////////////////////////////////////////////////////
 
+// sending nested json and number of nodes from R
 var leaf_nodes_1;
 
 Shiny.addCustomMessageHandler("search_height",
@@ -11,180 +12,272 @@ function(message) {
 
 Shiny.addCustomMessageHandler("search_json",
 function (message) {
-    
-    d3.selectAll("svg").remove();
-    //d3.select("svg_sticky").remove();
 
-    var data = message;
-
-    var margin = {top: 25, right: 50, bottom: 20, left: 50}
-    var width = 1050 - margin.left - margin.right //change width because leaf nodes were going out
-    var height = (leaf_nodes_1*35) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
-
-    // appending svg object to the body div "container"
-    var svg = d3.select("#search_container")   /////////changed Id, removed autoscroll and reduced 1 label level option
-        .append("svg")
-            .attr("width", width + margin.right + margin.left)
-            .attr("height", d => { return leaf_nodes_1 < 3 ? height + margin.top + margin.bottom + 150 : height + margin.top + margin.bottom + 30 ;})
-        .append("g")
-            .attr("transform", "translate(" + margin.left + "," + (margin.top + 30) + ")");
-
-    // Background rectangle
-    svg.append("rect")
-    .attr("width", width + margin.right + margin.left)
-    .attr("height", d => { return leaf_nodes_1 < 3 ? height + 150 : height + margin.top + margin.bottom  ;} )
-    .attr("transform", "translate(" + - margin.left  + "," + - (margin.top + 10) + ")")
-    .attr("fill", "#F8F8F8")
-    .attr('rx', 20);
-    
-    var i = 0;
-
-    // adjusting height dynamizally
-    if (leaf_nodes_1 < 3) {
-        var treeHeight = height + 100;
-    }
-    else {
-        var treeHeight = height;
-    }
-
-    // Create the cluster layout:
-    var tree = d3.tree()
-        .size([treeHeight, width]) 
-        .separation((a,b) => {return a.parent == b.parent ? 1 : 1;}); // for separating nodes nicely vertically
-    
-    // Give the data to the tree layout:
-    root = d3.hierarchy(data, function(d) {
-        return d.children;
-    });
-    //root.x0 = leaf_nodes_1 <3 ? (height + 100) / 2 : height / 2 ;
-    
-        // x and y position for nodes;
-        var treeData = tree(root);
+    // Loading csv containing URIs for each property (components, estimation methods etc.)
+    // and then run the following code chunk
+    d3.csv("hyperlink.csv").then(function(uri_data) {
         
-        // compute the new tree layout
-        var nodes = treeData.descendants()
-        var links = treeData.descendants().slice(1);
+        // Storing nested json data to 'data'
+        var data = message;
+        console.log(uri_data);
+        //////////////////////////////////////////////////////
+        ///////////////////// ADD URIs FROM CSV TO NESTED JSON 
+        //////////////////////////////////////////////////////
 
-        //Normalizing for fixed depth
-        nodes.forEach(d => {d.y = d.depth * 235}); //d.y dictates how much tree unfolds in x axis distance because it is a horizontal tree, if it was vertical d.y would affect y axis
+        // Creating empty arrays for each class to hold all values from csv
+        // and use them to create unique values
+        var em_uri = [];
+        var em_uri_unique = [];
+        var p_uri = [];
+        var p_uri_unique = [];
+        var ds_uri = [];
+        var ds_uri_unique = [];
 
-        // Adding labels for each level
-        // using underscore.js library
-        var level_labels = ["", "Estimation Method", "Parameter", "Data Source"]
-        var depthOrder = _.uniq(_.pluck(nodes, "depth")).sort();
-        var label_data = [];
-        for (var n in depthOrder){
-            label_data[n] = {
-                id: parseInt(n),
-                label: level_labels[n]
-            };
-        }
-        
-        svg.selectAll("g.levels-svg").remove();
-        var levelSVG = svg.append("g").attr("class", "levels-svg");
-        var levels =  levelSVG.selectAll("g.level");
-        levels.data(label_data)
-             .enter().append("g")
-             .attr("class", "level")
-             .attr("transform", function(d) { return "translate(" + d.id*235 + "," + -10 + ")"; })
-             .append("text")
-             .text(function(d){
-                 return d.label;
-             })
-             //.attr("x", -40)
-             .attr("x", function(d) {
-                return d.label === "Estimation Method" ? -65 : -40;})
-             .attr("y", 0)
-             .attr("font-family","arial")
-             .style("font-weight", "bold")
-             .style("fill", "#777777")
-            //  .transition().duration(duration)
-            //  .attr("fill-opacity", 1)
-        
-        //LINKS***************************************
-        var link = svg.selectAll('path.link')
-            .data(links, function(d) { return d.id; })
-            .enter().append('path')
-                .attr("class", "link")
-                .attr("fill", "none")   // without this its gonna fill all black
-                .attr("stroke", "#ccc") // for the black line connecting nodes
-                .attr('d', function(d) {
-                    return "M" + d.y + "," + d.x
-                    + "C" + (d.parent.y + 20) + "," + d.x
-                    + " " + (d.parent.y + 10) + "," + d.parent.x
-                    + " " + d.parent.y + "," + d.parent.x;
-                });
-        
-        var node = svg.selectAll('g.node')
-            .data(nodes)
-            .enter().append('g')
-            .attr("class", function(d) {
-                return "node" + 
-                (d.children ? " node--internal" : " node--leaf"); })
-            .attr('transform', d => { return "translate(" + d.y + "," + d.x + ")"})
-        
-        // NODES *********************************************
-        // add circle for the nodes
-        node.append('circle')
-            .attr('class', 'node')
-            .attr('r', 6.5) // before merging
-            .style("fill", "#E55E69" )
-            //.style("fill", d => {return d._children ? "blue" : "#fff";}) //before merging
-
-        // ADD LABELS FOR THE NODES
-        node.append('text')
-            .attr("dy", "0.35em")
-            .attr("x", function(d) {
-                return d.children ? -13 : 13;})
-            //.attr("y", -4) 
-            .attr("text-anchor", function(d) {
-                return d.children ? "end" : "start";
+        // Creating function to store each class elements in an array
+        function createArray(array, uri, label) {
+            uri_data.forEach(item => {
+                var innerObj = {};
+                innerObj[label] = item[label];
+                innerObj[uri] = item[uri];
+                array.push(innerObj);
             })
-            .text(function(d) { return d.data.name; })
-            .call(wrap, 250)  // wrap text labels to 2 lines
-            .attr("font-size", "11")
-            .style("font-family", "arial")
-            .style("fill", "#777777")
-            .style("font-weight", "bold")
-            .style("text-shadow", "-1px -1px 3px white, -1px 1px 3px white, 1px -1px 3px white, 1px 1px 3px white")
-            // .style("word-break", "normal");
-        
-        function wrap(text, width) {
-            text.each(function() {
-                var text = d3.select(this),
-                words = text.text().split(/\s+/).reverse(),
-                word,
-                line = [],
-                lineNumber = 0,
-                lineHeight = 1, // ems
-                x = text.attr("x"),
-                y = text.attr("y"),
-                dy = parseFloat(text.attr("dy")),
-                tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em"); // removed dy + em for making equal line spaces among nodes and leaf nodes
-                while (word = words.pop()) {
-                    line.push(word);
-                    tspan.text(line.join(" "));
-                    if (tspan.node().getComputedTextLength() > width) {
-                        line.pop();
-                        tspan.text(line.join(" "));
-                        line = [word];
-                        tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
-                        
+        }
+
+        createArray(em_uri, 'em', 'emL');
+        createArray(p_uri, 'p', 'pL');
+        createArray(ds_uri, 'ds', 'dsL');
+
+        // Creating function to extract unique values from previous arrays
+        var em_map, p_map, ds_map;
+        function createUniqueArray(array, unique_array, uri, label, map){
+            map = new Map();
+            for (const item of array){
+                if(!map.has(item[label])){
+                    map.set(item[label], true);
+                    var innerObj = {};
+                    innerObj[label] = item[label];
+                    innerObj[uri] = item[uri];
+                    unique_array.push(innerObj);
+                }
+            }
+        }
+
+        createUniqueArray(em_uri, em_uri_unique, 'em', 'emL', em_map);
+        createUniqueArray(p_uri, p_uri_unique, 'p', 'pL', p_map);
+        createUniqueArray(ds_uri, ds_uri_unique, 'ds', 'dsL', ds_map);
+
+        // creating a function to add uri as a property to add to each children node
+        function addURI(array, uri, label, item){
+            if (uri === 'c'){
+                for (const level_name in array){
+                    if (array[level_name][label] === item["name"] + '-' + data["name"]) {
+                        item["uri"] = array[level_name][uri]
                     }
                 }
-            });
+            } else {
+                for (const level_name in array){
+                    if (array[level_name][label] === item["name"]){
+                        item["uri"] = array[level_name][uri]
+                    }
+                }
+            }  
+        }
 
-        } 
+        //adding uri as a property to each children node
+        //data["uri"] = "http://purl.org/iow/WaterBudgetingFramework#" + data["name"]
+        //data["uri"] = "http://www.google.com";
+        data.children.forEach(item2 => {
+            addURI(em_uri_unique, 'em', 'emL', item2);
+            //console.log(index);
+            item2.children.forEach(item3 =>{
+                addURI(p_uri_unique, 'p', 'pL', item3);
+                item3.children.forEach(item4 => {
+                    addURI(ds_uri_unique, 'ds', 'dsL', item4);
+                })
+            })
+        })
+
+        ////////////////////////////////////////////
+        ///////////////////////////CREATING D3 CHART 
+        ////////////////////////////////////////////
+    
+        d3.selectAll("svg").remove();
+        //d3.select("svg_sticky").remove();
+
+        var data = message;
+
+        var margin = {top: 25, right: 50, bottom: 20, left: 50}
+        var width = 1050 - margin.left - margin.right //change width because leaf nodes were going out
+        var height = (leaf_nodes_1*35) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
+
+        // appending svg object to the body div "container"
+        var svg = d3.select("#search_container")   /////////changed Id, removed autoscroll and reduced 1 label level option
+            .append("svg")
+                .attr("width", width + margin.right + margin.left)
+                .attr("height", d => { return leaf_nodes_1 < 3 ? height + margin.top + margin.bottom + 150 : height + margin.top + margin.bottom + 30 ;})
+            .append("g")
+                .attr("transform", "translate(" + margin.left + "," + (margin.top + 30) + ")");
+
+        // Background rectangle
+        svg.append("rect")
+        .attr("width", width + margin.right + margin.left)
+        .attr("height", d => { return leaf_nodes_1 < 3 ? height + 150 : height + margin.top + margin.bottom  ;} )
+        .attr("transform", "translate(" + - margin.left  + "," + - (margin.top + 10) + ")")
+        .attr("fill", "#F8F8F8")
+        .attr('rx', 20);
+        
+        var i = 0;
+
+        // adjusting height dynamically
+        if (leaf_nodes_1 < 3) {
+            var treeHeight = height + 100;
+        }
+        else {
+            var treeHeight = height;
+        }
+
+        // Create the cluster layout:
+        var tree = d3.tree()
+            .size([treeHeight, width]) 
+            .separation((a,b) => {return a.parent == b.parent ? 1 : 1;}); // for separating nodes nicely vertically
+        
+        // Give the data to the tree layout:
+        root = d3.hierarchy(data, function(d) {
+            return d.children;
+        });
+        //root.x0 = leaf_nodes_1 <3 ? (height + 100) / 2 : height / 2 ;
+        
+            // x and y position for nodes;
+            var treeData = tree(root);
+            
+            // compute the new tree layout
+            var nodes = treeData.descendants()
+            var links = treeData.descendants().slice(1);
+
+            //Normalizing for fixed depth
+            nodes.forEach(d => {d.y = d.depth * 235}); //d.y dictates how much tree unfolds in x axis distance because it is a horizontal tree, if it was vertical d.y would affect y axis
+
+            // Adding labels for each level
+            // using underscore.js library
+            var level_labels = ["", "Estimation Method", "Parameter", "Data Source"]
+            var depthOrder = _.uniq(_.pluck(nodes, "depth")).sort();
+            var label_data = [];
+            for (var n in depthOrder){
+                label_data[n] = {
+                    id: parseInt(n),
+                    label: level_labels[n]
+                };
+            }
+            
+            svg.selectAll("g.levels-svg").remove();
+            var levelSVG = svg.append("g").attr("class", "levels-svg");
+            var levels =  levelSVG.selectAll("g.level");
+            levels.data(label_data)
+                .enter().append("g")
+                .attr("class", "level")
+                .attr("transform", function(d) { return "translate(" + d.id*235 + "," + -10 + ")"; })
+                .append("text")
+                .text(function(d){
+                    return d.label;
+                })
+                //.attr("x", -40)
+                .attr("x", function(d) {
+                    return d.label === "Estimation Method" ? -65 : -40;})
+                .attr("y", 0)
+                .attr("font-family","arial")
+                .style("font-weight", "bold")
+                .style("fill", "#777777")
+                //  .transition().duration(duration)
+                //  .attr("fill-opacity", 1)
+            
+            //LINKS***************************************
+            var link = svg.selectAll('path.link')
+                .data(links, function(d) { return d.id; })
+                .enter().append('path')
+                    .attr("class", "link")
+                    .attr("fill", "none")   // without this its gonna fill all black
+                    .attr("stroke", "#ccc") // for the black line connecting nodes
+                    .attr('d', function(d) {
+                        return "M" + d.y + "," + d.x
+                        + "C" + (d.parent.y + 20) + "," + d.x
+                        + " " + (d.parent.y + 10) + "," + d.parent.x
+                        + " " + d.parent.y + "," + d.parent.x;
+                    });
+            
+            var node = svg.selectAll('g.node')
+                .data(nodes)
+                .enter().append('g')
+                .attr("class", function(d) {
+                    return "node" + 
+                    (d.children ? " node--internal" : " node--leaf"); })
+                .attr('transform', d => { return "translate(" + d.y + "," + d.x + ")"})
+            
+            // NODES *********************************************
+            // add circle for the nodes
+            node.append('circle')
+                .attr('class', 'node')
+                .attr('r', 6.5) // before merging
+                .style("fill", "#E55E69" )
+                //.style("fill", d => {return d._children ? "blue" : "#fff";}) //before merging
+
+            // ADD LABELS FOR THE NODES
+            node.append("a")
+                .attr("xlink:href", d => {return d.data.uri;})
+                .attr("target", "_blank")
+            .append('text')
+                .attr("dy", "0.35em")
+                .attr("x", function(d) {
+                    return d.children ? -13 : 13;})
+                //.attr("y", -4) 
+                .attr("text-anchor", function(d) {
+                    return d.children ? "end" : "start";
+                })
+                .text(function(d) { return d.data.name; })
+                .call(wrap, 250)  // wrap text labels to 2 lines
+                .attr("font-size", "11")
+                .style("font-family", "arial")
+                .style("fill", "#777777")
+                .style("font-weight", "bold")
+                .style("text-shadow", "-1px -1px 3px white, -1px 1px 3px white, 1px -1px 3px white, 1px 1px 3px white")
+                // .style("word-break", "normal");
+            
+            function wrap(text, width) {
+                text.each(function() {
+                    var text = d3.select(this),
+                    words = text.text().split(/\s+/).reverse(),
+                    word,
+                    line = [],
+                    lineNumber = 0,
+                    lineHeight = 1, // ems
+                    x = text.attr("x"),
+                    y = text.attr("y"),
+                    dy = parseFloat(text.attr("dy")),
+                    tspan = text.text(null).append("tspan").attr("x", x).attr("y", y).attr("dy", dy + "em"); // removed dy + em for making equal line spaces among nodes and leaf nodes
+                    while (word = words.pop()) {
+                        line.push(word);
+                        tspan.text(line.join(" "));
+                        if (tspan.node().getComputedTextLength() > width) {
+                            line.pop();
+                            tspan.text(line.join(" "));
+                            line = [word];
+                            tspan = text.append("tspan").attr("x", x).attr("y", y).attr("dy", ++lineNumber * lineHeight + dy + "em").text(word);
+                            
+                        }
+                    }
+                });
+
+            } 
+        })
 
 })
 
 
 /////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////// sending nested json from R
+////////////////////////////////////////////////////// STATE TAB
 /////////////////////////////////////////////////////////////////////////////////
 
 
-
+// sending nested json and number of nodes from R
 var leaf_nodes_2;
 
 Shiny.addCustomMessageHandler("state_height",
@@ -302,7 +395,7 @@ function (message) {
         d3.selectAll("svg").remove();
 
         var margin = {top: 25, right: 90, bottom: 20, left: 90}
-        var width = 1300 - margin.left - margin.right //changed width because leaf nodes were going out
+        var width = 1150 - margin.left - margin.right //changed width because leaf nodes were going out
         var height = (leaf_nodes_2*30) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
 
         // appending svg object to the body div "container"

@@ -14,7 +14,7 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?jL ?cL ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?pscL ?psc ?exmL ?exm WHERE {
+SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?pscL ?psc ?exmL ?exm WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -50,7 +50,7 @@ results_search <- rdf_query(file, query_search)
 df_search_full <- as.data.frame(results_search)
 df_search_full <- arrange(df_search_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
 df_search_full$cL <- gsub("-[A-Z][A-Z]","", df_search_full$cL)
-df_search_flow <- df_search_full[c(1,2,(seq(3,length(colnames(df_search_full)), 2)))]
+df_search_flow <- df_search_full[c(1,2,(seq(4,length(df_search_full), 2)))]
 
 
 # ---- 2. creating dataframe state-wise info ---- #
@@ -98,10 +98,11 @@ ui <- fluidPage(id = "page", theme = "styles.css",
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
               tags$script(src = "index_v8.js")),
-    tags$body(HTML('<link rel="icon", href="favicon.png",
+    tags$body(HTML('<link rel="shortcut icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
     tags$div(class = "header",
-             tags$img(src = "iow_logo.png", width = 60),
+             tags$a(href="https://internetofwater.org/", target = "_blank", 
+                    tags$img(src = "iow_logo.png", width = 60)),
              tags$h1("IoW Water Budget Tool"),
              titlePanel(title="", windowTitle = "IoW Water Budget App")),
     navbarPage(title = "",
@@ -111,7 +112,14 @@ ui <- fluidPage(id = "page", theme = "styles.css",
       tabPanel(title = "Home"),
       
 # ------ Tab - Search - Begin ------ # 
-      tabPanel(title = "Search",
+      tabPanel(title = "Component",
+        tags$div(class = "banner", 
+                 tags$img(class = "banner-img-component",
+                          src = "image_1.jpg"),
+                 tags$div(class = "banner-text",
+                          tags$p(class = "h1", "Search by component"),
+                          tags$p(class = "h3", "Explore the profile of a water budget component")
+                          )),
         column(width = 12,
           column(width = 3,
                  selectInput(inputId = "states1",
@@ -129,7 +137,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
         tags$body(hidden(
                   tags$div(id = "search_summary",
                            style = "color:#777777",
-                           tags$h3(tags$b(textOutput("component_title"))),
+                           tags$h3(tags$b(htmlOutput("component_title"))),
                            tags$p(htmlOutput("flow_source")),
                            tags$p(htmlOutput("flow_sink")),
                            tags$p(htmlOutput("flow_type")),
@@ -147,6 +155,13 @@ ui <- fluidPage(id = "page", theme = "styles.css",
       
 # ------ Tab - State - Begin ------ #
       tabPanel(title = "State",
+        tags$div(class = "banner", 
+                 tags$img(class = "banner-img-state",
+                          src = "image_3.jpg"),
+                 tags$div(class = "banner-text",
+                          tags$h1("Search by state"),
+                          tags$h3("Explore the water budget framework of a state")
+                        )),
         column(width = 12,
           column(width = 3,
                  selectInput(inputId = "states2",
@@ -184,12 +199,20 @@ server <- function(input, output, session){
     # Show summary div
     show("search_summary")
     
-    #Summary URIs
+    # Summary URIs
     df_uri <- df_search_full %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
-      select(-c(1,2,3,5,7,9,11,13)) %>% #dropping jL, cL columns and retaining uri columns
+      select(-c(1,2,3,4,6,8,10,12,14)) %>% #dropping jL, cL, c columns and retaining uri columns
       as.data.frame()
+    
+    # Extracting component (title) URI
+    uri_title <- df_search_full %>%
+      filter(jL %in% input$states1) %>%
+      filter(cL %in% input$components) %>%
+      .$c # selecting component
+    
+    uri_title <- uri_title[1]
     
     #Summary information 
     component_info <- df_search_flow %>%
@@ -224,7 +247,9 @@ server <- function(input, output, session){
     }
     
     # Render output
-    output$component_title <- renderText(paste(summary_title))
+    output$component_title <- renderText(paste('<a href="', uri_title,
+                                               '" target="_blank">',
+                                               summary_title, '</a>'))
     properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:",
                      "Subcomponent of:", "Partial Subcomponent of:","Exact Match:")
     
