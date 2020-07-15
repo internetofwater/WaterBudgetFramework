@@ -7,7 +7,7 @@ library(d3r)
 
 file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
 
-# ---- 1. creating dataframe for flow and subcomponent info ---- #
+# ---- 1. creating dataframe for flow and component-subcomponent info ---- #
 query_search <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
@@ -79,11 +79,9 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?type WHERE {
 
 results_state <- rdf_query(file, query_state)
 df_state <- as.data.frame(results_state) 
-#df_state <- df_state[which(df_state$type == 'Component'),]# remove rows that have "type" other than "components"
-#used SPARQL for selecting type as components
 df_state <- select(df_state, -type)
-df_state <- arrange(df_state, jL, cL, emL, pL, dsL)# each column in ascending alphabetical order
-df_state$cL <- gsub("-[A-Z][A-Z]","", df_state$cL)#remove state initials from components
+df_state <- arrange(df_state, jL, cL, emL, pL, dsL) # each column in ascending alphabetical order
+df_state$cL <- gsub("-[A-Z][A-Z]","", df_state$cL) # remove state initials from components
 
 
 
@@ -200,28 +198,11 @@ server <- function(input, output, session){
       select(3:length(df_search_flow)) %>% #dropping jL, cL columns 
       as.data.frame()
     
-    # URIs - storing multiple values as a list (to hyperlink each of them separately)
-    
+    # URIs
     uri_properties <- c("flow_source", "flow_sink", "flow_type",
                         "subcomponent", "p_subcomponent", "exact_match")
     
     uri_list <- paste("uri", uri_properties, sep="_")
-    
-    # for (i in seq(2,length(df_uri), 2)) {
-    #   assign(paste(uri_list[i]), 
-    #          paste(unlist(unique(df_uri[i]), use.names = FALSE), collapse=", "))
-    # }
-    
-    #uri_list <- uri_list[-c(seq(1, length(uri_list), 2))] #remove empty variables
-    
-    # storing multiple URIs for 1 property in separate variables to later wrap as hyperlinks
-    # for (i in 1:length(uri_list)){
-    #   split_uri_values <- strsplit(get(uri_list[i]), "")[[1]]
-    #   if ("," %in% split_uri_values) {
-    #     split_uri <- unlist(strsplit(get(uri_list[i]), "[,]")) %>%
-    #       trimws()
-    #   } 
-    # }
     
     # SUMMARY
     # Property names based on textOutput
@@ -249,7 +230,7 @@ server <- function(input, output, session){
     
     # if an attribute has multiple values, it would add 1 hyperlink
     # to all values
-    # so first we split each value and see if it has a comma
+    # so first we split each character in a string and see if it has a comma
     # if it does then we assign split it by comma and store each value as a list in
     # a signle variable
     # then we run two different render options depending if a field has  a

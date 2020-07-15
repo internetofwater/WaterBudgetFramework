@@ -396,7 +396,9 @@ df4 <- as.data.frame(res4)
 abc_no_uri <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),] %>%
   select(c(seq(3, length(colnames(df4)), 2)))
 
-abc_w_uri <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),]
+abc_w_uri <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),] %>%
+  select(-1, -2, -c(seq(3, 14, 2))) %>% #dropping jL, cL columns and retaining uri columns
+  as.data.frame()
 
 properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:", 
                         "Subcomponent:", "Partial Subcomponent:","Exact Match:")
@@ -412,6 +414,7 @@ for (i in 1:length(properties)) {
          paste(unlist(unique(abc_no_uri[i]), use.names = FALSE), collapse=", "))
 } 
 
+# Splitting multiple values in one property
 for (i in 1:length(summary_list)){
   #split all characters
   split_property <- strsplit(get(summary_list[i]), "")[[1]]
@@ -420,16 +423,41 @@ for (i in 1:length(summary_list)){
     #if ya then split by comma
     split_value <- unlist(strsplit(get(summary_list[i]), "[,]")) %>%
       trimws()
-    paste(properties_display[i],
-          split_value[1], 
-          split_value[2])
+    
+    cat(paste(properties_display[i],
+              split_value[1], 
+              split_value[2]))
+    
   }
 }
 
-paste(properties_display[i],
-      get(split_value[1]), 
-      get(split_value[2]))
-# see if there is a comma. If there is, then split the string into a list with multiple values. 
+#### URI
+
+uri_properties <- c("", "flow_source", "", "flow_sink", "", "flow_type",
+              "", "subcomponent", "", "p_subcomponent", "", "exact_match")
+
+uri_list <- paste("uri", uri_properties, sep="_")
+
+for (i in seq(2,length(abc_w_uri), 2)) {
+  assign(paste(uri_list[i]), 
+         paste(unlist(unique(abc_w_uri[i]), use.names = FALSE), collapse=", "))
+} 
+
+# remove empty var
+uri_list <- uri_list[-c(seq(1, length(uri_list), 2))]
+
+for (i in 1:length(uri_list)) {
+  split_uri_values <- strsplit(get(uri_list[i]), "")[[1]]
+  if ("," %in% split_uri_values) {
+    split_uri <- unlist(strsplit(get(uri_list[i]), "[,]")) %>%
+      trimws()
+    cat(paste(split_uri[1], 
+              split_uri[2]))
+  } 
+}
+
+
+
 
 
 #### ----------------------------- Developing and exploring SPARQL queries

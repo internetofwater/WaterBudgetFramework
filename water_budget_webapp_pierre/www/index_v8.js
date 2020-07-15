@@ -195,7 +195,7 @@ function(message) {
 Shiny.addCustomMessageHandler("state_json",
 function (message) {
 
-    // Loading csv containing URIs for each class (components, estimation methods etc.)
+    // Loading csv containing URIs for each property (components, estimation methods etc.)
     // and then run the following code chunk
     d3.csv("hyperlink.csv").then(function(uri_data) {
         
@@ -437,10 +437,10 @@ function (message) {
             .append('text')
                 .attr("dy", "0.35em")
                 .attr("x", function(d) {
-                    return d.children || d._children ? -13 : 13;})
+                    return d.children || d._children ? -13 : -13;}) /// changing directions so they dont overlap
                 //.attr("y", -4) 
                 .attr("text-anchor", function(d) {
-                    return d.children || d._children ? "end" : "start";
+                    return d.children || d._children ? "end" : "end"; /// changing directions so they dont overlap
                 })
                 .text(function(d) { return d.data.name; })
                 .call(wrap, 250)  // wrap text labels to 2 lines
@@ -471,7 +471,7 @@ function (message) {
 
             // Update node attributes and style
             nodeUpdate.select('circle') // before it said "circle.node"
-                .style("fill", "#E55E69")
+                .style("fill", d => { return d.children || d._children ? '#E55E69' : '#696969';})
                 //.style("fill", d => {return d._children ? "red" : "blue";})
                 .attr('cursor', d => { return d.children || d._children ? 'pointer' : 'default';}) 
                 .on("mouseover", function(d) {
@@ -481,7 +481,7 @@ function (message) {
                     }
                     })
                 .on("mouseout", d => {d3.select(event.currentTarget)
-                    .style("fill", "#E55E69")
+                    .style("fill", d => { return d.children || d._children ? '#E55E69' : '#696969';})
                     .attr("r", "6.5");
                 })
                 .transition()
