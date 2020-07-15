@@ -237,7 +237,7 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?jL ?cL ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?pscL ?psc ?exmL ?exm WHERE {
+SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?pscL ?psc ?exmL ?exm WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -399,6 +399,9 @@ abc_no_uri <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),] %>%
 abc_w_uri <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),] %>%
   select(-1, -2, -c(seq(3, 14, 2))) %>% #dropping jL, cL columns and retaining uri columns
   as.data.frame()
+
+uri_title <- df4[which(df4$cL == 'Conveyance Evaporation-CA'),] %>%
+  .$c
 
 properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:", 
                         "Subcomponent:", "Partial Subcomponent:","Exact Match:")
