@@ -1,4 +1,4 @@
-# IoW Water Budget Framework
+# IoW Water Budget Framewor
 
 This is the repository describing the Water Budget Framework (WBF) project. A Water Budget (sometimes called Water Account or Water Balance) is ["...an accounting of the rates of water movement and the change in water storage in all or parts of the atmosphere, land surface, and subsurface."](https://water.usgs.gov/watercensus/AdHocComm/Background/WaterBudgets-FoundationsforEffectiveWater-ResourcesandEnvironmentalManagement.pdf)
 
