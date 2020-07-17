@@ -1,0 +1,211 @@
+/*----------------Header & Navbar--------------- */
+/* setting margin */
+#page {
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #555555;
+}
+
+/* IoW logo and title in same line */
+.header {
+    overflow: auto; 
+    padding-bottom: 25px;
+}
+
+/* Logo placement */
+.header img {
+    float: left;
+    margin-left: 25px;
+}
+
+/* Title attributes */
+.header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-right: 75px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #555555;
+    letter-spacing: 1px;
+  }
+
+/* Remove navbar border and extra space upon collapsing window */
+
+nav.navbar.navbar-default.navbar-static-top{
+    position: sticky;
+    top: 0;
+    opacity: 0.9;
+}
+
+
+.navbar {
+    border: none;
+    margin: 0;
+    min-height: 0;
+    
+}
+
+/* Remove top and bottom padding */
+.navbar-nav {
+    margin: 0;
+}
+
+/* Remove extra top space */
+.navbar-brand {
+    display: none;
+} 
+
+
+/* Make gray navbar bg extend to window border */
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Center navbar text */
+ul.nav.navbar-nav {
+    text-align: center;
+    width: 100%;
+    
+}
+
+/* Center navbar text */
+ul.nav.navbar-nav li {
+    display: inline-block;
+    float: none;
+}
+
+/* Change navbar text attributes */
+.navbar-default .navbar-nav>li>a {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+}
+
+/* Change active tab color */
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: white;
+    background-color: #182856;
+    font-size: 15px;
+}
+
+/* Change hover color */
+.navbar-default .navbar-nav>li>a:hover {
+    color: #01AFA8;
+}
+
+/* Tab content margin */
+.tab-content {
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+/* Reducing width of drop-down menu */
+.dropdown-menu {
+    min-width: 0;
+}
+
+/*--------------Tab Content - States------------- */
+/*--------------btn and col styles also applies to search tab ------------- */
+
+/* Deafult button attributes */
+.btn {
+    border: none;
+    border-radius: 10;
+    background-color: #01AFA8;
+    color: white;
+
+}
+
+/* Hover attributes */
+.btn:hover {
+    color:#01AFA8;
+    border: none;
+}
+
+/* After-click attributes */
+.btn-default.focus, .btn-default:focus {
+    outline: none;
+    border-radius: 10;
+    background-color: #01AFA8;
+    color: white;
+}
+
+/* Uniform position attributes */
+.col-sm-12, .col-sm-3, .col-sm-2 {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+}
+
+
+
+/* Align checkbox with drop down  */
+.col-sm-2 {
+    padding-top: 25.5px;
+    z-index:1;
+}
+
+/* Spacing if window is minimized */
+@media (max-width: 766px) {
+    .col-sm-2 {
+        padding-top: 0px;
+    }
+}
+
+/* Level labels */
+
+#state_sticky {
+    position: sticky;
+    top: -50px;
+}
+ 
+#state_sticky svg {
+    background: white;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 766px) {
+    #state_sticky {
+        position: sticky;
+        top: 20px;
+    }
+}
+
+/* Align the chart box to the center */
+#state_container {
+    text-align: center;
+}
+
+/***************************************************************************
+Tab - Search
+***************************************************************************/
+
+/* Align the chart box to the center */
+#search_container{
+    text-align: center;
+}
+
+#search_summary {
+    overflow: hidden;
+    background: #F8F8F8;
+    width: 1050px;
+    margin: 25px 0px 25px 0px auto;
+    border-radius: 20px;
+    line-height: 20px;
+    text-align: left;
+    padding: 10px 0px 20px 30px;
+    line-height: 2;
+}
+
+#component_title {
+    color: Black;
+    margin: 0px;
+    padding-bottom: 10px;
+    
+}
