@@ -1,10 +1,14 @@
 /*----------------Global--------------- */
 
+* {
+    margin: 0;
+    padding:0; 
+}
+
 div.selectize-input,
 div.selectize-dropdown{
     color:#555555;
 }
-
 
 /*----------------Header & Navbar--------------- */
 /* setting margin */
@@ -23,7 +27,7 @@ div.selectize-dropdown{
 /* Logo placement */
 .header img {
     float: left;
-    margin-left: 35px;
+    margin-left: 25px;
     padding-top: 3px;
 }
 
@@ -113,7 +117,7 @@ ul.nav.navbar-nav li {
 /* Tab content margin */
 .tab-content {
     margin-left: 0px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
 }
 
 /* Reducing width of drop-down menu */
@@ -129,7 +133,7 @@ ul.nav.navbar-nav li {
 /***************************************************************************
 Tab - State
 ***************************************************************************/
-/*--------------btn and col styles also applies to search tab ------------- */
+/*--------------btn and col styles also applies to component tab ------------- */
 
 /* Deafult button attributes */
 .btn {
@@ -206,15 +210,15 @@ Tab - State
 }
 
 /**************************************************************************
-Tab - Search
+Tab - component
 ***************************************************************************/
 
 /* Align the chart box to the center */
-#search_container{
+#component_container{
     text-align: center;
 }
 
-#search_summary {
+#component_summary {
     overflow: hidden;
     background: #F8F8F8;
     width: 1050px;
@@ -274,44 +278,190 @@ a, a:hover, a:visited {
 }
 
 .banner > .banner-text .h3 {
-    position: relative;
+    position: absolute;
     color: white;
     font-size: 20px;
-    top: 100px;
+    top: 120px;
     left: 35px; 
 }
 
+/* Prevent banner header and subheader squish into each other when window is small or on phones */
+@media (max-width: 766px) {
+    .banner > .banner-text .h1 {
+        position: absolute;
+        color: white;
+        top: 50px;
+        left: 35px;
+        font-weight: bolder;
+        font-size: 8vw;
+    }
+
+    .banner > .banner-text .h3 {
+        position: absolute;
+        color: white;
+        font-size: 20px;
+        top: 100px;
+        left: 35px;
+        line-height: 1.3;
+        font-size: 5vw; 
+    }
+
+}
+
 /* Fade-in animation banner title */
-@keyframes fadeIn {
+.banner-text {
+    animation: fade linear 1s 1;
+    -webkit-animation: fade linear 1s 1;
+    -moz-animation: fade linear 1s 1;
+    -o-animation: fade linear 1s 1;
+    -ms-animation: fade linear 1s 1;
+  }
+
+@keyframes fade {
     0%   { opacity:0; }
     100% { opacity:1; }
   }
-@-o-keyframes fadeIn{
+@-o-keyframes fade{
     0%   { opacity:0; }
     100% { opacity:1; }
   }
-@-moz-keyframes fadeIn{
+@-moz-keyframes fade{
     0%   { opacity:0; }
     100% { opacity:1; }
   }
-@-webkit-keyframes fadeIn{
+@-webkit-keyframes fade{
     0%   { opacity:0; }
     100% { opacity:1; }
   }
 
-@-ms-keyframes fadeIn {
+@-ms-keyframes fade {
     0% { opacity:0; }
     100% { opacity:1; }
 }
 
-.banner-text {
-    animation: fadeIn ease 1s 1;
-    -webkit-animation: fadeIn ease 1s 1;
-    -moz-animation: fadeIn ease 1s 1;
-    -o-animation: fadeIn ease 1s 1;
-    -ms-animation: fadeIn ease 1s 1;
-  }
 
 
+/**************************************************************************
+Tab - Home
+***************************************************************************/
 
+.home-banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 130px);
+    overflow: hidden;
+    font-size: 1em;
+}
 
+.home-banner > .home-banner-img {
+    height: 110%;
+    width: 110%;
+    margin-left: -10px;
+    margin-top: -10px;
+    vertical-align: middle;
+    filter: grayscale(75%) blur(4px);
+}
+
+.home-banner > .banner-text .h1 {
+    position: absolute;
+    color: white;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+    font-size: 40px;
+    /* add animation */
+}
+
+@media (max-width: 766px) {
+    .home-banner > .banner-text .h1 {
+        position: absolute;
+        color: white;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bolder;
+        font-size: 10vw;
+    }
+
+}
+
+.scrolldown {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translateY(-40px) translateX(-50%) rotate(45deg);
+}
+
+.scrolldown span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 4px solid #fff;
+    border-right: 4px solid #fff;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+}
+
+.scrolldown span:nth-child(1) {
+    transform: translate(-15px, -15px);
+    animation-delay: -0.4s;
+}
+
+.scrolldown span:nth-child(2) {
+    transform: translate(0, 0);
+    animation-delay: -0.2s;
+}
+
+.scrolldown span:nth-child(3) {
+    transform: translate(15px, 15px);
+    animation-delay: 0s;
+}
+
+@keyframes animate {
+    0% {
+        top: -5px;
+        left: -5px;
+        opacity: 1;
+    }
+    25% {
+        top: 0px;
+        left: 0px;
+        opacity: 1;
+    }
+    50%, 100% {
+        top: 5px;
+        left: 5px;
+        opacity:0;
+    }
+}
+
+.instruction {
+    background: #F8F8F8;
+    position: relative;
+    width: 100%;
+}
+
+.instruction h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+}
+
+.instruction .text-area {
+    padding-top: 5em;
+    padding-left: 3em;
+    line-height: 2;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    background-color: #F8F8F8;
+    position: relative;
+}
+
+ /* watch for snap scrolling https://www.youtube.com/watch?v=0Og_kQUsxEw */

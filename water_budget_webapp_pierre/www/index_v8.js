@@ -5,12 +5,12 @@
 // sending nested json and number of nodes from R
 var leaf_nodes_1;
 
-Shiny.addCustomMessageHandler("search_height",
+Shiny.addCustomMessageHandler("component_height",
 function(message) {
     leaf_nodes_1 = message;
 })
 
-Shiny.addCustomMessageHandler("search_json",
+Shiny.addCustomMessageHandler("component_json",
 function (message) {
 
     // Loading csv containing URIs for each property (components, estimation methods etc.)
@@ -111,7 +111,7 @@ function (message) {
         var height = (leaf_nodes_1*35) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
 
         // appending svg object to the body div "container"
-        var svg = d3.select("#search_container")   /////////changed Id, removed autoscroll and reduced 1 label level option
+        var svg = d3.select("#component_container")   /////////changed Id, removed autoscroll and reduced 1 label level option
             .append("svg")
                 .attr("width", width + margin.right + margin.left)
                 .attr("height", d => { return leaf_nodes_1 < 3 ? height + margin.top + margin.bottom + 150 : height + margin.top + margin.bottom + 30 ;})
@@ -127,6 +127,13 @@ function (message) {
         .attr('rx', 20);
         
         var i = 0;
+
+        // Auto-scroll
+        var scrollCount = 1;
+        while (scrollCount < 2) {
+            autoscroll();
+            scrollCount++ ;
+        } 
 
         // adjusting height dynamically
         if (leaf_nodes_1 < 3) {
@@ -267,6 +274,21 @@ function (message) {
                 });
 
             } 
+
+            function autoscroll() {
+                d3.select("#component_container")
+                    .transition()
+                    .duration(1000)
+                    .tween("scroll", scrollTween(270));
+                
+                function scrollTween(offset) {
+                    return function() {
+                        var i = d3.interpolateNumber(window.pageYOffset || document.documentElement.scrollTop, offset);
+                        return function(t) {scrollTo(0, i(t));};
+                    };
+                }
+                
+            }
         })
 
 })
