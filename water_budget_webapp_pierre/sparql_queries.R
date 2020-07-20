@@ -461,6 +461,44 @@ for (i in 1:length(uri_list)) {
 
 
 
+####################### Reverse JSON ################################
+
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?dsL ?pL ?emL ?cL ?jL ?type WHERE {
+    ?c wb:usedBy ?j.
+    ?c rdf:type ?t.
+    ?t rdfs:label ?type.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    OPTIONAL {
+    ?c wb:hasEstimationMethod ?em.
+    ?em rdfs:label ?emL.
+    ?em wb:hasParameter ?p.
+    ?p rdfs:label ?pL.
+    ?p wb:hasDataSource ?ds.
+    ?ds rdfs:label ?dsL.
+    }
+} "
+
+res <- rdf_query(file, query)
+
+# Exporting as dataframe
+df <- as.data.frame(res)
+df <- df[which(df$type == 'Component'),]
+df <- arrange(df, dsL, pL, emL, cL) # each column in ascending order
+#df$cL <- gsub("-[A-Z][A-Z]","", df$cL)#remove state initials from components
+df <- df[which(df$jL == 'CO'),]
+#df <- select(df, -jL)
+df <- select(df, -type, -jL)
+
+nested_json <- d3_nest(data = df, root = "Data Source");
+#nested_json_colorado <- d3_nest(df_colorado, root = "CO")
+write(nested_json, "./www/sample_json_reverse.json")
 
 
 #### ----------------------------- Developing and exploring SPARQL queries
