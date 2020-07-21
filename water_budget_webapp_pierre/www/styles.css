@@ -342,6 +342,43 @@ a, a:hover, a:visited {
 
 
 /**************************************************************************
+Tab - Data Source
+***************************************************************************/
+
+
+#data_source_sticky {
+    position: sticky;
+    top: -50px;
+    text-align: center;
+}
+ 
+#data_source_sticky svg {
+    background: white;
+    position: relative;
+    margin-top: -9px;
+    
+}
+
+@media (max-width: 766px) {
+    #data_source_sticky {
+        position: sticky;
+        top: 50px;
+    }
+
+}
+
+/* Align the chart rectangular box to the center */
+#data_source_container {
+    text-align: center;
+}
+
+
+
+
+
+
+
+/**************************************************************************
 Tab - Home
 ***************************************************************************/
 

@@ -58,6 +58,8 @@ df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
 #df <- df[which(df$jL == 'CO'),]
 #df <- select(df, -jL)
 df <- select(df, -type)
+df$dsL <- gsub(",","", df$dsL)
+df$dsL
 #df_table <- cat(format_csv(df))
 write.table(df, file = "./www/hyperlink.csv", sep = ",",
                         qmethod = "double", quote=FALSE, 
