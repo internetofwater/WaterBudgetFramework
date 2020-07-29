@@ -105,7 +105,9 @@ ui <- fluidPage(id = "page", theme = "styles.css",
               tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
-              tags$script(src = "index_v8.js")),
+              tags$script(src = "index_v8.js"),
+              tags$script(src = "index_home.js")
+              ),
     tags$body(HTML('<link rel="shortcut icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
     tags$div(class = "header",
@@ -120,23 +122,29 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
 # ------ Tab - Home ------ #
       tabPanel(title = "Home",
-        tags$div(class = "home-banner",
-                 tags$img(class = "home-banner-img",
-                          src = "image_2.jpg"),
-                 tags$div(class = "banner-text",
-                          tags$p(class = "h1", "WELCOME")),
-                 tags$div(class = "scrolldown",
-                          tags$span(),
-                          tags$span(),
-                          tags$span())
-                 ),
-        tags$div(class = "instruction",
-                 tags$div(class = "text-area",
-                          tags$h1("What is IoW Water Budget Tool?"),
-                          tags$br(), tags$br(),
-                          tags$p("bla bla stuff")
-                          )
-                 )),
+        tags$div(class = "home",
+          tags$div(class = "home-banner",
+                   tags$img(class = "home-banner-img",
+                            src = "image_2.jpg"),
+                   tags$div(class = "banner-text",
+                            tags$p(class = "h1", "WELCOME")),
+                   tags$div(class = "scrolldown",
+                            tags$span(),
+                            tags$span(),
+                            tags$span())
+                   ),
+          tags$div(class = "instruction-1",
+                   tags$div(class = "text-area",
+                            tags$h1("What is IoW Water Budget Tool?"),
+                            tags$br(), tags$br(),
+                            tags$h3("IoW Water Budget Tool is a web application that allows users to explore water budget frameworks 
+                                   of states across the United States. A water budget framework consists of a jusrisdiction, components,
+                                   estimation methods, parameters and data sources. "),
+                            tags$div(id = "home_container")
+                            )
+                   ),
+          tags$div(class = "instruction-2")
+          )),
 
       
 # ------ Tab - Component - Begin ------ # 
@@ -212,7 +220,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                    src = "image_4.jpg"),
                           tags$div(class = "banner-text",
                                    tags$p(class = "h1", "Search by data source"),
-                                   tags$p(class = "h3", "Explore the objects used by a data source")
+                                   tags$p(class = "h3", "Explore the estimation methods and components used by a data source")
                           )),
                  column(width = 12,
                         column(width = 3,

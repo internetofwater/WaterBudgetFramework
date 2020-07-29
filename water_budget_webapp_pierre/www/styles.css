@@ -478,19 +478,21 @@ Tab - Home
     }
 }
 
-.instruction {
+.instruction-1 {
     background: #F8F8F8;
     position: relative;
+    height: 100vh;
     width: 100%;
+    scroll-snap-align: start;
 }
 
-.instruction h1 {
+.instruction-1 h1 {
     margin: 0;
     padding: 0;
     font-weight: bolder;
 }
 
-.instruction .text-area {
+.instruction-1 .text-area {
     padding-top: 5em;
     padding-left: 3em;
     line-height: 2;
@@ -501,4 +503,17 @@ Tab - Home
     position: relative;
 }
 
+.text-area {
+    animation: fade linear 1s 1;
+    -webkit-animation: fade linear 1s 1;
+    -moz-animation: fade linear 1s 1;
+    -o-animation: fade linear 1s 1;
+    -ms-animation: fade linear 1s 1;
+  }
+
+  .instruction-1 h3 {
+      line-height: 2;
+  }
+
  /* watch for snap scrolling https://www.youtube.com/watch?v=0Og_kQUsxEw */
+
