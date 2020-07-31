@@ -108,7 +108,7 @@ function (message) {
 
         var margin = {top: 25, right: 50, bottom: 20, left: 50}
         var width = 1050 - margin.left - margin.right //change width because leaf nodes were going out
-        var height = (leaf_nodes_1*35) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
+        var height = (leaf_nodes_1*40) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
 
         // appending svg object to the body div "container"
         var svg = d3.select("#component_container")   /////////changed Id, removed autoscroll and reduced 1 label level option
@@ -157,6 +157,8 @@ function (message) {
             // x and y position for nodes;
             var treeData = tree(root);
             
+            console.log(treeData);
+
             // compute the new tree layout
             var nodes = treeData.descendants()
             var links = treeData.descendants().slice(1);
