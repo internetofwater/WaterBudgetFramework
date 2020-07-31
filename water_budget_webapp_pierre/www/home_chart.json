@@ -1,0 +1,42 @@
+{
+    "name": "Jurisdiction",
+    "children": [
+        {
+            "name": "Component",
+            "children": [
+                {
+                    "name": "Estimation Method",
+                    "children": [
+                        {
+                            "name": "Parameter",
+                            "children": [
+                                {
+                                    "name": "Data Source"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Flow Type"
+                },
+                {
+                    "name": "Flow Source"
+                },
+                {
+                    "name": "Flow Sink"
+                },
+                {
+                    "name": "Subcomponent of"
+                },
+                {
+                    "name": "Partial Subcomponent of"
+                },
+                {
+                    "name": "Exact Match"
+                }
+
+            ]
+        }
+    ]
+} 

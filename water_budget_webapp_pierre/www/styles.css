@@ -385,8 +385,9 @@ Tab - Home
 .home-banner {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 120px);
     font-size: 1em;
+    overflow: hidden;
 }
 
 .home-banner > .home-banner-img {
@@ -501,6 +502,7 @@ Tab - Home
     margin: auto;
     background-color: #F8F8F8;
     position: relative;
+    overflow: hidden;
 }
 
 .text-area {

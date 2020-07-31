@@ -97,15 +97,25 @@ component_choices <- c(unique(df_component_full$cL))
 data_source_choices <- c(unique(df_state$dsL))
 data_source_choices <- sort(data_source_choices[-1]) # remove NA & reordering
 
+#home tab chart
+# home_d3 <- fromJSON("www/home_chart.json")
+# home_d3_df <- lapply(home_d3, function(a) # Loop through each "play"
+# {
+#   data.frame(matrix(unlist(a), ncol=5, byrow=TRUE))
+# })
+
+
 # Shiny app
 ui <- fluidPage(id = "page", theme = "styles.css",
     useShinyjs(),
+    #includeScript("www/index_home_test.js"),
     tags$head(tags$link(href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap",
                         rel="stylesheet"),
               tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
-              tags$script(src = "index_v8.js")
+              tags$script(src = "index_v8.js"),
+              tags$script(src = "index_home_chart.js")
               ),
     tags$body(HTML('<link rel="shortcut icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
@@ -140,7 +150,12 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                  estimation methods, parameters and data sources with the components containing additional properties.")
                           )
                  ),
-        tags$div(class = "instruction-2")
+       # tags$div(class = "instruction-2"),
+        tags$body(tags$div(id = "home_container", 
+                 "HELLOOOOOO",
+                 actionButton(inputId = "lalala", 
+                              label = "",
+                              icon = icon("check"))))
           ),
         
 
@@ -242,6 +257,13 @@ ui <- fluidPage(id = "page", theme = "styles.css",
   ))
 
 server <- function(input, output, session){
+  
+# send random custom message to communicate with d3
+  observeEvent(input$lalala ,{
+    abc <- "hello"
+    session$sendCustomMessage(type = "home_chart", abc)
+  })
+  
   
 # Update component choices based on states you select
   observe({
