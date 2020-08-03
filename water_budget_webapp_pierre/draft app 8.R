@@ -4,6 +4,7 @@ library(tidyverse)
 library(rdflib)
 library(jsonlite)
 library(d3r)
+#library(htmlwidgets)
 
 # Importing ttl file
 file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
@@ -115,7 +116,8 @@ ui <- fluidPage(id = "page", theme = "styles.css",
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
               tags$script(src = "index_v8.js"),
-              tags$script(src = "index_home_chart.js")
+              #tags$script(type="text/javascript", src = "index_home_chart.js")
+             # tags$script(JS('drawChart()'))
               ),
     tags$body(HTML('<link rel="shortcut icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
@@ -148,14 +150,10 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$h3("IoW Water Budget Tool is a web application that allows users to explore water budget frameworks
                                  across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
                                  estimation methods, parameters and data sources with the components containing additional properties.")
-                          )
+                          ),
+                 tags$div(id = "home_container")
                  ),
-       # tags$div(class = "instruction-2"),
-        tags$body(tags$div(id = "home_container", 
-                 "HELLOOOOOO",
-                 actionButton(inputId = "lalala", 
-                              label = "",
-                              icon = icon("check"))))
+        tags$div(class = "instruction-2"),
           ),
         
 
@@ -258,11 +256,12 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
 server <- function(input, output, session){
   
-# send random custom message to communicate with d3
-  observeEvent(input$lalala ,{
-    abc <- "hello"
-    session$sendCustomMessage(type = "home_chart", abc)
-  })
+# Home tab - send random custom message to communicate with d3
+  runjs('
+        var home_chart = document.createElement("script");
+        home_chart.src = "index_home_chart.js";
+        document.head.appendChild(home_chart)
+        ')
   
   
 # Update component choices based on states you select

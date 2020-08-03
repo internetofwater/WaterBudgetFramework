@@ -51,7 +51,12 @@ var margin = {top: 50, right: 50, bottom: 50, left: 50};
 var width = 1200 - margin.left - margin.right;
 var height = 500 - margin.top - margin.bottom; 
 
+// set rectangle dimensions
+box_width = 150;
+box_height = 30;
+
 // add svg on which d3 will be made
+
 var svg = d3.select("#home_container")
     .append("svg")
         .attr("height", height + margin.top + margin.bottom)
@@ -88,11 +93,14 @@ var link = svg.selectAll('path.link')
     .attr("fill", "none")   // without this its gonna fill all black
     .attr("stroke", "#ccc") // for the black line connecting nodes
     .attr('d', function(d) {
-        return "M" + d.y + "," + d.x
-        + "C" + (d.parent.y + 20) + "," + d.x
-        + " " + (d.parent.y + 10) + "," + d.parent.x
-        + " " + d.parent.y + "," + d.parent.x;
+        return "M" + d.y  + "," + (d.x + box_height/2)
+        + "C" + (d.parent.y + 170) + "," + (d.x + box_height/2)
+        + " " + (d.parent.y + 160) + "," + (d.parent.x + box_height/2) 
+        + " " + (d.parent.y + box_width) + "," + (d.parent.x + box_height/2);
     });
+
+    console.log(links)
+    // changing M y changes x axis
 
 var node = svg.selectAll('g.node')
     .data(nodes)
@@ -106,8 +114,8 @@ var node = svg.selectAll('g.node')
 // add circle for the nodes
 node.append('rect')
     .attr('class', 'node')
-    .attr('width', 120)
-    .attr('height', 30)
+    .attr('width', box_width)
+    .attr('height', box_height)
     .attr('rx', 6)
     .attr('ry', 6)
 //   .attr("x", function(d) { return d.children || d._children ? -60 : 26; })
@@ -118,17 +126,20 @@ node.append('rect')
 // ADD LABELS FOR THE NODES
 node.append('text')
     .attr("dy", "0.35em")
-    .attr("x", 30)
-    //.attr("y", -4) 
-    .attr("text-anchor", function(d) {
-        return d.children ? "end" : "start";
-    })
+    .attr("x", box_width/2)
+    .attr("y", box_height/2) 
+    .attr("text-anchor", "middle")
     .text(function(d) { return d.data.name; })
     .attr("font-size", "11")
     .style("font-family", "arial")
-    .style("fill", "#777777")
+    .style("fill", "#ffffff")
     .style("font-weight", "bold")
     // .style("word-break", "normal");
 
 
 
+
+    // // return "M" + d.y  + "," + (d.x + box_height/2)
+    // + "C" + (d.parent.y + 50) + "," + (d.x + box_height/2)
+    // + " " + (d.y + box_width + 50) + "," + (d.parent.x + box_height/2) 
+    // + " " + d.parent.y + "," + (d.parent.x + box_height/2);
