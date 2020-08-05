@@ -6,6 +6,154 @@ library(d3r)
 
 file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
 
+##########################################################################################################################
+##########################################################################################################################
+##########################################################################################################################
+
+# ---- 1. creating dataframe for flow and component-subcomponent info ---- #
+query_component <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?pscL ?psc ?exmL ?exm WHERE {
+    ?c wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    
+    OPTIONAL{
+    ?c wb:flowSource ?fsource.
+    ?fsource rdfs:label ?fsourceL.
+    }
+    OPTIONAL{
+    ?c wb:flowSink ?fsink.
+    ?fsink rdfs:label ?fsinkL.
+    }
+    OPTIONAL{
+    ?c wb:isFlowType ?ftype.
+    ?ftype rdfs:label ?ftypeL.
+    }
+    OPTIONAL{
+    ?c wb:isSubComponentOf ?sc.
+    ?sc rdfs:label ?scL.
+    }
+    OPTIONAL{
+    ?c wb:isPartialSubComponentOf ?psc.
+    ?psc rdfs:label ?pscL.
+    }
+    OPTIONAL{
+    ?c wb:isExactMatch ?exm.
+    ?exm rdfs:label ?exmL.
+    }
+}
+"
+
+results_component <- rdf_query(file, query_component)
+df_component_full <- as.data.frame(results_component)
+df_component_full <- arrange(df_component_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
+df_component_full$cL <- gsub("-[A-Z][A-Z]","", df_component_full$cL)
+df_component_flow <- df_component_full[c(1,2,(seq(4,length(df_component_full), 2)))]
+write_csv(df_component_full, "www/df_component_full.csv")
+write_csv(df_component_flow, "www/df_component_flow.csv")
+
+# ---- 2. creating dataframe state-wise info ---- #
+query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?jL ?cL ?emL ?pL ?dsL ?type WHERE {
+    ?c wb:usedBy ?j.
+    ?c rdf:type ?t.
+    ?t rdfs:label ?type.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    OPTIONAL {
+    ?c wb:hasEstimationMethod ?em.
+    ?em rdfs:label ?emL.
+    ?em wb:hasParameter ?p.
+    ?p rdfs:label ?pL.
+    ?p wb:hasDataSource ?ds.
+    ?ds rdfs:label ?dsL.
+    }
+} HAVING (?type = 'Component')
+" 
+
+results_state <- rdf_query(file, query_state)
+df_state <- as.data.frame(results_state) 
+df_state <- select(df_state, -type)
+
+# Data source tab
+df_data_source <- select(df_state, -jL)
+df_data_source <- df_data_source[,c(4,3,2,1)]
+df_data_source$dsL <- gsub(",","", df_data_source$dsL)
+write_csv(df_data_source, "www/df_data_source.csv")
+
+# State tab
+df_state <- arrange(df_state, jL, cL, emL, pL, dsL) # each column in ascending alphabetical order
+df_state$cL <- gsub("-[A-Z][A-Z]","", df_state$cL) # remove state initials from components
+df_state$dsL <- gsub(",","", df_state$dsL)
+write_csv(df_state, "www/df_state.csv")
+
+
+# Everything (including url)
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?type WHERE {
+    ?c wb:usedBy ?j.
+    ?c rdf:type ?t.
+    ?t rdfs:label ?type.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    OPTIONAL {
+    ?c wb:hasEstimationMethod ?em.
+    ?em rdfs:label ?emL.
+    ?em wb:hasParameter ?p.
+    ?p rdfs:label ?pL.
+    ?p wb:hasDataSource ?ds.
+    ?ds rdfs:label ?dsL.
+    }
+} "
+
+res <- rdf_query(file, query)
+
+# Exporting as dataframe
+df <- as.data.frame(res)
+df <- df[which(df$type == 'Component'),]
+df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
+df <- select(df, -type)
+df$dsL <- gsub(",","", df$dsL)
+df$dsL
+write.table(df, file = "./www/hyperlink.csv", sep = ",",
+            qmethod = "double", quote=FALSE, 
+            row.name = FALSE)
+
+##########################################################################################################################
+##########################################################################################################################
+##########################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #--- Parent-child ---#
 # Only completed states (Colorado):
  # query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
@@ -64,6 +212,8 @@ df$dsL
 write.table(df, file = "./www/hyperlink.csv", sep = ",",
                         qmethod = "double", quote=FALSE, 
             row.name = FALSE)
+
+
 #df_colorado <- # SORT by components
 #write_csv(df, "water_budget_june8.csv")
 

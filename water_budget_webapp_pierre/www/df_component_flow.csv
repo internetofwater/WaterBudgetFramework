@@ -1,0 +1,190 @@
+jL,cL,fsourceL,fsinkL,ftypeL,scL,pscL,exmL
+CA,Applied Water,Zone Land System,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Applied Water Reuse/Recycled Water,Zone Land System,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Change in Groundwater Storage,NA,NA,Storage Change,Change in Total System Storage-CA,NA,NA
+CA,Change in Land System Storage,NA,NA,Storage Change,Change in Total System Storage-CA,NA,NA
+CA,Change in Surface Water Storage,NA,NA,Storage Change,Change in Total System Storage-CA,NA,NA
+CA,Change in Total System Storage,NA,NA,Storage Change,NA,NA,NA
+CA,Conveyance Evaporation,Zone Surface Water,Atmosphere,Outflow,Human Consumption-NM,NA,NA
+CA,Conveyance Evaporation,Zone Surface Water,Atmosphere,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Conveyance Seepage,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Conveyance Seepage,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Evapotranspiration,Zone Land System,Atmosphere,Outflow,Total Land System Outflow-CA,NA,NA
+CA,Groundwater Export,Zone Groundwater,External Groundwater,Outflow,Total Groundwater System Outflow-CA,NA,NA
+CA,Groundwater Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Groundwater Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Imported Water,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,NA,NA
+CA,Lake Evaporation,Zone Surface Water,Atmosphere,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Lake Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Lake Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Lake Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Lake Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Lake Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Managed Aquifer Recharge,Zone Land System,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Managed Aquifer Recharge,Zone Land System,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Managed Aquifer Recharge,Zone Land System,Zone Groundwater,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-NM,NA,NA
+CA,Precipitation,Atmosphere,Zone Land System,Inflow,Total Land System Inflow-CA,NA,NA
+CA,Precipitation on Lakes,Atmosphere,Zone Surface Water,Inflow,Precipitation-NM,NA,NA
+CA,Precipitation on Lakes,Atmosphere,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,NA,NA
+CA,Recharge of Applied Water,Zone Land System,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Recharge of Applied Water,Zone Land System,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Recharge of Applied Water,Zone Land System,Zone Groundwater,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Recharge of Precipitation,Zone Land System,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Recharge of Precipitation,Zone Land System,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Recharge of Precipitation,Zone Land System,Zone Groundwater,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Recycled Water Export,Zone Land System,External Land System,Outflow,Total Land System Outflow-CA,NA,NA
+CA,Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Runoff,Zone Land System,Zone Surface Water,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Runoff,Zone Land System,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Stored Water Export,Zone Groundwater,External Groundwater,Outflow,Total Groundwater System Outflow-CA,NA,NA
+CA,Stored Water Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Stored Water Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Stream Evaporation,Zone Surface Water,Atmosphere,Total Outflow-CA,Total Surface Water Outflow-CA,NA,NA
+CA,Stream Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Stream Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Stream Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,NA,NA
+CA,Stream Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Stream Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Stream Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Stream Outflow,Zone Surface Water,External Surface Water,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Subsurface Inflow,External Groundwater,Zone Groundwater,Inflow,Total Groundwater System Inflow-CA,NA,NA
+CA,Subsurface Outflow,Zone Groundwater,External Groundwater,Outflow,Total Groundwater System Outflow-CA,NA,NA
+CA,Surface Water Delivery,Zone Surface Water,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Surface Water Delivery,Zone Surface Water,Zone Land System,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Surface Water Diversions,Zone Surface Water,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Surface Water Diversions,Zone Surface Water,Zone Surface Water,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Surface Water Exports,Zone Surface Water,External Surface Water,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Total Groundwater System Inflow,NA,NA,Inflow,NA,NA,NA
+CA,Total Groundwater System Outflow,NA,NA,Outflow,NA,NA,NA
+CA,Total Inflow,NA,NA,NA,NA,NA,NA
+CA,Total Land System Inflow,NA,NA,NA,NA,NA,NA
+CA,Total Land System Outflow,NA,NA,NA,NA,NA,NA
+CA,Total Outflow,NA,NA,NA,NA,NA,NA
+CA,Total Surface Water Inflow,NA,NA,NA,NA,NA,NA
+CA,Total Surface Water Outflow,NA,NA,NA,NA,NA,NA
+CA,Water Release Caused by Land Subsidence,NA,Zone Groundwater,Inflow,Total Groundwater System Inflow-CA,NA,NA
+CO,Baseflow,NA,NA,NA,NA,NA,NA
+CO,Change in Ground Water Storage,NA,NA,Storage Change,NA,NA,NA
+CO,Change in Surface Water Storage,NA,NA,Storage Change,NA,NA,NA
+CO,CO Agricultural Meteorology Network Station (COAGM),NA,NA,NA,NA,NA,NA
+CO,CO Division of Water Resources Gages,NA,NA,NA,NA,NA,NA
+CO,CO Livestock Method,NA,NA,NA,NA,NA,NA
+CO,Colorado Census Bureau,NA,NA,NA,NA,NA,NA
+CO,Colorado StateMod,NA,NA,NA,NA,NA,NA
+CO,Consumptive Ratio,NA,NA,NA,NA,NA,NA
+CO,Crop Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
+CO,Crop Growth State Coefficient (Kc),NA,NA,NA,NA,NA,NA
+CO,Daily ASCE Standardized Penman-Monteith,NA,NA,NA,NA,NA,NA
+CO,Daily Effective Precipitation,NA,NA,NA,NA,NA,NA
+CO,Daily Modified Hargreaves,NA,NA,NA,NA,NA,NA
+CO,Daily Penman-Monteith,NA,NA,NA,NA,NA,NA
+CO,Evaporation,NA,NA,NA,NA,NA,NA
+CO,Exports,Zone Groundwater,External Groundwater,Outflow,NA,Basin Outflow-UT,NA
+CO,Exports,Zone Groundwater,External Surface Water,Outflow,NA,Basin Outflow-UT,NA
+CO,Exports,Zone Surface Water,External Groundwater,Outflow,NA,Basin Outflow-UT,NA
+CO,Exports,Zone Surface Water,External Surface Water,Outflow,NA,Basin Outflow-UT,NA
+CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,Basin Inflow-UT,NA,NA
+CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,River Inflow-UT,NA,NA
+CO,Gaged Surface Water Outflow,Zone Surface Water,External Surface Water,Outflow,Basin Outflow-UT,NA,NA
+CO,Gross Usage,NA,NA,NA,NA,NA,NA
+CO,Ground Water Inflow,External Groundwater,Zone Groundwater,Inflow,NA,NA,NA
+CO,Ground Water Outflow,Zone Groundwater,External Groundwater,Outflow,NA,NA,NA
+CO,Historical Reservoir Content,NA,NA,NA,NA,NA,NA
+CO,Imports,External Groundwater,Zone Land System,Inflow,NA,Basin Inflow-UT,NA
+CO,Imports,External Surface Water,Zone Land System,Inflow,NA,Basin Inflow-UT,NA
+CO,Instream Flow Demand,NA,NA,NA,NA,NA,NA
+CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Agricultural and Municipal Depletions-UT,NA
+CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Agricultural Depletions-UT,NA
+CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Agricultural and Municipal Depletions-UT,NA
+CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Agricultural Depletions-UT,NA
+CO,Livestock Count,NA,NA,NA,NA,NA,NA
+CO,"Midwest Plan Service Structures and Environmental Handbook, 1977",NA,NA,NA,NA,NA,NA
+CO,Modified Blaney-Criddle,NA,NA,NA,NA,NA,NA
+CO,Modified Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,NA
+CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
+CO,Municipal and Industrial Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
+CO,National Oceanic and Atmospheric Administration Stations,NA,NA,NA,NA,NA,NA
+CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Natural System Use-UT,NA
+CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Riparian Depletions-UT,NA
+CO,Native Vegetation Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,Natural System Use-UT,NA
+CO,Native Vegetation Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,Riparian Depletions-UT,NA
+CO,Original Blaney-Criddle,NA,NA,NA,NA,NA,NA
+CO,Original Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,NA
+CO,Population,NA,NA,NA,NA,NA,NA
+CO,Precipitation,NA,NA,NA,NA,NA,NA
+CO,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,NA
+CO,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+CO,Reservoir Targets,NA,NA,NA,NA,NA,NA
+CO,Return Flow,NA,NA,NA,NA,NA,NA
+CO,SCS TR21,NA,NA,NA,NA,NA,NA
+CO,Solar Radiation,NA,NA,NA,NA,NA,NA
+CO,State Agricultural Statistics,NA,NA,NA,NA,NA,NA
+CO,Sum of Monthly Consumptive Use Factors for Growing Season (F),NA,NA,NA,NA,NA,NA
+CO,Temperature,NA,NA,NA,NA,NA,NA
+CO,Temperature Coefficient (Kt),NA,NA,NA,NA,NA,NA
+CO,Ungaged Surface Water Inflow,External Surface Water,Zone Surface Water,Inflow,River Inflow-UT,NA,NA
+CO,US Bureau of Reclamation Stations,NA,NA,NA,NA,NA,NA
+CO,Vapor Pressure,NA,NA,NA,NA,NA,NA
+CO,Well Demand,NA,NA,NA,NA,NA,NA
+CO,Wind Run,NA,NA,NA,NA,NA,NA
+NM,Evaporation,Zone Land System,Atmosphere,Outflow,Total Evaporation-NM,NA,NA
+NM,Groundwater Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Groundwater ET,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,NA,NA
+NM,Groundwater ET,Zone Groundwater,Atmosphere,Outflow,Total Evaporation-NM,NA,NA
+NM,Groundwater Inflows,External Groundwater,Zone Groundwater,Inflow,NA,NA,NA
+NM,Groundwater Outflows,Zone Groundwater,External Groundwater,Outflow,NA,NA,NA
+NM,Groundwater Return,Zone Land System,Zone Groundwater,Internal Transfer,NA,NA,NA
+NM,Groundwater Stock,NA,NA,NA,NA,NA,NA
+NM,Human Storage and Distribution System Stock,NA,NA,NA,Change in Surface Water Storage-CA,NA,NA
+NM,Land Surface Evapotranspiration,Zone Land System,Atmosphere,Outflow,NA,NA,NA
+NM,Land Surface Stock,NA,NA,NA,NA,NA,NA
+NM,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,NA
+NM,Recharge,Zone Land System,Zone Groundwater,Internal Transfer,NA,NA,NA
+NM,Riparian Consumption,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
+NM,River Evaporation,Zone Surface Water,Atmosphere,Outflow,Total Evaporation-NM,NA,NA
+NM,Runoff,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
+NM,Surface Water Diversions,Zone Surface Water,Zone Land System,Outflow,NA,NA,NA
+NM,Surface Water Inflows,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
+NM,Surface Water Outflows,Zone Surface Water,External Surface Water,Outflow,NA,NA,NA
+NM,Surface Water Returns,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
+NM,Surface Water Stock,NA,NA,NA,NA,NA,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
+UT,Agricultural and Municipal Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Agricultural and Municipal Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
+UT,Agricultural Potential Consumptive Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Agricultural Potential Consumptive Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Area Outflows,Zone Land System,External Surface Water,Outflow,Exports-CO,NA,NA
+UT,Area Outflows,Zone Surface Water,External Surface Water,Outflow,Exports-CO,NA,NA
+UT,Basin Inflow,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
+UT,Basin Outflow,Zone Surface Water,External Surface Water,Outflow,Exports-CO,NA,NA
+UT,Cropland Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-UT,NA,NA
+UT,Flow Constrained Actual Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
+UT,Flow Constrained Actual Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+UT,Groundwater Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
+UT,Natural System Use,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,NA,NA
+UT,Natural System Use,Zone Surface Water,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,NA,NA
+UT,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,NA
+UT,Pumped Groundwater,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+UT,Riparian Depletions,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,NA,NA
+UT,Riparian Depletions,Zone Land System,Atmosphere,Outflow,Natural System Use-UT,NA,NA
+UT,River Inflow,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
+UT,River Use By Wet Pasture,Zone Surface Water,Zone Land System,Internal Transfer,Crop Consumptive Use-CO,NA,NA
+UT,Surface Diversion to Cropland,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Surface Water Flows,Zone Surface Water,Zone Surface Water,Internal Transfer,NA,NA,NA
+UT,Total Land Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Imports-CO,NA,NA

@@ -1,0 +1,142 @@
+jL,cL,emL,pL,dsL
+CA,Applied Water,NA,NA,NA
+CA,Applied Water Reuse/Recycled Water,NA,NA,NA
+CA,Change in Groundwater Storage,NA,NA,NA
+CA,Change in Land System Storage,NA,NA,NA
+CA,Change in Surface Water Storage,NA,NA,NA
+CA,Change in Total System Storage,NA,NA,NA
+CA,Conveyance Evaporation,NA,NA,NA
+CA,Conveyance Seepage,NA,NA,NA
+CA,Evapotranspiration,NA,NA,NA
+CA,Groundwater Export,NA,NA,NA
+CA,Groundwater Extraction,NA,NA,NA
+CA,Imported Water,NA,NA,NA
+CA,Lake Evaporation,NA,NA,NA
+CA,Lake Gain from Groundwater,NA,NA,NA
+CA,Lake Loss to Groundwater,NA,NA,NA
+CA,Managed Aquifer Recharge,NA,NA,NA
+CA,Precipitation,NA,NA,NA
+CA,Precipitation on Lakes,NA,NA,NA
+CA,Recharge of Applied Water,NA,NA,NA
+CA,Recharge of Precipitation,NA,NA,NA
+CA,Recycled Water Export,NA,NA,NA
+CA,Return Flow,NA,NA,NA
+CA,Runoff,NA,NA,NA
+CA,Stored Water Export,NA,NA,NA
+CA,Stored Water Extraction,NA,NA,NA
+CA,Stream Evaporation,NA,NA,NA
+CA,Stream Gain from Groundwater,NA,NA,NA
+CA,Stream Inflow,NA,NA,NA
+CA,Stream Loss to Groundwater,NA,NA,NA
+CA,Stream Outflow,NA,NA,NA
+CA,Subsurface Inflow,NA,NA,NA
+CA,Subsurface Outflow,NA,NA,NA
+CA,Surface Water Delivery,NA,NA,NA
+CA,Surface Water Diversions,NA,NA,NA
+CA,Surface Water Exports,NA,NA,NA
+CA,Total Groundwater System Inflow,NA,NA,NA
+CA,Total Groundwater System Outflow,NA,NA,NA
+CA,Total Inflow,NA,NA,NA
+CA,Total Land System Inflow,NA,NA,NA
+CA,Total Land System Outflow,NA,NA,NA
+CA,Total Outflow,NA,NA,NA
+CA,Total Surface Water Inflow,NA,NA,NA
+CA,Total Surface Water Outflow,NA,NA,NA
+CA,Water Release Caused by Land Subsidence,NA,NA,NA
+CO,Change in Ground Water Storage,NA,NA,NA
+CO,Change in Surface Water Storage,NA,NA,NA
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Vapor Pressure,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Modified Hargreaves,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Modified Hargreaves,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Modified Hargreaves,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Modified Hargreaves,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Modified Hargreaves,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Modified Hargreaves,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Vapor Pressure,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use,Original Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,Original Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Original Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Original Blaney-Criddle,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Temperature Coefficient (Kt),SCS TR21
+CO,Exports,NA,NA,NA
+CO,Gaged Surface Water Inflow,NA,NA,NA
+CO,Gaged Surface Water Outflow,NA,NA,NA
+CO,Ground Water Inflow,NA,NA,NA
+CO,Ground Water Outflow,NA,NA,NA
+CO,Imports,NA,NA,NA
+CO,Livestock Consumptive Use,CO Livestock Method,Average Use Rate,Midwest Plan Service Structures and Environmental Handbook 1977
+CO,Livestock Consumptive Use,CO Livestock Method,Livestock Count,State Agricultural Statistics
+CO,Municipal and Industrial Consumptive Use,CO Municipal and Industrial Method,Population,Colorado Census Bureau
+CO,Native Vegetation Consumptive Use,NA,NA,NA
+CO,Precipitation,NA,NA,NA
+CO,Reservoir Evaporation,NA,NA,NA
+CO,Ungaged Surface Water Inflow,NA,NA,NA
+NM,Evaporation,NA,NA,NA
+NM,Groundwater Diversions,NA,NA,NA
+NM,Groundwater ET,NA,NA,NA
+NM,Groundwater Inflows,NA,NA,NA
+NM,Groundwater Outflows,NA,NA,NA
+NM,Groundwater Return,NA,NA,NA
+NM,Groundwater Stock,NA,NA,NA
+NM,Human Storage and Distribution System Stock,NA,NA,NA
+NM,Land Surface Evapotranspiration,NA,NA,NA
+NM,Land Surface Stock,NA,NA,NA
+NM,Precipitation,NA,NA,NA
+NM,Recharge,NA,NA,NA
+NM,Riparian Consumption,NA,NA,NA
+NM,River Evaporation,NA,NA,NA
+NM,Runoff,NA,NA,NA
+NM,Surface Water Diversions,NA,NA,NA
+NM,Surface Water Inflows,NA,NA,NA
+NM,Surface Water Outflows,NA,NA,NA
+NM,Surface Water Returns,NA,NA,NA
+NM,Surface Water Stock,NA,NA,NA
+UT,Agricultural and Municipal Depletions,NA,NA,NA
+UT,Agricultural and Municipal Diversions,NA,NA,NA
+UT,Agricultural Depletions,NA,NA,NA
+UT,Agricultural Potential Consumptive Use,NA,NA,NA
+UT,Area Outflows,NA,NA,NA
+UT,Basin Inflow,NA,NA,NA
+UT,Basin Outflow,NA,NA,NA
+UT,Cropland Precipitation,NA,NA,NA
+UT,Flow Constrained Actual Consumptive Use,NA,NA,NA
+UT,Groundwater Use,NA,NA,NA
+UT,Municipal and Industrial Depeltion,NA,NA,NA
+UT,Municipal and Industrial Diversions,NA,NA,NA
+UT,Municipal and Industrial Return Flow,NA,NA,NA
+UT,Natural System Use,NA,NA,NA
+UT,Precipitation,NA,NA,NA
+UT,Pumped Groundwater,NA,NA,NA
+UT,Reservoir Evaporation,NA,NA,NA
+UT,Riparian Depletions,NA,NA,NA
+UT,River Inflow,NA,NA,NA
+UT,River Use By Wet Pasture,NA,NA,NA
+UT,Surface Diversion to Cropland,NA,NA,NA
+UT,Surface Water Flows,NA,NA,NA
+UT,Total Land Return Flow,NA,NA,NA
+UT,Tributary Inflow,NA,NA,NA
