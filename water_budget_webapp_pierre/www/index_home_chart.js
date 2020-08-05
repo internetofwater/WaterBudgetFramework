@@ -57,6 +57,14 @@ var svg = d3.select("#home_container")
     .append("g")
         .attr("transform", "translate(" + (margin.left + 80) + "," + margin.top + ")");
 
+// Background rectangle 
+svg.append("rect")
+.attr("width", width + margin.right + margin.left)
+.attr("height", height + margin.top + margin.bottom)
+.attr("transform", "translate(" + - margin.left  + "," + - (margin.top + 10) + ")")
+.attr("fill", "#F8F8F8")
+.attr('rx', 20);
+
 // set rectangle dimensions
 box_width = 150;
 box_height = 30;
