@@ -52,6 +52,9 @@ SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?psc
 results_component <- rdf_query(file, query_component)
 df_component_full <- as.data.frame(results_component)
 df_component_full <- arrange(df_component_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
+df_component_full <- df_component_full[grep(".-CO|.-NMOSE|.-UT|.-WY", df_component_full$cL),] # exclude California
+#df_component_full$cL <- gsub("-NMOSE","-NM", df_component_full$cL)
+#df_component_full$cL <- gsub("-[A-Z][A-Z][A-Z][A-Z][A-Z]","", df_component_full$cL)
 df_component_full$cL <- gsub("-[A-Z][A-Z]","", df_component_full$cL)
 df_component_flow <- df_component_full[c(1,2,(seq(4,length(df_component_full), 2)))]
 write_csv(df_component_full, "www/df_component_full.csv")
@@ -84,6 +87,8 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?type WHERE {
 results_state <- rdf_query(file, query_state)
 df_state <- as.data.frame(results_state) 
 df_state <- select(df_state, -type)
+df_state <- df_state[grep(".-CO|.-NMOSE|.-UT|.-WY", df_state$cL),] #Exclude California
+#$cL <- gsub("-NMOSE","-NM", df_state$cL) 
 
 # Data source tab
 df_data_source <- select(df_state, -jL)
@@ -91,8 +96,16 @@ df_data_source <- df_data_source[,c(4,3,2,1)]
 df_data_source$dsL <- gsub(",","", df_data_source$dsL)
 write_csv(df_data_source, "www/df_data_source.csv")
 
+# Component tab
+df_component <- arrange(df_state, jL, cL, emL, pL, dsL) # each column in ascending alphabetical order
+df_component$cL <- gsub("-[A-Z][A-Z][A-Z][A-Z][A-Z]","", df_component$cL) #remove "-NMOSE" for New mexico in output
+df_component$cL <- gsub("-[A-Z][A-Z]","", df_component$cL) # remove state initials from components
+df_component$dsL <- gsub(",","", df_component$dsL)
+write_csv(df_component, "www/df_component.csv")
+
 # State tab
 df_state <- arrange(df_state, jL, cL, emL, pL, dsL) # each column in ascending alphabetical order
+df_state$cL <- gsub("-[A-Z][A-Z][A-Z][A-Z][A-Z]","", df_state$cL)
 df_state$cL <- gsub("-[A-Z][A-Z]","", df_state$cL) # remove state initials from components
 df_state$dsL <- gsub(",","", df_state$dsL)
 write_csv(df_state, "www/df_state.csv")
@@ -119,13 +132,14 @@ SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?type WHERE {
     ?p wb:hasDataSource ?ds.
     ?ds rdfs:label ?dsL.
     }
-} "
+} HAVING (?type = 'Component')
+"
 
 res <- rdf_query(file, query)
 
 # Exporting as dataframe
 df <- as.data.frame(res)
-df <- df[which(df$type == 'Component'),]
+#df <- df[which(df$type == 'Component'),]
 df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
 df <- select(df, -type)
 df$dsL <- gsub(",","", df$dsL)

@@ -504,8 +504,8 @@ Tab - Home
 
 .instruction-1 .text-area {
     padding-top: 5%;
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 13%;
+    padding-right: 13%;
     line-height: 1;
     width: 100%;
     margin: auto;
@@ -528,5 +528,5 @@ Tab - Home
 
  #home_container {
     text-align: center;
-    
+    max-width: none;
 } 

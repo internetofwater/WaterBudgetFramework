@@ -19,7 +19,7 @@ function (message) {
         
         // Storing nested json data to 'data'
         var data = message;
-        console.log(uri_data);
+        
         //////////////////////////////////////////////////////
         ///////////////////// ADD URIs FROM CSV TO NESTED JSON 
         //////////////////////////////////////////////////////
@@ -70,7 +70,8 @@ function (message) {
         function addURI(array, uri, label, item){
             if (uri === 'c'){
                 for (const level_name in array){
-                    if (array[level_name][label] === item["name"] + '-' + data["name"]) {
+                    if (array[level_name][label] === item["name"] + '-' + data["name"] ||
+                    array[level_name][label] === item["name"] + '-' + data["name"] + "OSE") {
                         item["uri"] = array[level_name][uri]
                     }
                 }
@@ -82,6 +83,8 @@ function (message) {
                 }
             }  
         }
+
+        
 
         //adding uri as a property to each children node
         //data["uri"] = "http://purl.org/iow/WaterBudgetingFramework#" + data["name"]
@@ -156,8 +159,6 @@ function (message) {
         
             // x and y position for nodes;
             var treeData = tree(root);
-            
-            console.log(treeData);
 
             // compute the new tree layout
             var nodes = treeData.descendants()
@@ -318,7 +319,6 @@ function (message) {
         
         // Storing nested json data to 'data'
         var data = message;
-        console.log(uri_data);
         //////////////////////////////////////////////////////
         ///////////////////// ADD URIs FROM CSV TO NESTED JSON 
         //////////////////////////////////////////////////////
@@ -377,7 +377,9 @@ function (message) {
         function addURI(array, uri, label, item){
             if (uri === 'c'){
                 for (const level_name in array){
-                    if (array[level_name][label] === item["name"] + '-' + data["name"]) {
+                    if (array[level_name][label] === item["name"] + '-' + data["name"] ||
+                    array[level_name][label] === item["name"] + '-' + data["name"] + "OSE") //for Mexico 
+                    {
                         item["uri"] = array[level_name][uri]
                     }
                 }
@@ -408,7 +410,6 @@ function (message) {
         })
 
         console.log(c_uri_unique)
-        console.log(data)
 
         ////////////////////////////////////////////
         ///////////////////////////CREATING D3 CHART 
@@ -840,7 +841,7 @@ function (message) {
         addURI(ds_uri_unique, 'ds', 'dsL', data);
             data.children.forEach(item1 => {
                 addURI(p_uri_unique, 'p', 'pL', item1);
-                console.log(item1);
+                //console.log(item1);
                 //console.log(index);
                 item1.children.forEach(item2 =>{
                     addURI(em_uri_unique, 'em', 'emL', item2);

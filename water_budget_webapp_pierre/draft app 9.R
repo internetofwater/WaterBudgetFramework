@@ -7,20 +7,20 @@ library(d3r)
 #library(htmlwidgets)
 
 # ---- 1. Loading data for flow and component-subcomponent info ---- #
-df_component_full <- read_csv("www/df_component_full.csv")
-df_component_flow <- read_csv("www/df_component_flow.csv")
-
+df_component_full <- read_csv("www/df_component_full.csv") # dataframe for summary
+df_component_flow <- read_csv("www/df_component_flow.csv") # dataframe for summary
+df_component <- read_csv("www/df_component.csv") # dataframe for d3 chart on component tab
 
 # ---- 2. Loading dataframe state-wise info ---- #
-df_data_source <- read_csv("www/df_data_source.csv")
-df_state <- read_csv("www/df_state.csv")
+df_data_source <- read_csv("www/df_data_source.csv") # dataframe for d3 chart on data source tab
+df_state <- read_csv("www/df_state.csv") # dataframe for d3 chart on state tab
 
 
 #drop-down choices
-state_choices <- c("CA","CO","NM","UT") # later change it to unique values from dataframe
+state_choices <- c("CO","NM","UT","WY") # later change it to unique values from dataframe
 component_choices <- c(unique(df_component_full$cL))
 data_source_choices <- c(unique(df_state$dsL))
-data_source_choices <- sort(data_source_choices[-1]) # remove NA & reordering
+data_source_choices <- sort(data_source_choices[-1]) # remove NA & reorder
 
 #home tab chart
 # home_d3 <- fromJSON("www/home_chart.json")
@@ -73,11 +73,15 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$br(),
                           tags$h3("IoW Water Budget Tool is a web application that allows users to explore water budget frameworks
                                  across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
-                                 estimation methods, parameters and data sources with the components containing additional properties.")
+                                 estimation methods, parameters and data sources. The components have additional properties describing
+                                  flow information and relationship with other components within and across states."),
+                          tags$br()
                           ),
-                 tags$div(id = "home_container"),
+                 tags$div(id = "home_container",
+                          tags$img(src = "home_d3.svg")),
                  tags$br(),
-                 tags$div("More to come here...")
+                 tags$div(class = "text-area",
+                          tags$h3("More coming soon..."))
                  ),
           ),
         
@@ -182,17 +186,17 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
 server <- function(input, output, session){
   
-# Home tab - send random custom message to communicate with d3
-  runjs('
-        var home_chart = document.createElement("script");
-        home_chart.src = "index_home_chart.js";
-        document.head.appendChild(home_chart)
-        ')
+# Home tab - send random custom message to communicate with d3 (instead saved as png)
+  # runjs('
+  #       var home_chart = document.createElement("script");
+  #       home_chart.src = "index_home_chart.js";
+  #       document.head.appendChild(home_chart)
+  #       ')
   
   
 # Update component choices based on states you select
   observe({
-    choices_components <- df_state %>%
+    choices_components <- df_component %>%
       filter(jL %in% input$states1)
     choices_components <- c(unique(choices_components$cL))
     
@@ -240,8 +244,15 @@ server <- function(input, output, session){
     
     # Create intermediary objects to hold unique strings from dataframe "component_info"
     # multiple values for a property are separated by commas
-    summary_title <- paste(input$components, input$states1, 
-                           sep = "-")
+    if (input$states1 == "NM"){
+      summary_title <- paste(input$components, input$states1, 
+                             sep = "-")
+      summary_title <- paste0(summary_title, "OSE")
+    } else {
+      summary_title <- paste(input$components, input$states1, 
+                             sep = "-")
+    }
+    
     summary_list <- paste("summary", summary_properties, sep="_")
     
     for (i in 1:length(summary_properties)) {
@@ -293,7 +304,7 @@ server <- function(input, output, session){
 # Chart by component on Component tab
   observeEvent(input$runButton1, 
                autoDestroy = FALSE, {
-    selection_df_1 <- df_state %>%
+    selection_df_1 <- df_component %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
       as.data.frame()
