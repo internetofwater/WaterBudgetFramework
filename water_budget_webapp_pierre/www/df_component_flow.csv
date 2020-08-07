@@ -65,14 +65,18 @@ CA,Total Outflow,NA,NA,NA,NA,NA,NA
 CA,Total Surface Water Inflow,NA,NA,NA,NA,NA,NA
 CA,Total Surface Water Outflow,NA,NA,NA,NA,NA,NA
 CA,Water Release Caused by Land Subsidence,NA,Zone Groundwater,Inflow,Total Groundwater System Inflow-CA,NA,NA
+CO,Average Use Rate,NA,NA,NA,NA,NA,NA
 CO,Baseflow,NA,NA,NA,NA,NA,NA
 CO,Change in Ground Water Storage,NA,NA,Storage Change,NA,NA,NA
 CO,Change in Surface Water Storage,NA,NA,Storage Change,NA,NA,NA
 CO,CO Agricultural Meteorology Network Station (COAGM),NA,NA,NA,NA,NA,NA
 CO,CO Division of Water Resources Gages,NA,NA,NA,NA,NA,NA
+CO,CO GIS Exercise,NA,NA,NA,NA,NA,NA
 CO,CO Livestock Method,NA,NA,NA,NA,NA,NA
+CO,CO Native Vegetation Method,NA,NA,NA,NA,NA,NA
 CO,Colorado Census Bureau,NA,NA,NA,NA,NA,NA
 CO,Colorado StateMod,NA,NA,NA,NA,NA,NA
+CO,Colorado Water Conservation Board (CWCB),NA,NA,NA,NA,NA,NA
 CO,Consumptive Ratio,NA,NA,NA,NA,NA,NA
 CO,Crop Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
 CO,Crop Growth State Coefficient (Kc),NA,NA,NA,NA,NA,NA
@@ -80,56 +84,93 @@ CO,Daily ASCE Standardized Penman-Monteith,NA,NA,NA,NA,NA,NA
 CO,Daily Effective Precipitation,NA,NA,NA,NA,NA,NA
 CO,Daily Modified Hargreaves,NA,NA,NA,NA,NA,NA
 CO,Daily Penman-Monteith,NA,NA,NA,NA,NA,NA
+CO,Direct Flow Demand - Annual,NA,NA,NA,NA,NA,NA
+CO,Direct Flow Demand - Monthly,NA,NA,NA,NA,NA,NA
+CO,Diversions,NA,NA,NA,NA,NA,NA
+CO,Effective Precipitation Factor,NA,NA,NA,NA,NA,NA
 CO,Evaporation,NA,NA,NA,NA,NA,NA
 CO,Exports,Zone Groundwater,External Groundwater,Outflow,NA,Basin Outflow-UT,NA
 CO,Exports,Zone Groundwater,External Surface Water,Outflow,NA,Basin Outflow-UT,NA
 CO,Exports,Zone Surface Water,External Groundwater,Outflow,NA,Basin Outflow-UT,NA
 CO,Exports,Zone Surface Water,External Surface Water,Outflow,NA,Basin Outflow-UT,NA
+CO,Gage Height,NA,NA,NA,NA,NA,NA
 CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,Basin Inflow-UT,NA,NA
 CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,River Inflow-UT,NA,NA
 CO,Gaged Surface Water Outflow,Zone Surface Water,External Surface Water,Outflow,Basin Outflow-UT,NA,NA
+CO,Gross Monthly Free Water Surface Evaporation,NA,NA,NA,NA,NA,NA
 CO,Gross Usage,NA,NA,NA,NA,NA,NA
 CO,Ground Water Inflow,External Groundwater,Zone Groundwater,Inflow,NA,NA,NA
 CO,Ground Water Outflow,Zone Groundwater,External Groundwater,Outflow,NA,NA,NA
-CO,Historical Reservoir Content,NA,NA,NA,NA,NA,NA
+CO,Historical Data,NA,NA,NA,NA,NA,NA
+CO,Historical Diversions File,NA,NA,NA,NA,NA,NA
 CO,Imports,External Groundwater,Zone Land System,Inflow,NA,Basin Inflow-UT,NA
 CO,Imports,External Surface Water,Zone Land System,Inflow,NA,Basin Inflow-UT,NA
-CO,Instream Flow Demand,NA,NA,NA,NA,NA,NA
+CO,Instream Flow Demand-Monthly,NA,NA,NA,NA,NA,NA
+CO,Instream Flow Demand - Annual,NA,NA,NA,NA,NA,NA
 CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Agricultural and Municipal Depletions-UT,NA
 CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Agricultural Depletions-UT,NA
 CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Agricultural and Municipal Depletions-UT,NA
 CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Agricultural Depletions-UT,NA
 CO,Livestock Count,NA,NA,NA,NA,NA,NA
+CO,Mean Daily Percentage of Annual Daytime Hours,NA,NA,NA,NA,NA,NA
+CO,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,NA
 CO,"Midwest Plan Service Structures and Environmental Handbook, 1977",NA,NA,NA,NA,NA,NA
 CO,Modified Blaney-Criddle,NA,NA,NA,NA,NA,NA
 CO,Modified Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,NA
+CO,Monthly Effective Precipitation,NA,NA,NA,NA,NA,NA
+CO,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,NA
 CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
 CO,Municipal and Industrial Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
 CO,National Oceanic and Atmospheric Administration Stations,NA,NA,NA,NA,NA,NA
+CO,Native Vegetation Coefficient,NA,NA,NA,NA,NA,NA
 CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Natural System Use-UT,NA
 CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Riparian Depletions-UT,NA
 CO,Native Vegetation Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,Natural System Use-UT,NA
 CO,Native Vegetation Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,Riparian Depletions-UT,NA
+CO,Natural Flow Gain Distribution,NA,NA,NA,NA,NA,NA
+CO,NOAA Technical Report NWS 33,NA,NA,NA,NA,NA,NA
 CO,Original Blaney-Criddle,NA,NA,NA,NA,NA,NA
 CO,Original Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,NA
 CO,Population,NA,NA,NA,NA,NA,NA
+CO,Potential Evapotranspiration,NA,NA,NA,NA,NA,NA
 CO,Precipitation,NA,NA,NA,NA,NA,NA
 CO,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,NA
+CO,Proration Factors,NA,NA,NA,NA,NA,NA
+CO,Reservoir Estimation Method,NA,NA,NA,NA,NA,NA
 CO,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
 CO,Reservoir Targets,NA,NA,NA,NA,NA,NA
 CO,Return Flow,NA,NA,NA,NA,NA,NA
 CO,SCS TR21,NA,NA,NA,NA,NA,NA
+CO,Seasonal Consumptive Use Coefficients (K),NA,NA,NA,NA,NA,NA
 CO,Solar Radiation,NA,NA,NA,NA,NA,NA
 CO,State Agricultural Statistics,NA,NA,NA,NA,NA,NA
+CO,Streamflow,NA,NA,NA,NA,NA,NA
 CO,Sum of Monthly Consumptive Use Factors for Growing Season (F),NA,NA,NA,NA,NA,NA
 CO,Temperature,NA,NA,NA,NA,NA,NA
 CO,Temperature Coefficient (Kt),NA,NA,NA,NA,NA,NA
 CO,Ungaged Surface Water Inflow,External Surface Water,Zone Surface Water,Inflow,River Inflow-UT,NA,NA
 CO,US Bureau of Reclamation Stations,NA,NA,NA,NA,NA,NA
 CO,Vapor Pressure,NA,NA,NA,NA,NA,NA
-CO,Well Demand,NA,NA,NA,NA,NA,NA
 CO,Wind Run,NA,NA,NA,NA,NA,NA
+NM,Annual Evaporation,NA,NA,NA,NA,NA,NA
+NM,Average Monthly Reservoir Gage Height,NA,NA,NA,NA,NA,NA
+NM,"Brown and Caldwell,1984",NA,NA,NA,NA,NA,NA
+NM,Class A Pan Evaporation Data,NA,NA,NA,NA,NA,NA
+NM,Climate Coefficient (kt),NA,NA,NA,NA,NA,NA
+NM,CommercialOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,CommercialOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Commercial: Incomplete MeteredOSE,NA,NA,NA,Commercial-NMOSE,NA,NA
+NM,Commercial: MeteredOSE,NA,NA,NA,Commercial-NMOSE,NA,NA
+NM,Commercial: SchoolsOSE,NA,NA,NA,Commercial: Unmetered-NMOSE,NA,NA
+NM,Commercial: UnmeteredOSE,NA,NA,NA,Commercial-NMOSE,NA,NA
+NM,Conservancy Districts,NA,NA,NA,NA,NA,NA
+NM,Consumptive Irrigation Requirement (CIR),NA,NA,NA,NA,NA,NA
+NM,Crop Growth State Coefficient (Kc),NA,NA,NA,NA,NA,NA
+NM,Empirical Data for Small Reservoirs,NA,NA,NA,NA,NA,NA
 NM,Evaporation,Zone Land System,Atmosphere,Outflow,Total Evaporation-NM,NA,NA
+NM,Evaporation from ReservoirsOSE,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+NM,Facility Director or Operator,NA,NA,NA,NA,NA,NA
+NM,GPS Population Data,NA,NA,NA,NA,NA,NA
 NM,Groundwater Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
 NM,Groundwater ET,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,NA,NA
 NM,Groundwater ET,Zone Groundwater,Atmosphere,Outflow,Total Evaporation-NM,NA,NA
@@ -138,28 +179,95 @@ NM,Groundwater Outflows,Zone Groundwater,External Groundwater,Outflow,NA,NA,NA
 NM,Groundwater Return,Zone Land System,Zone Groundwater,Internal Transfer,NA,NA,NA
 NM,Groundwater Stock,NA,NA,NA,NA,NA,NA
 NM,Human Storage and Distribution System Stock,NA,NA,NA,Change in Surface Water Storage-CA,NA,NA
+NM,IndustrialOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Interpolation from Other Records,NA,NA,NA,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Groundwater,Atmosphere,Internal Transfer,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Groundwater,Zone Land System,Outflow,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Surface Water,Atmosphere,Internal Transfer,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Irrigated AgricultureOSE,Zone Surface Water,Zone Land System,Outflow,NA,NA,NA
+NM,Irrigated Agriculture DepletionsOSE,Zone Groundwater,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,NA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,NA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,NA,NA
+NM,Irrigation Districts,NA,NA,NA,NA,NA,NA
 NM,Land Surface Evapotranspiration,Zone Land System,Atmosphere,Outflow,NA,NA,NA
 NM,Land Surface Stock,NA,NA,NA,NA,NA,NA
+NM,LivestockOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,LivestockOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Livestock Population,NA,NA,NA,NA,NA,NA
+NM,Livestock: MeteredOSE,NA,NA,NA,NA,NA,NA
+NM,Livestock: UnmeteredOSE,NA,NA,NA,NA,NA,NA
+NM,Mean Daily Percentage of Annual Daytime Hours,NA,NA,NA,NA,NA,NA
+NM,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,NA
+NM,Military Base Population Data,NA,NA,NA,NA,NA,NA
+NM,MiningOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,MiningOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Modified Blaney-Criddle,NA,NA,NA,NA,NA,NA
+NM,Monthly Consumptive Use Coefficient (k),NA,NA,NA,NA,NA,NA
+NM,Monthly Evaporation,NA,NA,NA,NA,NA,NA
+NM,Monthly Gross Evaporation Rate,NA,NA,NA,NA,NA,NA
+NM,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,NA
+NM,Monthly Precipitation Volume,NA,NA,NA,NA,NA,NA
+NM,National Agricultural Statistics Service,NA,NA,NA,NA,NA,NA
+NM,New Mexico Environment Department (NMED),NA,NA,NA,NA,NA,NA
+NM,New Mexico Interstate Stream Commission (NMISC),NA,NA,NA,NA,NA,NA
+NM,NM Irrigation Withdrawals,NA,NA,NA,NA,NA,NA
+NM,NM Withdrawal Method,NA,NA,NA,NA,NA,NA
+NM,NMOSE Crop Acreage File,NA,NA,NA,NA,NA,NA
+NM,NMOSE Growing Season File,NA,NA,NA,NA,NA,NA
+NM,NMOSE Technical Report No. 48,NA,NA,NA,NA,NA,NA
+NM,NMOSE Temperature and Precipitation File,NA,NA,NA,NA,NA,NA
+NM,NMOSE Water Rights Database,NA,NA,NA,NA,NA,NA
+NM,NMOSEâ€™s Water Use and Conservation Bureau (WUCB) Survey,NA,NA,NA,NA,NA,NA
+NM,Pan Approach,NA,NA,NA,NA,NA,NA
+NM,Personal Outreach,NA,NA,NA,NA,NA,NA
+NM,Population Served by Public Water Supply,NA,NA,NA,NA,NA,NA
+NM,PowerOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,PowerOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Power: UnreportedOSE,NA,NA,NA,Power-NMOSE,NA,NA
 NM,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Public Water Supply: MeteredOSE,NA,NA,NA,Public Water Supply-NMOSE,NA,NA
+NM,Public Water Supply: UnmeteredOSE,NA,NA,NA,Public Water Supply-NMOSE,NA,NA
+NM,Rainfall,NA,NA,NA,NA,NA,NA
 NM,Recharge,Zone Land System,Zone Groundwater,Internal Transfer,NA,NA,NA
+NM,Reservoir Surface Area,NA,NA,NA,NA,NA,NA
 NM,Riparian Consumption,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
 NM,River Evaporation,Zone Surface Water,Atmosphere,Outflow,Total Evaporation-NM,NA,NA
 NM,Runoff,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
+NM,Seasonal Consumptive Use Coefficients (K),NA,NA,NA,NA,NA,NA
+NM,Self-Supplied DomesticOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+NM,Self Supplied Domestic Population,NA,NA,NA,NA,NA,NA
+NM,Student Population,NA,NA,NA,NA,NA,NA
 NM,Surface Water Diversions,Zone Surface Water,Zone Land System,Outflow,NA,NA,NA
 NM,Surface Water Inflows,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
 NM,Surface Water Outflows,Zone Surface Water,External Surface Water,Outflow,NA,NA,NA
 NM,Surface Water Returns,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
 NM,Surface Water Stock,NA,NA,NA,NA,NA,NA
-UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
-UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
-UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
-UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
+NM,University of New Mexico,NA,NA,NA,NA,NA,NA
+NM,University of New Mexico Geospatial and Population Studies (UNM GPS),NA,NA,NA,NA,NA,NA
+NM,US Army Corps of Engineers,NA,NA,NA,NA,NA,NA
+NM,US Bureau of Reclamation,NA,NA,NA,NA,NA,NA
+NM,US Census Bureau,NA,NA,NA,NA,NA,NA
+NM,USDA Cropland Data Layer (CDL),NA,NA,NA,NA,NA,NA
+NM,USDA Farm Service Agency,NA,NA,NA,NA,NA,NA
+NM,Water Use Estimate,NA,NA,NA,NA,NA,NA
+NM,Weather Stations,NA,NA,NA,NA,NA,NA
+NM,Winter Ice Surface Area,NA,NA,NA,NA,NA,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,NA,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,NA,Livestock Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,NA,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,NA,Livestock Consumptive Use-CO,NA
 UT,Agricultural and Municipal Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Agricultural and Municipal Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
-UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
-UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Crop Consumptive Use-CO,NA
-UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,Livestock Consumptive Use-CO,NA
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,NA,Crop Consumptive Use-CO,NA
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,NA,Livestock Consumptive Use-CO,NA
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,NA,Crop Consumptive Use-CO,NA
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,NA,Livestock Consumptive Use-CO,NA
 UT,Agricultural Potential Consumptive Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Agricultural Potential Consumptive Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Area Outflows,Zone Land System,External Surface Water,Outflow,Exports-CO,NA,NA
@@ -167,24 +275,51 @@ UT,Area Outflows,Zone Surface Water,External Surface Water,Outflow,Exports-CO,NA
 UT,Basin Inflow,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
 UT,Basin Outflow,Zone Surface Water,External Surface Water,Outflow,Exports-CO,NA,NA
 UT,Cropland Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-UT,NA,NA
-UT,Flow Constrained Actual Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
-UT,Flow Constrained Actual Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
 UT,Groundwater Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
 UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
 UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
-UT,Natural System Use,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,NA,NA
-UT,Natural System Use,Zone Surface Water,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,NA,NA
+UT,Natural System Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
+UT,Natural System Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
 UT,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,NA
+UT,PRISM,NA,NA,NA,NA,NA,NA
 UT,Pumped Groundwater,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-UT,Riparian Depletions,Zone Land System,Atmosphere,Outflow,Flow Constrained Actual Consumptive Use-UT,NA,NA
 UT,Riparian Depletions,Zone Land System,Atmosphere,Outflow,Natural System Use-UT,NA,NA
 UT,River Inflow,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
 UT,River Use By Wet Pasture,Zone Surface Water,Zone Land System,Internal Transfer,Crop Consumptive Use-CO,NA,NA
+UT,STATSGO Soils Data,NA,NA,NA,NA,NA,NA
 UT,Surface Diversion to Cropland,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Surface Water Flows,Zone Surface Water,Zone Surface Water,Internal Transfer,NA,NA,NA
 UT,Total Land Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
 UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Imports-CO,NA,NA
+UT,US Bureau of Reclamation AgriMet Stations,NA,NA,NA,NA,NA,NA
+UT,USGS Mean Annual Reach Estimates,NA,NA,NA,NA,NA,NA
+UT,USGS StreamStats,NA,NA,NA,NA,NA,NA
+UT,USU Research Report 145,NA,NA,NA,NA,NA,NA
+UT,UT Diversion Records from River Commissioners,NA,NA,NA,NA,NA,NA
+UT,UT Division of Water Resources Area-Altitude Method,NA,NA,NA,NA,NA,NA
+UT,UT Municipal Potable and Secondary Diversion Records,NA,NA,NA,NA,NA,NA
+UT,UT Other Irrigation Company Records,NA,NA,NA,NA,NA,NA
+UT,UT Reservoir Storage and Release Records,NA,NA,NA,NA,NA,NA
+UT,UT Water Rights,NA,NA,NA,NA,NA,NA
+WY,Crop Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+WY,Divertible Flow,Zone Surface Water,NA,Internal Transfer,NA,NA,NA
+WY,Gaged Stream Inflow,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
+WY,Gaged Stream Outflow,Zone Surface Water,Zone Surface Water,Outflow,NA,NA,NA
+WY,Industrial Water Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+WY,Irrigation Surface Water Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+WY,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+WY,Municipal and Domestic Depletions,Zone Surface Water,Atmosphere,Outflow,Municipal and Domestic Use-WY,NA,NA
+WY,Municipal and Domestic Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
+WY,Municipal and Domestic Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+WY,Precipitation,Atmosphere,Zone Surface Water,Inflow,NA,NA,NA
+WY,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
+WY,Reservoir Storage,NA,NA,NA,NA,NA,NA
+WY,Total Annual Natural Streamflow,NA,NA,NA,NA,NA,NA
+WY,Total Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+WY,Ungaged Stream Gains,External Groundwater,Zone Surface Water,Inflow,NA,NA,NA
+WY,USGS Stream Gages,NA,NA,NA,NA,NA,NA
+WY,Wyoming Water Resources Data System (WRDS),NA,NA,NA,NA,NA,NA

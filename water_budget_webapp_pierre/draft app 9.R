@@ -6,9 +6,6 @@ library(jsonlite)
 library(d3r)
 #library(htmlwidgets)
 
-# Importing ttl file
-file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
-
 # ---- 1. Loading data for flow and component-subcomponent info ---- #
 df_component_full <- read_csv("www/df_component_full.csv")
 df_component_flow <- read_csv("www/df_component_flow.csv")

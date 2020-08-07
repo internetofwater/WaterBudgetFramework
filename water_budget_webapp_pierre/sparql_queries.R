@@ -4,7 +4,7 @@ library(jsonlite)
 library(d3r)
 #library(rjson)
 
-file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
+file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG_new.ttl", format="turtle")
 
 ##########################################################################################################################
 ##########################################################################################################################
@@ -129,7 +129,6 @@ df <- df[which(df$type == 'Component'),]
 df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
 df <- select(df, -type)
 df$dsL <- gsub(",","", df$dsL)
-df$dsL
 write.table(df, file = "./www/hyperlink.csv", sep = ",",
             qmethod = "double", quote=FALSE, 
             row.name = FALSE)

@@ -68,22 +68,20 @@ CO,Crop Consumptive Use,Daily Penman-Monteith,Vapor Pressure,National Oceanic an
 CO,Crop Consumptive Use,Daily Penman-Monteith,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
 CO,Crop Consumptive Use,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
 CO,Crop Consumptive Use,Modified Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
-CO,Crop Consumptive Use,Modified Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
-CO,Crop Consumptive Use,Modified Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
-CO,Crop Consumptive Use,Modified Blaney-Criddle,Temperature Coefficient (Kt),SCS TR21
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),SCS TR21
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Weather Stations
 CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
 CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
 CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
 CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Temperature Coefficient (Kt),SCS TR21
 CO,Crop Consumptive Use,Original Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
-CO,Crop Consumptive Use,Original Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
-CO,Crop Consumptive Use,Original Blaney-Criddle,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
-CO,Crop Consumptive Use,Original Blaney-Criddle,Temperature Coefficient (Kt),SCS TR21
 CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
 CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),CO Agricultural Meteorology Network Station (COAGM)
 CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Sum of Monthly Consumptive Use Factors for Growing Season (F),National Oceanic and Atmospheric Administration Stations
 CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Temperature Coefficient (Kt),SCS TR21
-CO,Exports,NA,NA,NA
+CO,Exports,Historical Data,Diversions,Colorado Water Conservation Board (CWCB)
+CO,Exports,Historical Data,Diversions,Historical Diversions File
 CO,Gaged Surface Water Inflow,NA,NA,NA
 CO,Gaged Surface Water Outflow,NA,NA,NA
 CO,Ground Water Inflow,NA,NA,NA
@@ -92,11 +90,67 @@ CO,Imports,NA,NA,NA
 CO,Livestock Consumptive Use,CO Livestock Method,Average Use Rate,Midwest Plan Service Structures and Environmental Handbook 1977
 CO,Livestock Consumptive Use,CO Livestock Method,Livestock Count,State Agricultural Statistics
 CO,Municipal and Industrial Consumptive Use,CO Municipal and Industrial Method,Population,Colorado Census Bureau
-CO,Native Vegetation Consumptive Use,NA,NA,NA
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Diversions,Colorado Water Conservation Board (CWCB)
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Diversions,Historical Diversions File
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Native Vegetation Coefficient,Unknown
 CO,Precipitation,NA,NA,NA
-CO,Reservoir Evaporation,NA,NA,NA
-CO,Ungaged Surface Water Inflow,NA,NA,NA
+CO,Reservoir Evaporation,Reservoir Estimation Method,Gross Monthly Free Water Surface Evaporation,NOAA Technical Report NWS 33
+CO,Reservoir Evaporation,Reservoir Estimation Method,Monthly Effective Precipitation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Reservoir Evaporation,Reservoir Estimation Method,Monthly Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Reservoir Evaporation,Reservoir Estimation Method,Surface Area of Reservoir,CO GIS Exercise
+CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,CO Division of Water Resources Gages
+CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,USGS Stream Gages
+CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Proration Factors,Unknown
+NM,CommercialOSE,NA,NA,NA
+NM,Commercial: Incomplete MeteredOSE,NA,NA,NA
+NM,Commercial: MeteredOSE,NA,NA,NA
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),Brown and Caldwell1984
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NM Office of the State Engineer (NMOSE)
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NMOSE Technical Report No. 48
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Self Supplied Domestic Population,Population Served by Public Water Supply
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Commercial: SchoolsOSE,NM Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+NM,Commercial: UnmeteredOSE,Personal Outreach,Water Use Estimate,Facility Director or Operator
 NM,Evaporation,NA,NA,NA
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Annual Evaporation,Monthly Evaporation
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,PRISM
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,Weather Stations
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from ReservoirsOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,USGS Stream Gages
+NM,Evaporation from ReservoirsOSE,Pan Approach,Annual Evaporation,Monthly Evaporation
+NM,Evaporation from ReservoirsOSE,Pan Approach,Average Monthly Reservoir Gage Height,Irrigation Districts
+NM,Evaporation from ReservoirsOSE,Pan Approach,Average Monthly Reservoir Gage Height,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Average Monthly Reservoir Gage Height,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from ReservoirsOSE,Pan Approach,Average Monthly Reservoir Gage Height,US Army Corps of Engineers
+NM,Evaporation from ReservoirsOSE,Pan Approach,Average Monthly Reservoir Gage Height,US Bureau of Reclamation Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Average Monthly Reservoir Gage Height,USGS Stream Gages
+NM,Evaporation from ReservoirsOSE,Pan Approach,Class A Pan Evaporation Data,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Class A Pan Evaporation Data,Weather Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Monthly Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Monthly Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Monthly Gross Evaporation Rate,US Bureau of Reclamation Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from ReservoirsOSE,Pan Approach,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from ReservoirsOSE,Pan Approach,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from ReservoirsOSE,Pan Approach,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from ReservoirsOSE,Pan Approach,Reservoir Surface Area,USGS Stream Gages
+NM,Evaporation from ReservoirsOSE,Pan Approach,Winter Ice Surface Area,Historical Data
 NM,Groundwater Diversions,NA,NA,NA
 NM,Groundwater ET,NA,NA,NA
 NM,Groundwater Inflows,NA,NA,NA
@@ -104,13 +158,87 @@ NM,Groundwater Outflows,NA,NA,NA
 NM,Groundwater Return,NA,NA,NA
 NM,Groundwater Stock,NA,NA,NA
 NM,Human Storage and Distribution System Stock,NA,NA,NA
+NM,IndustrialOSE,NA,NA,NA
+NM,Irrigated AgricultureOSE,NA,NA,NA
+NM,Irrigated Agriculture DepletionsOSE,Modified Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+NM,Irrigated Agriculture DepletionsOSE,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+NM,Irrigated Agriculture DepletionsOSE,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),SCS TR21
+NM,Irrigated Agriculture DepletionsOSE,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Irrigated Agriculture DepletionsOSE,Original Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),Brown and Caldwell1984
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NM Office of the State Engineer (NMOSE)
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NMOSE Technical Report No. 48
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Self Supplied Domestic Population,Population Served by Public Water Supply
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Irrigated Agriculture DiversionsOSE,NM Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
 NM,Land Surface Evapotranspiration,NA,NA,NA
 NM,Land Surface Stock,NA,NA,NA
+NM,LivestockOSE,NA,NA,NA
+NM,Livestock: MeteredOSE,NA,NA,NA
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),Brown and Caldwell1984
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NM Office of the State Engineer (NMOSE)
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NMOSE Technical Report No. 48
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,Population Served by Public Water Supply
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Livestock: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+NM,MiningOSE,NA,NA,NA
+NM,PowerOSE,NA,NA,NA
+NM,Power: UnreportedOSE,Personal Outreach,Water Use Estimate,Facility Director or Operator
 NM,Precipitation,NA,NA,NA
+NM,Public Water SupplyOSE,NA,NA,NA
+NM,Public Water Supply: MeteredOSE,NA,NA,NA
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),Brown and Caldwell1984
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NMOSE Technical Report No. 48
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,Population Served by Public Water Supply
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply: UnmeteredOSE,NM Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
 NM,Recharge,NA,NA,NA
 NM,Riparian Consumption,NA,NA,NA
 NM,River Evaporation,NA,NA,NA
 NM,Runoff,NA,NA,NA
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),Brown and Caldwell1984
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NM Office of the State Engineer (NMOSE)
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Gallons Per Capita Per Day (GPCD),NMOSE Technical Report No. 48
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Self Supplied Domestic Population,Population Served by Public Water Supply
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Self-Supplied DomesticOSE,NM Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
 NM,Surface Water Diversions,NA,NA,NA
 NM,Surface Water Inflows,NA,NA,NA
 NM,Surface Water Outflows,NA,NA,NA
@@ -124,7 +252,6 @@ UT,Area Outflows,NA,NA,NA
 UT,Basin Inflow,NA,NA,NA
 UT,Basin Outflow,NA,NA,NA
 UT,Cropland Precipitation,NA,NA,NA
-UT,Flow Constrained Actual Consumptive Use,NA,NA,NA
 UT,Groundwater Use,NA,NA,NA
 UT,Municipal and Industrial Depeltion,NA,NA,NA
 UT,Municipal and Industrial Diversions,NA,NA,NA
@@ -140,3 +267,18 @@ UT,Surface Diversion to Cropland,NA,NA,NA
 UT,Surface Water Flows,NA,NA,NA
 UT,Total Land Return Flow,NA,NA,NA
 UT,Tributary Inflow,NA,NA,NA
+WY,Crop Consumptive Use,NA,NA,NA
+WY,Divertible Flow,NA,NA,NA
+WY,Gaged Stream Inflow,NA,NA,NA
+WY,Gaged Stream Outflow,NA,NA,NA
+WY,Industrial Water Use,NA,NA,NA
+WY,Irrigation Surface Water Diversions,NA,NA,NA
+WY,Livestock Consumptive Use,NA,NA,NA
+WY,Municipal and Domestic Depletions,NA,NA,NA
+WY,Municipal and Domestic Use,NA,NA,NA
+WY,Precipitation,NA,NA,NA
+WY,Reservoir Evaporation,NA,NA,NA
+WY,Reservoir Storage,NA,NA,NA
+WY,Total Annual Natural Streamflow,NA,NA,NA
+WY,Total Diversions,NA,NA,NA
+WY,Ungaged Stream Gains,NA,NA,NA
