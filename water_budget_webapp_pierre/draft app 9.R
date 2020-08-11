@@ -7,8 +7,8 @@ library(d3r)
 #library(htmlwidgets)
 
 # ---- 1. Loading data for flow and component-subcomponent info ---- #
-df_component_full <- read_csv("www/df_component_full.csv") # dataframe for summary
-df_component_flow <- read_csv("www/df_component_flow.csv") # dataframe for summary
+df_component_full <- read_csv("www/df_component_full.csv") # dataframe for component summary
+df_component_flow <- read_csv("www/df_component_flow.csv") # dataframe for component summary
 df_component <- read_csv("www/df_component.csv") # dataframe for d3 chart on component tab
 
 # ---- 2. Loading dataframe state-wise info ---- #

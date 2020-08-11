@@ -3222,7 +3222,7 @@ budget zone for use within the zone."""^^xsd:string ;
                                                                                  <http://purl.org/iow/WaterBudgetingFramework#Component> ;
                                                                         <http://purl.org/iow/WaterBudgetingFramework#flowSink> <http://purl.org/iow/WaterBudgetingFramework#ZoneLandSystem> ;
                                                                         <http://purl.org/iow/WaterBudgetingFramework#flowSource> <http://purl.org/iow/WaterBudgetingFramework#ZoneSurfaceWater> ;
-                                                                        <http://purl.org/iow/WaterBudgetingFramework#isFlowType> <http://purl.org/iow/WaterBudgetingFramework#Outflow> ;
+                                                                        <http://purl.org/iow/WaterBudgetingFramework#isFlowType> <http://purl.org/iow/WaterBudgetingFramework#InternalTransfer> ;
                                                                         <http://purl.org/iow/WaterBudgetingFramework#usedBy> <http://purl.org/iow/WaterBudgetingFramework#NM> ;
                                                                         rdfs:label "Surface Water Diversions-NM" ;
                                                                         skos:definition "Volume of water diverted from surface water to human storage and distribution systems"^^xsd:string ;
