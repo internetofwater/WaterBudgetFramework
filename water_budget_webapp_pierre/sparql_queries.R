@@ -43,7 +43,7 @@ SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?psc
     ?psc rdfs:label ?pscL.
     }
     OPTIONAL{
-    ?c wb:isExactMatch ?exm.
+    ?c skos:isExactMatch ?exm.
     ?exm rdfs:label ?exmL.
     }
 }
@@ -153,9 +153,29 @@ write.table(df, file = "./www/hyperlink.csv", sep = ",",
 
 
 
+#--- Exact Match ---#
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
+SELECT ?cL ?exmL WHERE {
+    ?c wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
 
+    ?c skos:isExactMatch ?exm.
+    ?exm rdfs:label ?exmL.
+    
+}
+"
 
+results <- rdf_query(file, query)
+df <- as.data.frame(results)
+df_json <- d3_nest(df)
+write(df_json, "./www/round_d3.json")
+write_csv(df, "./www/round_d3.csv")
 
 
 
