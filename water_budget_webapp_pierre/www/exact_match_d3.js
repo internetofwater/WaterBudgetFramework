@@ -391,17 +391,74 @@
 // }
 // ]
 
+// const data = [
+//   {"name": "A", "imports": ["B", "C", "C", "D"]},
+//   {"name": "B", "imports": ["A", "C", "D", "D"]},
+//   {"name": "C", "imports": ["B", "D"]},
+//   {"name": "D", "imports": ["B", "A"]},
+//   {"name": "E", "imports": ["B", "A"]},
+//   {"name": "F", "imports": ["B", "A"]},
+//   {"name": "G", "imports": ["B", "A"]},
+//   {"name": "H", "imports": ["A", "F", "I"]},
+//   {"name": "I", "imports": ["G", "H"]}
+//  ]
+
 const data = [
-  {"name": "A", "imports": ["B", "C", "C", "D"]},
-  {"name": "B", "imports": ["A", "C", "D", "D"]},
-  {"name": "C", "imports": ["B", "D"]},
-  {"name": "D", "imports": ["B", "A"]},
-  {"name": "E", "imports": ["B", "A"]},
-  {"name": "F", "imports": ["B", "A"]},
-  {"name": "G", "imports": ["B", "A"]},
-  {"name": "H", "imports": ["A", "F", "I"]},
-  {"name": "I", "imports": ["G", "H"]}
- ]
+  //Colorado
+  {"name": "Municipal and Industrial Consumptive Use-CO", 
+  "imports": ["Municipal and Industrial Depeltion-UT"]},
+
+  {"name": "Reservoir Evaporation-CO", 
+  "imports": ["Reservoir Evaporation-UT"]},
+
+  {"name": "Precipitation-CO", 
+  "imports": ["Precipitation-UT"]},
+
+  {"name": "Change in Surface Water Storage-CO",
+   "imports": ["Change in Surface Water Storage-CA"]},
+
+  {"name": "Reservoir Evaporation-CO", 
+  "imports": ["Reservoir Evaporation-UT"]},
+
+  {"name": "Change in Ground Water Storage-CO",
+   "imports": ["Change in Groundwater Storage-CA"]},
+
+  //California
+  {"name": "Subsurface Inflow-CA",
+   "imports": ["Groundwater Inflows-NM"]},
+
+  {"name": "Change in Surface Water Storage-CA",
+   "imports": ["Change in Surface Water Storage-CO"]},
+   
+  {"name": "Stream Inflow-CA",
+   "imports": ["Surface Water Inflows-NM"]},
+
+  {"name": "Change in Groundwater Storage-CA",
+   "imports": ["Change in Ground Water Storage-CO"]},
+
+  {"name": "Runoff-CA",
+   "imports": ["Runoff-NM"]},
+
+  //New Mexico
+  {"name": "Groundwater Inflows-NM",
+   "imports": ["Subsurface Inflow-CA"]},
+
+  {"name": "Surface Water Inflows-NM",
+   "imports": ["Stream Inflow-CA"]},
+
+  {"name": "Runoff-NM",
+   "imports": ["Runoff-CA"]},
+
+  //Utah
+  {"name": "Municipal and Industrial Depeltion-UT",
+   "imports": ["Municipal and Industrial Consumptive Use-CO"]},
+
+  {"name": "Reservoir Evaporation-UT",
+   "imports": ["Reservoir Evaporation-CO"]},
+
+  {"name": "Precipitation-UT",
+   "imports": ["Precipitation-CO"]},
+]
 
 var diameter = 960,
     radius = diameter / 2,
@@ -455,6 +512,7 @@ var node = svg.append("g").selectAll(".node");
       .text(function(d) { return d.data.key; })
       .on("mouseover", mouseovered)
       .on("mouseout", mouseouted)
+      .attr('cursor', 'pointer')
       .style("font-weight", 300)
       .style("font-size", 11)
       .style("font-family", "arial")
