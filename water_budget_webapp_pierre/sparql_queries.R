@@ -160,23 +160,38 @@ PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT ?cL ?exmL WHERE {
-    ?c wb:usedBy ?j.
-    ?j rdfs:label ?jL.
+SELECT ?state_1L ?cL ?exmL ?state_2L WHERE {
+    ?c wb:usedBy ?state_1.
+    ?state_1 rdfs:label ?state_1L.
     ?c rdfs:label ?cL.
 
     ?c skos:isExactMatch ?exm.
     ?exm rdfs:label ?exmL.
-    
+    ?exm wb:usedBy ?state_2.
+    ?state_2 rdfs:label ?state_2L.
 }
 "
-
 results <- rdf_query(file, query)
 df <- as.data.frame(results)
-df_json <- d3_nest(df)
-write(df_json, "./www/round_d3.json")
-write_csv(df, "./www/round_d3.csv")
+abc <- data.frame(cL = c(df[,"cL"], df[,"exmL"]),
+                  exmL = c(df[,"exmL"], df[,"cL"]),
+                  state_1L = c(df[,"state_1L"], df[,"state_2L"]))
+# putting all components and states in 1 row
+# adding a column of "key" for d3 edge bundling
+exact_match <- data.frame(cL = c(df[,"cL"], df[,"exmL"]),
+                  exmL = c(df[,"exmL"], df[,"cL"]),
+                  state_1L = c(df[,"state_1L"], df[,"state_2L"]),
+                  key = c(df[,"cL"], df[,"exmL"]))
+# rename column names
+colnames(exact_match) <- c("name", "imports", "state", "key")
+# rearrange columns
+col_order <- c("state","name","key","imports")
+exact_match <- exact_match[,col_order]
+# alphabetical order
+exact_match <- arrange(exact_match, state, name, key)
+write_csv(exact_match, "./www/exact_match_test.csv")
 
+#abc <- paste0("[", exact_match$state, "]")
 
 
 
