@@ -403,12 +403,18 @@
 //   {"name": "I", "imports": ["G", "H"]}
 //  ]
 
-d3.csv("exact_match_test.csv", function(data){
+
+
+// d3.csv("exact_match_test.csv", function(data){
+d3.csv("exact_match_test.csv").then(function(data) {
     
+    console.log(data)
     //convert typeof import to array
     data.forEach(item =>{
       item["imports"] = item["imports"].split(',')
     })
+
+    console.log(data)
     
     var diameter = 960,
     radius = diameter / 2,
@@ -444,14 +450,14 @@ var node = svg.append("g").selectAll(".node");
     .data(packageImports(root.leaves()))
     .enter().append("path")
       .each(function(d) { d.source = d[0], d.target = d[d.length - 1]; })
-      .attr("class", "link")
+      .attr("class", "link_interstate")
       .attr("d", line)
     //  .style("stroke", "cyan");
 
   node = node
     .data(root.leaves())
     .enter().append("text")
-      .attr("class", "node")
+      .attr("class", "node_interstate")
       .attr("dy", "0.31em")
       .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + (d.y + 8) + ",0)" + (d.x < 180 ? "" : "rotate(180)"); })
       .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })

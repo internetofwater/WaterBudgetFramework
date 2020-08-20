@@ -15,12 +15,16 @@ df_component <- read_csv("www/df_component.csv") # dataframe for d3 chart on com
 df_data_source <- read_csv("www/df_data_source.csv") # dataframe for d3 chart on data source tab
 df_state <- read_csv("www/df_state.csv") # dataframe for d3 chart on state tab
 
+# ---- 3. Loading dataframe for interstate tab ---- #
+#df_exact_match <- read_csv("www/exact_match_test.csv") 
+# Not required, choice is sent to JS where relevant csv is read and used for D3
 
 #drop-down choices
 state_choices <- c("CO","NM","UT","WY") # later change it to unique values from dataframe
 component_choices <- c(unique(df_component_full$cL))
 data_source_choices <- c(unique(df_state$dsL))
 data_source_choices <- sort(data_source_choices[-1]) # remove NA & reorder
+interstate_choices <- c("Exact Match", "Subcomponent", "Partial Subcomponent")
 
 #home tab chart
 # home_d3 <- fromJSON("www/home_chart.json")
@@ -40,6 +44,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
               tags$script(src = "index_v8.js"),
+              tags$script(src = "interstate.js")
               #tags$script(type="text/javascript", src = "index_home_chart.js")
              # tags$script(JS('drawChart()'))
               ),
@@ -55,7 +60,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                theme = "styles.css",
                fluid = TRUE,
 
-# ------ Tab - Home ------ #
+# ------ Tab - Home - Begin ------ #
       tabPanel(title = "Home",
         tags$div(class = "home-banner",
                  tags$img(class = "home-banner-img",
@@ -84,7 +89,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$h3("More coming soon..."))
                  ),
           ),
-        
+# ------ Tab - Home - End ------ #
 
       
 # ------ Tab - Component - Begin ------ # 
@@ -178,8 +183,33 @@ ui <- fluidPage(id = "page", theme = "styles.css",
         ),
 # ------- Tab - Data Sources (reverse chart) - End ------- #
 
-    tabPanel(title = "Interstate"),
-    navbarMenu(title = "About",
+
+# ------- Tab - Interstate - Begin ------- #
+        tabPanel(title = "Interstate",
+                 tags$div(class = "banner", 
+                          tags$img(class = "banner-img-state",
+                                   src = "image_7.jpg"),
+                          tags$div(class = "banner-text",
+                                   tags$p(class = "h1", "Search interstate relationships"),
+                                   tags$p(class = "h3", "Explore the relationship among components 
+                                          within and among states")
+                          )),
+                 column(width = 12,
+                        column(width = 3,
+                               selectInput(inputId = "interstate",
+                                           label = "Select relationship",
+                                           choices = interstate_choices)), #defined above UI
+                        column(width = 2, 
+                               actionButton(inputId = "runButton4", 
+                                            label = "",
+                                            icon = icon("check"))
+                        )),
+                 tags$body(tags$div(id = "interstate_container"))
+                 ),
+# ------- Tab - Interstate - End ------- #
+
+
+      navbarMenu(title = "About",
                tabPanel(title = "Other stuff"))
   ))
 
@@ -337,6 +367,13 @@ server <- function(input, output, session){
     leaf_nodes_3 <- nrow(selection_df_3)
     session$sendCustomMessage(type = "data_source_height", leaf_nodes_3)
     session$sendCustomMessage(type = "data_source_json", selection_json_3)
+  })
+  
+  # Interstate relationship chart
+  observeEvent(input$runButton4, {
+      interstate_relationship <- input$interstate
+      session$sendCustomMessage(type = "interstate_choice", interstate_relationship)
+    
   })
 }
 

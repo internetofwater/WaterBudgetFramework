@@ -1,0 +1,43 @@
+.node {
+    fill: #bbb;
+  }
+  
+  .node:hover {
+    fill: #000;
+  }
+  
+  .link {
+    stroke: #E55E69;
+    stroke-opacity: 0.4;
+    stroke-width: 1;
+    fill: none;
+    pointer-events: none;
+  }
+  
+  .node:hover,
+  .node--source,
+  .node--target {
+    font-weight: 700;
+  }
+  
+  .node--source {
+    fill: #00AFA8;
+  }
+  
+  .node--target {
+    fill: #00AFA8;
+  }
+  
+  .link--source,
+  .link--target {
+    stroke-opacity: 1;
+    stroke-width: 2px;
+  }
+  
+  .link--source {
+    stroke: #00AFA8;
+  }
+  
+  .link--target {
+    stroke: #00AFA8;
+  }
