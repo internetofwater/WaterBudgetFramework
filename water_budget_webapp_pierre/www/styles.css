@@ -545,6 +545,9 @@ Tab - Interstate D3
 
 .node_interstate {
     fill: #bbb;
+    font-size: 10;
+    font-family: arial;
+    font-weight: 700;
   }
   
   .node_interstate:hover {

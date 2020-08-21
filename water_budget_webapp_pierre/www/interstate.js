@@ -7,15 +7,19 @@ function (message) {
 
     // loading csv file based on input choice for interstate relationship
     if (interstate_choice == "Exact Match"){
-      var csv_data =  "exact_match_test.csv";
+      var csv_data =  "df_exact_match.csv";
     } else if (interstate_choice == "Subcomponent"){
-      csv_data = "subcomponent.csv";
-    } else if (interstate_choice == "Partial subcomponent"){
-      csv_data = "partial_subcomponent.csv";
+      csv_data = "df_subcomponent.csv";
+    } else if (interstate_choice == "Partial Subcomponent"){
+      csv_data = "df_partial_subcomponent.csv";
     }
 
     // d3 begins...
+
     d3.csv(csv_data).then(function (data) {
+
+      d3.selectAll("svg").remove();
+
       //convert typeof import to array
       data.forEach(item => {
         item["imports"] = item["imports"].split(',')
@@ -23,7 +27,7 @@ function (message) {
 
       var diameter = 960,
         radius = diameter / 2,
-        innerRadius = radius - 120;
+        innerRadius = radius - 250;
 
       var cluster = d3.cluster()
         .size([360, innerRadius]);
@@ -35,10 +39,27 @@ function (message) {
         .angle(function (d) { return d.x / 180 * Math.PI; });
 
       var svg = d3.select("#interstate_container").append("svg")
-        .attr("width", diameter + 800)
-        .attr("height", diameter + 500)
+        .attr("width", diameter + 400)
+        .attr("height", diameter + 400)
         .append("g")
-        .attr("transform", "translate(" + (radius + 400) + "," + (radius + 200) + ")");
+        .attr("transform", "translate(" + (radius + 200) + "," + (radius + 100) + ")");
+
+      // Background rectangle
+      svg.append("rect")
+      .attr("width", diameter + 200)
+      .attr("height", diameter + 300)
+      .attr("transform", "translate(" + -(radius + 100)  + "," + -(radius + 100) + ")")
+      .attr("fill", "#F8F8F8")
+      .attr('rx', 20);
+      
+      var i = 0;
+
+      // Auto-scroll
+      var scrollCount = 1;
+      while (scrollCount < 2) {
+          autoscroll();
+          scrollCount++ ;
+      }
 
       var link = svg.append("g").selectAll(".link")
       var node = svg.append("g").selectAll(".node");
@@ -70,9 +91,9 @@ function (message) {
         .on("mouseover", mouseovered)
         .on("mouseout", mouseouted)
         .attr('cursor', 'pointer')
-        .style("font-weight", 1000)
-        .style("font-size", 12)
-        .style("font-family", "arial")
+        //.style("font-weight", 1000)
+        //.style("font-size", 1)
+        //.style("font-family", "arial")
         // .style("fill", "#bbb")
         // .on("mouseover", d => {d3.select(event.currentTarget)
         //   .style("fill", "#000")
@@ -152,6 +173,22 @@ function (message) {
 
         return imports;
       }
+
+      function autoscroll() {
+        d3.select("#interstate_container")
+            .transition()
+            .duration(1000)
+            .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight)/2 + 150));
+        
+        function scrollTween(offset) {
+            return function() {
+                var i = d3.interpolateNumber(window.pageYOffset || document.documentElement.scrollTop, offset);
+                return function(t) {scrollTo(0, i(t));};
+            };
+        }
+        
+    }
+
     })
   })
     

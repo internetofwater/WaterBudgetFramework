@@ -1,0 +1,12 @@
+,state,name,key,imports
+1,CO,Crop Consumptive Use-CO,Crop Consumptive Use-CO,"Agricultural Depletions-UT","Agricultural and Municipal Depletions-UT"
+2,CO,Exports-CO,Exports-CO,"Basin Outflow-UT"
+3,CO,Imports-CO,Imports-CO,"Basin Inflow-UT"
+4,CO,Livestock Consumptive Use-CO,Livestock Consumptive Use-CO,"Agricultural Depletions-UT","Agricultural and Municipal Depletions-UT","Agricultural Depletions-UT","Agricultural and Municipal Depletions-UT"
+5,CO,Native Vegetation Consumptive Use-CO,Native Vegetation Consumptive Use-CO,"Riparian Depletions-UT","Natural System Use-UT"
+6,UT,Agricultural and Municipal Depletions-UT,Agricultural and Municipal Depletions-UT,"Livestock Consumptive Use-CO","Crop Consumptive Use-CO","Livestock Consumptive Use-CO"
+7,UT,Agricultural Depletions-UT,Agricultural Depletions-UT,"Livestock Consumptive Use-CO","Crop Consumptive Use-CO","Livestock Consumptive Use-CO"
+8,UT,Basin Inflow-UT,Basin Inflow-UT,"Imports-CO"
+9,UT,Basin Outflow-UT,Basin Outflow-UT,"Exports-CO"
+10,UT,Natural System Use-UT,Natural System Use-UT,"Native Vegetation Consumptive Use-CO"
+11,UT,Riparian Depletions-UT,Riparian Depletions-UT,"Native Vegetation Consumptive Use-CO"

@@ -173,9 +173,9 @@ SELECT ?state_1L ?cL ?exmL ?state_2L WHERE {
 "
 results <- rdf_query(file, query)
 df <- as.data.frame(results)
-abc <- data.frame(cL = c(df[,"cL"], df[,"exmL"]),
-                  exmL = c(df[,"exmL"], df[,"cL"]),
-                  state_1L = c(df[,"state_1L"], df[,"state_2L"]))
+# abc <- data.frame(cL = c(df[,"cL"], df[,"exmL"]),
+#                   exmL = c(df[,"exmL"], df[,"cL"]),
+#                   state_1L = c(df[,"state_1L"], df[,"state_2L"]))
 # putting all components and states in 1 row
 # adding a column of "key" for d3 edge bundling
 exact_match <- data.frame(cL = c(df[,"cL"], df[,"exmL"]),
@@ -189,15 +189,106 @@ col_order <- c("state","name","key","imports")
 exact_match <- exact_match[,col_order]
 # alphabetical order
 exact_match <- arrange(exact_match, state, name, key)
-write_csv(exact_match, "./www/exact_match_test.csv")
+write_csv(exact_match, "./www/df_exact_match.csv")
 
 #abc <- paste0("[", exact_match$state, "]")
 
 
 
 
+#--- Subcomponent ---#
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?state_1L ?cL ?scL ?state_2L WHERE {
+    ?c wb:usedBy ?state_1.
+    ?state_1 rdfs:label ?state_1L.
+    ?c rdfs:label ?cL.
+
+    ?c wb:isSubComponentOf ?sc.
+    ?sc rdfs:label ?scL.
+    
+    # the next two lines reduce observations by 4
+    
+    ?sc wb:usedBy ?state_2.
+    ?state_2 rdfs:label ?state_2L.
+}
+"
+results <- rdf_query(file, query)
+df <- as.data.frame(results)
+# putting all components and states in 1 row
+# adding a column of "key" for d3 edge bundling
+subcomponent <- data.frame(cL = c(df[,"cL"], df[,"scL"]),
+                          scL = c(df[,"scL"], df[,"cL"]),
+                          state_1L = c(df[,"state_1L"], df[,"state_2L"]),
+                          key = c(df[,"cL"], df[,"scL"]))
+# rename column names
+colnames(subcomponent) <- c("name", "imports", "state", "key")
+# rearrange columns
+col_order <- c("state","name","key","imports")
+subcomponent <- subcomponent[,col_order]
+# alphabetical order
+subcomponent <- arrange(subcomponent, state, name, key)
+# storing subcomponents separated by comma for a componenet
+# subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+subcomponent_final <- subcomponent %>%
+  group_by(state, name, key) %>%
+  summarise(imports = paste0('"', imports, '"', collapse = ","))
+write.csv(subcomponent_final, file = "./www/df_subcomponent.csv", quote=FALSE)
+
+# abc <- data.frame(a = c(1,1,1,2,2,2), b = c("a", "b", "c", "d", "e", "f")) %>% 
+#   group_by(a) %>% 
+#   summarise(b = paste(b, collapse = ","))
 
 
+
+
+
+
+#--- Partial Subcomponent ---#
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?state_1L ?cL ?pscL ?state_2L WHERE {
+    ?c wb:usedBy ?state_1.
+    ?state_1 rdfs:label ?state_1L.
+    ?c rdfs:label ?cL.
+
+    ?c wb:isPartialSubComponentOf ?psc.
+    ?psc rdfs:label ?pscL.
+    
+    ?psc wb:usedBy ?state_2.
+    ?state_2 rdfs:label ?state_2L.
+    
+}
+"
+results <- rdf_query(file, query)
+df <- as.data.frame(results)
+# putting all components and states in 1 row
+# adding a column of "key" for d3 edge bundling
+partial_subcomponent <- data.frame(cL = c(df[,"cL"], df[,"pscL"]),
+                           scL = c(df[,"pscL"], df[,"cL"]),
+                           state_1L = c(df[,"state_1L"], df[,"state_2L"]),
+                           key = c(df[,"cL"], df[,"pscL"]))
+# rename column names
+colnames(partial_subcomponent) <- c("name", "imports", "state", "key")
+# rearrange columns
+col_order <- c("state","name","key","imports")
+partial_subcomponent <- partial_subcomponent[,col_order]
+# alphabetical order
+partial_subcomponent <- arrange(partial_subcomponent, state, name, key)
+# storing subcomponents separated by comma for a componenet
+# subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+partial_subcomponent_final <- partial_subcomponent %>%
+  group_by(state, name, key) %>%
+  summarise(imports = paste0('"', imports, '"', collapse = ","))
+write.csv(partial_subcomponent_final, file = "./www/df_partial_subcomponent.csv", quote=FALSE)
 
 
 

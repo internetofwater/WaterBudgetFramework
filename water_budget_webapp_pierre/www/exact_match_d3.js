@@ -406,7 +406,7 @@
 
 
 // d3.csv("exact_match_test.csv", function(data){
-d3.csv("exact_match_test.csv").then(function(data) {
+d3.csv("df_partial_subcomponent.csv").then(function(data) {
     
     console.log(data)
     //convert typeof import to array
