@@ -219,14 +219,25 @@ SELECT ?state_1L ?cL ?scL ?state_2L WHERE {
 "
 results <- rdf_query(file, query)
 df <- as.data.frame(results)
+df$empty <- NA
 # putting all components and states in 1 row
 # adding a column of "key" for d3 edge bundling
-subcomponent <- data.frame(cL = c(df[,"cL"], df[,"scL"]),
+# Keeping the "imports" empty for d3 because d3 wants that A has import B but not B has import A
+subcomponent <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
                           scL = c(df[,"scL"], df[,"cL"]),
-                          state_1L = c(df[,"state_1L"], df[,"state_2L"]),
-                          key = c(df[,"cL"], df[,"scL"]))
+                          state_2L = c(df[,"state_2L"], df[,"state_1L"]),
+                          key = c(df[,"scL"], df[,"cL"]))
+
 # rename column names
-colnames(subcomponent) <- c("name", "imports", "state", "key")
+# renaming cL as "imports" and scL as "names"
+colnames(subcomponent) <- c("imports", "name", "state", "key")
+
+#add "a." in all names to work with d3 edge bundling (bilink function)
+subcomponent$name <- paste("a", 
+                           subcomponent$name, sep=". ")
+subcomponent$imports <- paste("a", 
+                              subcomponent$imports, sep=". ")
+
 # rearrange columns
 col_order <- c("state","name","key","imports")
 subcomponent <- subcomponent[,col_order]
@@ -236,8 +247,23 @@ subcomponent <- arrange(subcomponent, state, name, key)
 # subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
 subcomponent_final <- subcomponent %>%
   group_by(state, name, key) %>%
-  summarise(imports = paste0('"', imports, '"', collapse = ","))
-write.csv(subcomponent_final, file = "./www/df_subcomponent.csv", quote=FALSE)
+  summarise(imports = paste0(imports, collapse = ","))
+
+# Replace NAs with "" in imports column
+subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
+                                     replacement="", subcomponent_final$imports )
+subcomponent_final$imports <- mapply(gsub, pattern='a. NA',
+                                     replacement="", subcomponent_final$imports )
+subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
+                                     replacement="", subcomponent_final$imports )
+subcomponent_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
+                                     replacement="", subcomponent_final$imports )
+
+#write.csv(subcomponent_final, file = "./www/df_subcomponent.csv", quote=TRUE,
+#          row.names = FALSE)
+
+df_componentJSON <- toJSON(subcomponent_final)
+write(df_componentJSON, "www/df_subcomponent.json")
 
 # abc <- data.frame(a = c(1,1,1,2,2,2), b = c("a", "b", "c", "d", "e", "f")) %>% 
 #   group_by(a) %>% 

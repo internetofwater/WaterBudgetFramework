@@ -1,0 +1,125 @@
+[
+    {
+        "name": "nbv.bv-commons",
+        "size": 1000,
+        "imports": []
+    },
+    {
+        "name": "nbv.cs-commons.cs-navigation",
+        "size": 230,
+        "imports": []
+    },
+    {
+        "name": "nbv.cs-commons.users-lookup",
+        "size": 230,
+        "imports": []
+    },
+    {
+        "name": "nbv.meetx-components.custom-card-component",
+        "size": 20,
+        "imports": [
+            "nbv.bv-commons"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.meeting-card-component",
+        "size": 50,
+        "imports": [
+            "nbv.bv-commons"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.calendar-card-component",
+        "size": 100,
+        "imports": [
+            "nbv.bv-commons"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.new-items-card-component",
+        "size": 150,
+        "imports": [
+            "nbv.bv-commons"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.meeting-component",
+        "size": 200,
+        "imports": [
+            "nbv.bv-commons"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.tgi-card-component",
+        "size": 200,
+        "imports": [
+            "nbv.bv-commons"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.dashboard-component-v2",
+        "size": 300,
+        "imports": [
+            "nbv.bv-commons",
+            "nbv.meetx-components.calendar-card-component",
+            "nbv.meetx-components.custom-card-component",
+            "nbv.meetx-components.meeting-card-component",
+            "nbv.meetx-components.new-items-card-component",
+            "nbv.meetx-components.tgi-card-component"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.meetings-creation-component",
+        "size": 400,
+        "imports": [
+            "nbv.bv-commons",
+            "nbv.cs-commons.cs-navigation"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.directory-component",
+        "size": 200,
+        "imports": []
+    },
+    {
+        "name": "nbv.inbox.inbox-ui",
+        "size": 200,
+        "imports": [
+            "nbv.cs-commons.cs-navigation",
+            "nbv.cs-commons.users-lookup"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.directory-component",
+        "size": 200,
+        "imports": []
+    },
+    {
+        "name": "nbv.task-management.task-ui",
+        "size": 230,
+        "imports": [
+            "nbv.cs-commons.users-lookup",
+            "nbv.cs-commons.cs-navigation"
+        ]
+    },
+    {
+        "name": "nbv.meetx-components.components",
+        "size": 200,
+        "imports": [
+            "nbv.cs-commons.cs-navigation",
+            "nbv.cs-commons.users-lookup",
+            "nbv.meetx-components.calendar-card-component",
+            "nbv.meetx-components.custom-card-component",
+            "nbv.meetx-components.new-items-card-component"
+        ]
+    },
+    {
+        "name": "nbv.meetxhtmlclient",
+        "size": 200,
+        "imports": [
+            "nbv.meetx-components.components"
+        ]
+        
+    }
+
+]
