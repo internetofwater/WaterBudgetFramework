@@ -82,8 +82,8 @@ var node = svg.append("g").selectAll(".node");
       // .style("fill", "#bbb")
       // .style("font-weight", 1000)
       .call(text => text.append("title").text(d => `${id(d)}
-b. Has ${d.outgoing.length} subcomponents
-c. Is subcomponent of ${d.incoming.length}`));
+b. Has ${d.outgoing.length} subcomponents (in green)
+c. Is subcomponent of ${d.incoming.length} (in red)`));
 
   link = svg.append("g")
       .attr("stroke", colornone)
