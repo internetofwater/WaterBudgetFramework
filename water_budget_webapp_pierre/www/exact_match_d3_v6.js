@@ -14,6 +14,7 @@ d3.json("df_subcomponent.json").then(function(abc) {
 //convert typeof import to array
 abc.forEach(item =>{
   item["imports"] = item["imports"].split(',')
+  // change objects that have "" to empty 
   //console.log(Object.values(item.imports))
   if (Object.values(item.imports)[0] == "") {
     item.imports.length = 0;
@@ -33,7 +34,7 @@ abc.forEach(item =>{
 
   colorin = "#E55E69";
   colorout = "#00AFA8";
-  colornone = "lightgray"
+  colornone = "#bbb";
 
   width = 954;
   radius = width/2;
@@ -75,42 +76,47 @@ var node = svg.append("g").selectAll(".node");
       .attr("transform", d => d.x >= Math.PI ? "rotate(180)" : null)
       .text(d => d.data.name)
       .each(function(d) { d.text = this; })
+      .attr("fill", colornone)  // default text color
+      .attr("font-weight", "bold")                     
       .on("mouseover", overed)
       .on("mouseout", outed)
       .attr('cursor', 'pointer')
-      // .style("font-family", "arial")
-      // .style("fill", "#bbb")
-      // .style("font-weight", 1000)
+      .style("font-family", "arial")
+      .attr("font-size", "11")
       .call(text => text.append("title").text(d => `${id(d)}
 b. Has ${d.outgoing.length} subcomponents (in green)
 c. Is subcomponent of ${d.incoming.length} (in red)`));
 
   link = svg.append("g")
-      .attr("stroke", colornone)
+      .attr("stroke", "lightgray")
       .attr("fill", "none")
     .selectAll("path")
     .data(root.leaves().flatMap(leaf => leaf.outgoing))
     .join("path")
-      .style("mix-blend-mode", "multiply")
+      .style("mix-blend-mode", "multiply") //what to do if multiple path lines overlaps
       .attr("d", ([i, o]) => line(i.path(o)))
       .each(function(d) { d.path = this; });
 
-  function overed(event, d) {
-    link.style("mix-blend-mode", null);
+  function overed(d) {
+    link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
     d3.select(this).attr("font-weight", "bold");
+    d3.select(this).attr("fill", "#777777"); //on hover in, it darkens selected node
+
     d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", colorin).raise();
     d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colorin).attr("font-weight", "bold");
     d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", colorout).raise();
     d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colorout).attr("font-weight", "bold");
   }
 
-  function outed(event, d) {
+  function outed(d) { // set colornone to restore default gray text color after hover out
     link.style("mix-blend-mode", "multiply");
-    d3.select(this).attr("font-weight", null);
-    d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", null);
-    d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", null).attr("font-weight", null);
-    d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", null);
-    d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", null).attr("font-weight", null);
+    d3.select(this).attr("font-weight", "bold");
+    d3.select(this).attr("fill", colornone); //on hover out, restores text color of selected node
+
+    d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", "lightgray");
+    d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
+    d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", "lightgray");
+    d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
   }
 
   //return svg.node();

@@ -108,6 +108,7 @@ function (message) {
         //d3.select("svg_sticky").remove();
 
         var data = message;
+        
 
         var margin = {top: 25, right: 50, bottom: 20, left: 50}
         var width = 1050 - margin.left - margin.right //change width because leaf nodes were going out

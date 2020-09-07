@@ -7,7 +7,7 @@ library(d3r)
 #library(htmlwidgets)
 
 # ---- 1. Loading data for flow and component-subcomponent info ---- #
-df_component_full <- read_csv("www/df_component_full.csv") # dataframe for component summary
+df_component_full <- read_csv("www/df_component_full.csv") # dataframe for component summary (including URIs)
 df_component_flow <- read_csv("www/df_component_flow.csv") # dataframe for component summary
 df_component <- read_csv("www/df_component.csv") # dataframe for d3 chart on component tab
 
@@ -42,9 +42,13 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                         rel="stylesheet"),
               tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
+              #tags$script(src = "https://d3js.org/d3.v6.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
               tags$script(src = "index_v8.js"),
-              tags$script(src = "interstate.js")
+              tags$script(src = "interstate.js"),
+              tags$script(src = "interstate_exact_match.js"),
+              tags$script(src = "interstate_subcomponent.js"),
+              tags$script(src = "interstate_partial_subcomponent.js")
               #tags$script(type="text/javascript", src = "index_home_chart.js")
              # tags$script(JS('drawChart()'))
               ),
@@ -53,7 +57,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
     tags$div(class = "header",
              tags$a(href="https://internetofwater.org/", target = "_blank", 
                     tags$img(src = "iow_logo.png", width = 60)),
-             tags$h1("IoW Water Budget Tool"),
+             tags$h1("Water Budget Navigator"),
              titlePanel(title="", windowTitle = "IoW Water Budget App")),
     navbarPage(title = "",
                selected = "Home",
@@ -74,9 +78,9 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                  ),
         tags$div(class = "instruction-1",
                  tags$div(class = "text-area",
-                          tags$h1("What is IoW Water Budget Tool?"),
+                          tags$h1("What is IoW's Water Budget Navigator?"),
                           tags$br(),
-                          tags$h3("IoW Water Budget Tool is a web application that allows users to explore water budget frameworks
+                          tags$h3("Water Budget Navigator is a web application that allows users to explore water budget frameworks
                                  across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
                                  estimation methods, parameters and data sources. The components have additional properties describing
                                   flow information and relationship with other components within and across states."),
@@ -191,7 +195,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                    src = "image_7.jpg"),
                           tags$div(class = "banner-text",
                                    tags$p(class = "h1", "Search interstate relationships"),
-                                   tags$p(class = "h3", "Explore the relationship among components 
+                                   tags$p(class = "h3", "Explore the relationship among water budget components 
                                           within and among states")
                           )),
                  column(width = 12,
@@ -372,7 +376,14 @@ server <- function(input, output, session){
   # Interstate relationship chart
   observeEvent(input$runButton4, {
       interstate_relationship <- input$interstate
-      session$sendCustomMessage(type = "interstate_choice", interstate_relationship)
+      if (interstate_relationship == "Exact Match"){
+        session$sendCustomMessage(type = "exact_match", interstate_relationship)
+      } else if (interstate_relationship == "Subcomponent") {
+        session$sendCustomMessage(type = "subcomponent", interstate_relationship)
+      } else if (interstate_relationship == "Partial Subcomponent") {
+        session$sendCustomMessage(type = "partial_subcomponent", interstate_relationship)
+      }
+      
     
   })
 }

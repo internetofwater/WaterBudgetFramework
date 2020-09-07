@@ -5,40 +5,51 @@
 
 const data = {
     "name": "Jurisdiction",
+    "color": "#E55E69",
     "children": [
         {
             "name": "Component",
+            "color": "#E55E69",
             "children": [
                 {
                     "name": "Estimation Method",
+                    "color": "#E55E69",
                     "children": [
                         {
                             "name": "Parameter",
+                            "color": "#E55E69",
                             "children": [
                                 {
-                                    "name": "Data Source"
+                                    "name": "Data Source",
+                                    "color": "#E55E69",
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Flow Type"
+                    "name": "Flow Type",
+                    "color": "#E55E69",
                 },
                 {
-                    "name": "Flow Source"
+                    "name": "Flow Source",
+                    "color": "#E55E69",
                 },
                 {
-                    "name": "Flow Sink"
+                    "name": "Flow Sink",
+                    "color": "#E55E69"
                 },
                 {
-                    "name": "Subcomponent of"
+                    "name": "Subcomponent of",
+                    "color": "#E55E69"
                 },
                 {
-                    "name": "Partial Subcomponent of"
+                    "name": "Partial Subcomponent of",
+                    "color": "#E55E69"
                 },
                 {
-                    "name": "Exact Match"
+                    "name": "Exact Match",
+                    "color": "#E55E69"
                 }
 
             ]
@@ -125,8 +136,8 @@ node.append('rect')
     .attr('ry', 6)
 //   .attr("x", function(d) { return d.children || d._children ? -60 : 26; })
 //	 .attr("y", function(d) { return d.children || d._children ? 15 : 15; })
-    .style("fill", "#E55E69" )
-    //.style("fill", d => {return d._children ? "blue" : "#fff";}) //before merging
+    //.style("fill", "#E55E69" )
+    .style("fill", d => { return d.data.color;});
 
 // ADD LABELS FOR THE NODES
 node.append('text')
@@ -165,7 +176,7 @@ img.onload = function(){
   // Now that the image has loaded, put the image into a canvas element.
   var canvas = d3.select('body').append('canvas').node();
   canvas.width = width;
-  canvas.height = heihgt;
+  canvas.height = height;
   var ctx = canvas.getContext('2d');
   ctx.drawImage(img, 0, 0);
   var canvasUrl = canvas.toDataURL("image/png");

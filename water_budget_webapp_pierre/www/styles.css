@@ -543,7 +543,7 @@ Tab - Interstate D3
 ***************************************************************************/
 
 
-.node_interstate {
+/* .node_interstate {
     fill: #bbb;
     font-size: 10;
     font-family: arial;
@@ -587,5 +587,5 @@ Tab - Interstate D3
   }
   
   .link--target {
-    stroke: #00AFA8;
+    stroke: #00AFA8; */
   }
