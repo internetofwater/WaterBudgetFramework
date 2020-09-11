@@ -1,79 +1,221 @@
 dsL,pL,emL,cL
+USU Research Report 145,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
 SCS TR21,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
 Weather Stations,Mean Monthly Air Temperatures (T),Modified Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
 SCS TR21,Mean Monthly Air Temperatures (T),Modified Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
 PRISM,Mean Monthly Air Temperatures (T),Modified Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
+USU Research Report 145,Crop Growth State Coefficient (Kc),Modified Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
 SCS TR21,Crop Growth State Coefficient (Kc),Modified Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
-NA,NA,NA,Total Annual Natural Streamflow-WY
-NA,NA,NA,Divertible Flow-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+Mine Safety and Health Administration (MSHA),Coal Production Quantities,WY Mine Production Method,Industrial: Mine Production-WY
+Mine Safety and Health Administration (MSHA),Annual Employee Hours,WY Mine Production Method,Industrial: Mine Production-WY
 NA,NA,NA,Surface Diversion to Cropland-UT
 NA,NA,NA,Municipal and Industrial Diversions-UT
 Facility Director or Operator,Water Use Estimate,Personal Outreach,Commercial: Unmetered-NMOSE
 NA,NA,NA,Total Diversions-WY
-NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Livestock: Unmetered-NMOSE
-Brown and Caldwell1984,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Livestock: Unmetered-NMOSE
-NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Livestock: Unmetered-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-New Mexico Environment Department (NMED),Self Supplied Domestic Population,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-US Census Bureau,Self Supplied Domestic Population,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-Population Served by Public Water Supply,Self Supplied Domestic Population,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-Military Base Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-GPS Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-New Mexico Environment Department (NMED),Population Served by Public Water Supply,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-US Census Bureau,Population Served by Public Water Supply,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-Military Base Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-GPS Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Livestock: Unmetered-NMOSE
-New Mexico Department of Agriculture,Livestock Population,NM Withdrawal Method,Livestock: Unmetered-NMOSE
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Livestock: Unmetered-NMOSE
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Livestock: Unmetered-NMOSE
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Livestock: Unmetered-NMOSE
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Livestock: Unmetered-NMOSE
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Livestock: Unmetered-NMOSE
+US Census Bureau,Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+Colorado Census Bureau,Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Livestock: Unmetered-NMOSE
 NA,NA,NA,Commercial-NMOSE
+NA,NA,NA,Industrial Consumptive Use-WY
+NA,NA,NA,Industrial Consumptive Use-WY
+NA,NA,NA,Industrial Consumptive Use-WY
+NA,NA,NA,Industrial Consumptive Use-WY
+NA,NA,NA,Industrial Consumptive Use-WY
+NA,NA,NA,Industrial Consumptive Use-WY
+US Census Bureau,Population,CO Municipal and Industrial Method,Municipal and Industrial Consumptive Use-CO
 Colorado Census Bureau,Population,CO Municipal and Industrial Method,Municipal and Industrial Consumptive Use-CO
 NA,NA,NA,Agricultural Depletions-UT
 NA,NA,NA,Agricultural and Municipal Diversions-UT
 NA,NA,NA,Total Land Return Flow-UT
 NA,NA,NA,Gaged Surface Water Inflow-CO
-NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Commercial: Schools-NMOSE
-Brown and Caldwell1984,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Commercial: Schools-NMOSE
-NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Commercial: Schools-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,NM Withdrawal Method,Commercial: Schools-NMOSE
-New Mexico Environment Department (NMED),Self Supplied Domestic Population,NM Withdrawal Method,Commercial: Schools-NMOSE
-US Census Bureau,Self Supplied Domestic Population,NM Withdrawal Method,Commercial: Schools-NMOSE
-Population Served by Public Water Supply,Self Supplied Domestic Population,NM Withdrawal Method,Commercial: Schools-NMOSE
-Military Base Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Commercial: Schools-NMOSE
-GPS Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Commercial: Schools-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,NM Withdrawal Method,Commercial: Schools-NMOSE
-New Mexico Environment Department (NMED),Population Served by Public Water Supply,NM Withdrawal Method,Commercial: Schools-NMOSE
-US Census Bureau,Population Served by Public Water Supply,NM Withdrawal Method,Commercial: Schools-NMOSE
-Military Base Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Commercial: Schools-NMOSE
-GPS Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Commercial: Schools-NMOSE
-New Mexico Department of Agriculture,Livestock Population,NM Withdrawal Method,Commercial: Schools-NMOSE
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Commercial: Schools-NMOSE
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Commercial: Schools-NMOSE
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Commercial: Schools-NMOSE
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Commercial: Schools-NMOSE
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Commercial: Schools-NMOSE
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Commercial: Schools-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Commercial: Schools-NMOSE
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Commercial: Schools-NMOSE
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Commercial: Schools-NMOSE
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Commercial: Schools-NMOSE
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Commercial: Schools-NMOSE
+US Census Bureau,Population,Withdrawal Method,Commercial: Schools-NMOSE
+Colorado Census Bureau,Population,Withdrawal Method,Commercial: Schools-NMOSE
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Commercial: Schools-NMOSE
 NA,NA,NA,Precipitation-WY
 NA,NA,NA,Municipal and Industrial Return Flow-UT
 NA,NA,NA,Livestock: Metered-NMOSE
-NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-Brown and Caldwell1984,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-New Mexico Environment Department (NMED),Self Supplied Domestic Population,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-US Census Bureau,Self Supplied Domestic Population,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-Population Served by Public Water Supply,Self Supplied Domestic Population,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-Military Base Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-GPS Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-New Mexico Environment Department (NMED),Population Served by Public Water Supply,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-US Census Bureau,Population Served by Public Water Supply,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-Military Base Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-GPS Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
-New Mexico Department of Agriculture,Livestock Population,NM Withdrawal Method,Irrigated Agriculture Diversions-NMOSE
+Wyoming Water Resources Data System (WRDS),Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
+USGS Stream Gages,Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
+Wyoming Water Resources Data System (WRDS),Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
+USGS Stream Gages,Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
+NA,NA,NA,Irrigated Agriculture Diversions-NMOSE
 State Agricultural Statistics,Livestock Count,CO Livestock Method,Livestock Consumptive Use-CO
 Midwest Plan Service Structures and Environmental Handbook 1977,Average Use Rate,CO Livestock Method,Livestock Consumptive Use-CO
 NA,NA,NA,Commercial: Incomplete Metered-NMOSE
 NA,NA,NA,Municipal and Industrial Depeltion-UT
 NA,NA,NA,Agricultural and Municipal Depletions-UT
 Colorado Water Conservation Board (CWCB),Diversions,Historical Data,Exports-CO
+WY Office of the State Engineer,Diversions,Historical Data,Exports-CO
+WY Diversion Data from Water Users,Diversions,Historical Data,Exports-CO
 Historical Diversions File,Diversions,Historical Data,Exports-CO
 NA,NA,NA,Groundwater Use-UT
 NA,NA,NA,Imports-CO
-NA,NA,NA,Agricultural Potential Consumptive Use-UT
+USU Research Report 145,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Agricultural Potential Consumptive Use-UT
+SCS TR21,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Agricultural Potential Consumptive Use-UT
 CO GIS Exercise,Surface Area of Reservoir,Reservoir Estimation Method,Reservoir Evaporation-CO
 National Oceanic and Atmospheric Administration Stations,Monthly Effective Precipitation,Reservoir Estimation Method,Reservoir Evaporation-CO
 CO Agricultural Meteorology Network Station (COAGM),Monthly Effective Precipitation,Reservoir Estimation Method,Reservoir Evaporation-CO
@@ -83,35 +225,160 @@ NA,NA,NA,Commercial: Metered-NMOSE
 NA,NA,NA,Basin Outflow-UT
 NA,NA,NA,Gaged Surface Water Outflow-CO
 NA,NA,NA,Precipitation-UT
+Wyoming Oil and Gas Conservation Commission (WYOGCC),"Monthly Oil, Gas, and Produced Water",WY Industrial Production Method,Industrial: Coalbed Methand Production-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Natural Gas Processing Volumes,WY Industrial Production Method,Industrial: Coalbed Methand Production-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Monthly Coalbed Methane Gas Production and Produced Water,WY Industrial Production Method,Industrial: Coalbed Methand Production-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),"Monthly Oil, Gas, and Produced Water",WY Industrial Production Method,Industrial: Natural Gas-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Natural Gas Processing Volumes,WY Industrial Production Method,Industrial: Natural Gas-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Monthly Coalbed Methane Gas Production and Produced Water,WY Industrial Production Method,Industrial: Natural Gas-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),"Monthly Oil, Gas, and Produced Water",WY Industrial Production Method,Industrial: Natural Gas-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Natural Gas Processing Volumes,WY Industrial Production Method,Industrial: Natural Gas-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Monthly Coalbed Methane Gas Production and Produced Water,WY Industrial Production Method,Industrial: Natural Gas-WY
+NA,NA,NA,Industrial: Electrical Generation-WY
 NA,NA,NA,Cropland Precipitation-UT
 NA,NA,NA,Public Water Supply-NMOSE
 NA,NA,NA,Surface Water Flows-UT
 NA,NA,NA,Livestock Consumptive Use-WY
 NA,NA,NA,Irrigation Surface Water Diversions-WY
 NA,NA,NA,Power-NMOSE
+NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Agricultural Consumptive Use-WY
 Unknown,Native Vegetation Coefficient,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
 Colorado Water Conservation Board (CWCB),Diversions,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
+WY Office of the State Engineer,Diversions,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
+WY Diversion Data from Water Users,Diversions,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
 Historical Diversions File,Diversions,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
 NA,NA,NA,Ground Water Inflow-CO
-NA,NA,NA,Crop Consumptive Use-WY
 NA,NA,NA,Industrial-NMOSE
-NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-Brown and Caldwell1984,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-New Mexico Environment Department (NMED),Self Supplied Domestic Population,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-US Census Bureau,Self Supplied Domestic Population,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-Population Served by Public Water Supply,Self Supplied Domestic Population,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-Military Base Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-GPS Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-New Mexico Environment Department (NMED),Population Served by Public Water Supply,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-US Census Bureau,Population Served by Public Water Supply,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-Military Base Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-GPS Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-New Mexico Department of Agriculture,Livestock Population,NM Withdrawal Method,Self-Supplied Domestic-NMOSE
-NA,NA,NA,Reservoir Evaporation-WY
-NA,NA,NA,Municipal and Domestic Depletions-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Consumptive Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Consumptive Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Consumptive Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Consumptive Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Consumptive Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Consumptive Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Self-Supplied Domestic-NMOSE
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Self-Supplied Domestic-NMOSE
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Self-Supplied Domestic-NMOSE
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Self-Supplied Domestic-NMOSE
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Self-Supplied Domestic-NMOSE
+US Census Bureau,Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+Colorado Census Bureau,Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+High Plains Climate Center - University of Nebraska,Gross Pan Evaportation (inches),Pan Method (Net Evaporation),Reservoir Evaporation-WY
+Wyoming Water Resources Data Systems Water and Climate Map Server,Precipitation,Pan Method (Net Evaporation),Reservoir Evaporation-WY
+National Oceanic and Atmospheric Administration Stations,Precipitation,Pan Method (Net Evaporation),Reservoir Evaporation-WY
+CO Agricultural Meteorology Network Station (COAGM),Precipitation,Pan Method (Net Evaporation),Reservoir Evaporation-WY
 NA,NA,NA,Gaged Stream Inflow-WY
 NA,NA,NA,Change in Surface Water Storage-CO
 NA,NA,NA,Tributary Inflow-UT
@@ -119,15 +386,19 @@ NA,NA,NA,Ground Water Outflow-CO
 SCS TR21,Temperature Coefficient (Kt),Original Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
 National Oceanic and Atmospheric Administration Stations,Sum of Monthly Consumptive Use Factors for Growing Season (F),Original Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
 CO Agricultural Meteorology Network Station (COAGM),Sum of Monthly Consumptive Use Factors for Growing Season (F),Original Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
+USU Research Report 145,Crop Growth State Coefficient (Kc),Original Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
 SCS TR21,Crop Growth State Coefficient (Kc),Original Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
+USU Research Report 145,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Crop Consumptive Use-CO
 SCS TR21,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Crop Consumptive Use-CO
 SCS TR21,Temperature Coefficient (Kt),Modified Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
 National Oceanic and Atmospheric Administration Stations,Sum of Monthly Consumptive Use Factors for Growing Season (F),Modified Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
 CO Agricultural Meteorology Network Station (COAGM),Sum of Monthly Consumptive Use Factors for Growing Season (F),Modified Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
+USU Research Report 145,Crop Growth State Coefficient (Kc),Modified Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
 SCS TR21,Crop Growth State Coefficient (Kc),Modified Blaney-Criddle with ET Elevation Adjustment,Crop Consumptive Use-CO
 Weather Stations,Mean Monthly Air Temperatures (T),Modified Blaney-Criddle,Crop Consumptive Use-CO
 SCS TR21,Mean Monthly Air Temperatures (T),Modified Blaney-Criddle,Crop Consumptive Use-CO
 PRISM,Mean Monthly Air Temperatures (T),Modified Blaney-Criddle,Crop Consumptive Use-CO
+USU Research Report 145,Crop Growth State Coefficient (Kc),Modified Blaney-Criddle,Crop Consumptive Use-CO
 SCS TR21,Crop Growth State Coefficient (Kc),Modified Blaney-Criddle,Crop Consumptive Use-CO
 National Oceanic and Atmospheric Administration Stations,Wind Run,Daily Penman-Monteith,Crop Consumptive Use-CO
 CO Agricultural Meteorology Network Station (COAGM),Wind Run,Daily Penman-Monteith,Crop Consumptive Use-CO
@@ -151,34 +422,94 @@ National Oceanic and Atmospheric Administration Stations,Temperature,Daily ASCE 
 CO Agricultural Meteorology Network Station (COAGM),Temperature,Daily ASCE Standardized Penman-Monteith,Crop Consumptive Use-CO
 National Oceanic and Atmospheric Administration Stations,Solar Radiation,Daily ASCE Standardized Penman-Monteith,Crop Consumptive Use-CO
 CO Agricultural Meteorology Network Station (COAGM),Solar Radiation,Daily ASCE Standardized Penman-Monteith,Crop Consumptive Use-CO
-NA,NA,NA,Industrial Water Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Total Use-WY
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
+Colorado Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Total Use-WY
+NA,NA,NA,Industrial: Miscellaneous-WY
 NA,NA,NA,River Use By Wet Pasture-UT
 Facility Director or Operator,Water Use Estimate,Personal Outreach,Power: Unreported-NMOSE
 NA,NA,NA,Pumped Groundwater-UT
-NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-Brown and Caldwell1984,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPCD),NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-New Mexico Environment Department (NMED),Self Supplied Domestic Population,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-US Census Bureau,Self Supplied Domestic Population,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-Population Served by Public Water Supply,Self Supplied Domestic Population,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-Military Base Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-GPS Population Data,Self Supplied Domestic Population,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-New Mexico Environment Department (NMED),Population Served by Public Water Supply,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-US Census Bureau,Population Served by Public Water Supply,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-Military Base Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-GPS Population Data,Population Served by Public Water Supply,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
-New Mexico Department of Agriculture,Livestock Population,NM Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+Population Served by Public Water Supply,Self Supplied Domestic Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+Military Base Population Data,Self Supplied Domestic Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+GPS Population Data,Self Supplied Domestic Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+University of New Mexico Geospatial and Population Studies (UNM GPS),Population Served by Public Water Supply,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+New Mexico Environment Department (NMED),Population Served by Public Water Supply,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+Military Base Population Data,Population Served by Public Water Supply,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+US Census Bureau,Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+Colorado Census Bureau,Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
 NA,NA,NA,Mining-NMOSE
 Unknown,Proration Factors,Natural Flow Gain Distribution,Ungaged Surface Water Inflow-CO
 USGS Stream Gages,Gage Height,Natural Flow Gain Distribution,Ungaged Surface Water Inflow-CO
 CO Division of Water Resources Gages,Gage Height,Natural Flow Gain Distribution,Ungaged Surface Water Inflow-CO
+NA,NA,NA,Industrial Total Use-WY
+NA,NA,NA,Industrial Total Use-WY
+NA,NA,NA,Industrial Total Use-WY
+NA,NA,NA,Industrial Total Use-WY
+NA,NA,NA,Industrial Total Use-WY
 NA,NA,NA,Gaged Stream Outflow-WY
-NA,NA,NA,Reservoir Evaporation-UT
+Colorado Water Conservation Board (CWCB),Diversions,Historical Data,Reservoir Evaporation-UT
+WY Office of the State Engineer,Diversions,Historical Data,Reservoir Evaporation-UT
+WY Diversion Data from Water Users,Diversions,Historical Data,Reservoir Evaporation-UT
+Historical Diversions File,Diversions,Historical Data,Reservoir Evaporation-UT
 NA,NA,NA,Livestock-NMOSE
 NA,NA,NA,Irrigated Agriculture-NMOSE
-NA,NA,NA,Reservoir Storage-WY
 NA,NA,NA,Public Water Supply: Metered-NMOSE
 Historical Data,Winter Ice Surface Area,Pan Approach,Evaporation from Reservoirs-NMOSE
 New Mexico Interstate Stream Commission (NMISC),Reservoir Surface Area,Pan Approach,Evaporation from Reservoirs-NMOSE
@@ -187,6 +518,8 @@ US Bureau of Reclamation Stations,Reservoir Surface Area,Pan Approach,Evaporatio
 US Army Corps of Engineers,Reservoir Surface Area,Pan Approach,Evaporation from Reservoirs-NMOSE
 National Oceanic and Atmospheric Administration Stations,Reservoir Surface Area,Pan Approach,Evaporation from Reservoirs-NMOSE
 Irrigation Districts,Reservoir Surface Area,Pan Approach,Evaporation from Reservoirs-NMOSE
+USU Research Report 145,Rainfall,Pan Approach,Evaporation from Reservoirs-NMOSE
+PRISM,Rainfall,Pan Approach,Evaporation from Reservoirs-NMOSE
 National Oceanic and Atmospheric Administration Stations,Rainfall,Pan Approach,Evaporation from Reservoirs-NMOSE
 US Bureau of Reclamation Stations,Monthly Gross Evaporation Rate,Pan Approach,Evaporation from Reservoirs-NMOSE
 US Bureau of Reclamation Stations,Monthly Evaporation,Pan Approach,Evaporation from Reservoirs-NMOSE
@@ -206,15 +539,22 @@ US Bureau of Reclamation Stations,Reservoir Surface Area,Empirical Data for Smal
 US Army Corps of Engineers,Reservoir Surface Area,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 National Oceanic and Atmospheric Administration Stations,Reservoir Surface Area,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 Irrigation Districts,Reservoir Surface Area,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
+USU Research Report 145,Rainfall,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
+PRISM,Rainfall,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 National Oceanic and Atmospheric Administration Stations,Rainfall,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 Weather Stations,Monthly Precipitation Volume,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 PRISM,Monthly Precipitation Volume,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 Monthly Evaporation,Annual Evaporation,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
+Wyoming Oil and Gas Conservation Commission (WYOGCC),"Monthly Oil, Gas, and Produced Water",WY Industrial Production Method,Industrial: Oil and Gas-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Natural Gas Processing Volumes,WY Industrial Production Method,Industrial: Oil and Gas-WY
+Wyoming Oil and Gas Conservation Commission (WYOGCC),Monthly Coalbed Methane Gas Production and Produced Water,WY Industrial Production Method,Industrial: Oil and Gas-WY
 NA,NA,NA,Natural System Use-UT
 NA,NA,NA,River Inflow-UT
 NA,NA,NA,Riparian Depletions-UT
-NA,NA,NA,Municipal and Domestic Use-WY
 NA,NA,NA,Area Outflows-UT
 NA,NA,NA,Change in Ground Water Storage-CO
-NA,NA,NA,Ungaged Stream Gains-WY
+Wyoming Water Resources Data System (WRDS),Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
+USGS Stream Gages,Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
+Wyoming Water Resources Data System (WRDS),Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
+USGS Stream Gages,Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
 NA,NA,NA,Basin Inflow-UT
