@@ -25,6 +25,7 @@ component_choices <- c(unique(df_component_full$cL))
 data_source_choices <- c(unique(df_state$dsL))
 data_source_choices <- sort(data_source_choices[-1]) # remove NA & reorder
 interstate_choices <- c("Exact Match", "Subcomponent", "Partial Subcomponent")
+interstate_state_choices <- c("All", "CA","CO","NM","UT","WY")
 
 #home tab chart
 # home_d3 <- fromJSON("www/home_chart.json")
@@ -203,6 +204,12 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                selectInput(inputId = "interstate",
                                            label = "Select relationship",
                                            choices = interstate_choices)), #defined above UI
+                        column(width = 3,
+                               selectInput(inputId = "interstate_states",
+                                           label = "Select states",
+                                           choices = interstate_state_choices,
+                                           multiple = TRUE,
+                                           selected = "All")),
                         column(width = 2, 
                                actionButton(inputId = "runButton4", 
                                             label = "",
@@ -371,6 +378,15 @@ server <- function(input, output, session){
     leaf_nodes_3 <- nrow(selection_df_3)
     session$sendCustomMessage(type = "data_source_height", leaf_nodes_3)
     session$sendCustomMessage(type = "data_source_json", selection_json_3)
+  })
+  
+  # Interstate relationship select states
+  observe({
+    if("All" %in% input$interstate_states)
+      selected_choices = interstate_state_choices[-1] #choose all the choices except "All"
+    else
+      selected_choices = input$interstate_states
+    updateSelectInput(session, "interstate_states", selected = selected_choices)
   })
   
   # Interstate relationship chart

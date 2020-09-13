@@ -17,6 +17,16 @@ function (message) {
           }
       })
 
+      //Count number of objects in array for setting box and circle dimensions dynamically
+      var count = 0;
+      abc.forEach(function(item){
+          if(!item.__proto__.__proto__){
+              count++;
+          }
+      });
+      console.log("There are " + count + " objects in the array")
+      number_of_components = count;
+
       data = hierarchy(abc)
 
       //console.log(data)
@@ -30,7 +40,7 @@ function (message) {
       colorout = "#00AFA8";
       colornone = "#bbb";
 
-      var diameter = 960;
+      var diameter = number_of_components * 25; //approximately 960
       var radius = diameter / 2;
       var innerRadius = radius - 300;
 

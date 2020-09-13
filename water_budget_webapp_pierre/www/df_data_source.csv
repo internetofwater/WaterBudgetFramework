@@ -1,4 +1,5 @@
 dsL,pL,emL,cL
+NA,NA,NA,Water Release Caused by Land Subsidence-CA
 USU Research Report 145,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
 SCS TR21,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
 Weather Stations,Mean Monthly Air Temperatures (T),Modified Blaney-Criddle,Irrigated Agriculture Depletions-NMOSE
@@ -142,12 +143,18 @@ GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,D
 US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
 Colorado Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
 New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Domestic Total Use-WY
+NA,NA,NA,Conveyance Seepage-CA
+NA,NA,NA,Recharge of Applied Water-CA
+NA,NA,NA,Change in Surface Water Storage-CA
 Mine Safety and Health Administration (MSHA),Coal Production Quantities,WY Mine Production Method,Industrial: Mine Production-WY
 Mine Safety and Health Administration (MSHA),Annual Employee Hours,WY Mine Production Method,Industrial: Mine Production-WY
+NA,NA,NA,Total Outflow-CA
 NA,NA,NA,Surface Diversion to Cropland-UT
 NA,NA,NA,Municipal and Industrial Diversions-UT
 Facility Director or Operator,Water Use Estimate,Personal Outreach,Commercial: Unmetered-NMOSE
 NA,NA,NA,Total Diversions-WY
+NA,NA,NA,Precipitation on Lakes-CA
+NA,NA,NA,Total Surface Water Outflow-CA
 NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
@@ -165,6 +172,7 @@ GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,L
 US Census Bureau,Population,Withdrawal Method,Livestock: Unmetered-NMOSE
 Colorado Census Bureau,Population,Withdrawal Method,Livestock: Unmetered-NMOSE
 New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Livestock: Unmetered-NMOSE
+NA,NA,NA,Managed Aquifer Recharge-CA
 NA,NA,NA,Commercial-NMOSE
 NA,NA,NA,Industrial Consumptive Use-WY
 NA,NA,NA,Industrial Consumptive Use-WY
@@ -174,10 +182,12 @@ NA,NA,NA,Industrial Consumptive Use-WY
 NA,NA,NA,Industrial Consumptive Use-WY
 US Census Bureau,Population,CO Municipal and Industrial Method,Municipal and Industrial Consumptive Use-CO
 Colorado Census Bureau,Population,CO Municipal and Industrial Method,Municipal and Industrial Consumptive Use-CO
+NA,NA,NA,Evapotranspiration-CA
 NA,NA,NA,Agricultural Depletions-UT
 NA,NA,NA,Agricultural and Municipal Diversions-UT
 NA,NA,NA,Total Land Return Flow-UT
 NA,NA,NA,Gaged Surface Water Inflow-CO
+NA,NA,NA,Total Surface Water Inflow-CA
 NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
@@ -197,12 +207,17 @@ Colorado Census Bureau,Population,Withdrawal Method,Commercial: Schools-NMOSE
 New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Commercial: Schools-NMOSE
 NA,NA,NA,Precipitation-WY
 NA,NA,NA,Municipal and Industrial Return Flow-UT
+NA,NA,NA,Change in Land System Storage-CA
 NA,NA,NA,Livestock: Metered-NMOSE
+NA,NA,NA,Change in Total System Storage-CA
 Wyoming Water Resources Data System (WRDS),Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
 USGS Stream Gages,Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
 Wyoming Water Resources Data System (WRDS),Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
 USGS Stream Gages,Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Losses-WY
+NA,NA,NA,Total Groundwater System Inflow-CA
+NA,NA,NA,Conveyance Evaporation-CA
 NA,NA,NA,Irrigated Agriculture Diversions-NMOSE
+NA,NA,NA,Stream Loss to Groundwater-CA
 State Agricultural Statistics,Livestock Count,CO Livestock Method,Livestock Consumptive Use-CO
 Midwest Plan Service Structures and Environmental Handbook 1977,Average Use Rate,CO Livestock Method,Livestock Consumptive Use-CO
 NA,NA,NA,Commercial: Incomplete Metered-NMOSE
@@ -214,6 +229,7 @@ WY Diversion Data from Water Users,Diversions,Historical Data,Exports-CO
 Historical Diversions File,Diversions,Historical Data,Exports-CO
 NA,NA,NA,Groundwater Use-UT
 NA,NA,NA,Imports-CO
+NA,NA,NA,Stream Gain from Groundwater-CA
 USU Research Report 145,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Agricultural Potential Consumptive Use-UT
 SCS TR21,Crop Growth State Coefficient (Kc),Original Blaney-Criddle,Agricultural Potential Consumptive Use-UT
 CO GIS Exercise,Surface Area of Reservoir,Reservoir Estimation Method,Reservoir Evaporation-CO
@@ -223,6 +239,7 @@ NOAA Technical Report NWS 33,Gross Monthly Free Water Surface Evaporation,Reserv
 NA,NA,NA,Precipitation-CO
 NA,NA,NA,Commercial: Metered-NMOSE
 NA,NA,NA,Basin Outflow-UT
+NA,NA,NA,Stream Outflow-CA
 NA,NA,NA,Gaged Surface Water Outflow-CO
 NA,NA,NA,Precipitation-UT
 Wyoming Oil and Gas Conservation Commission (WYOGCC),"Monthly Oil, Gas, and Produced Water",WY Industrial Production Method,Industrial: Coalbed Methand Production-WY
@@ -239,7 +256,9 @@ NA,NA,NA,Cropland Precipitation-UT
 NA,NA,NA,Public Water Supply-NMOSE
 NA,NA,NA,Surface Water Flows-UT
 NA,NA,NA,Livestock Consumptive Use-WY
+NA,NA,NA,Subsurface Outflow-CA
 NA,NA,NA,Irrigation Surface Water Diversions-WY
+NA,NA,NA,Stream Evaporation-CA
 NA,NA,NA,Power-NMOSE
 NA,NA,NA,Agricultural Consumptive Use-WY
 NA,NA,NA,Agricultural Consumptive Use-WY
@@ -249,6 +268,7 @@ NA,NA,NA,Agricultural Consumptive Use-WY
 NA,NA,NA,Agricultural Consumptive Use-WY
 NA,NA,NA,Agricultural Consumptive Use-WY
 NA,NA,NA,Agricultural Consumptive Use-WY
+NA,NA,NA,Lake Gain from Groundwater-CA
 Unknown,Native Vegetation Coefficient,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
 Colorado Water Conservation Board (CWCB),Diversions,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
 WY Office of the State Engineer,Diversions,CO Native Vegetation Method,Native Vegetation Consumptive Use-CO
@@ -358,6 +378,9 @@ GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,M
 US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
 Colorado Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
 New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Consumptive Use-WY
+NA,NA,NA,Recharge of Precipitation-CA
+NA,NA,NA,Subsurface Inflow-CA
+NA,NA,NA,Total Land System Inflow-CA
 NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
@@ -375,11 +398,13 @@ GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,S
 US Census Bureau,Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
 Colorado Census Bureau,Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
 New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
+NA,NA,NA,Surface Water Diversions-CA
 High Plains Climate Center - University of Nebraska,Gross Pan Evaportation (inches),Pan Method (Net Evaporation),Reservoir Evaporation-WY
 Wyoming Water Resources Data Systems Water and Climate Map Server,Precipitation,Pan Method (Net Evaporation),Reservoir Evaporation-WY
 National Oceanic and Atmospheric Administration Stations,Precipitation,Pan Method (Net Evaporation),Reservoir Evaporation-WY
 CO Agricultural Meteorology Network Station (COAGM),Precipitation,Pan Method (Net Evaporation),Reservoir Evaporation-WY
 NA,NA,NA,Gaged Stream Inflow-WY
+NA,NA,NA,Stored Water Extraction-CA
 NA,NA,NA,Change in Surface Water Storage-CO
 NA,NA,NA,Tributary Inflow-UT
 NA,NA,NA,Ground Water Outflow-CO
@@ -422,6 +447,8 @@ National Oceanic and Atmospheric Administration Stations,Temperature,Daily ASCE 
 CO Agricultural Meteorology Network Station (COAGM),Temperature,Daily ASCE Standardized Penman-Monteith,Crop Consumptive Use-CO
 National Oceanic and Atmospheric Administration Stations,Solar Radiation,Daily ASCE Standardized Penman-Monteith,Crop Consumptive Use-CO
 CO Agricultural Meteorology Network Station (COAGM),Solar Radiation,Daily ASCE Standardized Penman-Monteith,Crop Consumptive Use-CO
+NA,NA,NA,Stored Water Export-CA
+NA,NA,NA,Applied Water Reuse/Recycled Water-CA
 NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Municipal Total Use-WY
@@ -474,8 +501,13 @@ US Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
 Colorado Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
 New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Municipal Total Use-WY
 NA,NA,NA,Industrial: Miscellaneous-WY
+NA,NA,NA,Change in Groundwater Storage-CA
 NA,NA,NA,River Use By Wet Pasture-UT
+NA,NA,NA,Recycled Water Export-CA
+NA,NA,NA,Groundwater Extraction-CA
 Facility Director or Operator,Water Use Estimate,Personal Outreach,Power: Unreported-NMOSE
+NA,NA,NA,Surface Water Delivery-CA
+NA,NA,NA,Groundwater Export-CA
 NA,NA,NA,Pumped Groundwater-UT
 NM Office of the State Engineer (NMOSE),Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Public Water Supply: Unmetered-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Public Water Supply: Unmetered-NMOSE
@@ -494,10 +526,17 @@ GPS Population Data,Population Served by Public Water Supply,Withdrawal Method,P
 US Census Bureau,Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
 Colorado Census Bureau,Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
 New Mexico Department of Agriculture,Livestock Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
+NA,NA,NA,Return Flow-CA
+NA,NA,NA,Applied Water-CA
 NA,NA,NA,Mining-NMOSE
+NA,NA,NA,Lake Evaporation-CA
+NA,NA,NA,Total Groundwater System Outflow-CA
+NA,NA,NA,Stream Inflow-CA
 Unknown,Proration Factors,Natural Flow Gain Distribution,Ungaged Surface Water Inflow-CO
 USGS Stream Gages,Gage Height,Natural Flow Gain Distribution,Ungaged Surface Water Inflow-CO
 CO Division of Water Resources Gages,Gage Height,Natural Flow Gain Distribution,Ungaged Surface Water Inflow-CO
+NA,NA,NA,Precipitation-CA
+NA,NA,NA,Runoff-CA
 NA,NA,NA,Industrial Total Use-WY
 NA,NA,NA,Industrial Total Use-WY
 NA,NA,NA,Industrial Total Use-WY
@@ -508,6 +547,7 @@ Colorado Water Conservation Board (CWCB),Diversions,Historical Data,Reservoir Ev
 WY Office of the State Engineer,Diversions,Historical Data,Reservoir Evaporation-UT
 WY Diversion Data from Water Users,Diversions,Historical Data,Reservoir Evaporation-UT
 Historical Diversions File,Diversions,Historical Data,Reservoir Evaporation-UT
+NA,NA,NA,Imported Water-CA
 NA,NA,NA,Livestock-NMOSE
 NA,NA,NA,Irrigated Agriculture-NMOSE
 NA,NA,NA,Public Water Supply: Metered-NMOSE
@@ -552,9 +592,13 @@ NA,NA,NA,Natural System Use-UT
 NA,NA,NA,River Inflow-UT
 NA,NA,NA,Riparian Depletions-UT
 NA,NA,NA,Area Outflows-UT
+NA,NA,NA,Lake Loss to Groundwater-CA
 NA,NA,NA,Change in Ground Water Storage-CO
+NA,NA,NA,Total Land System Outflow-CA
 Wyoming Water Resources Data System (WRDS),Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
 USGS Stream Gages,Upstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
 Wyoming Water Resources Data System (WRDS),Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
 USGS Stream Gages,Downstream Flow,Wyoming Gain/Loss Estimation Method,Ungaged Stream Gains-WY
+NA,NA,NA,Total Inflow-CA
 NA,NA,NA,Basin Inflow-UT
+NA,NA,NA,Surface Water Exports-CA

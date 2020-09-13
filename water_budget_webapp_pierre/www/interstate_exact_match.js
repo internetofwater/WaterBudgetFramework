@@ -1,7 +1,8 @@
-Shiny.addCustomMessageHandler("exact_match",
-function (message) {
 
-    d3.selectAll("svg").remove();
+Shiny.addCustomMessageHandler("exact_match",
+    function (message) {
+
+        d3.selectAll("svg").remove();
 
         d3.json("df_exact_match.json").then(function (abc) {
 
@@ -17,6 +18,16 @@ function (message) {
                 }
             })
 
+            //Count number of objects in array for setting box and circle dimensions dynamically
+            var count = 0;
+            abc.forEach(function(item){
+                if(!item.__proto__.__proto__){
+                    count++;
+                }
+            });
+            console.log("There are " + count + " objects in the array")
+            number_of_components = count;
+
             data = hierarchy(abc)
 
             //console.log(data)
@@ -29,40 +40,40 @@ function (message) {
             colorout = "#182856";
             colornone = "#bbb";
 
-            var diameter = 960;
+            var diameter = number_of_components * 3.6; //approximately 1300
             var radius = diameter / 2;
             var innerRadius = radius - 300;
-      
+
             line = d3.lineRadial()
                 .curve(d3.curveBundle.beta(0.85))
                 .radius(d => d.y)
                 .angle(d => d.x)
-      
+
             tree = d3.cluster()
                 .size([2 * Math.PI, innerRadius])
-      
+
             const root = tree(bilink(d3.hierarchy(data)
                 .sort((a, b) => d3.ascending(a.height, b.height) || d3.ascending(a.data.name, b.data.name))));
-      
+
             var svg = d3.select("#interstate_container").append("svg")
-              .attr("width", diameter + 400)
-              .attr("height", diameter + 400)
-              .append("g")
-              .attr("transform", "translate(" + (radius + 200) + "," + (radius) + ")");
-      
+                .attr("width", diameter + 400)
+                .attr("height", diameter + 400)
+                .append("g")
+                .attr("transform", "translate(" + (radius + 200) + "," + (radius) + ")");
+
             // Background rectangle
             svg.append("rect")
-            .attr("width", diameter + 200)
-            .attr("height", diameter + 50)
-            .attr("transform", "translate(" + -(radius + 100)  + "," + -(radius) + ")")
-            .attr("fill", "#F8F8F8")
-            .attr('rx', 20);
-      
+                .attr("width", diameter + 200)
+                .attr("height", diameter + 50)
+                .attr("transform", "translate(" + -(radius + 100) + "," + -(radius) + ")")
+                .attr("fill", "#F8F8F8")
+                .attr('rx', 20);
+
             // Auto-scroll
             var scrollCount = 1;
             while (scrollCount < 2) {
                 autoscroll();
-                scrollCount++ ;
+                scrollCount++;
             }
 
             var link = svg.append("g").selectAll(".link")
@@ -70,7 +81,7 @@ function (message) {
 
             node = svg.append("g")
                 .attr("font-family", "arial")
-                .attr("font-size", 12)
+                .attr("font-size", 8)
                 .selectAll("g")
                 .data(root.leaves())
                 .join("g")
@@ -81,8 +92,8 @@ function (message) {
                 .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
                 .attr("transform", d => d.x >= Math.PI ? "rotate(180)" : null)
                 .append("a")
-                    .attr("xlink:href", d => {return d.data.uri;})
-                    .attr("target", "_blank")
+                .attr("xlink:href", d => { return d.data.uri; })
+                .attr("target", "_blank")
                 .text(d => d.data.name)
                 .each(function (d) { d.text = this; })
                 .attr("fill", colornone)  // default text color
@@ -90,9 +101,9 @@ function (message) {
                 .on("mouseover", overed)
                 .on("mouseout", outed)
                 .attr('cursor', 'pointer')
-//                 .call(text => text.append("title").text(d => `${id(d)}
-// b. Has ${d.outgoing.length} subcomponents (in green)
-// c. Is subcomponent of ${d.incoming.length} (in red)`));
+            //                 .call(text => text.append("title").text(d => `${id(d)}
+            // b. Has ${d.outgoing.length} subcomponents (in green)
+            // c. Is subcomponent of ${d.incoming.length} (in red)`));
 
             link = svg.append("g")
                 .attr("stroke", "lightgray")
@@ -162,20 +173,20 @@ function (message) {
                 d3.select("#interstate_container")
                     .transition()
                     .duration(1000)
-                    .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight)/2 + 50));
-                
+                    .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight) / 2 + 50));
+
                 function scrollTween(offset) {
-                    return function() {
+                    return function () {
                         var i = d3.interpolateNumber(window.pageYOffset || document.documentElement.scrollTop, offset);
-                        return function(t) {scrollTo(0, i(t));};
+                        return function (t) { scrollTo(0, i(t)); };
                     };
                 }
-                
+
             }
 
         });
 
-})
+    })
 
 
 

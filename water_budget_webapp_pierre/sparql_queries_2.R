@@ -87,7 +87,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?type WHERE {
 results_state <- rdf_query(file, query_state)
 df_state <- as.data.frame(results_state) 
 df_state <- select(df_state, -type)
-df_state <- df_state[grep(".-CO|.-NMOSE|.-UT|.-WY", df_state$cL),] #Exclude California
+df_state <- df_state[grep(".-CA|.-CO|.-NMOSE|.-UT|.-WY", df_state$cL),] #Exclude NM
 #$cL <- gsub("-NMOSE","-NM", df_state$cL) 
 
 # Data source tab
@@ -182,15 +182,19 @@ df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
 df$exmL <- gsub("-[A-Z]*","", df$exmL)
 # Putting state abbreviations before the name so that d3 sorts by state
 df$cL <- paste0(df$state_1L,"-", df$cL)
-lapply(1:length(df$exmL), function(i){
-  if (!is.na(df$exmL[i]) {
-    df$exmL[i] <- paste0(df$state_2L[i],"-", df$exmL[i]) 
-  })
-})
+df$exmL <- paste0(df$state_2L,"-", df$exmL)
+#df[df == "NA-NA"] <- NA #for restoring NAs in exmL column
 
-ifelse(!is.na(df$exmL),
-       df$exmL <- paste0(df$state_2L,"-", df$exmL),
-       1)
+########### work from here
+# lapply(1:length(df$exmL), function(i){
+#   if (!is.na(df$exmL[i]) {
+#     df$exmL[i] <- paste0(df$state_2L[i],"-", df$exmL[i]) 
+#   })
+# })
+# 
+# ifelse(!is.na(df$exmL),
+#        df$exmL <- paste0(df$state_2L,"-", df$exmL),
+#        1)
 
 
 
@@ -234,11 +238,18 @@ exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
                                     replacement="", exact_match_final$imports )
 exact_match_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
                                     replacement="", exact_match_final$imports )
+# Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
+exact_match_final$name <- mapply(gsub, pattern='No.',
+                                    replacement="No", exact_match_final$name )
 
-# 
+# Drop NA-NA
+abc <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
 
+# Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
+# abc$imports[abc$imports == ""] <- abc$name
+# abc$imports <- with(abc, ifelse(imports == "", name, imports ) )
 
-df_exact_matchJSON <- toJSON(exact_match_final)
+df_exact_matchJSON <- toJSON(abc)
 
 write(df_exact_matchJSON, "www/df_exact_match.json")
 

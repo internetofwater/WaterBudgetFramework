@@ -38,6 +38,50 @@ Bear River,Municipal Consumptive Use,Withdrawal Method,Self Supplied Domestic Po
 Bear River,Municipal Consumptive Use,Withdrawal Method,Self Supplied Domestic Population,Population Served by Public Water Supply
 Bear River,Municipal Consumptive Use,Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
 Bear River,Municipal Consumptive Use,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+CA,Applied Water,NA,NA,NA
+CA,Applied Water Reuse/Recycled Water,NA,NA,NA
+CA,Change in Groundwater Storage,NA,NA,NA
+CA,Change in Land System Storage,NA,NA,NA
+CA,Change in Surface Water Storage,NA,NA,NA
+CA,Change in Total System Storage,NA,NA,NA
+CA,Conveyance Evaporation,NA,NA,NA
+CA,Conveyance Seepage,NA,NA,NA
+CA,Evapotranspiration,NA,NA,NA
+CA,Groundwater Export,NA,NA,NA
+CA,Groundwater Extraction,NA,NA,NA
+CA,Imported Water,NA,NA,NA
+CA,Lake Evaporation,NA,NA,NA
+CA,Lake Gain from Groundwater,NA,NA,NA
+CA,Lake Loss to Groundwater,NA,NA,NA
+CA,Managed Aquifer Recharge,NA,NA,NA
+CA,Precipitation,NA,NA,NA
+CA,Precipitation on Lakes,NA,NA,NA
+CA,Recharge of Applied Water,NA,NA,NA
+CA,Recharge of Precipitation,NA,NA,NA
+CA,Recycled Water Export,NA,NA,NA
+CA,Return Flow,NA,NA,NA
+CA,Runoff,NA,NA,NA
+CA,Stored Water Export,NA,NA,NA
+CA,Stored Water Extraction,NA,NA,NA
+CA,Stream Evaporation,NA,NA,NA
+CA,Stream Gain from Groundwater,NA,NA,NA
+CA,Stream Inflow,NA,NA,NA
+CA,Stream Loss to Groundwater,NA,NA,NA
+CA,Stream Outflow,NA,NA,NA
+CA,Subsurface Inflow,NA,NA,NA
+CA,Subsurface Outflow,NA,NA,NA
+CA,Surface Water Delivery,NA,NA,NA
+CA,Surface Water Diversions,NA,NA,NA
+CA,Surface Water Exports,NA,NA,NA
+CA,Total Groundwater System Inflow,NA,NA,NA
+CA,Total Groundwater System Outflow,NA,NA,NA
+CA,Total Inflow,NA,NA,NA
+CA,Total Land System Inflow,NA,NA,NA
+CA,Total Land System Outflow,NA,NA,NA
+CA,Total Outflow,NA,NA,NA
+CA,Total Surface Water Inflow,NA,NA,NA
+CA,Total Surface Water Outflow,NA,NA,NA
+CA,Water Release Caused by Land Subsidence,NA,NA,NA
 CO,Change in Ground Water Storage,NA,NA,NA
 CO,Change in Surface Water Storage,NA,NA,NA
 CO,Crop Consumptive Use,Daily ASCE Standardized Penman-Monteith,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)

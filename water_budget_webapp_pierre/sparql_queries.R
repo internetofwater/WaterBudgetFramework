@@ -52,9 +52,7 @@ SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?psc
 results_component <- rdf_query(file, query_component)
 df_component_full <- as.data.frame(results_component)
 df_component_full <- arrange(df_component_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
-df_component_full <- df_component_full[grep(".-CO|.-NMOSE|.-UT|.-WY", df_component_full$cL),] # exclude California
-#df_component_full$cL <- gsub("-NMOSE","-NM", df_component_full$cL)
-#df_component_full$cL <- gsub("-[A-Z][A-Z][A-Z][A-Z][A-Z]","", df_component_full$cL)
+df_component_full <- df_component_full[grep(".-CA |.-CO|.-NMOSE|.-UT|.-WY", df_component_full$cL),] # exclude NM
 df_component_full$cL <- gsub("-[A-Z][A-Z]","", df_component_full$cL)
 df_component_flow <- df_component_full[c(1,2,(seq(4,length(df_component_full), 2)))]
 write_csv(df_component_full, "www/df_component_full.csv")
@@ -87,7 +85,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?type WHERE {
 results_state <- rdf_query(file, query_state)
 df_state <- as.data.frame(results_state) 
 df_state <- select(df_state, -type)
-df_state <- df_state[grep(".-CO|.-NMOSE|.-UT|.-WY", df_state$cL),] #Exclude California
+df_state <- df_state[grep(".-CA|.-CO|.-NMOSE|.-UT|.-WY", df_state$cL),] #Exclude NM
 #$cL <- gsub("-NMOSE","-NM", df_state$cL) 
 
 # Data source tab
