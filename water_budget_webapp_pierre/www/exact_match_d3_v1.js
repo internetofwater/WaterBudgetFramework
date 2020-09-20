@@ -1,27 +1,27 @@
-const abc = [
-  {"name": "a.A", "imports": ["a.B", "a.C", "a.D"]},
-  {"name": "a.B", "imports": ["a.C", "a.D"]},
-  {"name": "a.C", "imports": ["a.D"]},
-  {"name": "a.D", "imports": []},
-  {"name": "a.E", "imports": ["a.E"]}
- ]
+// const abc = [
+//   {"name": "a.A", "imports": ["a.B", "a.C", "a.D"]},
+//   {"name": "a.B", "imports": ["a.C", "a.D"]},
+//   {"name": "a.C", "imports": ["a.D"]},
+//   {"name": "a.D", "imports": []},
+//   {"name": "a.E", "imports": ["a.E"]}
+//  ]
 
 
 
-//d3.json("df_subcomponent.json").then(function(abc) {
+d3.json("df_exact_match_v2.json").then(function(abc) {
 
 
    console.log(abc)
 
-// //convert typeof import to array
-// abc.forEach(item =>{
-//   item["imports"] = item["imports"].split(',')
-//   // change objects that have "" to empty 
-//   //console.log(Object.values(item.imports))
-//   if (Object.values(item.imports)[0] == "") {
-//     item.imports.length = 0;
-//   }
-// })
+//convert typeof import to array
+abc.forEach(item =>{
+  item["imports"] = item["imports"].split(',')
+  // change objects that have "" to empty 
+  //console.log(Object.values(item.imports))
+  if (Object.values(item.imports)[0] == "") {
+    item.imports.length = 0;
+  }
+}) 
 
   data = hierarchy(abc)
 
@@ -153,4 +153,4 @@ c. Is subcomponent of ${d.incoming.length} (in red)`));
     return `${node.parent ? id(node.parent) + "." : ""}${node.data.name}`;
   }
 
-//});
+});
