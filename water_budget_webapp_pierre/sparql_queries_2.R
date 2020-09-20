@@ -176,6 +176,9 @@ SELECT ?state_1L ?cL ?exmL ?state_2L ?c ?exm WHERE {
 "
 results <- rdf_query(file, query)
 df <- as.data.frame(results)
+# remove any components where usedBy is a river basin and not a 2letter state abbreviation
+df <- df[(df$state_1L %in% c("CA", "CO", "NM", "UT", "WY")),]
+df <- df[(df$state_2L %in% c("CA", "CO", "NM", "UT", "WY", NA)),]
 df$empty <- NA
 # Removing state abbreviations to put them before names in next steps (for d3 sorting)
 df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
@@ -420,10 +423,158 @@ partial_subcomponent_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
                                      replacement="", partial_subcomponent_final$imports )
 
 # 
-
-
 df_partial_subcomponentJSON <- toJSON(partial_subcomponent_final)
 write(df_partial_subcomponentJSON, "www/df_partial_subcomponent.json")
 
 
+##########################################################################################################################
+##########################################################################################################################
+##########################################################################################################################
+# INTERSTATE V2
+
+
+# properties like flow type, flowsink and source are put in a separat optional tag for c and with the same optional tag for ex
+
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?state_cL ?ftype_cL ?fsource_cL ?fsink_cL ?cL ?exmL ?state_exmL ?ftype_exmL ?fsource_exmL ?fsink_exmL ?c ?exm WHERE {
+    ?c wb:usedBy ?state_c.
+    ?state_c rdfs:label ?state_cL.
+    ?c rdfs:label ?cL.
+    
+  OPTIONAL {
+    ?c skos:isExactMatch ?exm.
+    ?exm rdfs:label ?exmL.
+    ?exm wb:usedBy ?state_exm.
+    ?state_exm rdfs:label ?state_exmL.
+    
+    ?exm wb:isFlowType ?ftype_exm.
+    ?ftype_exm rdfs:label ?ftype_exmL.
+    
+    ?exm wb:flowSource ?fsource_exm.
+    ?fsource_exm rdfs:label ?fsource_exmL.
+    
+    ?exm wb:flowSink ?fsink_exm.
+    ?fsink_exm rdfs:label ?fsink_exmL.
+  }
+  
+  OPTIONAL {
+    ?c wb:isFlowType ?ftype_c.
+    ?ftype_c rdfs:label ?ftype_cL.
+  }
+  
+  OPTIONAL {
+    ?c wb:flowSource ?fsource_c.
+    ?fsource_c rdfs:label ?fsource_cL.
+  }
+  
+  OPTIONAL {
+    ?c wb:flowSink ?fsink_c.
+    ?fsink_c rdfs:label ?fsink_cL.
+  }
+  
+}
+"
+results <- rdf_query(file, query)
+df <- as.data.frame(results)
+
+
+
+
+
+
+
+
+
+
+
+#--- Exact Match ---#
+query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?state_1L ?cL ?exmL ?state_2L ?c ?exm WHERE {
+    ?c wb:usedBy ?state_1.
+    ?state_1 rdfs:label ?state_1L.
+    ?c rdfs:label ?cL.
+  OPTIONAL {
+    ?c skos:isExactMatch ?exm.
+    ?exm rdfs:label ?exmL.
+    ?exm wb:usedBy ?state_2.
+    ?state_2 rdfs:label ?state_2L.
+  }
+}
+"
+results <- rdf_query(file, query)
+df <- as.data.frame(results)
+# remove components usedBy river basins
+df <- df[(df$state_1L %in% c("CA", "CO", "NM", "UT", "WY")),]
+df <- df[(df$state_2L %in% c("CA", "CO", "NM", "UT", "WY", NA)),]
+df$empty <- NA
+# Removing state abbreviations to put them before names in next steps (for d3 sorting)
+df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
+df$exmL <- gsub("-[A-Z]*","", df$exmL)
+# Putting state abbreviations before the name so that d3 sorts by state
+df$cL <- paste0(df$state_1L,"-", df$cL)
+df$exmL <- paste0(df$state_2L,"-", df$exmL)
+# putting all components and states in 1 column
+# adding a column of "key" for d3 edge bundling
+# Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
+exact_match <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
+                          exmL = c(df[,"exmL"], df[,"cL"]),
+                          state_2L = c(df[,"state_2L"], df[,"state_1L"]),
+                          key = c(df[,"exmL"], df[,"cL"]),
+                          uri = c(df[,"exm"], df[,"c"]))
+
+# rename column names
+# renaming cL as "imports" and scL as "names"
+colnames(exact_match) <- c("imports", "name", "state", "key", "uri")
+
+#add "a." in all names to work with d3 edge bundling (bilink function)
+#dont ask why
+exact_match$name <- paste("a", 
+                          exact_match$name, sep=". ")
+exact_match$imports <- paste("a", 
+                             exact_match$imports, sep=". ")
+
+# rearrange columns
+col_order <- c("state","name","key","imports", "uri")
+exact_match <- exact_match[,col_order]
+# alphabetical order
+exact_match <- arrange(exact_match, state, name, key)
+# storing subcomponents separated by comma for a componenet
+# subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+exact_match_final <- exact_match %>%
+  group_by(state, name, key, uri) %>%
+  summarise(imports = paste0(imports, collapse = ","))
+
+# Replace NAs with "" in imports column for later emptying in JS
+exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
+                                    replacement="", exact_match_final$imports )
+exact_match_final$imports <- mapply(gsub, pattern='a. NA',
+                                    replacement="", exact_match_final$imports )
+exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
+                                    replacement="", exact_match_final$imports )
+exact_match_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
+                                    replacement="", exact_match_final$imports )
+# Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
+exact_match_final$name <- mapply(gsub, pattern='No.',
+                                 replacement="No", exact_match_final$name )
+
+# Drop NA-NA
+abc <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
+
+# Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
+# abc$imports[abc$imports == ""] <- abc$name
+# abc$imports <- with(abc, ifelse(imports == "", name, imports ) )
+
+df_exact_matchJSON <- toJSON(abc)
+
+write(df_exact_matchJSON, "www/df_exact_match_v2.json")
 
