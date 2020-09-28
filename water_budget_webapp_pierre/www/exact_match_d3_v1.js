@@ -1,27 +1,27 @@
-// const abc = [
-//   {"name": "a.A", "imports": ["a.B", "a.C", "a.D"]},
-//   {"name": "a.B", "imports": ["a.C", "a.D"]},
-//   {"name": "a.C", "imports": ["a.D"]},
-//   {"name": "a.D", "imports": []},
-//   {"name": "a.E", "imports": ["a.E"]}
-//  ]
+const abc = [
+  {"name": "a.A", "imports": ["a.B", "a.C", "a.D"]},
+  {"name": "a.B", "imports": ["a.C", "a.D"]},
+  {"name": "a.C", "imports": ["a.D"]},
+  {"name": "a.D", "imports": []},
+  {"name": "a.E", "imports": ["a.A"]}
+ ]
 
 
 
-d3.json("df_exact_match_v2.json").then(function(abc) {
+//d3.json("df_exact_match_v2.json").then(function(abc) {
 
 
    console.log(abc)
 
-//convert typeof import to array
-abc.forEach(item =>{
-  item["imports"] = item["imports"].split(',')
-  // change objects that have "" to empty 
-  //console.log(Object.values(item.imports))
-  if (Object.values(item.imports)[0] == "") {
-    item.imports.length = 0;
-  }
-}) 
+// //convert typeof import to array
+// abc.forEach(item =>{
+//   item["imports"] = item["imports"].split(',')
+//   // change objects that have "" to empty 
+//   //console.log(Object.values(item.imports))
+//   if (Object.values(item.imports)[0] == "") {
+//     item.imports.length = 0;
+//   }
+// }) 
 
   data = hierarchy(abc)
 
@@ -31,15 +31,12 @@ abc.forEach(item =>{
     //   item["imports"] = item["imports"].split(',')
     // })
 
-  var diameter = 960,
+  var diameter = 500,
   radius = diameter / 2,
 
   colorin = "#E55E69";
   colorout = "#00AFA8";
   colornone = "#bbb";
-
-  width = 954;
-  radius = width/2;
 
   line = d3.lineRadial()
     .curve(d3.curveBundle.beta(0.85))
@@ -153,4 +150,4 @@ c. Is subcomponent of ${d.incoming.length} (in red)`));
     return `${node.parent ? id(node.parent) + "." : ""}${node.data.name}`;
   }
 
-});
+//});
