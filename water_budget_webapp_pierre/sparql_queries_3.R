@@ -486,6 +486,23 @@ df <- as.data.frame(results)
 df <- df[(df$state_cL %in% c("CA", "CO", "NM", "UT", "WY")),]
 df <- df[(df$state_exmL %in% c("CA", "CO", "NM", "UT", "WY", NA)),]
 df$empty <- NA
+# check how will user input work in R shiny based on 
+write_csv(df, "www/df_exact_match_v2.csv")
+# import the exported dataframe above
+df2 <- read_csv("www/df_exact_match_v2.csv")
+
+choice1 <- c("Outflow", "Inflow", "Internal Transfer")
+choice2 <- c("CO", "NM", "UT", "CA", "WY")
+df <- df2 %>%
+  #filter(ftype_cL %in% choice1) %>%
+  #filter(ftype_exmL %in% choice1) %>%
+  filter(state_cL %in% choice2) %>%
+  filter(state_exmL %in% choice2) %>%
+  as.data.frame()
+
+
+### Copy below code to RShiny to apply the following steps only to the state and flow info chosen by
+### the user.....
 # Removing state abbreviations to put them before names in next steps (for d3 sorting)
 df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
 df$exmL <- gsub("-[A-Z]*","", df$exmL)
@@ -543,6 +560,10 @@ exact_match_final$name <- mapply(gsub, pattern='No.',
 
 # Drop NA-NA
 abc <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
+
+# Export to csv 
+# write_csv(abc, "www/df_exact_match_v2.csv")
+
 
 # Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
 # abc$imports[abc$imports == ""] <- abc$name

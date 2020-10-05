@@ -25,14 +25,14 @@ d3.json("df_exact_match_v2.json").then(function(abc) {
 
   // only get specified flow type
   // apply multiple conditions to specify flow type, flow source, flow sink etc
-  var cdf = abc.filter(item => {
-    return item.state === "CA";
-    //return item.flow_type === "Inflow";
-  }); 
+  // var cdf = abc.filter(item => {
+  //   return item.state === "CA";
+  //   //return item.flow_type === "Inflow";
+  // }); 
 
-  console.log(cdf)
+  console.log(abc)
 
-  data = hierarchy(cdf)
+  data = hierarchy(abc)
 
   var diameter = 600, //radius of circle
   radius = diameter / 2,

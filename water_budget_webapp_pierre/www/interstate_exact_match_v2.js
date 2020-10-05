@@ -1,21 +1,19 @@
 
-// assigning user input variables globally
-var state_choice;
+// // assigning user input variables globally
+// var state_choice;
 
-// assign state input to a variable
-Shiny.addCustomMessageHandler("interstate_states2",
-function(message) {
-    state_choice = message;
-    console.log(state_choice)
-})
+// // assign state input to a variable
+// Shiny.addCustomMessageHandler("interstate_states2",
+// function(message) {
+//     state_choice = message;
+//     console.log(state_choice)
+// })
 
 Shiny.addCustomMessageHandler("exact_match2",
     function (message) {
 
+        abc = message;
         d3.selectAll("svg").remove();
-
-        d3.json("df_exact_match_v2.json").then(function (abc) {
-
 
             console.log(abc)
             //convert typeof import to array
@@ -41,15 +39,15 @@ Shiny.addCustomMessageHandler("exact_match2",
             // Select states based on user input
             //n = state_choice.length
             //first_value = state_choice[n-1]
-            var cdf = abc.filter(item => {
-                x = item.flow_type === "Inflow";
-                return x;
-              }); 
+            // var cdf = abc.filter(item => {
+            //     x = item.flow_type === "Inflow";
+            //     return x;
+            //   }); 
             //console.log(n);
             //console.log(first_value);
 
             
-            data = hierarchy(cdf);  
+            data = hierarchy(abc);  
             //console.log(data)
             // //convert typeof import to array
             // data.forEach(item =>{
@@ -60,7 +58,7 @@ Shiny.addCustomMessageHandler("exact_match2",
             colorout = "#182856";
             colornone = "#bbb";
 
-            var diameter = number_of_components * 3.6; //approximately 1300
+            var diameter = 1300; //approximately 1300, USE "NUMBER OF COMPONENTS" for dyanmic size
             var radius = diameter / 2;
             var innerRadius = radius - 300;
 
@@ -204,9 +202,9 @@ Shiny.addCustomMessageHandler("exact_match2",
 
             }
 
-        });
+        })
 
-    })
+
 
 
 

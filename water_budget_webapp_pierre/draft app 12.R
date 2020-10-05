@@ -19,13 +19,19 @@ df_state <- read_csv("www/df_state.csv") # dataframe for d3 chart on state tab
 #df_exact_match <- read_csv("www/exact_match_test.csv") 
 # Not required, choice is sent to JS where relevant csv is read and used for D3
 
+# ---- 4. Importing dataframe for Interstate v2 tab --- #
+df_exact_match <- read_csv("www/df_exact_match_v2.csv")
+
 #drop-down choices
 state_choices <- c("CA","CO","NM","UT","WY") # later change it to unique values from dataframe
 component_choices <- c(unique(df_component_full$cL))
 data_source_choices <- c(unique(df_state$dsL))
 data_source_choices <- sort(data_source_choices[-1]) # remove NA & reorder
 interstate_choices <- c("Exact Match", "Subcomponent", "Partial Subcomponent")
-interstate_state_choices <- c("All", "CA","CO","NM","UT","WY")
+interstate_state_choices <- c("SELECT ALL", "CLEAR ALL", "CA","CO","NM","UT","WY")
+flow_type_choices <- c("All", "Inflow", "Internal Transfer", "Outflow", "Storage Change")
+flow_source_choices <- c("All", unique(df_exact_match$fsource_cL))
+flow_sink_choices <- c("All", "hello")
 
 #home tab chart
 # home_d3 <- fromJSON("www/home_chart.json")
@@ -221,7 +227,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 # ------- Tab - Interstate - End ------- #
 
 
-# ------- Tab - Interstate - Begin ------- #
+# ------- Tab - Interstate v2 - Begin ------- #
                 tabPanel(title = "Interstate 2",
                          tags$div(class = "banner", 
                                   tags$img(class = "banner-img-state",
@@ -234,22 +240,54 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                          column(width = 12,
                                 column(width = 3,
                                        selectInput(inputId = "interstate2",
-                                                   label = "Select relationship",
-                                                   choices = interstate_choices)), #defined above UI
+                                                   label = "Select interstate relationship",
+                                                   choices = interstate_choices)),
+                                column(width = 2,
+                                       actionButton(inputId = "runButton4.1",
+                                                    label = "View all components",
+                                                    icon = icon("check")
+                                       ))
+                                ), #defined above UI
+                         
+                         column(width = 12, 
+                                column(width = 12,
+                                       tags$b("OR only view components that are exact matches using state and flow information below:"))
+                                ),
+                         column(width = 12,
                                 column(width = 3,
                                        selectInput(inputId = "interstate_states2",
                                                    label = "Select states",
                                                    choices = interstate_state_choices,
                                                    multiple = TRUE,
+                                                   selected = "SELECT ALL")),
+                                column(width = 3,
+                                       selectInput(inputId = "interstate_flowType",
+                                                   label = "Select flow type", 
+                                                   choices = flow_type_choices, 
+                                                   multiple = TRUE,
+                                                   selected = "All"))
+                                ),
+                         column(width = 12,
+                                column(width = 3,
+                                       selectInput(inputId = "interstate_flowSource",
+                                                   label = "Select flow source",
+                                                   choices = flow_source_choices,
+                                                   multiple = TRUE,
+                                                   selected = "All")), 
+                                column(width = 3,
+                                       selectInput(inputId = "interstate_flowSink",
+                                                   label = "Select flow sink",
+                                                   choices = flow_sink_choices,
+                                                   multiple = TRUE,
                                                    selected = "All")),
                                 column(width = 2, 
                                        actionButton(inputId = "runButton4.2", 
                                                     label = "",
-                                                    icon = icon("check"))
-                                )),
+                                                    icon = icon("check")))
+                                ),
                          tags$body(tags$div(id = "interstate_container2"))
 ),
-# ------- Tab - Interstate - End ------- #
+# ------- Tab - Interstate v2 - End ------- #
 
 
       navbarMenu(title = "About",
@@ -423,15 +461,71 @@ server <- function(input, output, session){
   })
   
   # Interstate v2
+  # Update choices
   observe({
-    if("All" %in% input$interstate_states2)
-      selected_choices2 = interstate_state_choices[-1] #choose all the choices except "All"
+    #--- State choices ---#
+    if("SELECT ALL" %in% input$interstate_states2)
+      selected_choices2 = interstate_state_choices[c(-1, -2)] #choose all the choices except "All"
+    else if("CLEAR ALL" %in% input$interstate_states2)
+      selected_choices2 = ""
     else
       selected_choices2 = input$interstate_states2
     updateSelectInput(session, "interstate_states2", selected = selected_choices2)
+    
+    #--- Flow Type choices ---#
+    # Updating flow choices based on states selected
+    selected_flowType <- df_exact_match %>%
+      filter(state_exmL %in% input$interstate_states2) 
+    selected_flowType <- c("SELECT ALL", "CLEAR ALL", unique(selected_flowType$ftype_exmL))
+    
+    # if you select "All" it will add all flow types
+    if("SELECT ALL" %in% input$interstate_flowType)
+      selected_flowType_default = selected_flowType[c(-1, -2)] #choose all the choices except "All"
+    else if("CLEAR ALL" %in% input$interstate_flowType)
+      selected_flowType_default = ""
+    else
+      selected_flowType_default = input$interstate_flowType
+    
+    # Update choices
+    updateSelectInput(session, "interstate_flowType", selected = selected_flowType_default, choices = selected_flowType)
+    
+    #--- Flow Source choices ---#
+    selected_flowSource <- df_exact_match %>%
+      filter(state_exmL %in% input$interstate_states2) %>%
+      filter(ftype_exmL %in% input$interstate_flowType)
+    selected_flowSource <- c("SELECT ALL", "CLEAR ALL", unique(selected_flowSource$fsource_exmL))
+    
+    # if you select "All" it will add all flow sources
+    if("SELECT ALL" %in% input$interstate_flowSource)
+      selected_flowSource_default = selected_flowSource[c(-1, -2)] #choose all the choices except 1 and 2
+    else if("CLEAR ALL" %in% input$interstate_flowSource)
+      selected_flowSource_default = ""
+    else
+      selected_flowSource_default = input$interstate_flowSource
+    
+    # Update choices
+    updateSelectInput(session, "interstate_flowSource", selected = selected_flowSource_default, choices = selected_flowSource)
+    
+    #--- Flow Sink choices ---#
+    selected_flowSink <- df_exact_match %>%
+      filter(state_exmL %in% input$interstate_states2) %>%
+      filter(ftype_exmL %in% input$interstate_flowType) %>%
+      filter(fsource_exmL %in% input$interstate_flowSource)
+    selected_flowSink <- c("SELECT ALL", "CLEAR ALL", unique(selected_flowSink$fsink_exmL))
+    
+    if("SELECT ALL" %in% input$interstate_flowSink)
+      selected_flowSink_default = selected_flowSink[c(-1, -2)] #choose all the choices except 1 and 2
+    else if("CLEAR ALL" %in% input$interstate_flowSink)
+      selected_flowSink_default = ""
+    else
+      selected_flowSink_default = input$interstate_flowSink
+    
+    # Update choices
+    updateSelectInput(session, "interstate_flowSink", selected = selected_flowSink_default, choices = selected_flowSink)
   })
   
   # Interstate relationship chart
+  # Interstate v1
   observeEvent(input$runButton4, {
       interstate_relationship <- input$interstate
       if (interstate_relationship == "Exact Match"){
@@ -443,12 +537,184 @@ server <- function(input, output, session){
       }
   })
   
+  # Interstate v2
+  
+  # See all components
+  observeEvent(input$runButton4.1, {
+    interstate_relationship2 <- input$interstate2
+    
+    if (interstate_relationship2 == "Exact Match"){
+      ########## COPY PASTE FORM SPARQL QUERIES AND SEND JSON TO VISUAL STUDIO CODE
+      # storing user input in separate variables, directly putting input$___ in filter did not work...
+      state <- c(input$interstate_states2)
+      flowType <- c(input$interstate_flowType)
+      flowSource <- c(input$interstate_flowSource)
+      flowSink <- c(input$interstate_flowSink)
+      
+      df <- df_exact_match %>%
+        as.data.frame()
+    }
+      
+      df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
+      df$exmL <- gsub("-[A-Z]*","", df$exmL)
+      # Putting state abbreviations before the name so that d3 sorts by state
+      df$cL <- paste0(df$state_cL,"-", df$cL)
+      df$exmL <- paste0(df$state_exmL,"-", df$exmL)
+      # putting all components and states in 1 column
+      # adding a column of "key" for d3 edge bundling
+      # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
+      exact_match <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
+                                exmL = c(df[,"exmL"], df[,"cL"]),
+                                state_2L = c(df[,"state_exmL"], df[,"state_cL"]),
+                                key = c(df[,"exmL"], df[,"cL"]),
+                                ftype = c(df[,"ftype_exmL"], df[,"ftype_cL"]),
+                                fsource = c(df[,"fsource_exmL"], df[,"fsource_cL"]),
+                                fsink = c(df[,"fsink_exmL"], df[,"fsink_cL"]),
+                                uri = c(df[,"exm"], df[,"c"]))
+      
+      # rename column names
+      # renaming cL as "imports" and scL as "names"
+      colnames(exact_match) <- c("imports", "name", "state", "key", "flow_type",
+                                 "flow_source", "flow_sink", "uri")
+      
+      #add "a." in all names to work with d3 edge bundling (bilink function)
+      #dont ask why
+      exact_match$name <- paste("a", 
+                                exact_match$name, sep=". ")
+      exact_match$imports <- paste("a", 
+                                   exact_match$imports, sep=". ")
+      
+      # rearrange columns
+      col_order <- c("state","name","key","imports", "flow_type",
+                     "flow_source", "flow_sink", "uri")
+      exact_match <- exact_match[,col_order]
+      # alphabetical order
+      exact_match <- arrange(exact_match, state, name, key)
+      # storing subcomponents separated by comma for a componenet
+      # subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+      exact_match_final <- exact_match %>%
+        group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
+        summarise(imports = paste0(imports, collapse = ","))
+      
+      # Replace NAs with "" in imports column for later emptying in JS
+      exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
+                                          replacement="", exact_match_final$imports )
+      exact_match_final$imports <- mapply(gsub, pattern='a. NA',
+                                          replacement="", exact_match_final$imports )
+      exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
+                                          replacement="", exact_match_final$imports )
+      exact_match_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
+                                          replacement="", exact_match_final$imports )
+      # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
+      exact_match_final$name <- mapply(gsub, pattern='No.',
+                                       replacement="No", exact_match_final$name )
+      
+      # Drop NA-NA
+      abc <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
+      
+      # Export to csv 
+      # write_csv(abc, "www/df_exact_match_v2.csv")
+      
+      
+      # Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
+      # abc$imports[abc$imports == ""] <- abc$name
+      # abc$imports <- with(abc, ifelse(imports == "", name, imports ) )
+      
+      df_exact_matchJSON <- toJSON(abc)
+      session$sendCustomMessage(type = "exact_match2", df_exact_matchJSON)
+    })
+  
+  
   observeEvent(input$runButton4.2, {
     interstate_relationship2 <- input$interstate2
-    interstate_state_input2 <- input$interstate_states2
+    
     if (interstate_relationship2 == "Exact Match"){
-      session$sendCustomMessage(type = "exact_match2", interstate_relationship2)
-      session$sendCustomMessage(type = "interstate_states2", interstate_state_input2)
+      ########## COPY PASTE FORM SPARQL QUERIES AND SEND JSON TO VISUAL STUDIO CODE
+      # storing user input in separate variables, directly putting input$___ in filter did not work...
+      state <- c(input$interstate_states2)
+      flowType <- c(input$interstate_flowType)
+      flowSource <- c(input$interstate_flowSource)
+      flowSink <- c(input$interstate_flowSink)
+      
+      df <- df_exact_match %>%
+         filter(state_cL %in% state) %>%
+         filter(state_exmL %in% state) %>%
+         filter(ftype_exmL %in% flowType) %>%
+         filter(ftype_cL %in% flowType) %>%
+         filter(fsource_exmL %in% flowSource) %>%
+         filter(fsource_cL %in% flowSource) %>%
+         filter(fsink_exmL %in% flowSink) %>%
+         filter(fsink_cL %in% flowSink) %>%
+        as.data.frame()
+      
+      df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
+      df$exmL <- gsub("-[A-Z]*","", df$exmL)
+      # Putting state abbreviations before the name so that d3 sorts by state
+      df$cL <- paste0(df$state_cL,"-", df$cL)
+      df$exmL <- paste0(df$state_exmL,"-", df$exmL)
+      # putting all components and states in 1 column
+      # adding a column of "key" for d3 edge bundling
+      # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
+      exact_match <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
+                                exmL = c(df[,"exmL"], df[,"cL"]),
+                                state_2L = c(df[,"state_exmL"], df[,"state_cL"]),
+                                key = c(df[,"exmL"], df[,"cL"]),
+                                ftype = c(df[,"ftype_exmL"], df[,"ftype_cL"]),
+                                fsource = c(df[,"fsource_exmL"], df[,"fsource_cL"]),
+                                fsink = c(df[,"fsink_exmL"], df[,"fsink_cL"]),
+                                uri = c(df[,"exm"], df[,"c"]))
+      
+      # rename column names
+      # renaming cL as "imports" and scL as "names"
+      colnames(exact_match) <- c("imports", "name", "state", "key", "flow_type",
+                                 "flow_source", "flow_sink", "uri")
+      
+      #add "a." in all names to work with d3 edge bundling (bilink function)
+      #dont ask why
+      exact_match$name <- paste("a", 
+                                exact_match$name, sep=". ")
+      exact_match$imports <- paste("a", 
+                                   exact_match$imports, sep=". ")
+      
+      # rearrange columns
+      col_order <- c("state","name","key","imports", "flow_type",
+                     "flow_source", "flow_sink", "uri")
+      exact_match <- exact_match[,col_order]
+      # alphabetical order
+      exact_match <- arrange(exact_match, state, name, key)
+      # storing subcomponents separated by comma for a componenet
+      # subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+      exact_match_final <- exact_match %>%
+        group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
+        summarise(imports = paste0(imports, collapse = ","))
+      
+      # Replace NAs with "" in imports column for later emptying in JS
+      exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
+                                          replacement="", exact_match_final$imports )
+      exact_match_final$imports <- mapply(gsub, pattern='a. NA',
+                                          replacement="", exact_match_final$imports )
+      exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
+                                          replacement="", exact_match_final$imports )
+      exact_match_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
+                                          replacement="", exact_match_final$imports )
+      # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
+      exact_match_final$name <- mapply(gsub, pattern='No.',
+                                       replacement="No", exact_match_final$name )
+      
+      # Drop NA-NA
+      abc <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
+      
+      # Export to csv 
+      # write_csv(abc, "www/df_exact_match_v2.csv")
+      
+      
+      # Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
+      # abc$imports[abc$imports == ""] <- abc$name
+      # abc$imports <- with(abc, ifelse(imports == "", name, imports ) )
+      
+      df_exact_matchJSON <- toJSON(abc)
+      session$sendCustomMessage(type = "exact_match2", df_exact_matchJSON)
+      
     } else if (interstate_relationship2 == "Subcomponent") {
       session$sendCustomMessage(type = "subcomponent2", interstate_relationship2)
     } else if (interstate_relationship2 == "Partial Subcomponent") {
