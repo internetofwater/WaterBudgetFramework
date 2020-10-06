@@ -4,7 +4,7 @@ library(jsonlite)
 library(d3r)
 #library(rjson)
 
-file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG_newer.ttl", format="turtle")
+file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG_oct.ttl", format="turtle")
 
 ##########################################################################################################################
 ##########################################################################################################################

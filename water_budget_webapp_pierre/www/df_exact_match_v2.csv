@@ -1,330 +1,223 @@
 state_cL,ftype_cL,fsource_cL,fsink_cL,cL,exmL,state_exmL,ftype_exmL,fsource_exmL,fsink_exmL,c,exm,empty
 CA,Inflow,NA,Zone Groundwater,Water Release Caused by Land Subsidence-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterReleaseCausedByLandSubsidence-CA,NA,NA
-UT,NA,NA,NA,UT Reservoir Storage and Release Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTReservoirStorageAndReleaseRecords,NA,NA
-NM,Outflow,Zone Surface Water,Atmosphere,Irrigated Agriculture Depletions-NMOSE,Crop Consumptive Use-CO,CO,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDepletions-NMOSE,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA
-NM,Outflow,Zone Groundwater,Atmosphere,Irrigated Agriculture Depletions-NMOSE,Crop Consumptive Use-CO,CO,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDepletions-NMOSE,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA
+CO,NA,NA,NA,RESET,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RESET,NA,NA
 WY,NA,Zone Groundwater,Zone Land System,Domestic Total Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DomesticTotalUse-WY,NA,NA
+WY,NA,NA,NA,Climate Coefficient (kt),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ClimateCoefficient%28kt%29,NA,NA
+UT,NA,NA,NA,Climate Coefficient (kt),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ClimateCoefficient%28kt%29,NA,NA
 NM,NA,NA,NA,Climate Coefficient (kt),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ClimateCoefficient%28kt%29,NA,NA
-NM,NA,NA,NA,Interpolation from Other Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#InterpolationFromOtherRecords,NA,NA
-WY,NA,NA,NA,Diversions,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Diversions,NA,NA
-CO,NA,NA,NA,Diversions,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Diversions,NA,NA
+CO,NA,NA,NA,Climate Coefficient (kt),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ClimateCoefficient%28kt%29,NA,NA
 UT,NA,NA,NA,UT Other Irrigation Company Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTOtherIrrigationCompanyRecords,NA,NA
-UT,NA,NA,NA,Historical Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HistoricalData,NA,NA
-CO,NA,NA,NA,Historical Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HistoricalData,NA,NA
-CA,Internal Transfer,Zone Surface Water,Zone Groundwater,Conveyance Seepage-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ConveyanceSeepage-CA,NA,NA
-WY,NA,NA,NA,Pan Method (Net Evaporation),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PanMethod%28NetEvaporation%29,NA,NA
-CA,Internal Transfer,Zone Land System,Zone Groundwater,Recharge of Applied Water-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RechargeOfAppliedWater-CA,NA,NA
+UT,NA,NA,NA,UT Consumptive Use Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTConsumptiveUseMethod,NA,NA
 CO,NA,NA,NA,CO Livestock Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#COLivestockMethod,NA,NA
-UT,NA,NA,NA,Water Resources Studies,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterResourcesStudies,NA,NA
+WY,NA,NA,NA,Solar Radiation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SolarRadiation,NA,NA
+UT,NA,NA,NA,Solar Radiation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SolarRadiation,NA,NA
+NM,NA,NA,NA,Solar Radiation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SolarRadiation,NA,NA
 CO,NA,NA,NA,Solar Radiation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SolarRadiation,NA,NA
-CA,Storage Change,NA,NA,Change in Surface Water Storage-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInSurfaceWaterStorage-CA,NA,NA
+UT,NA,NA,NA,Inflow-Outflow Approach,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Inflow-OutflowApproach,NA,NA
 UT,NA,NA,NA,UT State Engineer Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTStateEngineerData,NA,NA
 CO,NA,NA,NA,Average Use Rate,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AverageUseRate,NA,NA
-WY,Internal Transfer,Zone Surface Water,Zone Land System,Industrial: Mine Production-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA,NA
-WY,Internal Transfer,Zone Groundwater,Zone Land System,Industrial: Mine Production-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA,NA
-WY,NA,NA,NA,WY Department of Environmental Quality (DEQ),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYDepartmentOfEnvironmentalQuality%28DEQ%29,NA,NA
-UT,NA,NA,NA,UT Municipal Potable and Secondary Diversion Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTMunicipalPotableAndSecondaryDiversionRecords,NA,NA
-WY,NA,NA,NA,Divertible Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DivertibleFlow-WY,NA,NA
-WY,NA,NA,NA,Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation,NA,NA
-CO,NA,NA,NA,Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation,NA,NA
 NM,NA,NA,NA,Consumptive Irrigation Requirement (CIR),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ConsumptiveIrrigationRequirement%28CIR%29,NA,NA
-CO,NA,NA,NA,National Oceanic and Atmospheric Administration Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalOceanicAndAtmosphericAdministrationStations,NA,NA
-WY,NA,NA,NA,US Energy Information Administration (USEIA),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USEnergyInformationAdministration%28USEIA%29,NA,NA
 CA,NA,NA,NA,Total Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalOutflow-CA,NA,NA
-NM,NA,NA,NA,Class A Pan Evaporation Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ClassAPanEvaporationData,NA,NA
+WY,NA,NA,NA,Daily ASCE Standardized Penman-Monteith,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyASCEStandardizedPenman-Monteith,NA,NA
 CO,NA,NA,NA,Daily ASCE Standardized Penman-Monteith,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyASCEStandardizedPenman-Monteith,NA,NA
-UT,Internal Transfer,Zone Surface Water,Zone Land System,Surface Diversion to Cropland-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceDiversionToCropland-UT,NA,NA
-UT,Internal Transfer,Zone Surface Water,Zone Land System,Municipal and Industrial Diversions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDiversions-UT,NA,NA
-UT,Internal Transfer,Zone Groundwater,Zone Land System,Municipal and Industrial Diversions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDiversions-UT,NA,NA
 UT,NA,NA,NA,STATSGO Soils Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#STATSGOSoilsData,NA,NA
 NM,NA,NA,NA,Personal Outreach,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PersonalOutreach,NA,NA
 NM,NA,NA,NA,Commercial: Unmetered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial%3AUnmetered-NMOSE,NA,NA
-WY,NA,NA,NA,Crop Type,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropType,NA,NA
-WY,NA,NA,NA,Downstream Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DownstreamFlow,NA,NA
-WY,Internal Transfer,Zone Surface Water,Zone Land System,Total Diversions-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalDiversions-WY,NA,NA
 NM,NA,NA,NA,Land Surface Stock-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LandSurfaceStock-NM,NA,NA
 CO,NA,NA,NA,Daily Effective Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyEffectivePrecipitation,NA,NA
-NM,NA,NA,NA,Reservoir Surface Area,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReservoirSurfaceArea,NA,NA
 UT,NA,NA,NA,Soil Moisture Holding Capacity,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SoilMoistureHoldingCapacity,NA,NA
-NM,Internal Transfer,Zone Surface Water,Zone Land System,Surface Water Diversions-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterDiversions-NM,NA,NA
 WY,NA,NA,NA,Withdrawal Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WithdrawalMethod,NA,NA
 NM,NA,NA,NA,Withdrawal Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WithdrawalMethod,NA,NA
-WY,NA,NA,NA,Bear River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#BearRiver,NA,NA
-CA,Inflow,Atmosphere,Zone Surface Water,Precipitation on Lakes-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PrecipitationOnLakes-CA,NA,NA
-WY,NA,NA,NA,Gross Pan Evaportation (inches),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GrossPanEvaportation%28inches%29,NA,NA
-CA,NA,NA,NA,Total Surface Water Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalSurfaceWaterOutflow-CA,NA,NA
 NM,NA,NA,NA,Livestock: Unmetered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Livestock%3AUnmetered-NMOSE,NA,NA
-UT,NA,NA,NA,Monthly Precipitation Volume,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPrecipitationVolume,NA,NA
-NM,NA,NA,NA,Monthly Precipitation Volume,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPrecipitationVolume,NA,NA
-CA,Internal Transfer,Zone Land System,Zone Groundwater,Managed Aquifer Recharge-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ManagedAquiferRecharge-CA,NA,NA
 WY,NA,NA,NA,NDVI,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NDVI,NA,NA
 NM,Internal Transfer,Zone Land System,Zone Groundwater,Groundwater Return-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterReturn-NM,NA,NA
 NM,Internal Transfer,Zone Surface Water,Zone Land System,Commercial-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial-NMOSE,NA,NA
 NM,Internal Transfer,Zone Groundwater,Zone Land System,Commercial-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial-NMOSE,NA,NA
 WY,NA,NA,NA,Wyoming Gain/Loss Estimation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingGain%2FLossEstimationMethod,NA,NA
-WY,Outflow,Zone Surface Water,Atmosphere,Industrial Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IndustrialConsumptiveUse-WY,NA,NA
-WY,Outflow,Zone Groundwater,Atmosphere,Industrial Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IndustrialConsumptiveUse-WY,NA,NA
+CO,NA,NA,NA,CO Irrigated Acreage Assessment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#COIrrigatedAcreageAssessment,NA,NA
 NM,NA,NA,NA,Annual Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AnnualEvaporation,NA,NA
 NM,NA,NA,NA,Self Supplied Domestic Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SelfSuppliedDomesticPopulation,NA,NA
-WY,NA,NA,NA,Mine Safety and Health Administration (MSHA),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MineSafetyAndHealthAdministration%28MSHA%29,NA,NA
-NM,Internal Transfer,Zone Groundwater,Zone Land System,Groundwater Diversions-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterDiversions-NM,NA,NA
-NM,Outflow,Zone Land System,Atmosphere,Land Surface Evapotranspiration-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LandSurfaceExapotranspiration-NM,NA,NA
 CO,Outflow,Zone Surface Water,Atmosphere,Municipal and Industrial Consumptive Use-CO,Municipal and Industrial Depeltion-UT,UT,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialConsumptiveUse-CO,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDepeltion-UT,NA
 CO,Outflow,Zone Groundwater,Atmosphere,Municipal and Industrial Consumptive Use-CO,Municipal and Industrial Depeltion-UT,UT,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialConsumptiveUse-CO,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDepeltion-UT,NA
 CO,Outflow,Zone Surface Water,Atmosphere,Municipal and Industrial Consumptive Use-CO,Municipal and Industrial Depeltion-UT,UT,Outflow,Zone Groundwater,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialConsumptiveUse-CO,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDepeltion-UT,NA
 CO,Outflow,Zone Groundwater,Atmosphere,Municipal and Industrial Consumptive Use-CO,Municipal and Industrial Depeltion-UT,UT,Outflow,Zone Groundwater,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialConsumptiveUse-CO,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDepeltion-UT,NA
-CA,Outflow,Zone Land System,Atmosphere,Evapotranspiration-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Evapotranspiration-CA,NA,NA
-UT,Outflow,Zone Land System,Atmosphere,Agricultural Depletions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalDepletions-UT,NA,NA
-UT,Outflow,Zone Groundwater,Atmosphere,Agricultural Depletions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalDepletions-UT,NA,NA
 UT,Internal Transfer,Zone Surface Water,Zone Land System,Agricultural and Municipal Diversions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalAndMunicipalDiversions-UT,NA,NA
 UT,Internal Transfer,Zone Groundwater,Zone Land System,Agricultural and Municipal Diversions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalAndMunicipalDiversions-UT,NA,NA
-UT,Internal Transfer,Zone Land System,Zone Surface Water,Total Land Return Flow-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalLandReturnFlow-UT,NA,NA
+UT,Internal Transfer,Zone Land System,Zone Surface Water,Total Land Return Flow-UT,Return Flow-CA,CA,Internal Transfer,Zone Land System,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#TotalLandReturnFlow-UT,http://purl.org/iow/WaterBudgetingFramework#ReturnFlow-CA,NA
 CO,NA,NA,NA,Native Vegetation Coefficient,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NativeVegetationCoefficient,NA,NA
 WY,NA,NA,NA,USGS Stream Gages,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSStreamGages,NA,NA
-CO,NA,External Surface Water,Zone Surface Water,Gaged Surface Water Inflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GagedSurfaceWaterInflow-CO,NA,NA
-NM,NA,NA,NA,Weather Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WeatherStations,NA,NA
+UT,NA,NA,NA,USGS Stream Gages,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSStreamGages,NA,NA
+NM,NA,NA,NA,USGS Stream Gages,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSStreamGages,NA,NA
+CO,NA,NA,NA,USGS Stream Gages,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSStreamGages,NA,NA
 CO,NA,NA,NA,NOAA Technical Report NWS 33,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NOAATechnicalReportNWS33,NA,NA
 WY,NA,NA,NA,US Geological Survey (USGS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGeologicalSurvey%28USGS%29,NA,NA
-WY,NA,NA,NA,State CU Output,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StateCUOutput,NA,NA
 CA,NA,NA,NA,Total Surface Water Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalSurfaceWaterInflow-CA,NA,NA
 NM,NA,NA,NA,Conservancy Districts,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ConservancyDistricts,NA,NA
+WY,NA,NA,NA,SCS TR21,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SCSTR21,NA,NA
+NM,NA,NA,NA,SCS TR21,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SCSTR21,NA,NA
 CO,NA,NA,NA,SCS TR21,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SCSTR21,NA,NA
-WY,NA,NA,NA,Irrigated Acreage,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAcreage,NA,NA
 WY,NA,NA,NA,Annual Employee Hours,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AnnualEmployeeHours,NA,NA
-NM,NA,NA,NA,Commercial: Schools-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial%3ASchools-NMOSE,NA,NA
 CO,NA,NA,NA,Monthly Effective Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyEffectivePrecipitation,NA,NA
-WY,Inflow,Atmosphere,Zone Surface Water,Precipitation-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation-WY,NA,NA
-UT,NA,NA,NA,UT State Archives,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTStateArchives,NA,NA
-NM,NA,NA,NA,US Army Corps of Engineers,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USArmyCorpsOfEngineers,NA,NA
-UT,NA,NA,NA,USU Research Report 145,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USUResearchReport145,NA,NA
+WY,NA,NA,NA,Energy Balance Remote Sensing,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EnergyBalanceRemoteSensing,NA,NA
+UT,NA,NA,NA,Energy Balance Remote Sensing,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EnergyBalanceRemoteSensing,NA,NA
+NM,NA,NA,NA,Energy Balance Remote Sensing,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EnergyBalanceRemoteSensing,NA,NA
+CO,NA,NA,NA,Energy Balance Remote Sensing,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EnergyBalanceRemoteSensing,NA,NA
 UT,Internal Transfer,Zone Land System,Zone Surface Water,Municipal and Industrial Return Flow-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialReturnFlow-UT,NA,NA
 CA,Storage Change,NA,NA,Change in Land System Storage-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInLandSystemStorage-CA,NA,NA
 NM,NA,NA,NA,Livestock: Metered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Livestock%3AMetered-NMOSE,NA,NA
-WY,NA,NA,NA,Natural Gas Processing Volumes,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NaturalGasProcessingVolumes,NA,NA
 CA,Storage Change,NA,NA,Change in Total System Storage-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInTotalSystemStorage-CA,NA,NA
 WY,Outflow,Zone Surface Water,External Groundwater,Ungaged Stream Losses-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UngagedStreamLosses-WY,NA,NA
-UT,NA,NA,NA,UT Diversion Records from River Commissioners,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTDiversionRecordsFromRiverCommissioners,NA,NA
-WY,NA,NA,NA,State CU,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StateCU,NA,NA
 NM,NA,NA,NA,Seasonal Consumptive Use Coefficients (K),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SeasonalConsumptiveUseCoefficients%28K%29,NA,NA
 CO,NA,NA,NA,Seasonal Consumptive Use Coefficients (K),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SeasonalConsumptiveUseCoefficients%28K%29,NA,NA
 CO,NA,NA,NA,"Midwest Plan Service Structures and Environmental Handbook, 1977",NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MidwestPlanServiceStructuresAndEnvironmentalHandbook%2C1977,NA,NA
-CO,NA,NA,NA,CO Agricultural Meteorology Network Station (COAGM),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#COAgriculturalMeteorologyNetworkStation,NA,NA
 NM,NA,NA,NA,Winter Ice Surface Area,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WinterIceSurfaceArea,NA,NA
 CA,Inflow,NA,NA,Total Groundwater System Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalGroundwaterSystemInflow-CA,NA,NA
-CA,Outflow,Zone Surface Water,Atmosphere,Conveyance Evaporation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ConveyanceEvaporation-CA,NA,NA
 CO,NA,NA,NA,Instream Flow Demand - Annual,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#InstreamFlowDemand-Annual,NA,NA
-NM,NA,NA,NA,USDA Farm Service Agency,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USDAFarmServiceAgency,NA,NA
-WY,NA,NA,NA,Direct Communication,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DirectCommunication,NA,NA
 CO,NA,NA,NA,Baseflow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Baseflow,NA,NA
-CO,NA,NA,NA,US Bureau of Reclamation Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfReclamationStations,NA,NA
-NM,Internal Transfer,Zone Surface Water,Zone Land System,Irrigated Agriculture Diversions-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDiversions-NMOSE,NA,NA
-NM,Internal Transfer,Zone Groundwater,Zone Land System,Irrigated Agriculture Diversions-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDiversions-NMOSE,NA,NA
+WY,NA,NA,NA,WY Consumptive Use Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYConsumptiveUseMethod,NA,NA
 WY,NA,NA,NA,WY Electrical Generation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYElectricalGenerationMethod,NA,NA
 CA,Internal Transfer,Zone Surface Water,Zone Groundwater,Stream Loss to Groundwater-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StreamLossToGroundwater-CA,NA,NA
-CO,Outflow,Zone Surface Water,Atmosphere,Livestock Consumptive Use-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-CO,NA,NA
-CO,Outflow,Zone Groundwater,Atmosphere,Livestock Consumptive Use-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-CO,NA,NA
 CO,NA,NA,NA,Colorado Census Bureau,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ColoradoCensusBureau,NA,NA
-NM,NA,NA,NA,Commercial: Incomplete Metered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial%3AIncompleteMetered-NMOSE,NA,NA
-NM,Outflow,Zone Surface Water,Atmosphere,River Evaporation-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RiverEvaporation-NM,NA,NA
 UT,Outflow,Zone Surface Water,Atmosphere,Municipal and Industrial Depeltion-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDepeltion-UT,NA,NA
 UT,Outflow,Zone Groundwater,Atmosphere,Municipal and Industrial Depeltion-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDepeltion-UT,NA,NA
-NM,Inflow,External Groundwater,Zone Groundwater,Groundwater Inflows-NM,Subsurface Inflow-CA,CA,Inflow,External Groundwater,Zone Groundwater,http://purl.org/iow/WaterBudgetingFramework#GroundwaterInflows-NM,http://purl.org/iow/WaterBudgetingFramework#SubsurfaceInflow-CA,NA
 UT,Outflow,Zone Surface Water,Atmosphere,Agricultural and Municipal Depletions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalAndMunicipalDepletions-UT,NA,NA
 UT,Outflow,Zone Groundwater,Atmosphere,Agricultural and Municipal Depletions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalAndMunicipalDepletions-UT,NA,NA
-CO,Outflow,Zone Surface Water,External Surface Water,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
-CO,Outflow,Zone Surface Water,External Groundwater,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
-CO,Outflow,Zone Groundwater,External Surface Water,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
-CO,Outflow,Zone Groundwater,External Groundwater,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
-UT,Internal Transfer,Zone Groundwater,Zone Land System,Groundwater Use-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterUse-UT,NA,NA
-CO,NA,NA,NA,Gage Height,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GageHeight,NA,NA
-CO,Inflow,External Surface Water,Zone Land System,Imports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Imports-CO,NA,NA
-CO,Inflow,External Groundwater,Zone Land System,Imports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Imports-CO,NA,NA
+UT,Internal Transfer,Zone Groundwater,Zone Land System,Groundwater Use-UT,Groundwater Extraction-CA,CA,Internal Transfer,Zone Groundwater,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#GroundwaterUse-UT,http://purl.org/iow/WaterBudgetingFramework#GroundwaterExtraction-CA,NA
 CA,Internal Transfer,Zone Groundwater,Zone Surface Water,Stream Gain from Groundwater-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StreamGainFromGroundwater-CA,NA,NA
 NM,NA,NA,NA,NMOSE Technical Report No. 48,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSETechnicalReportNo.48,NA,NA
-NM,NA,NA,NA,US Bureau of Reclamation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfReclamation,NA,NA
-NM,NA,NA,NA,NMOSEâ€™s Water Use and Conservation Bureau (WUCB) Survey,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSE%E2%80%99sWaterUseAndConservationBureau%28WUCB%29Survey,NA,NA
 WY,NA,NA,NA,Monthly Coalbed Methane Gas Production and Produced Water,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyCoalbedMethaneGasProductionAndProducedWater,NA,NA
-UT,Internal Transfer,Zone Surface Water,Zone Land System,Agricultural Potential Consumptive Use-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalPotentialConsumptiveUse-UT,NA,NA
-UT,Internal Transfer,Zone Groundwater,Zone Land System,Agricultural Potential Consumptive Use-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalPotentialConsumptiveUse-UT,NA,NA
-WY,NA,NA,NA,WY Diversion Data from Water Users,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYDiversionDataFromWaterUsers,NA,NA
-WY,NA,NA,NA,WY Industrial Production Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYIndustrialProductionMethod,NA,NA
-CO,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-CO,Reservoir Evaporation-UT,UT,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-CO,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,NA
-WY,NA,NA,NA,Platte River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PlatteRiver,NA,NA
-WY,NA,NA,NA,Wind-Bighorn River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Wind-BighornRiver,NA,NA
 CO,NA,NA,NA,Reservoir Estimation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReservoirEstimationMethod,NA,NA
-CO,Inflow,Atmosphere,Zone Land System,Precipitation-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CO,NA,NA
-CO,NA,NA,NA,Direct Flow Demand - Monthly,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DirectFlowDemand-Monthly,NA,NA
 NM,NA,NA,NA,Commercial: Metered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial%3AMetered-NMOSE,NA,NA
-CO,NA,NA,NA,Gross Usage,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GrossUsage,NA,NA
-UT,Outflow,Zone Surface Water,External Surface Water,Basin Outflow-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#BasinOutflow-UT,NA,NA
-NM,NA,NA,NA,Monthly Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyEvaporation,NA,NA
-CA,Outflow,Zone Surface Water,External Surface Water,Stream Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StreamOutfow-CA,NA,NA
 NM,NA,NA,NA,NM Irrigation Withdrawals,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMIrrigationWithdrawals,NA,NA
 WY,NA,NA,NA,High Plains Climate Center - University of Nebraska,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HighPlainsClimateCenter-UniversityOfNebraska,NA,NA
-CO,Outflow,Zone Surface Water,External Surface Water,Gaged Surface Water Outflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GagedSurfaceWaterOutflow-CO,NA,NA
-UT,Inflow,Atmosphere,Zone Land System,Precipitation-UT,Precipitation-CO,CO,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-UT,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CO,NA
 NM,Outflow,Zone Groundwater,Atmosphere,Groundwater ET-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterET-NM,NA,NA
 NM,NA,NA,NA,Surface Water Stock-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterStock-NM,NA,NA
-NM,NA,NA,NA,Mean Daily Percentage of Annual Daytime Hours,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanDailyPercentageOfAnnualDaytimeHours,NA,NA
-CO,NA,NA,NA,Mean Daily Percentage of Annual Daytime Hours,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanDailyPercentageOfAnnualDaytimeHours,NA,NA
 WY,Internal Transfer,Zone Surface Water,Zone Land System,Industrial: Coalbed Methand Production-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3ACoalbedMethandProduction-WY,NA,NA
 WY,Internal Transfer,Zone Groundwater,Zone Land System,Industrial: Coalbed Methand Production-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3ACoalbedMethandProduction-WY,NA,NA
-WY,NA,Zone Surface Water,Atmosphere,Industrial: Natural Gas-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3ANaturalGas-WY,NA,NA
-WY,NA,Zone Groundwater,Atmosphere,Industrial: Natural Gas-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3ANaturalGas-WY,NA,NA
 WY,NA,Zone Groundwater,Zone Land System,Industrial: Electrical Generation-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AElectricalGeneration-WY,NA,NA
 NM,Outflow,Zone Land System,Atmosphere,Evaporation-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Evaporation-NM,NA,NA
 UT,Inflow,Atmosphere,Zone Land System,Cropland Precipitation-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CoplandPrecipitation-UT,NA,NA
 NM,NA,NA,NA,National Agricultural Statistics Service,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalAgriculturalStatisticsService,NA,NA
-WY,NA,NA,NA,Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Population,NA,NA
-CO,NA,NA,NA,Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Population,NA,NA
-NM,Internal Transfer,Zone Surface Water,Zone Land System,Public Water Supply-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PublicWaterSupply-NMOSE,NA,NA
-NM,Internal Transfer,Zone Groundwater,Zone Land System,Public Water Supply-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PublicWaterSupply-NMOSE,NA,NA
+WY,NA,NA,NA,Effective Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EffectivePrecipitation,NA,NA
+UT,NA,NA,NA,Effective Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EffectivePrecipitation,NA,NA
+NM,NA,NA,NA,Effective Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EffectivePrecipitation,NA,NA
+CO,NA,NA,NA,Effective Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EffectivePrecipitation,NA,NA
 CO,NA,NA,NA,CO GIS Exercise,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#COGISExercise,NA,NA
 UT,NA,NA,NA,Original Blaney-Criddle,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#OriginalBlaney-Criddle,NA,NA
 NM,NA,NA,NA,Original Blaney-Criddle,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#OriginalBlaney-Criddle,NA,NA
 CO,NA,NA,NA,Original Blaney-Criddle,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#OriginalBlaney-Criddle,NA,NA
-UT,Internal Transfer,Zone Surface Water,Zone Surface Water,Surface Water Flows-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterFlows-UT,NA,NA
+WY,NA,NA,NA,PRISM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PRISM,NA,NA
 UT,NA,NA,NA,PRISM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PRISM,NA,NA
+NM,NA,NA,NA,PRISM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PRISM,NA,NA
+CO,NA,NA,NA,PRISM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PRISM,NA,NA
 WY,NA,NA,NA,Electrical Generation Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ElectricalGenerationData,NA,NA
 CO,NA,NA,NA,Reservoir Targets,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReservoirTargets,NA,NA
-NM,Outflow,Zone Groundwater,External Groundwater,Groundwater Outflows-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterOutflows-NM,NA,NA
 WY,NA,NA,NA,Wyoming Water Resources Data System (WRDS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingWaterResourcesDataSystem%28WRDS%29,NA,NA
-WY,Outflow,Zone Surface Water,Atmosphere,Livestock Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-WY,NA,NA
-WY,NA,NA,NA,Powder-Tongue River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Powder-TongueRiver,NA,NA
+UT,NA,NA,NA,Soil Climate Analysis Network (SCAN),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SoilClimateAnalysisNetwork%28SCAN%29,NA,NA
 CA,Outflow,Zone Groundwater,External Groundwater,Subsurface Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SubsurfaceOutflow-CA,NA,NA
-WY,NA,NA,NA,Wyoming Water Development Commission (WWDC) 2002 Water System Survey Report,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingWaterDevelopmentCommission%28WWDC%292002WaterSystemSurveyReport,NA,NA
-NM,NA,NA,NA,New Mexico Environment Department (NMED),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NewMexicoEnvironmentDepartment%28NMED%29,NA,NA
 WY,Internal Transfer,Zone Surface Water,Zone Land System,Irrigation Surface Water Diversions-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigationSurfaceWaterDiversions-WY,NA,NA
-CA,Total Outflow-CA,Zone Surface Water,Atmosphere,Stream Evaporation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StreamEvaporation-CA,NA,NA
+NM,NA,NA,NA,New Mexico Environment Department (NMED),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NewMexicoEnvironmentDepartment%28NMED%29,NA,NA
+CA,Outflow,Zone Surface Water,Atmosphere,Stream Evaporation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StreamEvaporation-CA,NA,NA
 NM,Outflow,Zone Groundwater,Atmosphere,Riparian Consumption-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RiparianConsumption-NM,NA,NA
-CO,NA,NA,NA,CO Division of Water Resources Gages,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CODivisionOfWaterResourcesGages,NA,NA
 WY,NA,NA,NA,WY Various Water Supply Reports,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYVariousWaterSupplyReports,NA,NA
 NM,Internal Transfer,Zone Surface Water,Zone Land System,Power-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Power-NMOSE,NA,NA
 NM,Internal Transfer,Zone Groundwater,Zone Land System,Power-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Power-NMOSE,NA,NA
-UT,NA,NA,NA,Rainfall,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Rainfall,NA,NA
-NM,NA,NA,NA,Rainfall,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Rainfall,NA,NA
-WY,NA,NA,NA,Wyoming Water Resources Data Systems Water and Climate Map Server,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingWaterResourcesDataSystemsWaterAndClimateMapServer,NA,NA
 NM,NA,NA,NA,University of New Mexico,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UniversityOfNewMexico,NA,NA
-CO,NA,NA,NA,Temperature Coefficient (Kt),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TemperatureCoefficient%28Kt%29,NA,NA
-WY,NA,Zone Surface Water,Atmosphere,Agricultural Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalConsumptiveUse-WY,NA,NA
-WY,NA,Zone Groundwater,Atmosphere,Agricultural Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalConsumptiveUse-WY,NA,NA
 UT,NA,NA,NA,Water Resources irrigated land use database,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterResourcesIrrigatedLandUseDatabase,NA,NA
-NM,NA,NA,NA,University of New Mexico Geospatial and Population Studies (UNM GPS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UniversityOfNewMexicoGeospatialAndPopulationStudies%28UNMGPS%29,NA,NA
-CA,Internal Transfer,Zone Groundwater,Zone Surface Water,Lake Gain from Groundwater-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LakeGainFromGroundwater-CA,NA,NA
 CO,Outflow,Zone Surface Water,Atmosphere,Native Vegetation Consumptive Use-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NativeVegetationConsumptiveUse-CO,NA,NA
 CO,Outflow,Zone Groundwater,Atmosphere,Native Vegetation Consumptive Use-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NativeVegetationConsumptiveUse-CO,NA,NA
 CO,NA,NA,NA,Colorado Water Conservation Board (CWCB),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ColoradoWaterConservationBoard%28CWCB%29,NA,NA
-CO,Inflow,External Groundwater,Zone Groundwater,Ground Water Inflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundWaterInflow-CO,NA,NA
-NM,NA,NA,NA,Human Storage and Distribution System Stock-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HumanStorageAndDistributionSystemStock-NM,NA,NA
+CO,Inflow,External Groundwater,Zone Groundwater,Ground Water Inflow-CO,Subsurface Inflow-CA,CA,Inflow,External Groundwater,Zone Groundwater,http://purl.org/iow/WaterBudgetingFramework#GroundWaterInflow-CO,http://purl.org/iow/WaterBudgetingFramework#SubsurfaceInflow-CA,NA
+WY,NA,NA,NA,National Weather Service Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalWeatherServiceStations,NA,NA
+NM,NA,NA,NA,National Weather Service Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalWeatherServiceStations,NA,NA
+WY,NA,NA,NA,Snotel Network of Weather Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SnotelNetworkOfWeatherStations,NA,NA
+CO,NA,NA,NA,Snotel Network of Weather Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SnotelNetworkOfWeatherStations,NA,NA
 NM,NA,NA,NA,Average Monthly Reservoir Gage Height,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AverageMonthlyReservoirGageHeight,NA,NA
-UT,NA,NA,NA,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanMonthlyAirTemperatures%28T%29,NA,NA
-NM,NA,NA,NA,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanMonthlyAirTemperatures%28T%29,NA,NA
-CO,NA,NA,NA,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanMonthlyAirTemperatures%28T%29,NA,NA
 CO,NA,NA,NA,Original Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#OriginalBlaney-CriddleWithETElevationAdjustment,NA,NA
-UT,NA,NA,NA,Municipal and Industrial Diversion Reports,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDiversionReports,NA,NA
-NM,Internal Transfer,Zone Groundwater,Zone Land System,Industrial-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial-NMOSE,NA,NA
-NM,Outflow,Zone Surface Water,External Surface Water,Surface Water Outflows-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterOutflows-NM,NA,NA
-NM,NA,NA,NA,Irrigation Districts,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigationDistricts,NA,NA
 WY,NA,Zone Surface Water,Atmosphere,Municipal Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalConsumptiveUse-WY,NA,NA
 WY,NA,Zone Groundwater,Atmosphere,Municipal Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalConsumptiveUse-WY,NA,NA
-CA,Internal Transfer,Zone Land System,Zone Groundwater,Recharge of Precipitation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RechargeOfPrecipitation-CA,NA,NA
+WY,NA,NA,NA,Effective Precipitation Factor,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EffectivePrecipitationFactor,NA,NA
+NM,NA,NA,NA,Effective Precipitation Factor,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EffectivePrecipitationFactor,NA,NA
 CO,NA,NA,NA,Effective Precipitation Factor,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EffectivePrecipitationFactor,NA,NA
-CO,NA,NA,NA,Daily Modified Hargreaves,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyModifiedHargreaves,NA,NA
-NM,NA,NA,NA,Monthly Gross Evaporation Rate,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyGrossEvaporationRate,NA,NA
-WY,NA,NA,NA,Wyoming Oil and Gas Conservation Commission (WYOGCC),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingOilAndGasConservationCommission%28WYOGCC%29,NA,NA
 CO,NA,NA,NA,Consumptive Ratio,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ConsumptiveRatio,NA,NA
-CA,Inflow,External Groundwater,Zone Groundwater,Subsurface Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SubsurfaceInflow-CA,NA,NA
-CO,NA,NA,NA,Streamflow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Streamflow,NA,NA
 NM,NA,NA,NA,Military Base Population Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MilitaryBasePopulationData,NA,NA
-NM,NA,NA,NA,GPS Population Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GPSPopulationData,NA,NA
-CA,NA,NA,NA,Total Land System Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalLandSystemInflow-CA,NA,NA
 NM,Internal Transfer,Zone Groundwater,Zone Land System,Self-Supplied Domestic-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Self-SuppliedDomestic-NMOSE,NA,NA
 CA,Internal Transfer,Zone Surface Water,Zone Surface Water,Surface Water Diversions-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterDiversions-CA,NA,NA
-WY,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-WY,NA,NA
+WY,NA,NA,NA,Crop Growth State Coefficient (Kc),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropGrowthStateCoefficient%28Kc%29,NA,NA
 UT,NA,NA,NA,Crop Growth State Coefficient (Kc),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropGrowthStateCoefficient%28Kc%29,NA,NA
 NM,NA,NA,NA,Crop Growth State Coefficient (Kc),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropGrowthStateCoefficient%28Kc%29,NA,NA
 CO,NA,NA,NA,Crop Growth State Coefficient (Kc),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropGrowthStateCoefficient%28Kc%29,NA,NA
 WY,NA,NA,NA,WY Office of the State Engineer,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYOfficeOfTheStateEngineer,NA,NA
 NM,NA,NA,NA,"Brown and Caldwell,1984",NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#BrownAndCaldwell%2C1984,NA,NA
 CO,NA,NA,NA,CO Native Vegetation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CONativeVegetationMethod,NA,NA
-WY,NA,NA,NA,US Census Bureau,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USCensusBureau,NA,NA
-NM,NA,NA,NA,US Census Bureau,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USCensusBureau,NA,NA
 WY,Inflow,External Surface Water,Zone Surface Water,Gaged Stream Inflow-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GagedStreamInflow-WY,NA,NA
-CO,NA,NA,NA,State Agricultural Statistics,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StateAgriculturalStatistics,NA,NA
+CO,NA,NA,NA,HydroBase,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HydroBase,NA,NA
 NM,NA,NA,NA,Pan Approach,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PanApproach,NA,NA
 NM,NA,NA,NA,Facility Director or Operator,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#FacilityDirectorOrOperator,NA,NA
-NM,NA,NA,NA,NMOSE Crop Acreage File,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSECropAcreageFile,NA,NA
+WY,NA,NA,NA,Crop Irrigation Requirement Estimation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirementEstimationMethod,NA,NA
+UT,NA,NA,NA,Crop Irrigation Requirement Estimation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirementEstimationMethod,NA,NA
+NM,NA,NA,NA,Crop Irrigation Requirement Estimation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirementEstimationMethod,NA,NA
+CO,NA,NA,NA,Crop Irrigation Requirement Estimation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirementEstimationMethod,NA,NA
 CA,Internal Transfer,Zone Groundwater,Zone Land System,Stored Water Extraction-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StoredWaterExtraction-CA,NA,NA
 CO,Storage Change,NA,NA,Change in Surface Water Storage-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInSurfaceWaterStorage-CO,NA,NA
-UT,Inflow,External Surface Water,Zone Surface Water,Tributary Inflow-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TributaryInflow-UT,NA,NA
 NM,NA,NA,NA,NMOSE Growing Season File,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSEGrowingSeasonFile,NA,NA
-CO,Outflow,Zone Groundwater,External Groundwater,Ground Water Outflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundWaterOutflow-CO,NA,NA
-CO,Outflow,Zone Land System,Atmosphere,Crop Consumptive Use-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA,NA
+CO,Outflow,Zone Groundwater,External Groundwater,Ground Water Outflow-CO,Subsurface Outflow-CA,CA,Outflow,Zone Groundwater,External Groundwater,http://purl.org/iow/WaterBudgetingFramework#GroundWaterOutflow-CO,http://purl.org/iow/WaterBudgetingFramework#SubsurfaceOutflow-CA,NA
+CO,Outflow,Zone Land System,Atmosphere,Crop Consumptive Use-CO,Irrigated Agriculture Depletions-NMOSE,NM,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDepletions-NMOSE,NA
 WY,NA,NA,NA,Green River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GreenRiver,NA,NA
-CA,Outflow,Zone Groundwater,External Groundwater,Stored Water Export-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StoredWaterExport-CA,NA,NA
-CO,NA,NA,NA,Instream Flow Demand-Monthly,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#InstreamFlowDemand-Monthly,NA,NA
-CA,Internal Transfer,Zone Land System,Zone Land System,Applied Water Reuse/Recycled Water-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AppliedWaterReuse%2FRecycledWater-CA,NA,NA
-WY,NA,Zone Groundwater,Zone Land System,Municipal Total Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalTotalUse-WY,NA,NA
 UT,NA,NA,NA,USGS Estimates of Basin Groundwater Flows,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSEstimatesOfBasinGroundwaterFlows,NA,NA
+WY,NA,NA,NA,Natural Resources Conservation Service Stations (NRCS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NaturalResourcesConservationServiceStations%28NRCS%29,NA,NA
+NM,NA,NA,NA,Natural Resources Conservation Service Stations (NRCS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NaturalResourcesConservationServiceStations%28NRCS%29,NA,NA
+WY,NA,NA,NA,Wind Run,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WindRun,NA,NA
+UT,NA,NA,NA,Wind Run,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WindRun,NA,NA
+NM,NA,NA,NA,Wind Run,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WindRun,NA,NA
 CO,NA,NA,NA,Wind Run,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WindRun,NA,NA
+WY,NA,NA,NA,Temperature,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Temperature,NA,NA
+UT,NA,NA,NA,Temperature,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Temperature,NA,NA
+NM,NA,NA,NA,Temperature,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Temperature,NA,NA
 CO,NA,NA,NA,Temperature,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Temperature,NA,NA
 UT,NA,NA,NA,US Bureau of Reclamation AgriMet Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfReclamationAgriMetStations,NA,NA
-NM,NA,NA,NA,Livestock Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockPopulation,NA,NA
-WY,NA,NA,NA,Annual Soda Ash Production,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AnnualSodaAshProduction,NA,NA
-NM,NA,NA,NA,NMOSE Temperature and Precipitation File,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSETemperatureAndPrecipitationFile,NA,NA
 WY,Internal Transfer,Zone Surface Water,Zone Land System,Industrial: Miscellaneous-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMiscellaneous-WY,NA,NA
 WY,Internal Transfer,Zone Groundwater,Zone Land System,Industrial: Miscellaneous-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMiscellaneous-WY,NA,NA
 CA,Storage Change,NA,NA,Change in Groundwater Storage-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInGroundwaterStorage-CA,NA,NA
 UT,Internal Transfer,Zone Surface Water,Zone Land System,River Use By Wet Pasture-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RiverUseByWetPasture-UT,NA,NA
-CA,Outflow,Zone Land System,External Land System,Recycled Water Export-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RecycledWaterExport-CA,NA,NA
-CA,Internal Transfer,Zone Groundwater,Zone Land System,Groundwater Extraction-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterExtraction-CA,NA,NA
 NM,NA,NA,NA,Power: Unreported-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Power%3AUnreported-NMOSE,NA,NA
-CA,Internal Transfer,Zone Surface Water,Zone Land System,Surface Water Delivery-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterDelivery-CA,NA,NA
 WY,NA,NA,NA,"US Census Bureau ""City and Town (Incorporated Places and Minor Civil Divisions)"" data set",NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USCensusBureau%22CityAndTown%28IncorporatedPlacesAndMinorCivilDivisions%29%22DataSet,NA,NA
 CA,Outflow,Zone Groundwater,External Groundwater,Groundwater Export-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterExport-CA,NA,NA
-UT,Internal Transfer,Zone Groundwater,Zone Land System,Pumped Groundwater-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PumpedGroundwater-UT,NA,NA
+UT,Internal Transfer,Zone Groundwater,Zone Land System,Pumped Groundwater-UT,Groundwater Extraction-CA,CA,Internal Transfer,Zone Groundwater,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#PumpedGroundwater-UT,http://purl.org/iow/WaterBudgetingFramework#GroundwaterExtraction-CA,NA
 NM,NA,NA,NA,Public Water Supply: Unmetered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PublicWaterSupply%3AUnmetered-NMOSE,NA,NA
+UT,NA,NA,NA,Fruit Growers Network Stations (FGNET),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#FruitGrowersNetworkStations%28FGNET%29,NA,NA
 CO,NA,NA,NA,Direct Flow Demand - Annual,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DirectFlowDemand-Annual,NA,NA
-CA,Internal Transfer,Zone Land System,Zone Surface Water,Return Flow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReturnFlow-CA,NA,NA
 CA,Internal Transfer,Zone Land System,Zone Land System,Applied Water-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AppliedWater-CA,NA,NA
+WY,NA,NA,NA,Daily Penman-Monteith,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyPenman-Monteith,NA,NA
+UT,NA,NA,NA,Daily Penman-Monteith,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyPenman-Monteith,NA,NA
+NM,NA,NA,NA,Daily Penman-Monteith,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyPenman-Monteith,NA,NA
 CO,NA,NA,NA,Daily Penman-Monteith,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyPenman-Monteith,NA,NA
-NM,Internal Transfer,Zone Surface Water,Zone Land System,Mining-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Mining-NMOSE,NA,NA
-NM,Internal Transfer,Zone Groundwater,Zone Land System,Mining-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Mining-NMOSE,NA,NA
+CO,NA,NA,NA,National Agricultural Statistics Service (NASS) Cropland Data Layer,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalAgriculturalStatisticsService%28NASS%29CroplandDataLayer,NA,NA
+NM,NA,NA,NA,NM Diversion Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMDiversionRecords,NA,NA
 CA,Outflow,Zone Surface Water,Atmosphere,Lake Evaporation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LakeEvaporation-CA,NA,NA
-CA,Outflow,NA,NA,Total Groundwater System Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalGroundwaterSystemOutflow-CA,NA,NA
-UT,NA,NA,NA,Groundwater Use,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterUse,NA,NA
+WY,NA,NA,NA,Potential Consumptive Use,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PotentialConsumptiveUse,NA,NA
+NM,NA,NA,NA,Potential Consumptive Use,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PotentialConsumptiveUse,NA,NA
+CO,NA,NA,NA,Potential Consumptive Use,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PotentialConsumptiveUse,NA,NA
+WY,NA,NA,NA,Wyoming Department of Environmental Quality (WYDEQ),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingDepartmentOfEnvironmentalQuality%28WYDEQ%29,NA,NA
 CO,NA,NA,NA,Gross Monthly Free Water Surface Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GrossMonthlyFreeWaterSurfaceEvaporation,NA,NA
-WY,NA,NA,NA,Return Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReturnFlow,NA,NA
-CO,NA,NA,NA,Return Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReturnFlow,NA,NA
-NM,NA,NA,NA,Population Served by Public Water Supply,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PopulationServedByPublicWaterSupply,NA,NA
 UT,NA,NA,NA,Federal Archives,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#FederalArchives,NA,NA
 CA,Inflow,External Surface Water,Zone Surface Water,Stream Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StreamInflow-CA,NA,NA
 WY,NA,NA,NA,"Monthly Oil, Gas, and Produced Water",NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyOil%2CGas%2CAndProducedWater,NA,NA
-CO,Inflow,External Surface Water,Zone Surface Water,Ungaged Surface Water Inflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UngagedSurfaceWaterInflow-CO,NA,NA
-CA,Inflow,Atmosphere,Zone Land System,Precipitation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CA,NA,NA
 WY,NA,NA,NA,Salt-Snake River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Salt-SnakeRiver,NA,NA
-CA,Internal Transfer,Zone Land System,Zone Surface Water,Runoff-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Runoff-CA,NA,NA
 WY,Internal Transfer,Zone Surface Water,Zone Land System,Industrial Total Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IndustrialTotalUse-WY,NA,NA
 WY,Internal Transfer,Zone Groundwater,Zone Land System,Industrial Total Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IndustrialTotalUse-WY,NA,NA
-NM,NA,NA,NA,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPercentageOfAnnualDaylightHours%28P%29,NA,NA
-CO,NA,NA,NA,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPercentageOfAnnualDaylightHours%28P%29,NA,NA
-WY,Outflow,Zone Surface Water,Zone Surface Water,Gaged Stream Outflow-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GagedStreamOutflow-WY,NA,NA
-NM,NA,NA,NA,USDA Cropland Data Layer (CDL),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USDACroplandDataLayer%28CDL%29,NA,NA
-WY,NA,NA,NA,Upstream Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UpstreamFlow,NA,NA
-NM,NA,NA,NA,Empirical Data for Small Reservoirs,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EmpiricalDataForSmallReservoirs,NA,NA
-NM,Inflow,External Surface Water,Zone Surface Water,Surface Water Inflows-NM,Stream Inflow-CA,CA,Inflow,External Surface Water,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterInflows-NM,http://purl.org/iow/WaterBudgetingFramework#StreamInflow-CA,NA
-UT,NA,NA,NA,Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Evaporation,NA,NA
-CO,NA,NA,NA,Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Evaporation,NA,NA
+CA,Internal Transfer,Zone Land System,Zone Surface Water,Runoff-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Runoff-CA,NA,NA
+WY,NA,NA,NA,US Bureau of Land Management (BLM),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfLandManagement%28BLM%29,NA,NA
+NM,NA,NA,NA,US Bureau of Land Management (BLM),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfLandManagement%28BLM%29,NA,NA
 NM,NA,NA,NA,Student Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StudentPopulation,NA,NA
-UT,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-UT,Reservoir Evaporation-CO,CO,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-CO,NA
-UT,NA,NA,NA,Potential Evapotranspiration,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PotentialEvapotranspiration,NA,NA
-CO,NA,NA,NA,Potential Evapotranspiration,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PotentialEvapotranspiration,NA,NA
 CA,Inflow,External Surface Water,Zone Surface Water,Imported Water-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ImportedWater-CA,NA,NA
 UT,NA,NA,NA,USGS Mean Annual Reach Estimates,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSMeanAnnualReachEstimates,NA,NA
+WY,NA,NA,NA,Modified Blaney-Criddle,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ModifiedBlaney-Criddle,NA,NA
+UT,NA,NA,NA,Modified Blaney-Criddle,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ModifiedBlaney-Criddle,NA,NA
 NM,NA,NA,NA,Modified Blaney-Criddle,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ModifiedBlaney-Criddle,NA,NA
 CO,NA,NA,NA,Modified Blaney-Criddle,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ModifiedBlaney-Criddle,NA,NA
-NM,Internal Transfer,Zone Surface Water,Zone Land System,Livestock-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Livestock-NMOSE,NA,NA
-NM,Internal Transfer,Zone Groundwater,Zone Land System,Livestock-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Livestock-NMOSE,NA,NA
+NM,Internal Transfer,Zone Surface Water,Zone Land System,Livestock-NMOSE,Livestock Consumptive Use-WY,WY,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#Livestock-NMOSE,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-WY,NA
+NM,Internal Transfer,Zone Groundwater,Zone Land System,Livestock-NMOSE,Livestock Consumptive Use-WY,WY,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#Livestock-NMOSE,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-WY,NA
 WY,NA,NA,NA,WY Mine Production Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYMineProductionMethod,NA,NA
 NM,Outflow,Zone Surface Water,Zone Land System,Irrigated Agriculture-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgriculture-NMOSE,NA,NA
 NM,Outflow,Zone Surface Water,Atmosphere,Irrigated Agriculture-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgriculture-NMOSE,NA,NA
@@ -335,11 +228,273 @@ NM,Internal Transfer,Zone Surface Water,Atmosphere,Irrigated Agriculture-NMOSE,N
 NM,Internal Transfer,Zone Groundwater,Zone Land System,Irrigated Agriculture-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgriculture-NMOSE,NA,NA
 NM,Internal Transfer,Zone Groundwater,Atmosphere,Irrigated Agriculture-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgriculture-NMOSE,NA,NA
 NM,NA,NA,NA,Public Water Supply: Metered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PublicWaterSupply%3AMetered-NMOSE,NA,NA
+CO,NA,NA,NA,Daytime Hours,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DaytimeHours,NA,NA
+WY,NA,NA,NA,Supply Source,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SupplySource,NA,NA
+CO,NA,NA,NA,Supply Source,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SupplySource,NA,NA
+NM,Outflow,Zone Surface Water,Atmosphere,Evaporation from Reservoirs-NMOSE,Reservoir Evaporation-UT,UT,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#EvaporationFromReservoirs-NMOSE,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,NA
+NM,Outflow,Zone Surface Water,Atmosphere,Evaporation from Reservoirs-NMOSE,Reservoir Evaporation-CO,CO,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#EvaporationFromReservoirs-NMOSE,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-CO,NA
+NM,NA,NA,NA,New Mexico Interstate Stream Commission (NMISC),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NewMexicoInterstateStreamCommission%28NMISC%29,NA,NA
+UT,Inflow,External Surface Water,Zone Surface Water,River Inflow-UT,Stream Inflow-CA,CA,Inflow,External Surface Water,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#RiverInflow-UT,http://purl.org/iow/WaterBudgetingFramework#StreamInflow-CA,NA
+CO,NA,NA,NA,Historical Diversions File,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HistoricalDiversionsFile,NA,NA
+UT,Outflow,Zone Land System,Atmosphere,Riparian Depletions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RiparianDepletions-UT,NA,NA
+UT,Outflow,Zone Surface Water,External Surface Water,Area Outflows-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AreaOutflows,NA,NA
+UT,Outflow,Zone Land System,External Surface Water,Area Outflows-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AreaOutflows,NA,NA
+CO,Storage Change,NA,NA,Change in Ground Water Storage-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInGroundWaterStorage-CO,NA,NA
+CA,NA,NA,NA,Total Land System Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalLandSystemOutflow-CA,NA,NA
+WY,NA,NA,NA,Satellite and Aerial Photos,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SatelliteAndAerialPhotos,NA,NA
+UT,NA,NA,NA,Satellite and Aerial Photos,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SatelliteAndAerialPhotos,NA,NA
+CO,NA,NA,NA,Satellite and Aerial Photos,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SatelliteAndAerialPhotos,NA,NA
+WY,NA,NA,NA,On-Farm Water Balance,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#On-FarmWaterBalance,NA,NA
+CO,NA,NA,NA,On-Farm Water Balance,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#On-FarmWaterBalance,NA,NA
+NM,NA,NA,NA,Monthly Consumptive Use Coefficient (k),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyConsumptiveUseCoefficient%28k%29,NA,NA
+CO,NA,NA,NA,Colorado StateMod,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ColoradoStateMod,NA,NA
+NM,Internal Transfer,Zone Land System,Zone Surface Water,Surface Water Returns-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterReturns-NM,NA,NA
+UT,NA,NA,NA,Elevation-Area-Capacity Tables,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Elevation-Area-CapacityTables,NA,NA
+WY,Inflow,External Groundwater,Zone Surface Water,Ungaged Stream Gains-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UngagedStreamGains-WY,NA,NA
+NM,Internal Transfer,Zone Land System,Zone Groundwater,Recharge-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Recharge-NM,NA,NA
+WY,NA,NA,NA,Coal Production Quantities,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CoalProductionQuantities,NA,NA
+CA,Outflow,Zone Surface Water,External Surface Water,Surface Water Exports-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterExports-CA,NA,NA
+WY,NA,NA,NA,METRIC,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#METRIC,NA,NA
+UT,NA,NA,NA,METRIC,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#METRIC,NA,NA
+NM,NA,NA,NA,METRIC,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#METRIC,NA,NA
+CO,NA,NA,NA,METRIC,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#METRIC,NA,NA
+NM,NA,NA,NA,Indicator Gage Approach,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IndicatorGageApproach,NA,NA
+UT,NA,NA,NA,UT Reservoir Storage and Release Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTReservoirStorageAndReleaseRecords,NA,NA
+NM,Outflow,Zone Land System,Atmosphere,Irrigated Agriculture Depletions-NMOSE,Crop Consumptive Use-CO,CO,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDepletions-NMOSE,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA
+NM,Outflow,Zone Land System,Atmosphere,Irrigated Agriculture Depletions-NMOSE,Agricultural Depletions-UT,UT,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDepletions-NMOSE,http://purl.org/iow/WaterBudgetingFramework#AgriculturalDepletions-UT,NA
+NM,Outflow,Zone Land System,Atmosphere,Irrigated Agriculture Depletions-NMOSE,Agricultural Depletions-UT,UT,Outflow,Zone Groundwater,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDepletions-NMOSE,http://purl.org/iow/WaterBudgetingFramework#AgriculturalDepletions-UT,NA
+NM,NA,NA,NA,Interpolation from Other Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#InterpolationFromOtherRecords,NA,NA
+WY,NA,NA,NA,Diversions,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Diversions,NA,NA
+CO,NA,NA,NA,Diversions,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Diversions,NA,NA
+UT,NA,NA,NA,Historical Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HistoricalData,NA,NA
+CO,NA,NA,NA,Historical Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HistoricalData,NA,NA
+WY,NA,NA,NA,Original Hargreaves,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#OriginalHargreaves,NA,NA
+NM,NA,NA,NA,Original Hargreaves,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#OriginalHargreaves,NA,NA
+CO,NA,NA,NA,Original Hargreaves,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#OriginalHargreaves,NA,NA
+CA,Internal Transfer,Zone Surface Water,Zone Groundwater,Conveyance Seepage-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ConveyanceSeepage-CA,NA,NA
+WY,NA,NA,NA,Pan Method (Net Evaporation),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PanMethod%28NetEvaporation%29,NA,NA
+CA,Internal Transfer,Zone Land System,Zone Groundwater,Recharge of Applied Water-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RechargeOfAppliedWater-CA,NA,NA
+UT,NA,NA,NA,Water Resources Studies,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterResourcesStudies,NA,NA
+CA,Storage Change,NA,NA,Change in Surface Water Storage-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInSurfaceWaterStorage-CA,NA,NA
+WY,Internal Transfer,Zone Surface Water,Zone Land System,Industrial: Mine Production-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA,NA
+WY,Internal Transfer,Zone Groundwater,Zone Land System,Industrial: Mine Production-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA,NA
+WY,NA,NA,NA,WY Department of Environmental Quality (DEQ),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYDepartmentOfEnvironmentalQuality%28DEQ%29,NA,NA
+UT,NA,NA,NA,UT Municipal Potable and Secondary Diversion Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTMunicipalPotableAndSecondaryDiversionRecords,NA,NA
+WY,NA,NA,NA,Divertible Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DivertibleFlow-WY,NA,NA
+WY,NA,NA,NA,Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation,NA,NA
+UT,NA,NA,NA,Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation,NA,NA
+NM,NA,NA,NA,Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation,NA,NA
+CO,NA,NA,NA,Precipitation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation,NA,NA
+WY,NA,NA,NA,National Oceanic and Atmospheric Administration Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalOceanicAndAtmosphericAdministrationStations,NA,NA
+UT,NA,NA,NA,National Oceanic and Atmospheric Administration Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalOceanicAndAtmosphericAdministrationStations,NA,NA
+NM,NA,NA,NA,National Oceanic and Atmospheric Administration Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalOceanicAndAtmosphericAdministrationStations,NA,NA
+CO,NA,NA,NA,National Oceanic and Atmospheric Administration Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalOceanicAndAtmosphericAdministrationStations,NA,NA
+WY,NA,NA,NA,US Energy Information Administration (USEIA),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USEnergyInformationAdministration%28USEIA%29,NA,NA
+NM,NA,NA,NA,Class A Pan Evaporation Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ClassAPanEvaporationData,NA,NA
+UT,Internal Transfer,Zone Surface Water,Zone Land System,Surface Diversion to Cropland-UT,Irrigation Surface Water Diversions-WY,WY,Internal Transfer,Zone Surface Water,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#SurfaceDiversionToCropland-UT,http://purl.org/iow/WaterBudgetingFramework#IrrigationSurfaceWaterDiversions-WY,NA
+UT,Internal Transfer,Zone Surface Water,Zone Land System,Municipal and Industrial Diversions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDiversions-UT,NA,NA
+UT,Internal Transfer,Zone Groundwater,Zone Land System,Municipal and Industrial Diversions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDiversions-UT,NA,NA
+WY,NA,NA,NA,Crop Type,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropType,NA,NA
+UT,NA,NA,NA,Crop Type,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropType,NA,NA
+NM,NA,NA,NA,Crop Type,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropType,NA,NA
+CO,NA,NA,NA,Crop Type,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropType,NA,NA
+WY,NA,NA,NA,Downstream Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DownstreamFlow,NA,NA
+WY,Internal Transfer,Zone Surface Water,Zone Land System,Total Diversions-WY,Surface Water Diversions-CA,CA,Internal Transfer,Zone Surface Water,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#TotalDiversions-WY,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterDiversions-CA,NA
+NM,NA,NA,NA,Reservoir Surface Area,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReservoirSurfaceArea,NA,NA
+NM,Internal Transfer,Zone Surface Water,Zone Land System,Surface Water Diversions-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterDiversions-NM,NA,NA
+WY,NA,NA,NA,Bear River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#BearRiver,NA,NA
+WY,NA,NA,NA,WY Irrigated Acreage Assessment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYIrrigatedAcreageAssessment,NA,NA
+CA,Inflow,Atmosphere,Zone Surface Water,Precipitation on Lakes-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PrecipitationOnLakes-CA,NA,NA
+CO,NA,NA,NA,NDVIstar,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NDVIstar,NA,NA
+WY,NA,NA,NA,Gross Pan Evaportation (inches),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GrossPanEvaportation%28inches%29,NA,NA
+CA,NA,NA,NA,Total Surface Water Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalSurfaceWaterOutflow-CA,NA,NA
+UT,NA,NA,NA,Monthly Precipitation Volume,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPrecipitationVolume,NA,NA
+NM,NA,NA,NA,Monthly Precipitation Volume,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPrecipitationVolume,NA,NA
+CA,Internal Transfer,Zone Land System,Zone Groundwater,Managed Aquifer Recharge-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ManagedAquiferRecharge-CA,NA,NA
+WY,Outflow,Zone Surface Water,Atmosphere,Industrial Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IndustrialConsumptiveUse-WY,NA,NA
+WY,Outflow,Zone Groundwater,Atmosphere,Industrial Consumptive Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IndustrialConsumptiveUse-WY,NA,NA
+WY,NA,NA,NA,Mine Safety and Health Administration (MSHA),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MineSafetyAndHealthAdministration%28MSHA%29,NA,NA
+NM,Internal Transfer,Zone Groundwater,Zone Land System,Groundwater Diversions-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterDiversions-NM,NA,NA
+NM,Outflow,Zone Land System,Atmosphere,Land Surface Evapotranspiration-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LandSurfaceExapotranspiration-NM,NA,NA
+CA,Outflow,Zone Land System,Atmosphere,Evapotranspiration-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Evapotranspiration-CA,NA,NA
+WY,NA,NA,NA,Supply Structure,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SupplyStructure,NA,NA
+NM,NA,NA,NA,Supply Structure,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SupplyStructure,NA,NA
+UT,Outflow,Zone Land System,Atmosphere,Agricultural Depletions-UT,Crop Consumptive Use-CO,CO,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#AgriculturalDepletions-UT,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA
+UT,Outflow,Zone Groundwater,Atmosphere,Agricultural Depletions-UT,Crop Consumptive Use-CO,CO,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#AgriculturalDepletions-UT,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA
+WY,NA,NA,NA,Remote Automated Weather Stations (RAWS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RemoteAutomatedWeatherStations%28RAWS%29,NA,NA
+CO,NA,NA,NA,Remote Automated Weather Stations (RAWS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RemoteAutomatedWeatherStations%28RAWS%29,NA,NA
+CO,NA,External Surface Water,Zone Surface Water,Gaged Surface Water Inflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GagedSurfaceWaterInflow-CO,NA,NA
+WY,NA,NA,NA,Weather Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WeatherStations,NA,NA
+UT,NA,NA,NA,Weather Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WeatherStations,NA,NA
+NM,NA,NA,NA,Weather Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WeatherStations,NA,NA
+CO,NA,NA,NA,Weather Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WeatherStations,NA,NA
+WY,NA,NA,NA,State CU Output,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StateCUOutput,NA,NA
+WY,NA,NA,NA,Irrigated Acreage,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAcreage,NA,NA
+NM,NA,NA,NA,Irrigated Acreage,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAcreage,NA,NA
+CO,NA,NA,NA,Irrigated Acreage,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAcreage,NA,NA
+NM,NA,NA,NA,Commercial: Schools-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial%3ASchools-NMOSE,NA,NA
+WY,Inflow,Atmosphere,Zone Surface Water,Precipitation-WY,Precipitation-UT,UT,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-WY,http://purl.org/iow/WaterBudgetingFramework#Precipitation-UT,NA
+WY,Inflow,Atmosphere,Zone Surface Water,Precipitation-WY,Precipitation-NM,NM,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-WY,http://purl.org/iow/WaterBudgetingFramework#Precipitation-NM,NA
+WY,Inflow,Atmosphere,Zone Surface Water,Precipitation-WY,Precipitation-CO,CO,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-WY,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CO,NA
+WY,Inflow,Atmosphere,Zone Surface Water,Precipitation-WY,Precipitation-CA,CA,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-WY,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CA,NA
+UT,NA,NA,NA,UT State Archives,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTStateArchives,NA,NA
+NM,NA,NA,NA,US Army Corps of Engineers,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USArmyCorpsOfEngineers,NA,NA
+CO,NA,NA,NA,CO Diversion Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CODiversionRecords,NA,NA
+UT,NA,NA,NA,USU Research Report 145,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USUResearchReport145,NA,NA
+WY,NA,NA,NA,Natural Gas Processing Volumes,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NaturalGasProcessingVolumes,NA,NA
+UT,NA,NA,NA,Ground Survey,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundSurvey,NA,NA
+UT,NA,NA,NA,UT Diversion Records from River Commissioners,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTDiversionRecordsFromRiverCommissioners,NA,NA
+WY,NA,NA,NA,State CU,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StateCU,NA,NA
+CO,NA,NA,NA,State CU,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StateCU,NA,NA
+CO,NA,NA,NA,CO Agricultural Meteorology Network Station (COAGM),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#COAgriculturalMeteorologyNetworkStation,NA,NA
+CA,Outflow,Zone Surface Water,Atmosphere,Conveyance Evaporation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ConveyanceEvaporation-CA,NA,NA
+NM,NA,NA,NA,USDA Farm Service Agency,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USDAFarmServiceAgency,NA,NA
+WY,NA,NA,NA,Direct Communication,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DirectCommunication,NA,NA
+NM,NA,NA,NA,US Bureau of Reclamation Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfReclamationStations,NA,NA
+CO,NA,NA,NA,US Bureau of Reclamation Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfReclamationStations,NA,NA
+NM,Internal Transfer,Zone Surface Water,Zone Land System,Irrigated Agriculture Diversions-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDiversions-NMOSE,NA,NA
+NM,Internal Transfer,Zone Groundwater,Zone Land System,Irrigated Agriculture Diversions-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigatedAgricultureDiversions-NMOSE,NA,NA
+CO,Outflow,Zone Surface Water,Atmosphere,Livestock Consumptive Use-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-CO,NA,NA
+CO,Outflow,Zone Groundwater,Atmosphere,Livestock Consumptive Use-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-CO,NA,NA
+NM,NA,NA,NA,Commercial: Incomplete Metered-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Commercial%3AIncompleteMetered-NMOSE,NA,NA
+NM,Outflow,Zone Surface Water,Atmosphere,River Evaporation-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RiverEvaporation-NM,NA,NA
+NM,Inflow,External Groundwater,Zone Groundwater,Groundwater Inflows-NM,Subsurface Inflow-CA,CA,Inflow,External Groundwater,Zone Groundwater,http://purl.org/iow/WaterBudgetingFramework#GroundwaterInflows-NM,http://purl.org/iow/WaterBudgetingFramework#SubsurfaceInflow-CA,NA
+CO,Outflow,Zone Surface Water,External Surface Water,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
+CO,Outflow,Zone Surface Water,External Groundwater,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
+CO,Outflow,Zone Groundwater,External Surface Water,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
+CO,Outflow,Zone Groundwater,External Groundwater,Exports-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Exports-CO,NA,NA
+UT,NA,NA,NA,UT Irrigated Acreage Assessment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTIrrigatedAcreageAssessment,NA,NA
+CO,Inflow,External Surface Water,Zone Land System,Imports-CO,Imported Water-CA,CA,Inflow,External Surface Water,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#Imports-CO,http://purl.org/iow/WaterBudgetingFramework#ImportedWater-CA,NA
+CO,Inflow,External Groundwater,Zone Land System,Imports-CO,Imported Water-CA,CA,Inflow,External Surface Water,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#Imports-CO,http://purl.org/iow/WaterBudgetingFramework#ImportedWater-CA,NA
+CO,NA,NA,NA,Gage Height,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GageHeight,NA,NA
+NM,NA,NA,NA,US Bureau of Reclamation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USBureauOfReclamation,NA,NA
+NM,NA,NA,NA,NMOSEâ€™s Water Use and Conservation Bureau (WUCB) Survey,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSE%E2%80%99sWaterUseAndConservationBureau%28WUCB%29Survey,NA,NA
+UT,Internal Transfer,Zone Surface Water,Zone Land System,Agricultural Potential Consumptive Use-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalPotentialConsumptiveUse-UT,NA,NA
+UT,Internal Transfer,Zone Groundwater,Zone Land System,Agricultural Potential Consumptive Use-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AgriculturalPotentialConsumptiveUse-UT,NA,NA
+WY,NA,NA,NA,WY Diversion Data from Water Users,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYDiversionDataFromWaterUsers,NA,NA
+WY,NA,NA,NA,WY Industrial Production Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYIndustrialProductionMethod,NA,NA
+CO,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-CO,Reservoir Evaporation-UT,UT,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-CO,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,NA
+WY,NA,NA,NA,Platte River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PlatteRiver,NA,NA
+WY,NA,NA,NA,Wind-Bighorn River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Wind-BighornRiver,NA,NA
+CO,Inflow,Atmosphere,Zone Land System,Precipitation-CO,Precipitation-NM,NM,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CO,http://purl.org/iow/WaterBudgetingFramework#Precipitation-NM,NA
+CO,Inflow,Atmosphere,Zone Land System,Precipitation-CO,Precipitation-CA,CA,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CO,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CA,NA
+CO,NA,NA,NA,Direct Flow Demand - Monthly,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DirectFlowDemand-Monthly,NA,NA
+NM,NA,NA,NA,New Mexico Climate Center Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NewMexicoClimateCenterStations,NA,NA
+CO,NA,NA,NA,Gross Usage,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GrossUsage,NA,NA
+UT,Outflow,Zone Surface Water,External Surface Water,Basin Outflow-UT,Stream Outflow-CA,CA,Outflow,Zone Surface Water,External Surface Water,http://purl.org/iow/WaterBudgetingFramework#BasinOutflow-UT,http://purl.org/iow/WaterBudgetingFramework#StreamOutfow-CA,NA
+UT,NA,NA,NA,MesoWest Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MesoWestStations,NA,NA
+NM,NA,NA,NA,Monthly Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyEvaporation,NA,NA
+CA,Outflow,Zone Surface Water,External Surface Water,Stream Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StreamOutfow-CA,NA,NA
+CO,Outflow,Zone Surface Water,External Surface Water,Gaged Surface Water Outflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GagedSurfaceWaterOutflow-CO,NA,NA
+UT,Inflow,Atmosphere,Zone Land System,Precipitation-UT,Precipitation-WY,WY,Inflow,Atmosphere,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#Precipitation-UT,http://purl.org/iow/WaterBudgetingFramework#Precipitation-WY,NA
+UT,Inflow,Atmosphere,Zone Land System,Precipitation-UT,Precipitation-CO,CO,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-UT,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CO,NA
+UT,Inflow,Atmosphere,Zone Land System,Precipitation-UT,Precipitation-CA,CA,Inflow,Atmosphere,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Precipitation-UT,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CA,NA
+WY,NA,Zone Surface Water,Atmosphere,Industrial: Natural Gas-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3ANaturalGas-WY,NA,NA
+WY,NA,Zone Groundwater,Atmosphere,Industrial: Natural Gas-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3ANaturalGas-WY,NA,NA
+WY,NA,NA,NA,Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Population,NA,NA
+CO,NA,NA,NA,Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Population,NA,NA
+NM,Internal Transfer,Zone Surface Water,Zone Land System,Public Water Supply-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PublicWaterSupply-NMOSE,NA,NA
+NM,Internal Transfer,Zone Groundwater,Zone Land System,Public Water Supply-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PublicWaterSupply-NMOSE,NA,NA
+NM,NA,NA,NA,Field Survey,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#FieldSurvey,NA,NA
+UT,Internal Transfer,Zone Surface Water,Zone Surface Water,Surface Water Flows-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterFlows-UT,NA,NA
+NM,Outflow,Zone Groundwater,External Groundwater,Groundwater Outflows-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterOutflows-NM,NA,NA
+WY,Outflow,Zone Surface Water,Atmosphere,Livestock Consumptive Use-WY,Livestock Consumptive Use-CO,CO,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-WY,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-CO,NA
+WY,Outflow,Zone Surface Water,Atmosphere,Livestock Consumptive Use-WY,Livestock Consumptive Use-CO,CO,Outflow,Zone Groundwater,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-WY,http://purl.org/iow/WaterBudgetingFramework#LivestockConsumptiveUse-CO,NA
+WY,NA,NA,NA,Powder-Tongue River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Powder-TongueRiver,NA,NA
+WY,NA,NA,NA,Wyoming Water Development Commission (WWDC) 2002 Water System Survey Report,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingWaterDevelopmentCommission%28WWDC%292002WaterSystemSurveyReport,NA,NA
+CO,NA,NA,NA,CO Division of Water Resources Gages,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CODivisionOfWaterResourcesGages,NA,NA
+UT,NA,NA,NA,Rainfall,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Rainfall,NA,NA
+NM,NA,NA,NA,Rainfall,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Rainfall,NA,NA
+WY,NA,NA,NA,Wyoming Water Resources Data Systems Water and Climate Map Server,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingWaterResourcesDataSystemsWaterAndClimateMapServer,NA,NA
+WY,NA,Zone Surface Water,Atmosphere,Agricultural Consumptive Use-WY,Crop Consumptive Use-CO,CO,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#AgriculturalConsumptiveUse-WY,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA
+WY,NA,Zone Groundwater,Atmosphere,Agricultural Consumptive Use-WY,Crop Consumptive Use-CO,CO,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#AgriculturalConsumptiveUse-WY,http://purl.org/iow/WaterBudgetingFramework#CropConsumptiveUse-CO,NA
+NM,NA,NA,NA,University of New Mexico Geospatial and Population Studies (UNM GPS),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UniversityOfNewMexicoGeospatialAndPopulationStudies%28UNMGPS%29,NA,NA
+WY,NA,NA,NA,WY Diversion Records,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WYDiversionRecords,NA,NA
+CA,Internal Transfer,Zone Groundwater,Zone Surface Water,Lake Gain from Groundwater-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LakeGainFromGroundwater-CA,NA,NA
+NM,NA,NA,NA,Human Storage and Distribution System Stock-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HumanStorageAndDistributionSystemStock-NM,NA,NA
+WY,NA,NA,NA,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanMonthlyAirTemperatures%28T%29,NA,NA
+UT,NA,NA,NA,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanMonthlyAirTemperatures%28T%29,NA,NA
+NM,NA,NA,NA,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanMonthlyAirTemperatures%28T%29,NA,NA
+CO,NA,NA,NA,Mean Monthly Air Temperatures (T),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MeanMonthlyAirTemperatures%28T%29,NA,NA
+UT,NA,NA,NA,Municipal and Industrial Diversion Reports,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalAndIndustrialDiversionReports,NA,NA
+WY,NA,NA,NA,Irrigation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigationMethod,NA,NA
+UT,NA,NA,NA,Irrigation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigationMethod,NA,NA
+NM,NA,NA,NA,Irrigation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigationMethod,NA,NA
+CO,NA,NA,NA,Irrigation Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigationMethod,NA,NA
+NM,Internal Transfer,Zone Groundwater,Zone Land System,Industrial-NMOSE,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial-NMOSE,NA,NA
+NM,Outflow,Zone Surface Water,External Surface Water,Surface Water Outflows-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterOutflows-NM,NA,NA
+NM,NA,NA,NA,Irrigation Districts,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#IrrigationDistricts,NA,NA
+CA,Internal Transfer,Zone Land System,Zone Groundwater,Recharge of Precipitation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RechargeOfPrecipitation-CA,NA,NA
+CO,NA,NA,NA,Daily Modified Hargreaves,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#DailyModifiedHargreaves,NA,NA
+NM,NA,NA,NA,Monthly Gross Evaporation Rate,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyGrossEvaporationRate,NA,NA
+CO,NA,NA,NA,NDVI Remote Sensing,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NDVIRemoteSensing,NA,NA
+WY,NA,NA,NA,Wyoming Oil and Gas Conservation Commission (WYOGCC),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingOilAndGasConservationCommission%28WYOGCC%29,NA,NA
+CA,Inflow,External Groundwater,Zone Groundwater,Subsurface Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SubsurfaceInflow-CA,NA,NA
+NM,NA,NA,NA,Streamflow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Streamflow,NA,NA
+CO,NA,NA,NA,Streamflow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Streamflow,NA,NA
+NM,NA,NA,NA,GPS Population Data,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GPSPopulationData,NA,NA
+CA,NA,NA,NA,Total Land System Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalLandSystemInflow-CA,NA,NA
+WY,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-WY,Reservoir Evaporation-UT,UT,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-WY,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,NA
+WY,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-WY,Reservoir Evaporation-CO,CO,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-WY,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-CO,NA
+WY,NA,NA,NA,US Census Bureau,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USCensusBureau,NA,NA
+NM,NA,NA,NA,US Census Bureau,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USCensusBureau,NA,NA
+CO,NA,NA,NA,State Agricultural Statistics,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StateAgriculturalStatistics,NA,NA
+NM,NA,NA,NA,NMOSE Crop Acreage File,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSECropAcreageFile,NA,NA
+UT,Inflow,External Surface Water,Zone Surface Water,Tributary Inflow-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TributaryInflow-UT,NA,NA
+CA,Outflow,Zone Groundwater,External Groundwater,Stored Water Export-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#StoredWaterExport-CA,NA,NA
+CO,NA,NA,NA,Instream Flow Demand-Monthly,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#InstreamFlowDemand-Monthly,NA,NA
+CA,Internal Transfer,Zone Land System,Zone Land System,Applied Water Reuse/Recycled Water-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AppliedWaterReuse%2FRecycledWater-CA,NA,NA
+WY,NA,Zone Surface Water,Zone Land System,Municipal Total Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalTotalUse-WY,NA,NA
+WY,NA,Zone Groundwater,Zone Land System,Municipal Total Use-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MunicipalTotalUse-WY,NA,NA
+NM,NA,NA,NA,Western Regional Climate Center (WRCC) Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WesternRegionalClimateCenter%28WRCC%29Stations,NA,NA
+WY,NA,NA,NA,Water Supply,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterSupply,NA,NA
+UT,NA,NA,NA,Water Supply,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterSupply,NA,NA
+NM,NA,NA,NA,Water Supply,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterSupply,NA,NA
+CO,NA,NA,NA,Water Supply,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterSupply,NA,NA
+NM,NA,NA,NA,Livestock Population,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockPopulation,NA,NA
+WY,NA,NA,NA,Annual Soda Ash Production,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AnnualSodaAshProduction,NA,NA
+NM,NA,NA,NA,NMOSE Temperature and Precipitation File,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSETemperatureAndPrecipitationFile,NA,NA
+CA,Outflow,Zone Land System,External Land System,Recycled Water Export-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RecycledWaterExport-CA,NA,NA
+CA,Internal Transfer,Zone Groundwater,Zone Land System,Groundwater Extraction-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterExtraction-CA,NA,NA
+CA,Internal Transfer,Zone Surface Water,Zone Land System,Surface Water Delivery-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterDelivery-CA,NA,NA
+WY,NA,NA,NA,Crop Irrigation Requirement,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirement,NA,NA
+UT,NA,NA,NA,Crop Irrigation Requirement,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirement,NA,NA
+NM,NA,NA,NA,Crop Irrigation Requirement,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirement,NA,NA
+CO,NA,NA,NA,Crop Irrigation Requirement,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CropIrrigationRequirement,NA,NA
+CA,Internal Transfer,Zone Land System,Zone Surface Water,Return Flow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReturnFlow-CA,NA,NA
+NM,NA,NA,NA,NM Spreadsheet-Based Consumptive Use Model,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMSpreadsheet-BasedConsumptiveUseModel,NA,NA
+NM,Internal Transfer,Zone Surface Water,Zone Land System,Mining-NMOSE,Industrial: Mine Production-WY,WY,Internal Transfer,Zone Surface Water,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Mining-NMOSE,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA
+NM,Internal Transfer,Zone Groundwater,Zone Land System,Mining-NMOSE,Industrial: Mine Production-WY,WY,Internal Transfer,Zone Surface Water,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Mining-NMOSE,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA
+NM,Internal Transfer,Zone Surface Water,Zone Land System,Mining-NMOSE,Industrial: Mine Production-WY,WY,Internal Transfer,Zone Groundwater,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Mining-NMOSE,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA
+NM,Internal Transfer,Zone Groundwater,Zone Land System,Mining-NMOSE,Industrial: Mine Production-WY,WY,Internal Transfer,Zone Groundwater,Zone Land System,http://purl.org/iow/WaterBudgetingFramework#Mining-NMOSE,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AMineProduction-WY,NA
+CA,Outflow,NA,NA,Total Groundwater System Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalGroundwaterSystemOutflow-CA,NA,NA
+UT,NA,NA,NA,Groundwater Use,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterUse,NA,NA
+WY,NA,NA,NA,Return Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReturnFlow,NA,NA
+CO,NA,NA,NA,Return Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ReturnFlow,NA,NA
+NM,NA,NA,NA,Population Served by Public Water Supply,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PopulationServedByPublicWaterSupply,NA,NA
+CO,Inflow,External Surface Water,Zone Surface Water,Ungaged Surface Water Inflow-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UngagedSurfaceWaterInflow-CO,NA,NA
+CA,Inflow,Atmosphere,Zone Land System,Precipitation-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation-CA,NA,NA
+WY,NA,NA,NA,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPercentageOfAnnualDaylightHours%28P%29,NA,NA
+UT,NA,NA,NA,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPercentageOfAnnualDaylightHours%28P%29,NA,NA
+NM,NA,NA,NA,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPercentageOfAnnualDaylightHours%28P%29,NA,NA
+CO,NA,NA,NA,Monthly Percentage of Annual Daylight Hours (P),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyPercentageOfAnnualDaylightHours%28P%29,NA,NA
+NM,NA,NA,NA,NM Consumptive Use Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMConsumptiveUseMethod,NA,NA
+WY,Outflow,Zone Surface Water,Zone Surface Water,Gaged Stream Outflow-WY,Gaged Surface Water Outflow-CO,CO,Outflow,Zone Surface Water,External Surface Water,http://purl.org/iow/WaterBudgetingFramework#GagedStreamOutflow-WY,http://purl.org/iow/WaterBudgetingFramework#GagedSurfaceWaterOutflow-CO,NA
+WY,NA,NA,NA,Wyoming State Engineer's Office Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WyomingStateEngineer%27sOfficeStations,NA,NA
+NM,NA,NA,NA,USDA Cropland Data Layer (CDL),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USDACroplandDataLayer%28CDL%29,NA,NA
+WY,NA,NA,NA,Upstream Flow,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UpstreamFlow,NA,NA
+NM,NA,NA,NA,Empirical Data for Small Reservoirs,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EmpiricalDataForSmallReservoirs,NA,NA
+NM,Inflow,External Surface Water,Zone Surface Water,Surface Water Inflows-NM,Stream Inflow-CA,CA,Inflow,External Surface Water,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterInflows-NM,http://purl.org/iow/WaterBudgetingFramework#StreamInflow-CA,NA
+UT,NA,NA,NA,Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Evaporation,NA,NA
+CO,NA,NA,NA,Evaporation,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Evaporation,NA,NA
+UT,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-UT,Reservoir Evaporation-WY,WY,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-WY,NA
+UT,Outflow,Zone Surface Water,Atmosphere,Reservoir Evaporation-UT,Reservoir Evaporation-CO,CO,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-CO,NA
+UT,NA,NA,NA,Potential Evapotranspiration,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PotentialEvapotranspiration,NA,NA
+CO,NA,NA,NA,Potential Evapotranspiration,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#PotentialEvapotranspiration,NA,NA
+CO,NA,NA,NA,"Community Collaborative Rain, Hail and Snow Network (CoCoRaHS)",NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CommunityCollaborativeRain%2CHailAndSnowNetwork%28CoCoRaHS%29,NA,NA
 NM,NA,NA,NA,Water Use Estimate,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#WaterUseEstimate,NA,NA
 NM,NA,NA,NA,NMOSE Water Rights Database,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMOSEWaterRightsDatabase,NA,NA
 CO,NA,NA,NA,Proration Factors,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ProrationFactors,NA,NA
-NM,Outflow,Zone Surface Water,Atmosphere,Evaporation from Reservoirs-NMOSE,Reservoir Evaporation-UT,UT,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#EvaporationFromReservoirs-NMOSE,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-UT,NA
-NM,Outflow,Zone Surface Water,Atmosphere,Evaporation from Reservoirs-NMOSE,Reservoir Evaporation-CO,CO,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#EvaporationFromReservoirs-NMOSE,http://purl.org/iow/WaterBudgetingFramework#ReservoirEvaporation-CO,NA
 CO,NA,NA,NA,Natural Flow Gain Distribution,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NaturalFlowGainDistribution,NA,NA
 WY,Internal Transfer,Zone Surface Water,Zone Land System,Industrial: Oil and Gas-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AOilAndGas-WY,NA,NA
 WY,Internal Transfer,Zone Groundwater,Zone Land System,Industrial: Oil and Gas-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Industrial%3AOilAndGas-WY,NA,NA
@@ -347,35 +502,29 @@ UT,Outflow,Zone Surface Water,Atmosphere,Natural System Use-UT,Native Vegetation
 UT,Outflow,Zone Land System,Atmosphere,Natural System Use-UT,Native Vegetation Consumptive Use-CO,CO,Outflow,Zone Surface Water,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#NaturalSystemUse-UT,http://purl.org/iow/WaterBudgetingFramework#NativeVegetationConsumptiveUse-CO,NA
 UT,Outflow,Zone Surface Water,Atmosphere,Natural System Use-UT,Native Vegetation Consumptive Use-CO,CO,Outflow,Zone Groundwater,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#NaturalSystemUse-UT,http://purl.org/iow/WaterBudgetingFramework#NativeVegetationConsumptiveUse-CO,NA
 UT,Outflow,Zone Land System,Atmosphere,Natural System Use-UT,Native Vegetation Consumptive Use-CO,CO,Outflow,Zone Groundwater,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#NaturalSystemUse-UT,http://purl.org/iow/WaterBudgetingFramework#NativeVegetationConsumptiveUse-CO,NA
-NM,NA,NA,NA,New Mexico Interstate Stream Commission (NMISC),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NewMexicoInterstateStreamCommission%28NMISC%29,NA,NA
+UT,Outflow,Zone Surface Water,Atmosphere,Natural System Use-UT,Evapotranspiration-CA,CA,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#NaturalSystemUse-UT,http://purl.org/iow/WaterBudgetingFramework#Evapotranspiration-CA,NA
+UT,Outflow,Zone Land System,Atmosphere,Natural System Use-UT,Evapotranspiration-CA,CA,Outflow,Zone Land System,Atmosphere,http://purl.org/iow/WaterBudgetingFramework#NaturalSystemUse-UT,http://purl.org/iow/WaterBudgetingFramework#Evapotranspiration-CA,NA
+WY,NA,NA,NA,Vapor Pressure,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#VaporPressure,NA,NA
+UT,NA,NA,NA,Vapor Pressure,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#VaporPressure,NA,NA
+NM,NA,NA,NA,Vapor Pressure,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#VaporPressure,NA,NA
 CO,NA,NA,NA,Vapor Pressure,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#VaporPressure,NA,NA
-UT,Inflow,External Surface Water,Zone Surface Water,River Inflow-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RiverInflow-UT,NA,NA
 WY,NA,NA,NA,Northeast River,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NortheastRiver,NA,NA
-CO,NA,NA,NA,Historical Diversions File,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#HistoricalDiversionsFile,NA,NA
-UT,Outflow,Zone Land System,Atmosphere,Riparian Depletions-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#RiparianDepletions-UT,NA,NA
-UT,Outflow,Zone Surface Water,External Surface Water,Area Outflows-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AreaOutflows,NA,NA
-UT,Outflow,Zone Land System,External Surface Water,Area Outflows-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#AreaOutflows,NA,NA
 CA,Internal Transfer,Zone Surface Water,Zone Groundwater,Lake Loss to Groundwater-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LakeLossToGroundwater-CA,NA,NA
 NM,NA,NA,NA,Groundwater Stock-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#GroundwaterStock-NM,NA,NA
-CO,Storage Change,NA,NA,Change in Ground Water Storage-CO,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ChangeInGroundWaterStorage-CO,NA,NA
-CA,NA,NA,NA,Total Land System Outflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalLandSystemOutflow-CA,NA,NA
-NM,NA,NA,NA,Monthly Consumptive Use Coefficient (k),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#MonthlyConsumptiveUseCoefficient%28k%29,NA,NA
-UT,NA,NA,NA,USGS Groundwater Reports,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSGroundwaterReports,NA,NA
 NM,Inflow,Atmosphere,Zone Land System,Precipitation-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Precipitation-NM,NA,NA
-CO,NA,NA,NA,Colorado StateMod,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ColoradoStateMod,NA,NA
-NM,Internal Transfer,Zone Land System,Zone Surface Water,Surface Water Returns-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterReturns-NM,NA,NA
-UT,NA,NA,NA,Elevation-Area-Capacity Tables,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Elevation-Area-CapacityTables,NA,NA
+UT,NA,NA,NA,USGS Groundwater Reports,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSGroundwaterReports,NA,NA
 CO,NA,NA,NA,Sum of Monthly Consumptive Use Factors for Growing Season (F),NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SumOfMonthlyConsumptiveUseFactorsForGrowingSeason%28F%29,NA,NA
-WY,Inflow,External Groundwater,Zone Surface Water,Ungaged Stream Gains-WY,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UngagedStreamGains-WY,NA,NA
-UT,NA,NA,NA,UT Division of Water Resources Area-Altitude Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTDivisionOfWaterResourcesArea-AltitudeMethod,NA,NA
 CA,NA,NA,NA,Total Inflow-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#TotalInflow-CA,NA,NA
+UT,NA,NA,NA,UT Division of Water Resources Area-Altitude Method,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTDivisionOfWaterResourcesArea-AltitudeMethod,NA,NA
+UT,NA,NA,NA,Emery Water Conservancy District Stations,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#EmeryWaterConservancyDistrictStations,NA,NA
+WY,NA,NA,NA,Modified Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ModifiedBlaney-CriddleWithETElevationAdjustment,NA,NA
+UT,NA,NA,NA,Modified Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ModifiedBlaney-CriddleWithETElevationAdjustment,NA,NA
 CO,NA,NA,NA,Modified Blaney-Criddle with ET Elevation Adjustment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#ModifiedBlaney-CriddleWithETElevationAdjustment,NA,NA
-NM,Internal Transfer,Zone Land System,Zone Groundwater,Recharge-NM,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#Recharge-NM,NA,NA
+NM,NA,NA,NA,NM Irrigated Acreage Assessment,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NMIrrigatedAcreageAssessment,NA,NA
 NM,Internal Transfer,Zone Land System,Zone Surface Water,Runoff-NM,Runoff-CA,CA,Internal Transfer,Zone Land System,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#Runoff-NM,http://purl.org/iow/WaterBudgetingFramework#Runoff-CA,NA
-WY,NA,NA,NA,Coal Production Quantities,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#CoalProductionQuantities,NA,NA
-UT,Inflow,External Surface Water,Zone Surface Water,Basin Inflow-UT,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#BasinInflow-UT,NA,NA
+UT,Inflow,External Surface Water,Zone Surface Water,Basin Inflow-UT,Stream Inflow-CA,CA,Inflow,External Surface Water,Zone Surface Water,http://purl.org/iow/WaterBudgetingFramework#BasinInflow-UT,http://purl.org/iow/WaterBudgetingFramework#StreamInflow-CA,NA
 UT,NA,NA,NA,USGS StreamStats,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#USGSStreamStats,NA,NA
 WY,NA,NA,NA,National Climatic Data Center's Climatography of the United States No. 81,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#NationalClimaticDataCenter%27sClimatographyOfTheUnitedStatesNo.81,NA,NA
 UT,NA,NA,NA,UT Water Rights Database,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#UTWaterRights,NA,NA
-CA,Outflow,Zone Surface Water,External Surface Water,Surface Water Exports-CA,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SurfaceWaterExports-CA,NA,NA
 CO,NA,NA,NA,Livestock Count,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#LivestockCount,NA,NA
+CO,NA,NA,NA,Supply Type,NA,NA,NA,NA,NA,http://purl.org/iow/WaterBudgetingFramework#SupplyType,NA,NA

@@ -1,66 +1,195 @@
 jL,cL,fsourceL,fsinkL,ftypeL,scL,pscL,exmL
-Bear River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Bear River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Bear River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-Bear River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-Bear River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+Bear River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Bear River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+Bear River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Bear River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Bear River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+Bear River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Bear River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Bear River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
 Bear River,Industrial: Natural Gas,Zone Groundwater,Atmosphere,NA,NA,Industrial Consumptive Use-WY,NA
 Bear River,Industrial: Natural Gas,Zone Surface Water,Atmosphere,NA,NA,Industrial Consumptive Use-WY,NA
-Bear River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Bear River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
+Bear River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Applied Water-CA,NA,NA
+Bear River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Bear River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Applied Water-CA,NA,NA
+Bear River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+CA,Applied Water,Zone Land System,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Applied Water Reuse/Recycled Water,Zone Land System,Zone Land System,Internal Transfer,Applied Water-CA,NA,NA
+CA,Applied Water Reuse/Recycled Water,Zone Land System,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Change in Groundwater Storage,NA,NA,Storage Change,Change in Total System Storage-CA,NA,NA
+CA,Change in Land System Storage,NA,NA,Storage Change,Change in Total System Storage-CA,NA,NA
+CA,Change in Surface Water Storage,NA,NA,Storage Change,Change in Total System Storage-CA,NA,NA
+CA,Change in Total System Storage,NA,NA,Storage Change,NA,NA,NA
+CA,Conveyance Evaporation,Zone Surface Water,Atmosphere,Outflow,Human Consumption-NM,NA,NA
+CA,Conveyance Evaporation,Zone Surface Water,Atmosphere,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Conveyance Seepage,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Conveyance Seepage,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Evapotranspiration,Zone Land System,Atmosphere,Outflow,Total Land System Outflow-CA,NA,NA
+CA,Groundwater Export,Zone Groundwater,External Groundwater,Outflow,Total Groundwater System Outflow-CA,NA,NA
+CA,Groundwater Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Groundwater Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Imported Water,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,NA,NA
+CA,Lake Evaporation,Zone Surface Water,Atmosphere,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Lake Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Lake Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Lake Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Lake Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Lake Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Managed Aquifer Recharge,Zone Land System,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Managed Aquifer Recharge,Zone Land System,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Managed Aquifer Recharge,Zone Land System,Zone Groundwater,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-NM,NA,NA
+CA,Precipitation,Atmosphere,Zone Land System,Inflow,Total Land System Inflow-CA,NA,NA
+CA,Precipitation on Lakes,Atmosphere,Zone Surface Water,Inflow,Precipitation-CA,NA,NA
+CA,Precipitation on Lakes,Atmosphere,Zone Surface Water,Inflow,Precipitation-NM,NA,NA
+CA,Precipitation on Lakes,Atmosphere,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,NA,NA
+CA,Recharge of Applied Water,Zone Land System,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Recharge of Applied Water,Zone Land System,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Recharge of Applied Water,Zone Land System,Zone Groundwater,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Recharge of Precipitation,Zone Land System,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Recharge of Precipitation,Zone Land System,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Recharge of Precipitation,Zone Land System,Zone Groundwater,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Recycled Water Export,Zone Land System,External Land System,Outflow,Total Land System Outflow-CA,NA,NA
+CA,Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Runoff,Zone Land System,Zone Surface Water,Internal Transfer,Total Land System Outflow-CA,NA,NA
+CA,Runoff,Zone Land System,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Stored Water Export,Zone Groundwater,External Groundwater,Outflow,Total Groundwater System Outflow-CA,NA,NA
+CA,Stored Water Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Stored Water Extraction,Zone Groundwater,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Stream Evaporation,Zone Surface Water,Atmosphere,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Stream Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Groundwater System Outflow-CA,NA,NA
+CA,Stream Gain from Groundwater,Zone Groundwater,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Stream Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,NA,NA
+CA,Stream Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Recharge-NM,NA,NA
+CA,Stream Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Groundwater System Inflow-CA,NA,NA
+CA,Stream Loss to Groundwater,Zone Surface Water,Zone Groundwater,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Stream Outflow,Zone Surface Water,External Surface Water,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Subsurface Inflow,External Groundwater,Zone Groundwater,Inflow,Total Groundwater System Inflow-CA,NA,NA
+CA,Subsurface Outflow,Zone Groundwater,External Groundwater,Outflow,Total Groundwater System Outflow-CA,NA,NA
+CA,Surface Water Delivery,Zone Surface Water,Zone Land System,Internal Transfer,Total Land System Inflow-CA,NA,NA
+CA,Surface Water Delivery,Zone Surface Water,Zone Land System,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Surface Water Diversions,Zone Surface Water,Zone Surface Water,Internal Transfer,Total Surface Water Inflow-CA,NA,NA
+CA,Surface Water Diversions,Zone Surface Water,Zone Surface Water,Internal Transfer,Total Surface Water Outflow-CA,NA,NA
+CA,Surface Water Exports,Zone Surface Water,External Surface Water,Outflow,Total Surface Water Outflow-CA,NA,NA
+CA,Total Groundwater System Inflow,NA,NA,Inflow,NA,NA,NA
+CA,Total Groundwater System Outflow,NA,NA,Outflow,NA,NA,NA
+CA,Total Inflow,NA,NA,NA,NA,NA,NA
+CA,Total Land System Inflow,NA,NA,NA,NA,NA,NA
+CA,Total Land System Outflow,NA,NA,NA,NA,NA,NA
+CA,Total Outflow,NA,NA,NA,NA,NA,NA
+CA,Total Surface Water Inflow,NA,NA,NA,NA,NA,NA
+CA,Total Surface Water Outflow,NA,NA,NA,NA,NA,NA
+CA,Water Release Caused by Land Subsidence,NA,Zone Groundwater,Inflow,Total Groundwater System Inflow-CA,NA,NA
 CO,Change in Ground Water Storage,NA,NA,Storage Change,NA,NA,Change in Groundwater Storage-CA
 CO,Change in Surface Water Storage,NA,NA,Storage Change,NA,NA,Change in Surface Water Storage-CA
-CO,Crop Consumptive Use,Zone Land System,Atmosphere,Outflow,NA,NA,NA
-CO,Exports,Zone Groundwater,External Groundwater,Outflow,NA,NA,NA
-CO,Exports,Zone Groundwater,External Surface Water,Outflow,NA,NA,NA
-CO,Exports,Zone Surface Water,External Groundwater,Outflow,NA,NA,NA
-CO,Exports,Zone Surface Water,External Surface Water,Outflow,NA,NA,NA
-CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,Basin Inflow-UT,NA,NA
-CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,River Inflow-UT,NA,NA
-CO,Gaged Surface Water Outflow,Zone Surface Water,External Surface Water,Outflow,Basin Outflow-UT,NA,NA
-CO,Ground Water Inflow,External Groundwater,Zone Groundwater,Inflow,NA,NA,NA
-CO,Ground Water Outflow,Zone Groundwater,External Groundwater,Outflow,NA,NA,NA
-CO,Imports,External Groundwater,Zone Land System,Inflow,NA,NA,NA
-CO,Imports,External Surface Water,Zone Land System,Inflow,NA,NA,NA
+CO,Crop Consumptive Use,Zone Land System,Atmosphere,Outflow,Applied Water-CA,NA,Irrigated Agriculture Depletions-NMOSE
+CO,Crop Consumptive Use,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,NA,Irrigated Agriculture Depletions-NMOSE
+CO,Crop Consumptive Use,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,NA,Irrigated Agriculture Depletions-NMOSE
+CO,Exports,Zone Groundwater,External Groundwater,Outflow,NA,Groundwater Export-CA,NA
+CO,Exports,Zone Groundwater,External Groundwater,Outflow,NA,Stored Water Export-CA,NA
+CO,Exports,Zone Groundwater,External Groundwater,Outflow,NA,Surface Water Exports-CA,NA
+CO,Exports,Zone Groundwater,External Surface Water,Outflow,NA,Groundwater Export-CA,NA
+CO,Exports,Zone Groundwater,External Surface Water,Outflow,NA,Stored Water Export-CA,NA
+CO,Exports,Zone Groundwater,External Surface Water,Outflow,NA,Surface Water Exports-CA,NA
+CO,Exports,Zone Surface Water,External Groundwater,Outflow,NA,Groundwater Export-CA,NA
+CO,Exports,Zone Surface Water,External Groundwater,Outflow,NA,Stored Water Export-CA,NA
+CO,Exports,Zone Surface Water,External Groundwater,Outflow,NA,Surface Water Exports-CA,NA
+CO,Exports,Zone Surface Water,External Surface Water,Outflow,NA,Groundwater Export-CA,NA
+CO,Exports,Zone Surface Water,External Surface Water,Outflow,NA,Stored Water Export-CA,NA
+CO,Exports,Zone Surface Water,External Surface Water,Outflow,NA,Surface Water Exports-CA,NA
+CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,Basin Inflow-UT,Stream Inflow-CA,NA
+CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,River Inflow-UT,Stream Inflow-CA,NA
+CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,Total Inflow-CA,Stream Inflow-CA,NA
+CO,Gaged Surface Water Inflow,External Surface Water,Zone Surface Water,NA,Total Surface Water Inflow-CA,Stream Inflow-CA,NA
+CO,Gaged Surface Water Outflow,Zone Surface Water,External Surface Water,Outflow,Basin Outflow-UT,Stream Outflow-CA,NA
+CO,Gaged Surface Water Outflow,Zone Surface Water,External Surface Water,Outflow,Total Surface Water Outflow-CA,Stream Outflow-CA,NA
+CO,Ground Water Inflow,External Groundwater,Zone Groundwater,Inflow,Total Groundwater System Inflow-CA,NA,Subsurface Inflow-CA
+CO,Ground Water Inflow,External Groundwater,Zone Groundwater,Inflow,Total Inflow-CA,NA,Subsurface Inflow-CA
+CO,Ground Water Outflow,Zone Groundwater,External Groundwater,Outflow,Total Groundwater System Outflow-CA,NA,Subsurface Outflow-CA
+CO,Imports,External Groundwater,Zone Land System,Inflow,NA,NA,Imported Water-CA
+CO,Imports,External Surface Water,Zone Land System,Inflow,NA,NA,Imported Water-CA
 CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Livestock-NMOSE,Agricultural and Municipal Depletions-UT,NA
 CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Livestock-NMOSE,Agricultural Depletions-UT,NA
+CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Livestock-NMOSE,Applied Water-CA,NA
+CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Livestock-NMOSE,Groundwater Extraction-CA,NA
+CO,Livestock Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Livestock-NMOSE,Surface Water Diversions-CA,NA
 CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Livestock-NMOSE,Agricultural and Municipal Depletions-UT,NA
 CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Livestock-NMOSE,Agricultural Depletions-UT,NA
+CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Livestock-NMOSE,Applied Water-CA,NA
+CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Livestock-NMOSE,Groundwater Extraction-CA,NA
+CO,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Livestock-NMOSE,Surface Water Diversions-CA,NA
+CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Applied Water-CA,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Commercial-NMOSE,Municipal and Industrial Depeltion-UT
+CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Groundwater Extraction-CA,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Industrial-NMOSE,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Mining-NMOSE,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Power-NMOSE,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Public Water Supply-NMOSE,Municipal and Industrial Depeltion-UT
+CO,Municipal and Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Surface Water Diversions-CA,Municipal and Industrial Depeltion-UT
+CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Applied Water-CA,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Commercial-NMOSE,Municipal and Industrial Depeltion-UT
+CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Groundwater Extraction-CA,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Industrial-NMOSE,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Mining-NMOSE,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Power-NMOSE,Municipal and Industrial Depeltion-UT
 CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Public Water Supply-NMOSE,Municipal and Industrial Depeltion-UT
-CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Natural System Use-UT,NA
-CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,Riparian Depletions-UT,NA
-CO,Native Vegetation Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Natural System Use-UT,NA
-CO,Native Vegetation Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Riparian Depletions-UT,NA
-CO,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,NA
-CO,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,Reservoir Evaporation-UT
-CO,Ungaged Surface Water Inflow,External Surface Water,Zone Surface Water,Inflow,River Inflow-UT,NA,NA
-Green River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Green River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Green River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-Green River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
-Green River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-Green River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-Green River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-Green River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Green River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-NM,CommercialOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
-NM,CommercialOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
+CO,Municipal and Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,Surface Water Diversions-CA,Municipal and Industrial Depeltion-UT
+CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,Natural System Use-UT,NA
+CO,Native Vegetation Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,Riparian Depletions-UT,NA
+CO,Native Vegetation Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Evapotranspiration-CA,Natural System Use-UT,NA
+CO,Native Vegetation Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Evapotranspiration-CA,Riparian Depletions-UT,NA
+CO,Precipitation,Atmosphere,Zone Land System,Inflow,NA,Precipitation on Lakes-CA,Precipitation-CA
+CO,Precipitation,Atmosphere,Zone Land System,Inflow,NA,Precipitation on Lakes-CA,Precipitation-NM
+CO,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,Lake Evaporation-CA,NA,Reservoir Evaporation-UT
+CO,Ungaged Surface Water Inflow,External Surface Water,Zone Surface Water,Inflow,River Inflow-UT,Stream Inflow-CA,NA
+CO,Ungaged Surface Water Inflow,External Surface Water,Zone Surface Water,Inflow,Total Inflow-CA,Stream Inflow-CA,NA
+CO,Ungaged Surface Water Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Stream Inflow-CA,NA
+Green River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Green River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+Green River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Green River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Green River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Green River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Green River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Green River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Green River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Green River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Green River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Green River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Green River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+Green River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Green River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Green River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+Green River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Applied Water-CA,NA,NA
+Green River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Green River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Applied Water-CA,NA,NA
+Green River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+NM,CommercialOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Applied Water-CA,NA
+NM,CommercialOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Applied Water-CA,NA
 NM,Commercial: Incomplete MeteredOSE,NA,NA,NA,Commercial-NMOSE,NA,NA
 NM,Commercial: MeteredOSE,NA,NA,NA,Commercial-NMOSE,NA,NA
 NM,Commercial: SchoolsOSE,NA,NA,NA,Commercial: Unmetered-NMOSE,NA,NA
 NM,Commercial: UnmeteredOSE,NA,NA,NA,Commercial-NMOSE,NA,NA
-NM,Evaporation from ReservoirsOSE,Zone Surface Water,Atmosphere,Outflow,NA,NA,Reservoir Evaporation-CO
-NM,Evaporation from ReservoirsOSE,Zone Surface Water,Atmosphere,Outflow,NA,NA,Reservoir Evaporation-UT
-NM,IndustrialOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
+NM,Evaporation from ReservoirsOSE,Zone Surface Water,Atmosphere,Outflow,NA,Lake Evaporation-CA,Reservoir Evaporation-CO
+NM,Evaporation from ReservoirsOSE,Zone Surface Water,Atmosphere,Outflow,NA,Lake Evaporation-CA,Reservoir Evaporation-UT
+NM,IndustrialOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Applied Water-CA,NA
+NM,IndustrialOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Consumptive Use-WY,NA
+NM,IndustrialOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,NA
 NM,Irrigated AgricultureOSE,Zone Groundwater,Atmosphere,Internal Transfer,NA,NA,NA
 NM,Irrigated AgricultureOSE,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
 NM,Irrigated AgricultureOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
@@ -69,124 +198,382 @@ NM,Irrigated AgricultureOSE,Zone Surface Water,Atmosphere,Internal Transfer,NA,N
 NM,Irrigated AgricultureOSE,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
 NM,Irrigated AgricultureOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
 NM,Irrigated AgricultureOSE,Zone Surface Water,Zone Land System,Outflow,NA,NA,NA
-NM,Irrigated Agriculture DepletionsOSE,Zone Groundwater,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DepletionsOSE,Zone Groundwater,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Agricultural Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DepletionsOSE,Zone Groundwater,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DepletionsOSE,Zone Groundwater,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Agricultural Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DepletionsOSE,Zone Surface Water,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DepletionsOSE,Zone Surface Water,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Agricultural Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DepletionsOSE,Zone Surface Water,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DepletionsOSE,Zone Surface Water,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Agricultural Depletions-UT,Crop Consumptive Use-CO
-NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,NA,NA
-NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,NA,NA
-NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,NA,NA
-NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,NA,NA
-NM,LivestockOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,NA,NA
-NM,LivestockOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,NA,NA
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Agricultural and Municipal Depletions-UT,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Agricultural and Municipal Depletions-UT,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Applied Water-CA,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Applied Water-CA,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Agricultural and Municipal Depletions-UT,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Agricultural and Municipal Depletions-UT,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Applied Water-CA,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Applied Water-CA,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture-NMOSE,Applied Water-CA,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Agricultural and Municipal Depletions-UT,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Agricultural and Municipal Depletions-UT,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Applied Water-CA,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Applied Water-CA,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Irrigated Agriculture Diversions-NMOSE,Applied Water-CA,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Agricultural and Municipal Depletions-UT,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Agricultural and Municipal Depletions-UT,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Agricultural and Municipal Depletions-UT,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Applied Water-CA,Agricultural Consumptive Use-WY
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Applied Water-CA,Agricultural Depletions-UT
+NM,Irrigated Agriculture DepletionsOSE,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Groundwater Extraction-CA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Irrigation Surface Water Diversions-WY,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Surface Water Diversions-CA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,Groundwater Extraction-CA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,Irrigation Surface Water Diversions-WY,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Groundwater,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,Surface Water Diversions-CA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Groundwater Extraction-CA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Irrigation Surface Water Diversions-WY,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Surface Water Diversions-CA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,Groundwater Extraction-CA,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,Irrigation Surface Water Diversions-WY,NA
+NM,Irrigated Agriculture DiversionsOSE,Zone Surface Water,Zone Land System,Internal Transfer,Irrigated Agriculture-NMOSE,Surface Water Diversions-CA,NA
+NM,LivestockOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Applied Water-CA,Livestock Consumptive Use-WY
+NM,LivestockOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Groundwater Extraction-CA,Livestock Consumptive Use-WY
+NM,LivestockOSE,Zone Groundwater,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Surface Water Diversions-CA,Livestock Consumptive Use-WY
+NM,LivestockOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Applied Water-CA,Livestock Consumptive Use-WY
+NM,LivestockOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Groundwater Extraction-CA,Livestock Consumptive Use-WY
+NM,LivestockOSE,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural and Municipal Diversions-UT,Surface Water Diversions-CA,Livestock Consumptive Use-WY
 NM,Livestock: MeteredOSE,NA,NA,NA,NA,NA,NA
 NM,Livestock: UnmeteredOSE,NA,NA,NA,NA,NA,NA
-NM,MiningOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
-NM,MiningOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
-NM,PowerOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
-NM,PowerOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
+NM,MiningOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Applied Water-CA,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Groundwater Extraction-CA,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Consumptive Use-WY,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Surface Water Diversions-CA,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Applied Water-CA,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Groundwater Extraction-CA,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Consumptive Use-WY,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,Industrial: Mine Production-WY
+NM,MiningOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Surface Water Diversions-CA,Industrial: Mine Production-WY
+NM,PowerOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Applied Water-CA,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Groundwater Extraction-CA,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Consumptive Use-WY,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Groundwater,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Surface Water Diversions-CA,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Applied Water-CA,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Groundwater Extraction-CA,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Consumptive Use-WY,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,Industrial: Electrical Generation-WY
+NM,PowerOSE,Zone Surface Water,Zone Land System,Internal Transfer,Municipal and Industrial Diversions-UT,Surface Water Diversions-CA,Industrial: Electrical Generation-WY
 NM,Power: UnreportedOSE,NA,NA,NA,Power-NMOSE,NA,NA
-NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,Agricultural and Municipal Diversions-UT,NA
-NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,Municipal and Industrial Diversions-UT,NA
-NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,Agricultural and Municipal Diversions-UT,NA
-NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,NA,Municipal and Industrial Diversions-UT,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Agricultural and Municipal Diversions-UT,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Domestic Total Use-WY,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Diversions-UT,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal Consumptive Use-WY,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal Total Use-WY,NA
+NM,Public Water SupplyOSE,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Diversions-CA,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Agricultural and Municipal Diversions-UT,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Domestic Total Use-WY,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Diversions-UT,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal Consumptive Use-WY,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal Total Use-WY,NA
+NM,Public Water SupplyOSE,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Diversions-CA,NA
 NM,Public Water Supply: MeteredOSE,NA,NA,NA,Public Water Supply-NMOSE,NA,NA
 NM,Public Water Supply: UnmeteredOSE,NA,NA,NA,Public Water Supply-NMOSE,NA,NA
-NM,Self-Supplied DomesticOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-Northeast River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Northeast River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Northeast River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-Northeast River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
-Northeast River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-Northeast River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Northeast River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Platte River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Platte River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Platte River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-Platte River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
-Platte River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-Platte River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-Platte River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-Platte River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Platte River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Powder-Tongue River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Powder-Tongue River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Powder-Tongue River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-Powder-Tongue River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-Powder-Tongue River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-Powder-Tongue River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Powder-Tongue River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Salt-Snake River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Salt-Snake River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Salt-Snake River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-Salt-Snake River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
-Salt-Snake River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-Salt-Snake River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
+NM,Self-Supplied DomesticOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,Groundwater Extraction-CA,NA
+NM,Self-Supplied DomesticOSE,Zone Groundwater,Zone Land System,Internal Transfer,NA,Surface Water Diversions-CA,NA
+Northeast River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Northeast River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+Northeast River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Northeast River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Northeast River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Northeast River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Northeast River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Northeast River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Northeast River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Northeast River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Northeast River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Applied Water-CA,NA,NA
+Northeast River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Northeast River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Applied Water-CA,NA,NA
+Northeast River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Platte River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Platte River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+Platte River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Platte River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Platte River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Platte River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Platte River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Platte River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Platte River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Platte River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Platte River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Platte River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Platte River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+Platte River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Platte River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Platte River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+Platte River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Applied Water-CA,NA,NA
+Platte River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Platte River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Applied Water-CA,NA,NA
+Platte River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Powder-Tongue River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Powder-Tongue River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+Powder-Tongue River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Powder-Tongue River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Powder-Tongue River,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+Powder-Tongue River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+Powder-Tongue River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Powder-Tongue River,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+Powder-Tongue River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Applied Water-CA,NA,NA
+Powder-Tongue River,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Powder-Tongue River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Applied Water-CA,NA,NA
+Powder-Tongue River,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+Salt-Snake River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Salt-Snake River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Salt-Snake River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Salt-Snake River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Groundwater Extraction-CA,NA
+Salt-Snake River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Salt-Snake River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Surface Water Diversions-CA,NA
+Salt-Snake River,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Groundwater Extraction-CA,NA
+Salt-Snake River,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Salt-Snake River,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Surface Water Diversions-CA,NA
 UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Groundwater Extraction-CA,NA
 UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Livestock Consumptive Use-CO,NA
 UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Municipal and Industrial Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Municipal Consumptive Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Municipal Total Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Surface Water Diversions-CA,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Livestock Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Municipal Consumptive Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Municipal Total Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
 UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Groundwater Extraction-CA,NA
 UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Livestock Consumptive Use-CO,NA
 UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Municipal and Industrial Consumptive Use-CO,NA
-UT,Agricultural and Municipal Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Agricultural and Municipal Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Crop Consumptive Use-CO,NA
-UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Livestock Consumptive Use-CO,NA
-UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Surface Diversion to Cropland-UT,NA
-UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Crop Consumptive Use-CO,NA
-UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Livestock Consumptive Use-CO,NA
-UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Surface Diversion to Cropland-UT,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Municipal Consumptive Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Municipal Total Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Agricultural and Municipal Diversions-UT,Surface Water Diversions-CA,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Crop Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Livestock Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Municipal Consumptive Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Municipal Total Use-WY,NA
+UT,Agricultural and Municipal Depletions,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+UT,Agricultural and Municipal Diversions,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+UT,Agricultural and Municipal Diversions,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Diversions-CA,NA
+UT,Agricultural and Municipal Diversions,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+UT,Agricultural and Municipal Diversions,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Diversions-CA,NA
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Applied Water-CA,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Applied Water-CA,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Surface Diversion to Cropland-UT,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Surface Diversion to Cropland-UT,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,Applied Water-CA,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,Surface Diversion to Cropland-UT,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Evapotranspiration-CA,Surface Diversion to Cropland-UT,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Surface Water Diversions-CA,Applied Water-CA,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Surface Water Diversions-CA,Surface Diversion to Cropland-UT,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Groundwater,Atmosphere,Outflow,Surface Water Diversions-CA,Surface Diversion to Cropland-UT,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Applied Water-CA,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Applied Water-CA,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Surface Diversion to Cropland-UT,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Agricultural Potential Consumptive Use-UT,Surface Diversion to Cropland-UT,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Applied Water-CA,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Surface Diversion to Cropland-UT,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,Surface Diversion to Cropland-UT,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Applied Water-CA,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Surface Diversion to Cropland-UT,Agricultural Consumptive Use-WY
+UT,Agricultural Depletions,Zone Land System,Atmosphere,Outflow,Surface Water Diversions-CA,Surface Diversion to Cropland-UT,Crop Consumptive Use-CO
 UT,Agricultural Potential Consumptive Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
 UT,Agricultural Potential Consumptive Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Area Outflows,Zone Land System,External Surface Water,Outflow,Exports-CO,NA,NA
-UT,Area Outflows,Zone Surface Water,External Surface Water,Outflow,Exports-CO,NA,NA
-UT,Basin Inflow,External Surface Water,Zone Surface Water,Inflow,NA,Gaged Surface Water Inflow-CO,NA
-UT,Basin Inflow,External Surface Water,Zone Surface Water,Inflow,NA,Ungaged Surface Water Inflow-CO,NA
-UT,Basin Outflow,Zone Surface Water,External Surface Water,Outflow,Exports-CO,NA,NA
+UT,Area Outflows,Zone Land System,External Surface Water,Outflow,Exports-CO,Gaged Stream Outflow-WY,Total Surface Water Outflow-CA
+UT,Area Outflows,Zone Land System,External Surface Water,Outflow,Exports-CO,Stream Outflow-CA,Total Surface Water Outflow-CA
+UT,Area Outflows,Zone Surface Water,External Surface Water,Outflow,Exports-CO,Gaged Stream Outflow-WY,Total Surface Water Outflow-CA
+UT,Area Outflows,Zone Surface Water,External Surface Water,Outflow,Exports-CO,Stream Outflow-CA,Total Surface Water Outflow-CA
+UT,Basin Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Gaged Stream Inflow-WY,Stream Inflow-CA
+UT,Basin Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Gaged Surface Water Inflow-CO,Stream Inflow-CA
+UT,Basin Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Ungaged Surface Water Inflow-CO,Stream Inflow-CA
+UT,Basin Outflow,Zone Surface Water,External Surface Water,Outflow,Exports-CO,Gaged Stream Outflow-WY,Stream Outflow-CA
+UT,Basin Outflow,Zone Surface Water,External Surface Water,Outflow,Total Surface Water Outflow-CA,Gaged Stream Outflow-WY,Stream Outflow-CA
+UT,Cropland Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-CA,NA,NA
 UT,Cropland Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-CO,NA,NA
+UT,Cropland Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-NM,NA,NA
 UT,Cropland Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-UT,NA,NA
-UT,Groundwater Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,NA,NA
-UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,NA,NA
-UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,NA,NA
-UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,NA,NA
-UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Municipal and Industrial Diversions-UT,NA,NA
+UT,Cropland Precipitation,Atmosphere,Zone Land System,Inflow,Precipitation-WY,NA,NA
+UT,Groundwater Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,Groundwater Extraction-CA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Applied Water-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Industrial Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Municipal Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Applied Water-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Groundwater Extraction-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Industrial Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Municipal Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Surface Water Diversions-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Applied Water-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Industrial Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Municipal Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Applied Water-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Groundwater Extraction-CA,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Industrial Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Municipal Consumptive Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Depeltion,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Diversions-UT,Surface Water Diversions-CA,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,Applied Water-CA,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,Groundwater Extraction-CA,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,Industrial Consumptive Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,Municipal Consumptive Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Groundwater,Zone Land System,Internal Transfer,NA,Surface Water Diversions-CA,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,Applied Water-CA,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,Groundwater Extraction-CA,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,Industrial Consumptive Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,Municipal Consumptive Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,Surface Water Diversions-CA,NA
+UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Applied Water-CA,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Applied Water-CA,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Municipal and Industrial Diversions-UT,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Municipal and Industrial Diversions-UT,Municipal Total Use-WY,NA
+UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Return Flow-CA,Industrial Total Use-WY,NA
+UT,Municipal and Industrial Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,Return Flow-CA,Municipal Total Use-WY,NA
+UT,Natural System Use,Zone Land System,Atmosphere,Outflow,NA,NA,Evapotranspiration-CA
 UT,Natural System Use,Zone Land System,Atmosphere,Outflow,NA,NA,Native Vegetation Consumptive Use-CO
+UT,Natural System Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,Evapotranspiration-CA
 UT,Natural System Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,Native Vegetation Consumptive Use-CO
-UT,Precipitation,Atmosphere,Zone Land System,Inflow,NA,NA,Precipitation-CO
-UT,Pumped Groundwater,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,Reservoir Evaporation-CO
+UT,Precipitation,Atmosphere,Zone Land System,Inflow,NA,Precipitation on Lakes-CA,Precipitation-CA
+UT,Precipitation,Atmosphere,Zone Land System,Inflow,NA,Precipitation on Lakes-CA,Precipitation-CO
+UT,Precipitation,Atmosphere,Zone Land System,Inflow,NA,Precipitation on Lakes-CA,Precipitation-WY
+UT,Pumped Groundwater,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,Groundwater Extraction-CA
+UT,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,Lake Evaporation-CA,NA,Reservoir Evaporation-CO
+UT,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,Lake Evaporation-CA,NA,Reservoir Evaporation-WY
+UT,Riparian Depletions,Zone Land System,Atmosphere,Outflow,Evapotranspiration-CA,NA,NA
 UT,Riparian Depletions,Zone Land System,Atmosphere,Outflow,Native Vegetation Consumptive Use-CO,NA,NA
 UT,Riparian Depletions,Zone Land System,Atmosphere,Outflow,Natural System Use-UT,NA,NA
-UT,River Inflow,External Surface Water,Zone Surface Water,Inflow,NA,Gaged Surface Water Inflow-CO,NA
-UT,River Inflow,External Surface Water,Zone Surface Water,Inflow,NA,Ungaged Surface Water Inflow-CO,NA
+UT,River Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Gaged Stream Inflow-WY,Stream Inflow-CA
+UT,River Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Gaged Surface Water Inflow-CO,Stream Inflow-CA
+UT,River Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Ungaged Surface Water Inflow-CO,Stream Inflow-CA
+UT,River Use By Wet Pasture,Zone Surface Water,Zone Land System,Internal Transfer,Agricultural Depletions-UT,NA,NA
 UT,River Use By Wet Pasture,Zone Surface Water,Zone Land System,Internal Transfer,Crop Consumptive Use-CO,NA,NA
-UT,Surface Diversion to Cropland,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-UT,Surface Water Flows,Zone Surface Water,Zone Surface Water,Internal Transfer,NA,NA,NA
-UT,Total Land Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,NA
-UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,NA,Gaged Surface Water Inflow-CO,NA
-UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,NA,Ungaged Surface Water Inflow-CO,NA
-Wind-Bighorn River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-Wind-Bighorn River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-Wind-Bighorn River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-Wind-Bighorn River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
-Wind-Bighorn River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-Wind-Bighorn River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-WY,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-WY,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-WY,Domestic Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-WY,Gaged Stream Inflow,External Surface Water,Zone Surface Water,Inflow,NA,NA,NA
-WY,Gaged Stream Outflow,Zone Surface Water,Zone Surface Water,Outflow,NA,NA,NA
-WY,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,NA,NA,NA
-WY,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-WY,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,NA,NA,NA
-WY,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
+UT,Surface Diversion to Cropland,Zone Surface Water,Zone Land System,Internal Transfer,Surface Water Diversions-CA,NA,Irrigation Surface Water Diversions-WY
+UT,Surface Water Flows,Zone Surface Water,Zone Surface Water,Internal Transfer,NA,Surface Water Diversions-CA,NA
+UT,Total Land Return Flow,Zone Land System,Zone Surface Water,Internal Transfer,NA,NA,Return Flow-CA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Stream Inflow-CA,Gaged Stream Inflow-WY,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Stream Inflow-CA,Gaged Surface Water Inflow-CO,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Stream Inflow-CA,Ungaged Surface Water Inflow-CO,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Total Inflow-CA,Gaged Stream Inflow-WY,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Total Inflow-CA,Gaged Surface Water Inflow-CO,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Total Inflow-CA,Ungaged Surface Water Inflow-CO,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Gaged Stream Inflow-WY,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Gaged Surface Water Inflow-CO,NA
+UT,Tributary Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,Ungaged Surface Water Inflow-CO,NA
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+Wind-Bighorn River,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+Wind-Bighorn River,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+Wind-Bighorn River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Groundwater Extraction-CA,NA
+Wind-Bighorn River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Wind-Bighorn River,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Surface Water Diversions-CA,NA
+Wind-Bighorn River,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Groundwater Extraction-CA,NA
+Wind-Bighorn River,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+Wind-Bighorn River,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Surface Water Diversions-CA,NA
+WY,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+WY,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+WY,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+WY,Agricultural Consumptive Use,Zone Groundwater,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+WY,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Evapotranspiration-CA,Applied Water-CA,Crop Consumptive Use-CO
+WY,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Irrigation Surface Water Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+WY,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Surface Water Diversions-CA,Applied Water-CA,Crop Consumptive Use-CO
+WY,Agricultural Consumptive Use,Zone Surface Water,Atmosphere,NA,Total Diversions-WY,Applied Water-CA,Crop Consumptive Use-CO
+WY,Domestic Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,NA,NA
+WY,Gaged Stream Inflow,External Surface Water,Zone Surface Water,Inflow,Stream Inflow-CA,NA,Gaged Surface Water Inflow-CO
+WY,Gaged Stream Inflow,External Surface Water,Zone Surface Water,Inflow,Total Inflow-CA,NA,Gaged Surface Water Inflow-CO
+WY,Gaged Stream Inflow,External Surface Water,Zone Surface Water,Inflow,Total Surface Water Inflow-CA,NA,Gaged Surface Water Inflow-CO
+WY,Gaged Stream Outflow,Zone Surface Water,Zone Surface Water,Outflow,Stream Outflow-CA,NA,Gaged Surface Water Outflow-CO
+WY,Gaged Stream Outflow,Zone Surface Water,Zone Surface Water,Outflow,Total Outflow-CA,NA,Gaged Surface Water Outflow-CO
+WY,Gaged Stream Outflow,Zone Surface Water,Zone Surface Water,Outflow,Total Surface Water Outflow-CA,NA,Gaged Surface Water Outflow-CO
+WY,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+WY,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+WY,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+WY,Industrial Consumptive Use,Zone Groundwater,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+WY,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Groundwater Extraction-CA,NA
+WY,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,Surface Water Diversions-CA,NA
+WY,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Groundwater Extraction-CA,NA
+WY,Industrial Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Municipal and Industrial Consumptive Use-CO,Surface Water Diversions-CA,NA
+WY,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+WY,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+WY,Industrial Total Use,Zone Groundwater,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
+WY,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Groundwater Extraction-CA,NA
+WY,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+WY,Industrial Total Use,Zone Surface Water,Zone Land System,Internal Transfer,Applied Water-CA,Surface Water Delivery-CA,NA
 WY,Industrial: Coalbed Methand Production,Zone Groundwater,Zone Land System,Internal Transfer,NA,Industrial Consumptive Use-WY,NA
 WY,Industrial: Coalbed Methand Production,Zone Groundwater,Zone Land System,Internal Transfer,NA,Industrial Total Use-WY,NA
 WY,Industrial: Coalbed Methand Production,Zone Surface Water,Zone Land System,Internal Transfer,NA,Industrial Consumptive Use-WY,NA
@@ -208,12 +595,23 @@ WY,Industrial: Oil and Gas,Zone Groundwater,Zone Land System,Internal Transfer,N
 WY,Industrial: Oil and Gas,Zone Surface Water,Zone Land System,Internal Transfer,NA,Industrial Consumptive Use-WY,NA
 WY,Industrial: Oil and Gas,Zone Surface Water,Zone Land System,Internal Transfer,NA,Industrial Total Use-WY,NA
 WY,Irrigation Surface Water Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-WY,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-WY,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,NA,NA,NA
-WY,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,NA,NA,NA
-WY,Municipal Total Use,Zone Groundwater,Zone Land System,NA,NA,NA,NA
-WY,Precipitation,Atmosphere,Zone Surface Water,Inflow,NA,NA,NA
-WY,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,NA,NA,NA
-WY,Total Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,NA
-WY,Ungaged Stream Gains,External Groundwater,Zone Surface Water,Inflow,NA,NA,NA
-WY,Ungaged Stream Losses,Zone Surface Water,External Groundwater,Outflow,NA,NA,NA
+WY,Livestock Consumptive Use,Zone Surface Water,Atmosphere,Outflow,Applied Water-CA,NA,Livestock Consumptive Use-CO
+WY,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Applied Water-CA,NA,NA
+WY,Municipal Consumptive Use,Zone Groundwater,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+WY,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Applied Water-CA,NA,NA
+WY,Municipal Consumptive Use,Zone Surface Water,Atmosphere,NA,Municipal and Industrial Consumptive Use-CO,NA,NA
+WY,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Groundwater Extraction-CA,NA
+WY,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+WY,Municipal Total Use,Zone Groundwater,Zone Land System,NA,Applied Water-CA,Surface Water Diversions-CA,NA
+WY,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Groundwater Extraction-CA,NA
+WY,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Municipal and Industrial Consumptive Use-CO,NA
+WY,Municipal Total Use,Zone Surface Water,Zone Land System,NA,Applied Water-CA,Surface Water Diversions-CA,NA
+WY,Precipitation,Atmosphere,Zone Surface Water,Inflow,NA,Precipitation on Lakes-CA,Precipitation-CA
+WY,Precipitation,Atmosphere,Zone Surface Water,Inflow,NA,Precipitation on Lakes-CA,Precipitation-CO
+WY,Precipitation,Atmosphere,Zone Surface Water,Inflow,NA,Precipitation on Lakes-CA,Precipitation-NM
+WY,Precipitation,Atmosphere,Zone Surface Water,Inflow,NA,Precipitation on Lakes-CA,Precipitation-UT
+WY,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,Lake Evaporation-CA,NA,Reservoir Evaporation-CO
+WY,Reservoir Evaporation,Zone Surface Water,Atmosphere,Outflow,Lake Evaporation-CA,NA,Reservoir Evaporation-UT
+WY,Total Diversions,Zone Surface Water,Zone Land System,Internal Transfer,NA,NA,Surface Water Diversions-CA
+WY,Ungaged Stream Gains,External Groundwater,Zone Surface Water,Inflow,Stream Gain from Groundwater-CA,NA,NA
+WY,Ungaged Stream Losses,Zone Surface Water,External Groundwater,Outflow,Stream Loss to Groundwater-CA,NA,NA

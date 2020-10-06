@@ -29,6 +29,7 @@ data_source_choices <- c(unique(df_state$dsL))
 data_source_choices <- sort(data_source_choices[-1]) # remove NA & reorder
 interstate_choices <- c("Exact Match", "Subcomponent", "Partial Subcomponent")
 interstate_state_choices <- c("SELECT ALL", "CLEAR ALL", "CA","CO","NM","UT","WY")
+# following choices do not really matter because they will subset based on state choices
 flow_type_choices <- c("All", "Inflow", "Internal Transfer", "Outflow", "Storage Change")
 flow_source_choices <- c("All", unique(df_exact_match$fsource_cL))
 flow_sink_choices <- c("All", "hello")
@@ -251,7 +252,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                          
                          column(width = 12, 
                                 column(width = 12,
-                                       tags$b("OR only view components that are exact matches using state and flow information below:"))
+                                       tags$b("OR only view components used by state and flow information below:"))
                                 ),
                          column(width = 12,
                                 column(width = 3,
@@ -477,6 +478,7 @@ server <- function(input, output, session){
     selected_flowType <- df_exact_match %>%
       filter(state_exmL %in% input$interstate_states2) 
     selected_flowType <- c("SELECT ALL", "CLEAR ALL", unique(selected_flowType$ftype_exmL))
+    selected_flowType_default <- selected_flowType
     
     # if you select "All" it will add all flow types
     if("SELECT ALL" %in% input$interstate_flowType)
