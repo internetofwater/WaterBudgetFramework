@@ -12,12 +12,12 @@
 Shiny.addCustomMessageHandler("exact_match2",
     function (message) {
 
-        abc = message;
+        df = message;
         d3.selectAll("svg").remove();
 
-            console.log(abc)
+            console.log(df)
             //convert typeof import to array
-            abc.forEach(item => {
+            df.forEach(item => {
                 item["imports"] = item["imports"].split(',')
                 // change objects that have "" to empty 
                 //console.log(Object.values(item.imports))
@@ -28,7 +28,7 @@ Shiny.addCustomMessageHandler("exact_match2",
 
             //Count number of objects in array for setting box and circle dimensions dynamically
             var count = 0;
-            abc.forEach(function(item){
+            df.forEach(function(item){
                 if(!item.__proto__.__proto__){
                     count++;
                 }
@@ -39,7 +39,7 @@ Shiny.addCustomMessageHandler("exact_match2",
             // Select states based on user input
             //n = state_choice.length
             //first_value = state_choice[n-1]
-            // var cdf = abc.filter(item => {
+            // var cdf = df.filter(item => {
             //     x = item.flow_type === "Inflow";
             //     return x;
             //   }); 
@@ -47,7 +47,7 @@ Shiny.addCustomMessageHandler("exact_match2",
             //console.log(first_value);
 
             
-            data = hierarchy(abc);  
+            data = hierarchy(df);  
             //console.log(data)
             // //convert typeof import to array
             // data.forEach(item =>{
@@ -58,7 +58,7 @@ Shiny.addCustomMessageHandler("exact_match2",
             colorout = "#182856";
             colornone = "#bbb";
 
-            var diameter = 1300; //approximately 1300, USE "NUMBER OF COMPONENTS" for dyanmic size
+            var diameter = 1200; //approximately 1300, USE "NUMBER OF COMPONENTS" for dyanmic size
             var radius = diameter / 2;
             var innerRadius = radius - 300;
 
@@ -99,7 +99,7 @@ Shiny.addCustomMessageHandler("exact_match2",
 
             node = svg.append("g")
                 .attr("font-family", "arial")
-                .attr("font-size", 8)
+                .attr("font-size", 12)
                 .selectAll("g")
                 .data(root.leaves())
                 .join("g")
@@ -135,6 +135,7 @@ Shiny.addCustomMessageHandler("exact_match2",
 
             function overed(d) {
                 link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
+                //link.style("stroke-width", 10); //line thickness
                 d3.select(this).attr("font-weight", "bold");
                 d3.select(this).attr("fill", "#777777"); //on hover in, it darkens selected node
 
