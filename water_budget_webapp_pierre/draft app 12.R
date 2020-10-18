@@ -239,9 +239,17 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                            src = "image_7.jpg"),
                                   tags$div(class = "banner-text",
                                            tags$p(class = "h1", "Search interstate relationships"),
-                                           tags$p(class = "h3", "Explore the relationship among water budget components 
+                                           tags$p(class = "h3", "Explore the relationships among water budget components 
                                                           within and among states")
                                   )),
+                         column(width = 12, 
+                                column(width = 12,
+                                       tags$b("SEE ALL COMPONENTS"),
+                                       tags$p(" "),
+                                       tags$p("1. Choose the type of interstate relationship among water budget components"),
+                                       tags$p('2. Click on "See all components" to include components with no relationships')
+                                       )
+                         ),
                          column(width = 12,
                                 column(width = 3,
                                        selectInput(inputId = "interstate2",
@@ -249,14 +257,20 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                                    choices = interstate_choices)),
                                 column(width = 2,
                                        actionButton(inputId = "runButton4.1",
-                                                    label = "View all components",
+                                                    label = "See all components",
                                                     icon = icon("check")
                                        ))
                                 ), #defined above UI
                          
                          column(width = 12, 
                                 column(width = 12,
-                                       tags$b("OR only view components used by state and flow information below:"))
+                                       tags$b("OR SEE SELECTED COMPONENTS"),
+                                       tags$p(" "),
+                                       tags$p('1. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
+                                       tags$p('2. Select the states of interest'),
+                                       tags$p('3. Filter the components by flow type, flow source and flow sink'),
+                                       tags$p('4. Click on the action button to see the relationships of selected components')
+                                       )
                                 ),
                          column(width = 12,
                                 column(width = 3,
