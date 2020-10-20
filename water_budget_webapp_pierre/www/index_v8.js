@@ -422,7 +422,7 @@ function (message) {
 
         var margin = {top: 25, right: 90, bottom: 20, left: 90}
         var width = 1150 - margin.left - margin.right //changed width because leaf nodes were going out
-        var height = (leaf_nodes_2*30) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
+        var height = (leaf_nodes_2*10) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
 
         // appending svg object to the body div "container"
         var svg = d3.select("#state_container")   

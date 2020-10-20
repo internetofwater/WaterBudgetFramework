@@ -244,7 +244,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                   )),
                          column(width = 12, 
                                 column(width = 12,
-                                       tags$b("SEE ALL COMPONENTS"),
+                                       tags$b("See All Components", style = "font-size: 130%"),
                                        tags$p(" "),
                                        tags$p("1. Choose the type of interstate relationship among water budget components"),
                                        tags$p('2. Click on "See all components" to include components with no relationships')
@@ -257,19 +257,19 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                                    choices = interstate_choices)),
                                 column(width = 2,
                                        actionButton(inputId = "runButton4.1",
-                                                    label = "See all components",
+                                                    label = "",
                                                     icon = icon("check")
                                        ))
                                 ), #defined above UI
                          
                          column(width = 12, 
                                 column(width = 12,
-                                       tags$b("OR SEE SELECTED COMPONENTS"),
+                                       tags$b("See Selected Components", style = "font-size: 130%"),
                                        tags$p(" "),
                                        tags$p('1. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
                                        tags$p('2. Select the states of interest'),
                                        tags$p('3. Filter the components by flow type, flow source and flow sink'),
-                                       tags$p('4. Click on the action button to see the relationships of selected components')
+                                       tags$p('4. Click on the button to see the relationships of selected components')
                                        )
                                 ),
                          column(width = 12,
