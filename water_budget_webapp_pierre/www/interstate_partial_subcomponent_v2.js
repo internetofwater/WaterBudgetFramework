@@ -168,7 +168,7 @@ c. Is partial subcomponent of ${d.incoming.length} (in red)`));
       }
 
       function autoscroll() {
-        d3.select("#interstate_container")
+        d3.select("#interstate_container2")
             .transition()
             .duration(1000)
             .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight)/2 + 50));

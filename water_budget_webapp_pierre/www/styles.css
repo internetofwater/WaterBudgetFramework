@@ -185,7 +185,7 @@ Tab - State
 
 #state_sticky {
     position: sticky;
-    top: -50px;
+    top: -170px;
     text-align: center;
 }
  
@@ -285,8 +285,20 @@ a, a:hover, a:visited {
     left: 35px; 
 }
 
+/* separate style for interstate header */
+.banner > .banner-text .h1-interstate {
+    position: absolute;
+    color: white;
+    top: 70px;
+    left: 35px;
+    font-weight: bolder;
+    font-size: 40px;
+    line-height: 0.8;
+}
+
+
 /* Prevent banner header and subheader squish into each other when window is small or on phones */
-@media (max-width: 766px) {
+@media (max-width: 600px) {
     .banner > .banner-text .h1 {
         position: absolute;
         color: white;
@@ -305,6 +317,18 @@ a, a:hover, a:visited {
         line-height: 1.3;
         font-size: 5vw; 
     }
+
+    /* prevent Interstate banner text from squishing into each other */
+    .banner > .banner-text .h1-interstate {
+        position: absolute;
+        color: white;
+        top: 50px;
+        left: 35px;
+        font-weight: bolder;
+        font-size: 7vw;
+        line-height: 0.9;
+    }
+
 
 }
 
@@ -428,7 +452,7 @@ Tab - Home
         left: 50%;
         transform: translate(-50%, -50%);
         font-weight: bolder;
-        font-size: 10vw;
+        font-size: 7vw;
     }
 
 }

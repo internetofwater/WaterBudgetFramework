@@ -4,7 +4,6 @@ library(tidyverse)
 library(rdflib)
 library(jsonlite)
 library(d3r)
-#library(htmlwidgets)
 
 # ---- 1. Loading data for flow and component-subcomponent info ---- #
 df_component_full <- read_csv("www/df_component_full.csv") # dataframe for component summary (including URIs)
@@ -52,18 +51,11 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                         rel="stylesheet"),
               tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"),
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
-              #tags$script(src = "https://d3js.org/d3.v6.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
               tags$script(src = "index_v8.js"),
-              #tags$script(src = "interstate.js"),
-              #tags$script(src = "interstate_exact_match.js"),
               tags$script(src = "interstate_exact_match_v2.js"),
-              #tags$script(src = "interstate_subcomponent.js"),
               tags$script(src = "interstate_subcomponent_v2.js"),
-              #tags$script(src = "interstate_partial_subcomponent.js"),
               tags$script(src = "interstate_partial_subcomponent_v2.js")
-              #tags$script(type="text/javascript", src = "index_home_chart.js")
-             # tags$script(JS('drawChart()'))
               ),
     tags$body(HTML('<link rel="shortcut icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
@@ -89,25 +81,55 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$span(),
                           tags$span())
                  ),
-        tags$b("DISCLAIMER: This application is currently in the development stage. 
-               All the data is provisional and subject to change. This tool best performs on Google Chrome 
-               but is also functional on Mozilla Firefox and Safari.",
-               style = "color: salmon; font-size: 120%; text-align: center;"),
         tags$div(class = "instruction-1",
                  tags$div(class = "text-area",
-                          tags$h1("What is IoW's Water Budget Navigator?"),
+                          tags$b("DISCLAIMER: This application is currently in the development stage. 
+               All the data is provisional and subject to change. This tool is suited for desktop use and best performs on Google Chrome 
+               but is also functional on Mozilla Firefox and Safari.",
+                                 style = "color: salmon; font-size: 100%; text-align: center; line-height: 1.2;"),
                           tags$br(),
-                          tags$h3("Water Budget Navigator is a web application that allows users to explore water budget frameworks
+                          tags$p("  "),
+                          tags$br(),
+                          tags$p("  "),
+                          tags$br(),
+                          tags$p("  "),
+                          tags$h1("What is Water Budget Navigator?"),
+                          tags$br(),
+                          tags$h3("Water Budget Navigator is a web application developed by Internet of Water (IoW). It allows users to explore water budget frameworks
                                  across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
-                                 estimation methods, parameters and data sources. The components have additional properties describing
-                                  flow information and relationship with other components within and across states."),
+                                 estimation methods, parameters and data sources in an ordered manner. The components have additional properties describing
+                                  their flow information and relationships with other components within and across states."),
                           tags$br()
                           ),
                  tags$div(id = "home_container",
                           tags$img(src = "home_d3.svg")),
                  tags$br(),
                  tags$div(class = "text-area",
-                          tags$h3("More coming soon..."))
+                          tags$h1("Why use Water Budget Navigator?"),
+                          tags$h3("One-stop place for water budget stuff, first of its kind, each term linked to its definition etc"),
+                          tags$br(),
+                          tags$br(),
+                          tags$br(),
+                          tags$br(),
+                          tags$h1("What is the definition of the terms used?"),
+                          tags$br(),
+                          tags$h3("Water Budget Navigator uses a specific terminology to facilitate easy interpretation of the tool to its users. The key terms used in the app are: ",
+                                  tags$p(" "),
+                                  tags$ul(type="disc", 
+                                          tags$li(tags$b("Jurisdiction"),": A state which has its own state-level water budget"),
+                                          tags$li(tags$b("Component")),
+                                          tags$li(tags$b("Estimation Method"))
+                                          )
+                                  ),
+                          tags$br(),
+                          tags$br(),
+                          tags$br(),
+                          tags$br(),
+                          tags$h1("How to use Water Budget Navigator?"),
+                          tags$h3("It has follwoing tabs: (explain each tab)s")
+                          ),
+                 tags$div(class = "text-area",
+                          tags$h3("More coming soon...")),
                  ),
           ),
 # ------ Tab - Home - End ------ #
@@ -122,6 +144,13 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$p(class = "h1", "Search by component"),
                           tags$p(class = "h3", "Explore the profile of a water budget component")
                           )),
+        column(width = 12, 
+               column(width = 12,
+                      tags$p("1. Select a state to see all its water budget components in the drop down menu"),
+                      tags$p('2. Select a component to explore its relationship with other components, its flow information, estimation method(s), parameter(s) and data source(s)'),
+                      tags$p('3. Click on the button and scroll down to see all the information')
+               )
+        ),
         column(width = 12,
           column(width = 3,
                  selectInput(inputId = "states1",
@@ -164,6 +193,13 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$p(class = "h1", "Search by state"),
                           tags$p(class = "h3", "Explore the water budget framework of a state")
                         )),
+        column(width = 12, 
+               column(width = 12,
+                      tags$p("1. Select a state to interact with its water budget framework"),
+                      tags$p('2. Click on the button to scroll to the parent node representing the state selected'),
+                      tags$p("3. Click on the colored nodes to explore the state's water budget components and the associated estimation method(s), parameter(s), and data source(s), in that order")
+               )
+        ),
         column(width = 12,
           column(width = 3,
                  selectInput(inputId = "states2",
@@ -186,8 +222,15 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                    src = "image_4.jpg"),
                           tags$div(class = "banner-text",
                                    tags$p(class = "h1", "Search by data source"),
-                                   tags$p(class = "h3", "Explore the estimation methods and components used by a data source")
+                                   tags$p(class = "h3", "Explore the parameters, estimation methods and components used by a data source")
                           )),
+                 column(width = 12, 
+                        column(width = 12,
+                               tags$p("1. Select a data source that contributed to a water budget"),
+                               tags$p('2. Click on the button to see parameters defined in the data source'),
+                               tags$p("3. Click on the colored nodes to explore the data source and the associated parameter(s), estimation method(s), and component(s), in that order")
+                        )
+                 ),
                  column(width = 12,
                         column(width = 3,
                                selectInput(inputId = "data_source",
@@ -205,44 +248,13 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 # ------- Tab - Data Sources (reverse chart) - End ------- #
 
 
-# ------- Tab - Interstate - Begin ------- #
-        tabPanel(title = "Interstate",
-                 tags$div(class = "banner", 
-                          tags$img(class = "banner-img-state",
-                                   src = "image_7.jpg"),
-                          tags$div(class = "banner-text",
-                                   tags$p(class = "h1", "Search interstate relationships"),
-                                   tags$p(class = "h3", "Explore the relationship among water budget components 
-                                          within and among states")
-                          )),
-                 column(width = 12,
-                        column(width = 3,
-                               selectInput(inputId = "interstate",
-                                           label = "Select relationship",
-                                           choices = interstate_choices)), #defined above UI
-                        column(width = 3,
-                               selectInput(inputId = "interstate_states",
-                                           label = "Select states",
-                                           choices = interstate_state_choices,
-                                           multiple = TRUE,
-                                           selected = "All")),
-                        column(width = 2, 
-                               actionButton(inputId = "runButton4", 
-                                            label = "",
-                                            icon = icon("check"))
-                        )),
-                 tags$body(tags$div(id = "interstate_container"))
-                 ),
-# ------- Tab - Interstate - End ------- #
-
-
 # ------- Tab - Interstate v2 - Begin ------- #
-                tabPanel(title = "Interstate 2",
+                tabPanel(title = "Interstate",
                          tags$div(class = "banner", 
                                   tags$img(class = "banner-img-state",
                                            src = "image_7.jpg"),
                                   tags$div(class = "banner-text",
-                                           tags$p(class = "h1", "Search interstate relationships"),
+                                           tags$p(class = "h1-interstate", "Search interstate relationships"),
                                            tags$p(class = "h3", "Explore the relationships among water budget components 
                                                           within and among states")
                                   )),
@@ -319,13 +331,6 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
 
 server <- function(input, output, session){
-  
-# Home tab - send random custom message to communicate with d3 (instead saved as png)
-  # runjs('
-  #       var home_chart = document.createElement("script");
-  #       home_chart.src = "index_home_chart.js";
-  #       document.head.appendChild(home_chart)
-  #       ')
   
   
 # Update component choices based on states you select
@@ -474,14 +479,6 @@ server <- function(input, output, session){
   })
   
   # Interstate relationship select states
-  # Interstate v1
-  observe({
-    if("All" %in% input$interstate_states)
-      selected_choices = interstate_state_choices[-1] #choose all the choices except "All"
-    else
-      selected_choices = input$interstate_states
-    updateSelectInput(session, "interstate_states", selected = selected_choices)
-  })
   
   # Interstate v2
   # Update choices
@@ -670,18 +667,7 @@ server <- function(input, output, session){
   })
   
   # Interstate relationship chart
-  # Interstate v1
-  observeEvent(input$runButton4, {
-      interstate_relationship <- input$interstate
-      if (interstate_relationship == "Exact Match"){
-        session$sendCustomMessage(type = "exact_match", interstate_relationship)
-      } else if (interstate_relationship == "Subcomponent") {
-        session$sendCustomMessage(type = "subcomponent", interstate_relationship)
-      } else if (interstate_relationship == "Partial Subcomponent") {
-        session$sendCustomMessage(type = "partial_subcomponent", interstate_relationship)
-      }
-  })
-  
+
   # Interstate v2
   
   ### --- SEE ALL COMPONENTS --- ###
@@ -915,260 +901,289 @@ server <- function(input, output, session){
   observeEvent(input$runButton4.2, {
     interstate_relationship2 <- input$interstate2
     
-    ### - EXACT MATCH - ###
-    if (interstate_relationship2 == "Exact Match"){
-      # storing user input in separate variables, directly putting input$___ in filter did not work...
-      state <- c(input$interstate_states2)
-      flowType <- c(input$interstate_flowType)
-      flowSource <- c(input$interstate_flowSource)
-      flowSink <- c(input$interstate_flowSink)
+    #--- Error Message ---#
+    if(is.null(input$interstate_flowType)){
+      # show pop-up
+      showModal(modalDialog(
+        title = "Invalid Input: Flow type not found",
+        paste0('Please select flow type, flow source, and flow sink and try again. If flow information is not required, click the button to "See All Components" '),
+        easyClose = TRUE,
+        footer = NULL
+      ))
+    } else if(is.null(input$interstate_flowSource)){
+      # show pop-up
+      showModal(modalDialog(
+        title = "Invalid Input: Flow source not found",
+        paste0('Please select flow source and flow sink and try again. If flow information is not required, click the button to "See All Components" '),
+        easyClose = TRUE,
+        footer = NULL
+      ))
+    } else if(is.null(input$interstate_flowSink)){
+      # show pop-up
+      showModal(modalDialog(
+        title = "Invalid Input: Flow sink not found",
+        paste0('Please select flow sink and try again. If flow information is not required, click the button to "See All Components" '),
+        easyClose = TRUE,
+        footer = NULL
+      ))
+    } else {
       
-      df <- df_exact_match %>%
-         filter(state_cL %in% state) %>%
-         filter(state_exmL %in% state) %>%
-         filter(ftype_exmL %in% flowType) %>%
-         filter(ftype_cL %in% flowType) %>%
-         filter(fsource_exmL %in% flowSource) %>%
-         filter(fsource_cL %in% flowSource) %>%
-         filter(fsink_exmL %in% flowSink) %>%
-         filter(fsink_cL %in% flowSink) %>%
-        as.data.frame()
-      
-      # Copy pasted from my sparql_queries file
-      df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
-      df$exmL <- gsub("-[A-Z]*","", df$exmL)
-      # Putting state abbreviations before the name so that d3 sorts by state
-      df$cL <- paste0(df$state_cL,"-", df$cL)
-      df$exmL <- paste0(df$state_exmL,"-", df$exmL)
-      # putting all components and states in 1 column
-      # adding a column of "key" for d3 edge bundling
-      # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
-      exact_match <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
-                                exmL = c(df[,"exmL"], df[,"cL"]),
-                                state_2L = c(df[,"state_exmL"], df[,"state_cL"]),
-                                key = c(df[,"exmL"], df[,"cL"]),
-                                ftype = c(df[,"ftype_exmL"], df[,"ftype_cL"]),
-                                fsource = c(df[,"fsource_exmL"], df[,"fsource_cL"]),
-                                fsink = c(df[,"fsink_exmL"], df[,"fsink_cL"]),
-                                uri = c(df[,"exm"], df[,"c"]))
-      
-      # rename column names
-      # renaming cL as "imports" and scL as "names"
-      colnames(exact_match) <- c("imports", "name", "state", "key", "flow_type",
-                                 "flow_source", "flow_sink", "uri")
-      
-      #add "a." in all names to work with d3 edge bundling (bilink function)
-      #dont ask why
-      exact_match$name <- paste("a", 
-                                exact_match$name, sep=". ")
-      exact_match$imports <- paste("a", 
-                                   exact_match$imports, sep=". ")
-      
-      # rearrange columns
-      col_order <- c("state","name","key","imports", "flow_type",
-                     "flow_source", "flow_sink", "uri")
-      exact_match <- exact_match[,col_order]
-      # alphabetical order
-      exact_match <- arrange(exact_match, state, name, key)
-      # storing subcomponents separated by comma for a componenet
-      # subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
-      exact_match_final <- exact_match %>%
-        group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
-        summarise(imports = paste0(imports, collapse = ","))
-      
-      # Replace NAs with "" in imports column for later emptying in JS
-      exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
-                                          replacement="", exact_match_final$imports )
-      exact_match_final$imports <- mapply(gsub, pattern='a. NA',
-                                          replacement="", exact_match_final$imports )
-      exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
-                                          replacement="", exact_match_final$imports )
-      exact_match_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
-                                          replacement="", exact_match_final$imports )
-      # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
-      exact_match_final$name <- mapply(gsub, pattern='No.',
-                                       replacement="No", exact_match_final$name )
-      
-      # Drop NA-NA
-      clean <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
-      
-      # Export to csv 
-      # write_csv(abc, "www/df_exact_match_v2.csv")
-      
-      
-      # Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
-      # abc$imports[abc$imports == ""] <- abc$name
-      # abc$imports <- with(abc, ifelse(imports == "", name, imports ) )
-      
-      df_exact_matchJSON <- toJSON(clean)
-      session$sendCustomMessage(type = "exact_match2", df_exact_matchJSON)
-    
-      ### - SUBCOMPONENT - ###  
-    } else if (interstate_relationship2 == "Subcomponent") {
-      
-      state <- c(input$interstate_states2)
-      flowType <- c(input$interstate_flowType)
-      flowSource <- c(input$interstate_flowSource)
-      flowSink <- c(input$interstate_flowSink)
-      
-      df <- df_subcomponent %>%
-        filter(state_cL %in% state) %>%
-        filter(state_scL %in% state) %>%
-        filter(ftype_scL %in% flowType) %>%
-        filter(ftype_cL %in% flowType) %>%
-        filter(fsource_scL %in% flowSource) %>%
-        filter(fsource_cL %in% flowSource) %>%
-        filter(fsink_scL %in% flowSink) %>%
-        filter(fsink_cL %in% flowSink) %>%
-        as.data.frame()
-      
-      # Copy pasted from sparql_queries file
-      # Removing state abbreviations to put them before names in next steps (for d3 sorting)
-      df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
-      df$scL <- gsub("-[A-Z]*","", df$scL)
-      # Putting state abbreviations before the name so that d3 sorts by state
-      df$cL <- paste0(df$state_cL,"-", df$cL)
-      df$scL <- paste0(df$state_scL,"-", df$scL)
-      
-      # putting all components and states in 1 column
-      # adding a column of "key" for d3 edge bundling
-      # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
-      subcomponent <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
-                                 scL = c(df[,"scL"], df[,"cL"]),
-                                 state_scL = c(df[,"state_scL"], df[,"state_cL"]),
-                                 key = c(df[,"scL"], df[,"cL"]),
-                                 ftype = c(df[,"ftype_scL"], df[,"ftype_cL"]),
-                                 fsource = c(df[,"fsource_scL"], df[,"fsource_cL"]),
-                                 fsink = c(df[,"fsink_scL"], df[,"fsink_cL"]),
-                                 uri = c(df[,"sc"], df[,"c"]))
-      
-      # rename column names
-      # renaming cL as "imports" and scL as "names"
-      colnames(subcomponent) <- c("imports", "name", "state", "key", "flow_type",
-                                  "flow_source", "flow_sink", "uri")
-      
-      #add "a." in all names to work with d3 edge bundling (bilink function)
-      #dont ask why...
-      subcomponent$name <- paste("a", 
-                                 subcomponent$name, sep=". ")
-      subcomponent$imports <- paste("a", 
-                                    subcomponent$imports, sep=". ")
-      
-      # rearrange columns
-      col_order <- c("state","name","key","imports", "flow_type",
-                     "flow_source", "flow_sink", "uri")
-      subcomponent <- subcomponent[,col_order]
-      # alphabetical order
-      subcomponent <- arrange(subcomponent, state, name, key, uri)
-      # storing subcomponents separated by comma for a componenet
-      # subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
-      subcomponent_final <- subcomponent %>%
-        group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
-        summarise(imports = paste0(imports, collapse = ","))
-      
-      # Replace NAs with "" in imports column for later emptying in JS
-      subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
-                                           replacement="", subcomponent_final$imports )
-      subcomponent_final$imports <- mapply(gsub, pattern='a. NA',
-                                           replacement="", subcomponent_final$imports )
-      subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
-                                           replacement="", subcomponent_final$imports )
-      subcomponent_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
-                                           replacement="", subcomponent_final$imports )
-      
-      # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
-      subcomponent_final$name <- mapply(gsub, pattern='No.',
-                                        replacement="No", subcomponent_final$name )
-      
-      # Drop NA-NA
-      clean <- subcomponent_final[!(subcomponent_final$name == "a. NA-NA"),]
-      
-      df_subcomponentJSON <- toJSON(clean)
-      session$sendCustomMessage(type = "subcomponent2", df_subcomponentJSON)
-    
-      ### - PARTIAL SUBCOMPONENT - ###
-    } else if (interstate_relationship2 == "Partial Subcomponent"){
-        
-        state <- c(input$interstate_states2)
-        flowType <- c(input$interstate_flowType)
-        flowSource <- c(input$interstate_flowSource)
-        flowSink <- c(input$interstate_flowSink)
-        
-        df <- df_partial_subcomponent %>%
-          filter(state_cL %in% state) %>%
-          filter(state_pscL %in% state) %>%
-          filter(ftype_pscL %in% flowType) %>%
-          filter(ftype_cL %in% flowType) %>%
-          filter(fsource_pscL %in% flowSource) %>%
-          filter(fsource_cL %in% flowSource) %>%
-          filter(fsink_pscL %in% flowSink) %>%
-          filter(fsink_cL %in% flowSink) %>%
-          as.data.frame()
-        
-        # Copy pasted from sparql_queries file
-        # Removing state abbreviations to put them before names in next steps (for d3 sorting)
-        df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
-        df$pscL <- gsub("-[A-Z]*","", df$pscL)
-        # Putting state abbreviations before the name so that d3 sorts by state
-        df$cL <- paste0(df$state_cL,"-", df$cL)
-        df$pscL <- paste0(df$state_pscL,"-", df$pscL)
-        
-        # putting all components and states in 1 column
-        # adding a column of "key" for d3 edge bundling
-        # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
-        partial_subcomponent <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
-                                           pscL = c(df[,"pscL"], df[,"cL"]),
-                                           state_pscL = c(df[,"state_pscL"], df[,"state_cL"]),
-                                           key = c(df[,"pscL"], df[,"cL"]),
-                                           ftype = c(df[,"ftype_pscL"], df[,"ftype_cL"]),
-                                           fsource = c(df[,"fsource_pscL"], df[,"fsource_cL"]),
-                                           fsink = c(df[,"fsink_pscL"], df[,"fsink_cL"]),
-                                           uri = c(df[,"psc"], df[,"c"]))
-        
-        # rename column names
-        # renaming cL as "imports" and pscL as "names"
-        colnames(partial_subcomponent) <- c("imports", "name", "state", "key", "flow_type",
-                                            "flow_source", "flow_sink", "uri")
-        
-        #add "a." in all names to work with d3 edge bundling (bilink function)
-        #dont ask why...
-        partial_subcomponent$name <- paste("a", 
-                                           partial_subcomponent$name, sep=". ")
-        partial_subcomponent$imports <- paste("a", 
-                                              partial_subcomponent$imports, sep=". ")
-        
-        # rearrange columns
-        col_order <- c("state","name","key","imports", "flow_type",
-                       "flow_source", "flow_sink", "uri")
-        partial_subcomponent <- partial_subcomponent[,col_order]
-        # alphabetical order
-        partial_subcomponent <- arrange(partial_subcomponent, state, name, key, uri)
-        # storing partial_subcomponents separated by comma for a componenet
-        # partial_subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
-        partial_subcomponent_final <- partial_subcomponent %>%
-          group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
-          summarise(imports = paste0(imports, collapse = ","))
-        
-        # Replace NAs with "" in imports column for later emptying in JS
-        partial_subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
-                                                     replacement="", partial_subcomponent_final$imports )
-        partial_subcomponent_final$imports <- mapply(gsub, pattern='a. NA',
-                                                     replacement="", partial_subcomponent_final$imports )
-        partial_subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
-                                                     replacement="", partial_subcomponent_final$imports )
-        partial_subcomponent_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
-                                                     replacement="", partial_subcomponent_final$imports )
-        
-        # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
-        partial_subcomponent_final$name <- mapply(gsub, pattern='No.',
-                                                  replacement="No", partial_subcomponent_final$name )
-        
-        # Drop NA-NA
-        clean <- partial_subcomponent_final[!(partial_subcomponent_final$name == "a. NA-NA"),]
-        
-        df_partial_subcomponentJSON <- toJSON(clean)
-        session$sendCustomMessage(type = "partial_subcomponent2", df_partial_subcomponentJSON)
+      ### - EXACT MATCH - ###
+        if (interstate_relationship2 == "Exact Match"){
+          # storing user input in separate variables, directly putting input$___ in filter did not work...
+          state <- c(input$interstate_states2)
+          flowType <- c(input$interstate_flowType)
+          flowSource <- c(input$interstate_flowSource)
+          flowSink <- c(input$interstate_flowSink)
+          
+          df <- df_exact_match %>%
+            filter(state_cL %in% state) %>%
+            filter(state_exmL %in% state) %>%
+            filter(ftype_exmL %in% flowType) %>%
+            filter(ftype_cL %in% flowType) %>%
+            filter(fsource_exmL %in% flowSource) %>%
+            filter(fsource_cL %in% flowSource) %>%
+            filter(fsink_exmL %in% flowSink) %>%
+            filter(fsink_cL %in% flowSink) %>%
+            as.data.frame()
+          
+          # Copy pasted from my sparql_queries file
+          df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
+          df$exmL <- gsub("-[A-Z]*","", df$exmL)
+          # Putting state abbreviations before the name so that d3 sorts by state
+          df$cL <- paste0(df$state_cL,"-", df$cL)
+          df$exmL <- paste0(df$state_exmL,"-", df$exmL)
+          # putting all components and states in 1 column
+          # adding a column of "key" for d3 edge bundling
+          # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
+          exact_match <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
+                                    exmL = c(df[,"exmL"], df[,"cL"]),
+                                    state_2L = c(df[,"state_exmL"], df[,"state_cL"]),
+                                    key = c(df[,"exmL"], df[,"cL"]),
+                                    ftype = c(df[,"ftype_exmL"], df[,"ftype_cL"]),
+                                    fsource = c(df[,"fsource_exmL"], df[,"fsource_cL"]),
+                                    fsink = c(df[,"fsink_exmL"], df[,"fsink_cL"]),
+                                    uri = c(df[,"exm"], df[,"c"]))
+          
+          # rename column names
+          # renaming cL as "imports" and scL as "names"
+          colnames(exact_match) <- c("imports", "name", "state", "key", "flow_type",
+                                     "flow_source", "flow_sink", "uri")
+          
+          #add "a." in all names to work with d3 edge bundling (bilink function)
+          #dont ask why
+          exact_match$name <- paste("a", 
+                                    exact_match$name, sep=". ")
+          exact_match$imports <- paste("a", 
+                                       exact_match$imports, sep=". ")
+          
+          # rearrange columns
+          col_order <- c("state","name","key","imports", "flow_type",
+                         "flow_source", "flow_sink", "uri")
+          exact_match <- exact_match[,col_order]
+          # alphabetical order
+          exact_match <- arrange(exact_match, state, name, key)
+          # storing subcomponents separated by comma for a componenet
+          # subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+          exact_match_final <- exact_match %>%
+            group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
+            summarise(imports = paste0(imports, collapse = ","))
+          
+          # Replace NAs with "" in imports column for later emptying in JS
+          exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
+                                              replacement="", exact_match_final$imports )
+          exact_match_final$imports <- mapply(gsub, pattern='a. NA',
+                                              replacement="", exact_match_final$imports )
+          exact_match_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
+                                              replacement="", exact_match_final$imports )
+          exact_match_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
+                                              replacement="", exact_match_final$imports )
+          # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
+          exact_match_final$name <- mapply(gsub, pattern='No.',
+                                           replacement="No", exact_match_final$name )
+          
+          # Drop NA-NA
+          clean <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
+          
+          # Export to csv 
+          # write_csv(abc, "www/df_exact_match_v2.csv")
+          
+          
+          # Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
+          # abc$imports[abc$imports == ""] <- abc$name
+          # abc$imports <- with(abc, ifelse(imports == "", name, imports ) )
+          
+          df_exact_matchJSON <- toJSON(clean)
+          session$sendCustomMessage(type = "exact_match2", df_exact_matchJSON)
+          
+          ### - SUBCOMPONENT - ###  
+        } else if (interstate_relationship2 == "Subcomponent") {
+          
+          state <- c(input$interstate_states2)
+          flowType <- c(input$interstate_flowType)
+          flowSource <- c(input$interstate_flowSource)
+          flowSink <- c(input$interstate_flowSink)
+          
+          df <- df_subcomponent %>%
+            filter(state_cL %in% state) %>%
+            filter(state_scL %in% state) %>%
+            filter(ftype_scL %in% flowType) %>%
+            filter(ftype_cL %in% flowType) %>%
+            filter(fsource_scL %in% flowSource) %>%
+            filter(fsource_cL %in% flowSource) %>%
+            filter(fsink_scL %in% flowSink) %>%
+            filter(fsink_cL %in% flowSink) %>%
+            as.data.frame()
+          
+          # Copy pasted from sparql_queries file
+          # Removing state abbreviations to put them before names in next steps (for d3 sorting)
+          df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
+          df$scL <- gsub("-[A-Z]*","", df$scL)
+          # Putting state abbreviations before the name so that d3 sorts by state
+          df$cL <- paste0(df$state_cL,"-", df$cL)
+          df$scL <- paste0(df$state_scL,"-", df$scL)
+          
+          # putting all components and states in 1 column
+          # adding a column of "key" for d3 edge bundling
+          # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
+          subcomponent <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
+                                     scL = c(df[,"scL"], df[,"cL"]),
+                                     state_scL = c(df[,"state_scL"], df[,"state_cL"]),
+                                     key = c(df[,"scL"], df[,"cL"]),
+                                     ftype = c(df[,"ftype_scL"], df[,"ftype_cL"]),
+                                     fsource = c(df[,"fsource_scL"], df[,"fsource_cL"]),
+                                     fsink = c(df[,"fsink_scL"], df[,"fsink_cL"]),
+                                     uri = c(df[,"sc"], df[,"c"]))
+          
+          # rename column names
+          # renaming cL as "imports" and scL as "names"
+          colnames(subcomponent) <- c("imports", "name", "state", "key", "flow_type",
+                                      "flow_source", "flow_sink", "uri")
+          
+          #add "a." in all names to work with d3 edge bundling (bilink function)
+          #dont ask why...
+          subcomponent$name <- paste("a", 
+                                     subcomponent$name, sep=". ")
+          subcomponent$imports <- paste("a", 
+                                        subcomponent$imports, sep=". ")
+          
+          # rearrange columns
+          col_order <- c("state","name","key","imports", "flow_type",
+                         "flow_source", "flow_sink", "uri")
+          subcomponent <- subcomponent[,col_order]
+          # alphabetical order
+          subcomponent <- arrange(subcomponent, state, name, key, uri)
+          # storing subcomponents separated by comma for a componenet
+          # subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+          subcomponent_final <- subcomponent %>%
+            group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
+            summarise(imports = paste0(imports, collapse = ","))
+          
+          # Replace NAs with "" in imports column for later emptying in JS
+          subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
+                                               replacement="", subcomponent_final$imports )
+          subcomponent_final$imports <- mapply(gsub, pattern='a. NA',
+                                               replacement="", subcomponent_final$imports )
+          subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
+                                               replacement="", subcomponent_final$imports )
+          subcomponent_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
+                                               replacement="", subcomponent_final$imports )
+          
+          # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
+          subcomponent_final$name <- mapply(gsub, pattern='No.',
+                                            replacement="No", subcomponent_final$name )
+          
+          # Drop NA-NA
+          clean <- subcomponent_final[!(subcomponent_final$name == "a. NA-NA"),]
+          
+          df_subcomponentJSON <- toJSON(clean)
+          session$sendCustomMessage(type = "subcomponent2", df_subcomponentJSON)
+          
+          ### - PARTIAL SUBCOMPONENT - ###
+        } else if (interstate_relationship2 == "Partial Subcomponent"){
+          
+          state <- c(input$interstate_states2)
+          flowType <- c(input$interstate_flowType)
+          flowSource <- c(input$interstate_flowSource)
+          flowSink <- c(input$interstate_flowSink)
+          
+          df <- df_partial_subcomponent %>%
+            filter(state_cL %in% state) %>%
+            filter(state_pscL %in% state) %>%
+            filter(ftype_pscL %in% flowType) %>%
+            filter(ftype_cL %in% flowType) %>%
+            filter(fsource_pscL %in% flowSource) %>%
+            filter(fsource_cL %in% flowSource) %>%
+            filter(fsink_pscL %in% flowSink) %>%
+            filter(fsink_cL %in% flowSink) %>%
+            as.data.frame()
+          
+          # Copy pasted from sparql_queries file
+          # Removing state abbreviations to put them before names in next steps (for d3 sorting)
+          df$cL <- gsub("-[A-Z]*","", df$cL) #* means zero or more time in regex
+          df$pscL <- gsub("-[A-Z]*","", df$pscL)
+          # Putting state abbreviations before the name so that d3 sorts by state
+          df$cL <- paste0(df$state_cL,"-", df$cL)
+          df$pscL <- paste0(df$state_pscL,"-", df$pscL)
+          
+          # putting all components and states in 1 column
+          # adding a column of "key" for d3 edge bundling
+          # Keeping the "imports" empty for d3 because d3 wants that A has import B but B does not have import A
+          partial_subcomponent <- data.frame(cL = c(df[,"cL"], df[,"empty"]),
+                                             pscL = c(df[,"pscL"], df[,"cL"]),
+                                             state_pscL = c(df[,"state_pscL"], df[,"state_cL"]),
+                                             key = c(df[,"pscL"], df[,"cL"]),
+                                             ftype = c(df[,"ftype_pscL"], df[,"ftype_cL"]),
+                                             fsource = c(df[,"fsource_pscL"], df[,"fsource_cL"]),
+                                             fsink = c(df[,"fsink_pscL"], df[,"fsink_cL"]),
+                                             uri = c(df[,"psc"], df[,"c"]))
+          
+          # rename column names
+          # renaming cL as "imports" and pscL as "names"
+          colnames(partial_subcomponent) <- c("imports", "name", "state", "key", "flow_type",
+                                              "flow_source", "flow_sink", "uri")
+          
+          #add "a." in all names to work with d3 edge bundling (bilink function)
+          #dont ask why...
+          partial_subcomponent$name <- paste("a", 
+                                             partial_subcomponent$name, sep=". ")
+          partial_subcomponent$imports <- paste("a", 
+                                                partial_subcomponent$imports, sep=". ")
+          
+          # rearrange columns
+          col_order <- c("state","name","key","imports", "flow_type",
+                         "flow_source", "flow_sink", "uri")
+          partial_subcomponent <- partial_subcomponent[,col_order]
+          # alphabetical order
+          partial_subcomponent <- arrange(partial_subcomponent, state, name, key, uri)
+          # storing partial_subcomponents separated by comma for a componenet
+          # partial_subcomponent_final <- aggregate(imports~name, data=subcomponent, paste, sep=",")
+          partial_subcomponent_final <- partial_subcomponent %>%
+            group_by(state, name, key, flow_type, flow_source, flow_sink, uri) %>%
+            summarise(imports = paste0(imports, collapse = ","))
+          
+          # Replace NAs with "" in imports column for later emptying in JS
+          partial_subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA\\b',
+                                                       replacement="", partial_subcomponent_final$imports )
+          partial_subcomponent_final$imports <- mapply(gsub, pattern='a. NA',
+                                                       replacement="", partial_subcomponent_final$imports )
+          partial_subcomponent_final$imports <- mapply(gsub, pattern='\\,a. NA,\\b',
+                                                       replacement="", partial_subcomponent_final$imports )
+          partial_subcomponent_final$imports <- mapply(gsub, pattern='\\a. NA,\\b',
+                                                       replacement="", partial_subcomponent_final$imports )
+          
+          # Replace dot in "No." in component name to nothing, because d3 separates at dot and just shows 81
+          partial_subcomponent_final$name <- mapply(gsub, pattern='No.',
+                                                    replacement="No", partial_subcomponent_final$name )
+          
+          # Drop NA-NA
+          clean <- partial_subcomponent_final[!(partial_subcomponent_final$name == "a. NA-NA"),]
+          
+          df_partial_subcomponentJSON <- toJSON(clean)
+          session$sendCustomMessage(type = "partial_subcomponent2", df_partial_subcomponentJSON)
+        }
     }
+    
   })
 }
 
