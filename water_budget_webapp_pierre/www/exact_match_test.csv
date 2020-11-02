@@ -1,0 +1,19 @@
+state,name,key,imports
+CA,Change in Groundwater Storage-CA,Change in Groundwater Storage-CA,Change in Ground Water Storage-CO
+CA,Change in Surface Water Storage-CA,Change in Surface Water Storage-CA,Change in Surface Water Storage-CO
+CA,Runoff-CA,Runoff-CA,Runoff-NM
+CA,Stream Inflow-CA,Stream Inflow-CA,Surface Water Inflows-NM
+CA,Subsurface Inflow-CA,Subsurface Inflow-CA,Groundwater Inflows-NM
+CO,Change in Ground Water Storage-CO,Change in Ground Water Storage-CO,Change in Groundwater Storage-CA
+CO,Change in Surface Water Storage-CO,Change in Surface Water Storage-CO,Change in Surface Water Storage-CA
+CO,Municipal and Industrial Consumptive Use-CO,Municipal and Industrial Consumptive Use-CO,Municipal and Industrial Depeltion-UT
+CO,Precipitation-CO,Precipitation-CO,Precipitation-UT
+CO,Reservoir Evaporation-CO,Reservoir Evaporation-CO,Reservoir Evaporation-UT
+CO,Reservoir Evaporation-CO,Reservoir Evaporation-CO,Reservoir Evaporation-UT
+NM,Groundwater Inflows-NM,Groundwater Inflows-NM,Subsurface Inflow-CA
+NM,Runoff-NM,Runoff-NM,Runoff-CA
+NM,Surface Water Inflows-NM,Surface Water Inflows-NM,Stream Inflow-CA
+UT,Municipal and Industrial Depeltion-UT,Municipal and Industrial Depeltion-UT,Municipal and Industrial Consumptive Use-CO
+UT,Precipitation-UT,Precipitation-UT,Precipitation-CO
+UT,Reservoir Evaporation-UT,Reservoir Evaporation-UT,Reservoir Evaporation-CO
+UT,Reservoir Evaporation-UT,Reservoir Evaporation-UT,Reservoir Evaporation-CO

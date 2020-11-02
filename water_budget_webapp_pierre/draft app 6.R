@@ -8,7 +8,7 @@ library(d3r)
 file <- rdf_parse("qrUilGBx2x8YZBCY6iSVG.ttl", format="turtle")
 
 # ---- 1. creating dataframe for flow and component-subcomponent info ---- #
-query_search <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
+query_component <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX : <http://webprotege.stanford.edu/project/qrUilGBx2x8YZBCY6iSVG#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -46,11 +46,11 @@ SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?psc
 }
 "
 
-results_search <- rdf_query(file, query_search)
-df_search_full <- as.data.frame(results_search)
-df_search_full <- arrange(df_search_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
-df_search_full$cL <- gsub("-[A-Z][A-Z]","", df_search_full$cL)
-df_search_flow <- df_search_full[c(1,2,(seq(4,length(df_search_full), 2)))]
+results_component <- rdf_query(file, query_component)
+df_component_full <- as.data.frame(results_component)
+df_component_full <- arrange(df_component_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
+df_component_full$cL <- gsub("-[A-Z][A-Z]","", df_component_full$cL)
+df_component_flow <- df_component_full[c(1,2,(seq(4,length(df_component_full), 2)))]
 
 
 # ---- 2. creating dataframe state-wise info ---- #
@@ -87,7 +87,7 @@ df_state$cL <- gsub("-[A-Z][A-Z]","", df_state$cL) # remove state initials from 
 
 #drop-down choices
 state_choices <- c("CA","CO","NM","UT")
-component_choices <- c(unique(df_search_full$cL))
+component_choices <- c(unique(df_component_full$cL))
 
 # Shiny app
 ui <- fluidPage(id = "page", theme = "styles.css",
@@ -109,9 +109,29 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                selected = "Home",
                theme = "styles.css",
                fluid = TRUE,
-      tabPanel(title = "Home"),
+
+# ------ Tab - Home ------ #
+      tabPanel(title = "Home",
+        tags$div(class = "home-banner",
+                 tags$img(class = "home-banner-img",
+                          src = "image_2.jpg"),
+                 tags$div(class = "banner-text",
+                          tags$p(class = "h1", "WELCOME")),
+                 tags$div(class = "scrolldown",
+                          tags$span(),
+                          tags$span(),
+                          tags$span())
+                 ),
+        tags$div(class = "instruction",
+                 tags$div(class = "text-area",
+                          tags$h1("What is IoW Water Budget Tool?"),
+                          tags$br(), tags$br(),
+                          tags$p("bla bla stuff")
+                          )
+                 )),
+
       
-# ------ Tab - Search - Begin ------ # 
+# ------ Tab - Component - Begin ------ # 
       tabPanel(title = "Component",
         tags$div(class = "banner", 
                  tags$img(class = "banner-img-component",
@@ -135,7 +155,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                               icon = icon("check"))
                  )),
         tags$body(hidden(
-                  tags$div(id = "search_summary",
+                  tags$div(id = "component_summary",
                            style = "color:#777777",
                            tags$h3(tags$b(htmlOutput("component_title"))),
                            tags$p(htmlOutput("flow_source")),
@@ -149,9 +169,9 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                          parameters and data sources 
                                          are presented below"))
                            )),
-                  tags$div(id = "search_container"))
+                  tags$div(id = "component_container"))
       ),
-# ------ Tab - Search - End ------ #
+# ------ Tab - Component - End ------ #
       
 # ------ Tab - State - Begin ------ #
       tabPanel(title = "State",
@@ -159,8 +179,8 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                  tags$img(class = "banner-img-state",
                           src = "image_3.jpg"),
                  tags$div(class = "banner-text",
-                          tags$h1("Search by state"),
-                          tags$h3("Explore the water budget framework of a state")
+                          tags$p(class = "h1", "Search by state"),
+                          tags$p(class = "h3", "Explore the water budget framework of a state")
                         )),
         column(width = 12,
           column(width = 3,
@@ -194,20 +214,20 @@ server <- function(input, output, session){
                       choices = choices_components)
   })
   
-# Summary of component on Search tab
+# Summary of component on Component tab
   observeEvent(input$runButton1, {
     # Show summary div
-    show("search_summary")
+    show("component_summary")
     
     # Summary URIs
-    df_uri <- df_search_full %>%
+    df_uri <- df_component_full %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
       select(-c(1,2,3,4,6,8,10,12,14)) %>% #dropping jL, cL, c columns and retaining uri columns
       as.data.frame()
     
     # Extracting component (title) URI
-    uri_title <- df_search_full %>%
+    uri_title <- df_component_full %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
       .$c # selecting component
@@ -215,10 +235,10 @@ server <- function(input, output, session){
     uri_title <- uri_title[1]
     
     #Summary information 
-    component_info <- df_search_flow %>%
+    component_info <- df_component_flow %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
-      select(3:length(df_search_flow)) %>% #dropping jL, cL columns 
+      select(3:length(df_component_flow)) %>% #dropping jL, cL columns 
       as.data.frame()
     
     # URIs
@@ -291,7 +311,7 @@ server <- function(input, output, session){
 
 })
 
-# Chart by component on search tab
+# Chart by component on Component tab
   observeEvent(input$runButton1,{
     selection_df_1 <- df_state %>%
       filter(jL %in% input$states1) %>%
@@ -300,8 +320,8 @@ server <- function(input, output, session){
     selection_df_1 <- select(selection_df_1, -jL, -cL)
     selection_json_1 <- d3_nest(data = selection_df_1, root = "")
     leaf_nodes_1 <- nrow(selection_df_1)
-    session$sendCustomMessage(type = "search_height", leaf_nodes_1)
-    session$sendCustomMessage(type = "search_json", selection_json_1)
+    session$sendCustomMessage(type = "component_height", leaf_nodes_1)
+    session$sendCustomMessage(type = "component_json", selection_json_1)
   })
   
 # State charts on State tabs

@@ -272,7 +272,6 @@ d3.csv("hyperlink.csv").then(function(data) {
             nodeExit.select('text')
                 .style('fill-opacity', 1e-6); 
 
-
             //LINKS***************************************
 
             // Update the links...

@@ -1,0 +1,78 @@
+"state","name","key","imports"
+"CA","Applied Water-CA","Applied Water-CA",
+"CA","Applied Water Reuse/Recycled Water-CA","Applied Water Reuse/Recycled Water-CA",
+"CA","Change in Groundwater Storage-CA","Change in Groundwater Storage-CA",
+"CA","Change in Land System Storage-CA","Change in Land System Storage-CA",
+"CA","Change in Surface Water Storage-CA","Change in Surface Water Storage-CA","Human Storage and Distribution System Stock-NM"
+"CA","Change in Total System Storage-CA","Change in Total System Storage-CA","Change in Surface Water Storage-CA,Change in Land System Storage-CA,Change in Groundwater Storage-CA"
+"CA","Conveyance Evaporation-CA","Conveyance Evaporation-CA",
+"CA","Conveyance Seepage-CA","Conveyance Seepage-CA",
+"CA","Evapotranspiration-CA","Evapotranspiration-CA","Groundwater ET-NM"
+"CA","Groundwater Export-CA","Groundwater Export-CA",
+"CA","Groundwater Extraction-CA","Groundwater Extraction-CA",
+"CA","Imported Water-CA","Imported Water-CA",
+"CA","Lake Evaporation-CA","Lake Evaporation-CA",
+"CA","Lake Gain from Groundwater-CA","Lake Gain from Groundwater-CA",
+"CA","Lake Loss to Groundwater-CA","Lake Loss to Groundwater-CA",
+"CA","Managed Aquifer Recharge-CA","Managed Aquifer Recharge-CA",
+"CA","Precipitation-CA","Precipitation-CA",
+"CA","Precipitation on Lakes-CA","Precipitation on Lakes-CA",
+"CA","Recharge of Applied Water-CA","Recharge of Applied Water-CA",
+"CA","Recharge of Precipitation-CA","Recharge of Precipitation-CA",
+"CA","Recycled Water Export-CA","Recycled Water Export-CA",
+"CA","Return Flow-CA","Return Flow-CA",
+"CA","Runoff-CA","Runoff-CA",
+"CA","Stored Water Export-CA","Stored Water Export-CA",
+"CA","Stored Water Extraction-CA","Stored Water Extraction-CA",
+"CA","Stream Evaporation-CA","Stream Evaporation-CA",
+"CA","Stream Gain from Groundwater-CA","Stream Gain from Groundwater-CA",
+"CA","Stream Inflow-CA","Stream Inflow-CA",
+"CA","Stream Loss to Groundwater-CA","Stream Loss to Groundwater-CA",
+"CA","Stream Outflow-CA","Stream Outflow-CA",
+"CA","Subsurface Inflow-CA","Subsurface Inflow-CA",
+"CA","Subsurface Outflow-CA","Subsurface Outflow-CA",
+"CA","Surface Water Delivery-CA","Surface Water Delivery-CA",
+"CA","Surface Water Diversions-CA","Surface Water Diversions-CA",
+"CA","Surface Water Exports-CA","Surface Water Exports-CA",
+"CA","Total Groundwater System Inflow-CA","Total Groundwater System Inflow-CA","Water Release Caused by Land Subsidence-CA,Conveyance Seepage-CA,Recharge of Applied Water-CA,Managed Aquifer Recharge-CA,Stream Loss to Groundwater-CA,Recharge of Precipitation-CA,Subsurface Inflow-CA,Lake Loss to Groundwater-CA"
+"CA","Total Groundwater System Outflow-CA","Total Groundwater System Outflow-CA","Stream Gain from Groundwater-CA,Subsurface Outflow-CA,Lake Gain from Groundwater-CA,Stored Water Extraction-CA,Stored Water Export-CA,Groundwater Extraction-CA,Groundwater Export-CA"
+"CA","Total Land System Inflow-CA","Total Land System Inflow-CA","Stored Water Extraction-CA,Applied Water Reuse/Recycled Water-CA,Groundwater Extraction-CA,Surface Water Delivery-CA,Applied Water-CA,Precipitation-CA"
+"CA","Total Land System Outflow-CA","Total Land System Outflow-CA","Recharge of Applied Water-CA,Managed Aquifer Recharge-CA,Evapotranspiration-CA,Recharge of Precipitation-CA,Recycled Water Export-CA,Return Flow-CA,Runoff-CA"
+"CA","Total Surface Water Inflow-CA","Total Surface Water Inflow-CA","Precipitation on Lakes-CA,Stream Loss to Groundwater-CA,Stream Gain from Groundwater-CA,Lake Gain from Groundwater-CA,Surface Water Diversions-CA,Return Flow-CA,Stream Inflow-CA,Runoff-CA,Imported Water-CA"
+"CA","Total Surface Water Outflow-CA","Total Surface Water Outflow-CA","Conveyance Seepage-CA,Conveyance Evaporation-CA,Stream Outflow-CA,Stream Evaporation-CA,Surface Water Diversions-CA,Surface Water Delivery-CA,Lake Evaporation-CA,Lake Loss to Groundwater-CA,Surface Water Exports-CA"
+"CA","Water Release Caused by Land Subsidence-CA","Water Release Caused by Land Subsidence-CA",
+"CO","Crop Consumptive Use-CO","Crop Consumptive Use-CO","River Use By Wet Pasture-UT"
+"CO","Exports-CO","Exports-CO","Basin Outflow-UT,Area Outflows-UT"
+"CO","Gaged Surface Water Inflow-CO","Gaged Surface Water Inflow-CO",
+"CO","Gaged Surface Water Outflow-CO","Gaged Surface Water Outflow-CO",
+"CO","Imports-CO","Imports-CO","Tributary Inflow-UT"
+"CO","Ungaged Surface Water Inflow-CO","Ungaged Surface Water Inflow-CO",
+"NM","Commercial-NMOSE","Commercial-NMOSE","Commercial: Unmetered-NMOSE,Commercial: Incomplete Metered-NMOSE,Commercial: Metered-NMOSE"
+"NM","Commercial: Incomplete Metered-NMOSE","Commercial: Incomplete Metered-NMOSE",
+"NM","Commercial: Metered-NMOSE","Commercial: Metered-NMOSE",
+"NM","Commercial: Schools-NMOSE","Commercial: Schools-NMOSE",
+"NM","Commercial: Unmetered-NMOSE","Commercial: Unmetered-NMOSE","Commercial: Schools-NMOSE"
+"NM","Groundwater ET-NM","Groundwater ET-NM",
+"NM","Human Storage and Distribution System Stock-NM","Human Storage and Distribution System Stock-NM",
+"NM","Irrigated Agriculture-NMOSE","Irrigated Agriculture-NMOSE","Irrigated Agriculture Depletions-NMOSE,Irrigated Agriculture Diversions-NMOSE"
+"NM","Irrigated Agriculture Depletions-NMOSE","Irrigated Agriculture Depletions-NMOSE",
+"NM","Irrigated Agriculture Diversions-NMOSE","Irrigated Agriculture Diversions-NMOSE",
+"NM","Power-NMOSE","Power-NMOSE","Power: Unreported-NMOSE"
+"NM","Power: Unreported-NMOSE","Power: Unreported-NMOSE",
+"NM","Precipitation-NM","Precipitation-NM","Precipitation on Lakes-CA,Precipitation-CA"
+"NM","Public Water Supply-NMOSE","Public Water Supply-NMOSE","Public Water Supply: Unmetered-NMOSE,Public Water Supply: Metered-NMOSE"
+"NM","Public Water Supply: Metered-NMOSE","Public Water Supply: Metered-NMOSE",
+"NM","Public Water Supply: Unmetered-NMOSE","Public Water Supply: Unmetered-NMOSE",
+"NM","Recharge-NM","Recharge-NM","Recharge of Applied Water-CA,Managed Aquifer Recharge-CA,Stream Loss to Groundwater-CA,Recharge of Precipitation-CA,Lake Loss to Groundwater-CA"
+"UT","Area Outflows-UT","Area Outflows-UT",
+"UT","Basin Inflow-UT","Basin Inflow-UT","Gaged Surface Water Inflow-CO"
+"UT","Basin Outflow-UT","Basin Outflow-UT","Gaged Surface Water Outflow-CO"
+"UT","Cropland Precipitation-UT","Cropland Precipitation-UT",
+"UT","Natural System Use-UT","Natural System Use-UT","Riparian Depletions-UT"
+"UT","Precipitation-UT","Precipitation-UT","Cropland Precipitation-UT"
+"UT","Riparian Depletions-UT","Riparian Depletions-UT",
+"UT","River Inflow-UT","River Inflow-UT","Gaged Surface Water Inflow-CO,Ungaged Surface Water Inflow-CO"
+"UT","River Use By Wet Pasture-UT","River Use By Wet Pasture-UT",
+"UT","Tributary Inflow-UT","Tributary Inflow-UT",
+"WY","Municipal and Domestic Depletions-WY","Municipal and Domestic Depletions-WY",
+"WY","Municipal and Domestic Use-WY","Municipal and Domestic Use-WY","Municipal and Domestic Depletions-WY"
