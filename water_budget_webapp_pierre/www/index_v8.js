@@ -428,17 +428,21 @@ function (message) {
         var svg = d3.select("#state_container")   
             .append("svg")
                 .attr("width", width + margin.right + margin.left)
-                .attr("height", height + margin.top + margin.bottom)
+                .attr("height", d => { return leaf_nodes_2 < 50 ? height + margin.top + margin.bottom + 350 : height + margin.top + margin.bottom;})
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+                
+
         // Background rectangle
         svg.append("rect")
-        .attr("width", width + margin.right + margin.left)
-        .attr("height", height + margin.top + margin.bottom)
-        .attr("transform", "translate(" + - margin.left + "," + - margin.top + ")")
-        .attr("fill", "#F8F8F8")
-        .attr('rx', 20);
+            .attr("width", width + margin.right + margin.left)
+            .attr("height", d => { return leaf_nodes_2 < 50 ? height + 350 : height + margin.top + margin.bottom;})
+            .attr("transform", "translate(" + - margin.left + "," + - margin.top + ")")
+            .attr("fill", "#F8F8F8")
+            .attr('rx', 20);
+
+        
 
         // appending svg object to the body div "sticky"
         var svg_sticky = d3.select("#state_sticky")  
@@ -458,10 +462,18 @@ function (message) {
             autoscroll();
             scrollCount++ ;
         } 
+
+        // adjusting height dynamizally
+        if (leaf_nodes_2 < 50) {
+            var treeHeight = height + 300;
+        }
+        else {
+            var treeHeight = height;
+        }
             
         // Create the cluster layout:
         var tree = d3.tree()
-            .size([height,width]) 
+            .size([treeHeight,width]) 
             .separation((a,b) => {return a.parent == b.parent ? 1 : 1;}); // for separating nodes nicely
 
         // Give the data to the tree layout:
@@ -862,21 +874,21 @@ function (message) {
         d3.selectAll("svg").remove();
 
         var margin = {top: 25, right: 90, bottom: 20, left: 250}
-        var width = 1150 - margin.left - margin.right //changed width because leaf nodes were going out
-        var height = (leaf_nodes_3*30) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
+        var width = 1100 - margin.left - margin.right //changed width because leaf nodes were going out
+        var height = (leaf_nodes_3*38) - margin.top - margin.bottom; //1200 height for about 40 leaf nodes
 
         // appending svg object to the body div "container"
         var svg = d3.select("#data_source_container")   
             .append("svg")
                 .attr("width", width + margin.right + margin.left)
-                .attr("height", d => { return leaf_nodes_1 < 3 ? height + margin.top + margin.bottom + 150 : height + margin.top + margin.bottom + 30 ;})
+                .attr("height", d => { return leaf_nodes_3 < 3 ? height + margin.top + margin.bottom + 150 : height + margin.top + margin.bottom + 30 ;})
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // Background rectangle
         svg.append("rect")
         .attr("width", width + margin.right + margin.left)
-        .attr("height", d => { return leaf_nodes_1 < 3 ? height + 150 : height + margin.top + margin.bottom + 20 ;})
+        .attr("height", d => { return leaf_nodes_3 < 3 ? height + 150 : height + margin.top + margin.bottom + 20 ;})
         .attr("transform", "translate(" + - margin.left + "," + - margin.top + ")")
         .attr("fill", "#F8F8F8")
         .attr('rx', 20);
@@ -894,8 +906,8 @@ function (message) {
         var root;
 
         // adjusting height dynamizally
-        if (leaf_nodes_1 < 3) {
-            var treeHeight = height + 100;
+        if (leaf_nodes_3 < 3) {
+            var treeHeight = height + 150;
         }
         else {
             var treeHeight = height;
@@ -944,7 +956,7 @@ function (message) {
             var links = treeData.descendants().slice(1);
 
             //Normalizing for fixed depth
-            nodes.forEach(d => {d.y = d.depth * 235}); //d.y dictates how much tree unfolds in x axis distance because it is a horizontal tree, if it was vertical d.y would affect y axis
+            nodes.forEach(d => {d.y = d.depth * 245}); //d.y dictates how much tree unfolds in x axis distance because it is a horizontal tree, if it was vertical d.y would affect y axis
 
             // Adding labels for each level
             // using underscore.js library
