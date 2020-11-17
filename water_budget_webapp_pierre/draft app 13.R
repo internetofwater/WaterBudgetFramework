@@ -98,7 +98,8 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$h3("Water Budget Navigator is a web application developed by Internet of Water (IoW). It allows users to explore water budget frameworks
                                  across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
                                  estimation methods, parameters and data sources in an ordered manner. The components have additional properties describing
-                                  their flow information and relationships with other components within and across states."),
+                                  their flow information and relationships with other components within and across states. Here is the framework we use for this tool.
+                                  Definition for each term of our framework is provided below."),
                           tags$br()
                           ),
                  tags$div(id = "home_container",

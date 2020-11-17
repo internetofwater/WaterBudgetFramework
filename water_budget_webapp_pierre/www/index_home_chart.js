@@ -1,11 +1,11 @@
-
-// HOW TO GENERATE HOME D3 CHART AS PNG
+// COLORS: BLUE - #182856, GREEN - #00afa8, RED - #E55E69, DARK GRAY - #656565, LIGHT GRAY - #a9a9a9
+// HOW TO GENERATE HOME D3 CHART AS AN IMAGE
 // Step 1: Ran "index_home_chart.html"
 // Step 2: Right clicked the bottom d3 graphic and save it as "home_d3.svg" in the www folder
 
 const data = {
     "name": "Jurisdiction",
-    "color": "#E55E69",
+    "color": "#182856",
     "children": [
         {
             "name": "Component",
@@ -21,7 +21,7 @@ const data = {
                             "children": [
                                 {
                                     "name": "Data Source",
-                                    "color": "#E55E69",
+                                    "color": "#a9a9a9"
                                 }
                             ]
                         }
@@ -30,26 +30,110 @@ const data = {
                 {
                     "name": "Flow Type",
                     "color": "#E55E69",
+                    "children": [
+                        {
+                            "name": "Inflow",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Internal Transfer",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Outflow",
+                            "color": "#a9a9a9"
+                        }
+                    ]
                 },
                 {
                     "name": "Flow Source",
                     "color": "#E55E69",
+                    "children": [
+                        {
+                            "name": "Atmosphere",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "External Groundwater",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "External Surface Water",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Zone Groundwater",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Zone Land System",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Zone Surface Water",
+                            "color": "#a9a9a9"
+                        }
+                    ]
                 },
                 {
                     "name": "Flow Sink",
-                    "color": "#E55E69"
+                    "color": "#E55E69",
+                    "children": [
+                        {
+                            "name": "Atmosphere",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "External Groundwater",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "External Surface Water",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Zone Groundwater",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Zone Land System",
+                            "color": "#a9a9a9"
+                        },
+                        {
+                            "name": "Zone Surface Water",
+                            "color": "#a9a9a9"
+                        }
+                    ]
                 },
                 {
-                    "name": "Subcomponent of",
-                    "color": "#E55E69"
+                    "name": "Subcomponent",
+                    "color": "#E55E69",
+                    "children": [
+                        {
+                            "name": "Component",
+                            "color": "#a9a9a9"
+                        }
+                    ]
                 },
                 {
-                    "name": "Partial Subcomponent of",
-                    "color": "#E55E69"
+                    "name": "Partial Subcomponent",
+                    "color": "#E55E69",
+                    "children": [
+                        {
+                            "name": "Component",
+                            "color": "#a9a9a9"
+                        }
+                    ]
                 },
                 {
                     "name": "Exact Match",
-                    "color": "#E55E69"
+                    "color": "#E55E69",
+                    "children": [
+                        {
+                            "name": "Component",
+                            "color": "#a9a9a9"
+                        }
+                    ]
                 }
 
             ]
@@ -62,7 +146,7 @@ console.log(data);
 // set dimensions
 var margin = {top: 1, right: 50, bottom: 50, left: 50};
 var width = 1100 - margin.left - margin.right;
-var height = 450 - margin.top - margin.bottom; 
+var height = 800 - margin.top - margin.bottom; 
 
 // add svg on which d3 will be made
 var svg = d3.select("#home_container")
@@ -127,7 +211,7 @@ var node = svg.selectAll('g.node')
     .attr('transform', d => { return "translate(" + d.y + "," + d.x + ")"})
 
 // NODES *********************************************
-// add circle for the nodes
+// add rectangle for the nodes
 node.append('rect')
     .attr('class', 'node')
     .attr('width', box_width)
@@ -146,7 +230,7 @@ node.append('text')
     .attr("y", box_height/2) 
     .attr("text-anchor", "middle")
     .text(function(d) { return d.data.name; })
-    .attr("font-size", "11")
+    .attr("font-size", "12")
     .style("font-family", "arial")
     .style("fill", "#ffffff")
     .style("font-weight", "bold")

@@ -21,22 +21,88 @@ const data = {
                     ]
                 },
                 {
-                    "name": "Flow Type"
+                    "name": "Flow Type",
+                    "children": [
+                        {
+                            "name": "Inflow"
+                        },
+                        {
+                            "name": "Internal Transfer"
+                        },
+                        {
+                            "name": "Outflow"
+                        }
+                    ]
                 },
                 {
-                    "name": "Flow Source"
+                    "name": "Flow Source",
+                    "children": [
+                        {
+                            "name": "Atmosphere"
+                        },
+                        {
+                            "name": "External Groundwater"
+                        },
+                        {
+                            "name": "External Surface Water"
+                        },
+                        {
+                            "name": "Zone Groundwater"
+                        },
+                        {
+                            "name": "Zone Land System"
+                        },
+                        {
+                            "name": "Zone Surface Water"
+                        }
+                    ]
                 },
                 {
-                    "name": "Flow Sink"
+                    "name": "Flow Sink",
+                    "children": [
+                        {
+                            "name": "Atmosphere"
+                        },
+                        {
+                            "name": "External Groundwater"
+                        },
+                        {
+                            "name": "External Surface Water"
+                        },
+                        {
+                            "name": "Zone Groundwater"
+                        },
+                        {
+                            "name": "Zone Land System"
+                        },
+                        {
+                            "name": "Zone Surface Water"
+                        }
+                    ]
                 },
                 {
-                    "name": "Subcomponent of"
+                    "name": "Subcomponent",
+                    "children": [
+                        {
+                            "name": "Component"
+                        }
+                    ]
                 },
                 {
-                    "name": "Partial Subcomponent of"
+                    "name": "Partial Subcomponent of",
+                    "children": [
+                        {
+                            "name": "Component"
+                        }
+                    ]
                 },
                 {
-                    "name": "Exact Match"
+                    "name": "Exact Match",
+                    "children": [
+                        {
+                            "name": "Component"
+                        }
+                    ]
                 }
 
             ]
@@ -49,7 +115,7 @@ console.log(data);
 // set dimensions
 var margin = {top: 50, right: 50, bottom: 50, left: 50};
 var width = 1200 - margin.left - margin.right;
-var height = 500 - margin.top - margin.bottom; 
+var height = 800 - margin.top - margin.bottom; 
 
 // set rectangle dimensions
 box_width = 150;
