@@ -264,7 +264,8 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                        tags$b("See All Components", style = "font-size: 130%"),
                                        tags$p(" "),
                                        tags$p("1. Choose the type of interstate relationship among water budget components"),
-                                       tags$p('2. Click on the button to include components with no relationships as well')
+                                       tags$p('2. Click on the button to include components with no relationships as well'),
+                                       tags$p('3. Hover over a component to explore relationships')
                                        )
                          ),
                          column(width = 12,
@@ -286,7 +287,8 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                        tags$p('1. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
                                        tags$p('2. Select the states of interest'),
                                        tags$p('3. Filter the components by flow type, flow source and flow sink'),
-                                       tags$p('4. Click on the button to see the relationships of selected components')
+                                       tags$p('4. Click on the button to see the relationships of selected components'),
+                                       tags$p('5. Hover over a component to explore relationships')
                                        )
                                 ),
                          column(width = 12,
