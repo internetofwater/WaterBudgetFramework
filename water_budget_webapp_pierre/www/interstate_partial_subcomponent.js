@@ -1,14 +1,12 @@
 Shiny.addCustomMessageHandler("partial_subcomponent",
 function (message) {
 
+  df = message;  
   d3.selectAll("svg").remove();
 
-  d3.json("df_partial_subcomponent.json").then(function (abc) {
-
-
-      console.log(abc)
+      console.log(df)
       //convert typeof import to array
-      abc.forEach(item => {
+      df.forEach(item => {
           item["imports"] = item["imports"].split(',')
           // change objects that have "" to empty 
           //console.log(Object.values(item.imports))
@@ -19,7 +17,7 @@ function (message) {
 
       //Count number of objects in array for setting box and circle dimensions dynamically
       var count = 0;
-      abc.forEach(function(item){
+      df.forEach(function(item){
           if(!item.__proto__.__proto__){
               count++;
           }
@@ -27,7 +25,7 @@ function (message) {
       console.log("There are " + count + " objects in the array")
       number_of_components = count;
 
-      data = hierarchy(abc)
+      data = hierarchy(df)
 
       //console.log(data)
       // //convert typeof import to array
@@ -40,7 +38,7 @@ function (message) {
       colorout = "#00AFA8";
       colornone = "#bbb";
 
-      var diameter = number_of_components * 25; //approximately 960
+      var diameter = 1200 //number_of_components * 25; //approximately 960
       var radius = diameter / 2;
       var innerRadius = radius - 300;
 
@@ -55,7 +53,7 @@ function (message) {
       const root = tree(bilink(d3.hierarchy(data)
           .sort((a, b) => d3.ascending(a.height, b.height) || d3.ascending(a.data.name, b.data.name))));
 
-      var svg = d3.select("#interstate_container").append("svg")
+      var svg = d3.select("#interstate_container2").append("svg")
         .attr("width", diameter + 400)
         .attr("height", diameter + 400)
         .append("g")
@@ -170,7 +168,7 @@ c. Is partial subcomponent of ${d.incoming.length} (in red)`));
       }
 
       function autoscroll() {
-        d3.select("#interstate_container")
+        d3.select("#interstate_container2")
             .transition()
             .duration(1000)
             .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight)/2 + 50));
@@ -184,7 +182,4 @@ c. Is partial subcomponent of ${d.incoming.length} (in red)`));
         
     }
 
-  });
-  
-
-})
+  })

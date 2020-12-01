@@ -1,15 +1,23 @@
 
+// // assigning user input variables globally
+// var state_choice;
+
+// // assign state input to a variable
+// Shiny.addCustomMessageHandler("interstate_states2",
+// function(message) {
+//     state_choice = message;
+//     console.log(state_choice)
+// })
+
 Shiny.addCustomMessageHandler("exact_match",
     function (message) {
 
+        df = message;
         d3.selectAll("svg").remove();
 
-        d3.json("df_exact_match.json").then(function (abc) {
-
-
-            console.log(abc)
+            console.log(df)
             //convert typeof import to array
-            abc.forEach(item => {
+            df.forEach(item => {
                 item["imports"] = item["imports"].split(',')
                 // change objects that have "" to empty 
                 //console.log(Object.values(item.imports))
@@ -20,7 +28,7 @@ Shiny.addCustomMessageHandler("exact_match",
 
             //Count number of objects in array for setting box and circle dimensions dynamically
             var count = 0;
-            abc.forEach(function(item){
+            df.forEach(function(item){
                 if(!item.__proto__.__proto__){
                     count++;
                 }
@@ -28,8 +36,18 @@ Shiny.addCustomMessageHandler("exact_match",
             console.log("There are " + count + " objects in the array")
             number_of_components = count;
 
-            data = hierarchy(abc)
+            // Select states based on user input
+            //n = state_choice.length
+            //first_value = state_choice[n-1]
+            // var cdf = df.filter(item => {
+            //     x = item.flow_type === "Inflow";
+            //     return x;
+            //   }); 
+            //console.log(n);
+            //console.log(first_value);
 
+            
+            data = hierarchy(df);  
             //console.log(data)
             // //convert typeof import to array
             // data.forEach(item =>{
@@ -40,7 +58,7 @@ Shiny.addCustomMessageHandler("exact_match",
             colorout = "#182856";
             colornone = "#bbb";
 
-            var diameter = number_of_components * 3.6; //approximately 1300
+            var diameter = 1200; //approximately 1300, USE "NUMBER OF COMPONENTS" for dyanmic size
             var radius = diameter / 2;
             var innerRadius = radius - 300;
 
@@ -55,7 +73,7 @@ Shiny.addCustomMessageHandler("exact_match",
             const root = tree(bilink(d3.hierarchy(data)
                 .sort((a, b) => d3.ascending(a.height, b.height) || d3.ascending(a.data.name, b.data.name))));
 
-            var svg = d3.select("#interstate_container").append("svg")
+            var svg = d3.select("#interstate_container2").append("svg")
                 .attr("width", diameter + 400)
                 .attr("height", diameter + 400)
                 .append("g")
@@ -81,7 +99,7 @@ Shiny.addCustomMessageHandler("exact_match",
 
             node = svg.append("g")
                 .attr("font-family", "arial")
-                .attr("font-size", 8)
+                .attr("font-size", 12)
                 .selectAll("g")
                 .data(root.leaves())
                 .join("g")
@@ -117,6 +135,7 @@ Shiny.addCustomMessageHandler("exact_match",
 
             function overed(d) {
                 link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
+                //link.style("stroke-width", 10); //line thickness
                 d3.select(this).attr("font-weight", "bold");
                 d3.select(this).attr("fill", "#777777"); //on hover in, it darkens selected node
 
@@ -170,7 +189,7 @@ Shiny.addCustomMessageHandler("exact_match",
             }
 
             function autoscroll() {
-                d3.select("#interstate_container")
+                d3.select("#interstate_container2")
                     .transition()
                     .duration(1000)
                     .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight) / 2 + 50));
@@ -184,9 +203,9 @@ Shiny.addCustomMessageHandler("exact_match",
 
             }
 
-        });
+        })
 
-    })
+
 
 
 
