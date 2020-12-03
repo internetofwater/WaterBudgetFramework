@@ -1,7 +1,6 @@
-# All code chunks can be expanded using ALT+O or collapsed using CTRL+ALT+O
+# All code chunks can be expanded using ALT+O or collapsed using SHIFT+ALT+O
 # Code structure is provided in 'App code structure.docx' file
 # The code is divided into 2 main parts: Data processing & Shiny app development
-
 #-------------------------------------------------------------------------------
 
 #*******************************#
@@ -19,35 +18,35 @@ library(d3r)
 
 # --------------- 2. Loading CSV files --------------- # ####
 
-# ----- 2.1. Importing CSVs for Component tab
+# ----- 2.1. Importing CSVs for Component tab ----- #
 df_component_full <- read_csv("www/df_component_full.csv") #dataframe for component summary (including URIs)
 df_component_flow <- read_csv("www/df_component_flow.csv") #dataframe for component summary including flow and interstate information
 df_component <- read_csv("www/df_component.csv") #dataframe for d3 chart on component tab
 
-# ----- 2.2. Importing CSVs for State tab
+# ----- 2.2. Importing CSVs for State tab ----- #
 df_state <- read_csv("www/df_state.csv")
 
-# ----- 2.3. Importing CSVs for Data Source tab
+# ----- 2.3. Importing CSVs for Data Source tab ----- #
 df_data_source <- read_csv("www/df_data_source.csv")
 
-# ----- 2.4. Importing CSVs for Data Source tab
+# ----- 2.4. Importing CSVs for Data Source tab ----- #
 df_exact_match <- read_csv("www/df_exact_match.csv") #dataframe for exact matches
 df_subcomponent <- read_csv("www/df_subcomponent.csv") #dataframe for subcomponents
 df_partial_subcomponent <- read_csv("www/df_partial_subcomponent.csv") #dataframe for partial subcomponents
 
 # --------------- 3. Input choices --------------- # ####
 
-# ----- 3.1. Component tab 
+# ----- 3.1. Component tab ----- #
 component_choices <- c(unique(df_component_full$cL))
 
-# ----- 3.2. State tab
+# ----- 3.2. State tab ----- #
 state_choices <- c("CA","CO","NM","UT","WY")
 
-# ----- 3.3. Data Source tab
+# ----- 3.3. Data Source tab ----- #
 data_source_choices <- c(unique(df_state$dsL)) #select unique data sources from dsL column
 data_source_choices <- sort(data_source_choices[-1]) #remove NA & sort alphabetically
 
-# ----- 3.4. Interstate tab
+# ----- 3.4. Interstate tab ----- #
 interstate_choices <- c("Exact Match", "Subcomponent", "Partial Subcomponent") #possible interstate relatiosnhips between components
 interstate_state_choices <- c("SELECT ALL", "CLEAR ALL", "CA","CO","NM","UT","WY") #state choices
 # Following choices do not really matter because they will subset based on input state choices
@@ -66,7 +65,7 @@ flow_sink_choices <- c("All", "hello")
 ui <- fluidPage(id = "page", theme = "styles.css",
     useShinyjs(),
     
-    # ----- 4.1. Locate supporting files ----- # ####
+    # ----- 4.1. Locate supporting files ----- #
     
     tags$head(tags$link(href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap", #add custom font
                         rel="stylesheet"),
@@ -90,9 +89,9 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                theme = "styles.css", #applying custom CSS from styles.css
                fluid = TRUE, 
 
-      # ----- 4.2. Tabs ---- # ####
+      # ----- 4.2. Tabs ---- #
       
-      # ----- 1.2.1. Tab - Home - Begin
+      # ----- 4.2.1. Tab - Home - Begin
       
       # Creating welcome banner
       tabPanel(title = "Home",
@@ -163,18 +162,18 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                  ),
           ),
           
-      # -X-X-X- Tab - Home - End -X-X-X- #
+      # -X-X-X- Tab - Home - End -X-X-X- 
 
       
-      # ----- 1.2.2. Tab - Component - Begin
+      # ----- 4.2.2. Tab - Component - Begin
       
       tabPanel(title = "Component",
         tags$div(class = "banner", 
                  tags$img(class = "banner-img-component",
-                          src = "image_1.jpg"),
+                          src = "image_1.jpg"), #tab banner image
                  tags$div(class = "banner-text",
-                          tags$p(class = "h1", "Search by component"),
-                          tags$p(class = "h3", "Explore the profile of a water budget component")
+                          tags$p(class = "h1", "Search by component"), #tab banner title
+                          tags$p(class = "h3", "Explore the profile of a water budget component") #tab banner sub-title
                           )),
         column(width = 12, 
                column(width = 12,
@@ -186,20 +185,20 @@ ui <- fluidPage(id = "page", theme = "styles.css",
         ),
         column(width = 12,
           column(width = 3,
-                 selectInput(inputId = "states1",
+                 selectInput(inputId = "states1", #users choose a state
                              label = "Select state", 
-                             choices = state_choices)),
+                             choices = state_choices)), 
           column(width = 3,
-                 selectInput(inputId = "components",
+                 selectInput(inputId = "components", #users choose a component
                              label = "Select component",
-                             choices = component_choices)),
+                             choices = component_choices)), 
           column(width = 2,
-                 actionButton(inputId = "runButton1",
+                 actionButton(inputId = "runButton1", #button to see output
                               label = "",
-                              icon = icon("check"))
+                              icon = icon("check")) 
                  )),
         tags$body(hidden(
-                  tags$div(id = "component_summary",
+                  tags$div(id = "component_summary", #div for a component's summary info
                            style = "color:#777777",
                            tags$h3(tags$b(htmlOutput("component_title"))),
                            tags$p(htmlOutput("flow_source")),
@@ -213,22 +212,24 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                          parameters and data sources 
                                          are presented below"))
                            )),
-                  tags$div(id = "component_container")) #div for D3.js chart
+                  tags$div(id = "component_container")) #div containing D3 visualization from JavaScript code
       ),
       
-      # -X-X-X- Tab - Component - End -X-X-X- #
+      # -X-X-X- Tab - Component - End -X-X-X- 
       
-      # ----- 1.2.3. Tab - Component - Begin
+      # ----- 4.2.3. Tab - Component - Begin
+      
       tabPanel(title = "State",
         tags$div(class = "banner", 
-                 tags$img(class = "banner-img-state",
+                 tags$img(class = "banner-img-state", #tab banner image
                           src = "image_3.jpg"),
                  tags$div(class = "banner-text",
-                          tags$p(class = "h1", "Search by state"),
-                          tags$p(class = "h3", "Explore the water budget framework of a state")
+                          tags$p(class = "h1", "Search by state"), #tab banner title
+                          tags$p(class = "h3", "Explore the water budget framework of a state") #tab banner subt-title
                         )),
         column(width = 12, 
                column(width = 12,
+                      # User instructions
                       tags$p("1. Select a state to interact with its water budget framework"),
                       tags$p('2. Click on the button to scroll to the parent node representing the state selected'),
                       tags$p("3. Click on the colored nodes to explore the state's water budget components and the associated estimation method(s), parameter(s), and data source(s), in that order")
@@ -236,135 +237,143 @@ ui <- fluidPage(id = "page", theme = "styles.css",
         ),
         column(width = 12,
           column(width = 3,
-                 selectInput(inputId = "states2",
+                 selectInput(inputId = "states2", #users input state choice
                              label = "Select state",
-                             choices = state_choices)), #defined above UI
+                             choices = state_choices)), 
           column(width = 2, 
-               actionButton(inputId = "runButton2", 
+               actionButton(inputId = "runButton2", #button to see output
                             label = "",
                             icon = icon("check"))
                )),
-        tags$body(tags$div(id = "state_sticky"),
-                  tags$div(id = "state_container"))
+        tags$body(tags$div(id = "state_sticky"), #sticky div to show headers of each new level of expandible D3 chart
+                  tags$div(id = "state_container")) #div containing D3 visualization
     ),
-# ------- Tab - State - End ------- #
+    
+    # -X-X-X- Tab - State - End -X-X-X- 
 
-# ------ Tab - Data Sources (reverse chart) - Begin ------ #
-        tabPanel(title = "Data Source",
-                 tags$div(class = "banner", 
-                          tags$img(class = "banner-img-state",
-                                   src = "image_4.jpg"),
-                          tags$div(class = "banner-text",
-                                   tags$p(class = "h1", "Search by data source"),
-                                   tags$p(class = "h3", "Explore the parameters, estimation methods and components used by a data source")
-                          )),
-                 column(width = 12, 
-                        column(width = 12,
-                               tags$p("1. Select a data source that contributed to a water budget"),
-                               tags$p('2. Click on the button to see parameters defined in the data source'),
-                               tags$p("3. Click on the colored nodes to explore the data source and the associated parameter(s), estimation method(s), and component(s), in that order")
-                        )
-                 ),
-                 column(width = 12,
-                        column(width = 3,
-                               selectInput(inputId = "data_source",
-                                           label = "Select data source",
-                                           selected = data_source_choices[2],
-                                           choices = data_source_choices)), 
-                        column(width = 2, 
-                               actionButton(inputId = "runButton3", 
-                                            label = "",
-                                            icon = icon("check"))
-                        )),
-                 tags$body(tags$div(id = "data_source_sticky"),
-                           tags$div(id = "data_source_container"))
-        ),
-# ------- Tab - Data Sources (reverse chart) - End ------- #
+    # ------ 4.2.4. Tab - Data Source - Begin 
+    
+    tabPanel(title = "Data Source",
+             tags$div(class = "banner", 
+                      tags$img(class = "banner-img-state", #tab banner image
+                               src = "image_4.jpg"),
+                      tags$div(class = "banner-text",
+                               tags$p(class = "h1", "Search by data source"), #tab banner title
+                               tags$p(class = "h3", "Explore the parameters, estimation methods and components used by a data source") #tab banner subtitle
+                      )),
+             column(width = 12, 
+                    column(width = 12,
+                           # User intructions
+                           tags$p("1. Select a data source that contributed to a water budget"),
+                           tags$p('2. Click on the button to see parameters defined in the data source'),
+                           tags$p("3. Click on the colored nodes to explore the data source and the associated parameter(s), estimation method(s), and component(s), in that order")
+                    )
+             ),
+             column(width = 12,
+                    column(width = 3,
+                           selectInput(inputId = "data_source",
+                                       label = "Select data source", #users select a data source 
+                                       selected = data_source_choices[2], #default choice
+                                       choices = data_source_choices)), 
+                    column(width = 2, 
+                           actionButton(inputId = "runButton3", #button to see output
+                                        label = "",
+                                        icon = icon("check"))
+                    )),
+             tags$body(tags$div(id = "data_source_sticky"), #sticky div to show headers of each new level of expandible D3 chart
+                       tags$div(id = "data_source_container")) #div containing D3 visualization
+    ),
+    
+    # -X-X-X- Tab - Data Source - End -X-X-X- 
 
 
-# ------- Tab - Interstate - Begin ------- #
-                tabPanel(title = "Interstate",
-                         tags$div(class = "banner", 
-                                  tags$img(class = "banner-img-state",
-                                           src = "image_7.jpg"),
-                                  tags$div(class = "banner-text",
-                                           tags$p(class = "h1-interstate", "Search interstate relationships"),
-                                           tags$p(class = "h3", "Explore the relationships among water budget components 
-                                                          within and among states")
-                                  )),
-                         column(width = 12, 
-                                column(width = 12,
-                                       tags$b("See All Components", style = "font-size: 130%"),
-                                       tags$p(" "),
-                                       tags$p("1. Choose the type of interstate relationship among water budget components"),
-                                       tags$p('2. Click on the button to include components with no relationships as well'),
-                                       tags$p('3. Hover over a component to explore relationships')
-                                       )
-                         ),
-                         column(width = 12,
-                                column(width = 3,
-                                       selectInput(inputId = "interstate2",
-                                                   label = "Select interstate relationship",
-                                                   choices = interstate_choices)),
-                                column(width = 2,
-                                       actionButton(inputId = "runButton4.1",
-                                                    label = "",
-                                                    icon = icon("check")
-                                       ))
-                                ), #defined above UI
-                         
-                         column(width = 12, 
-                                column(width = 12,
-                                       tags$b("See Selected Components", style = "font-size: 130%"),
-                                       tags$p(" "),
-                                       tags$p('1. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
-                                       tags$p('2. Select the states of interest'),
-                                       tags$p('3. Filter the components by flow type, flow source and flow sink'),
-                                       tags$p('4. Click on the button to see the relationships of selected components'),
-                                       tags$p('5. Hover over a component to explore relationships')
-                                       )
-                                ),
-                         column(width = 12,
-                                column(width = 3,
-                                       selectInput(inputId = "interstate_states2",
-                                                   label = "Select states",
-                                                   choices = interstate_state_choices,
-                                                   multiple = TRUE,
-                                                   selected = "SELECT ALL")),
-                                column(width = 3,
-                                       selectInput(inputId = "interstate_flowType",
-                                                   label = "Select flow type", 
-                                                   choices = flow_type_choices, 
-                                                   multiple = TRUE,
-                                                   selected = "All"))
-                                ),
-                         column(width = 12,
-                                column(width = 3,
-                                       selectInput(inputId = "interstate_flowSource",
-                                                   label = "Select flow source",
-                                                   choices = flow_source_choices,
-                                                   multiple = TRUE,
-                                                   selected = "All")), 
-                                column(width = 3,
-                                       selectInput(inputId = "interstate_flowSink",
-                                                   label = "Select flow sink",
-                                                   choices = flow_sink_choices,
-                                                   multiple = TRUE,
-                                                   selected = "All")),
-                                column(width = 2, 
-                                       actionButton(inputId = "runButton4.2", 
-                                                    label = "",
-                                                    icon = icon("check")))
-                                ),
-                         tags$body(tags$div(id = "interstate_container2"))
-),
-# ------- Tab - Interstate - End ------- #
+    # ------- 4.2.5 Tab - Interstate - Begin 
+    tabPanel(title = "Interstate",
+             tags$div(class = "banner", 
+                      tags$img(class = "banner-img-state", #tab banner image
+                               src = "image_7.jpg"),
+                      tags$div(class = "banner-text",
+                               tags$p(class = "h1-interstate", "Search interstate relationships"), #tab banner title
+                               tags$p(class = "h3", "Explore the relationships among water budget components 
+                                              within and among states")#tab banner sub-title
+                      )),
+             column(width = 12, 
+                    column(width = 12,
+                           tags$b("See All Components", style = "font-size: 130%"), #title for 'See all Components'
+                           tags$p(" "),
+                           # User instructions to see all components
+                           tags$p("1. Choose the type of interstate relationship among water budget components"),
+                           tags$p('2. Click on the button to include components with no relationships as well'),
+                           tags$p('3. Hover over a component to explore relationships')
+                           )
+             ),
+             column(width = 12,
+                    column(width = 3,
+                           selectInput(inputId = "interstate2", #users select an interstate relationship
+                                       label = "Select interstate relationship",
+                                       choices = interstate_choices)),
+                    column(width = 2,
+                           actionButton(inputId = "runButton4.1", #button to see D3 output
+                                        label = "",
+                                        icon = icon("check")
+                           ))
+                    ), #defined above UI
+             
+             column(width = 12, 
+                    column(width = 12,
+                           tags$b("See Selected Components", style = "font-size: 130%"),
+                           tags$p(" "),
+                           # User instructions to see selected components
+                           tags$p('1. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
+                           tags$p('2. Select the states of interest'),
+                           tags$p('3. Filter the components by flow type, flow source and flow sink'),
+                           tags$p('4. Click on the button to see the relationships of selected components'),
+                           tags$p('5. Hover over a component to explore relationships')
+                           )
+                    ),
+             column(width = 12,
+                    column(width = 3,
+                           selectInput(inputId = "interstate_states2", #users choose a state
+                                       label = "Select states",
+                                       choices = interstate_state_choices,
+                                       multiple = TRUE,
+                                       selected = "SELECT ALL")),
+                    column(width = 3,
+                           selectInput(inputId = "interstate_flowType", #users choose components by specific flow type
+                                       label = "Select flow type", 
+                                       choices = flow_type_choices, 
+                                       multiple = TRUE,
+                                       selected = "All"))
+                    ),
+             column(width = 12,
+                    column(width = 3,
+                           selectInput(inputId = "interstate_flowSource", #users choose components by specific flow source
+                                       label = "Select flow source",
+                                       choices = flow_source_choices,
+                                       multiple = TRUE,
+                                       selected = "All")), 
+                    column(width = 3,
+                           selectInput(inputId = "interstate_flowSink", #users choose components by specific flow sink
+                                       label = "Select flow sink",
+                                       choices = flow_sink_choices,
+                                       multiple = TRUE,
+                                       selected = "All")),
+                    column(width = 2, 
+                           actionButton(inputId = "runButton4.2", #button to see output
+                                        label = "",
+                                        icon = icon("check")))
+                    ),
+             tags$body(tags$div(id = "interstate_container2")) #div containing the D3 visualization
+    ),
+    
+    # -X-X-X- Tab - Interstate - End -X-X-X-
 
 
       navbarMenu(title = "About",
                tabPanel(title = "Other stuff"))
   ))
 
+# --------------- 5. Server --------------- # ####
 
 server <- function(input, output, session){
   
