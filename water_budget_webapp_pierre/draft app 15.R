@@ -288,6 +288,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
 
     # ------- 4.2.5 Tab - Interstate - Begin 
+    
     tabPanel(title = "Interstate",
              tags$div(class = "banner", 
                       tags$img(class = "banner-img-state", #tab banner image
@@ -377,38 +378,48 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
 server <- function(input, output, session){
   
+  # ---- 5.1. Component ---- #
   
-# Update component choices based on states you select
+  # ---- 5.1.1. Update component choices based on user-selected states 
+  
   observe({
-    choices_components <- df_component %>%
-      filter(jL %in% input$states1)
-    choices_components <- c(unique(choices_components$cL))
     
+    # Filter dataframe by state selected by user and store in a separate dataframe 
+    choices_components <- df_component %>%
+      filter(jL %in% input$states1) 
+    
+    # Select rows having unique components
+    choices_components <- c(unique(choices_components$cL)) 
+    
+    # Update input choices for components
     updateSelectInput(session, "components",
                       choices = choices_components)
   })
   
-# Summary of a component on Component tab
+  # ---- 5.1.2. Summary of a component on Component tab
+  
   observeEvent(input$runButton1, {
-    # Activate summary div
+    
+    # Activate div containig summary information of a component
     show("component_summary")
     
-    # Summary URIs
+    # Retaining columns only containing URIs
     df_uri <- df_component_full %>%
-      filter(jL %in% input$states1) %>%
-      filter(cL %in% input$components) %>%
+      filter(jL %in% input$states1) %>% #filter by user-selected state
+      filter(cL %in% input$components) %>% #filter by user-selected component
       select(-c(1,2,3,4,6,8,10,12,14)) %>% #dropping jL, cL, c columns and retaining uri columns
-      as.data.frame()
+      as.data.frame() #convert to dataframe
     
-    # Extracting component (title) URI
+    # Extracting component URI for the title of the Summary div
     uri_title <- df_component_full %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
-      .$c # selecting component
+      .$c #selecting component
     
-    uri_title <- uri_title[1]
+    # Selecting column with component name
+    uri_title <- uri_title[1] 
     
-    #Summary information 
+    # Storing summary information in a separate dataframe except state and component name 
     component_info <- df_component_flow %>%
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
@@ -419,16 +430,17 @@ server <- function(input, output, session){
     uri_properties <- c("flow_source", "flow_sink", "flow_type",
                         "subcomponent", "p_subcomponent", "exact_match")
     
+    # Property names attached with term "uri"
     uri_list <- paste("uri", uri_properties, sep="_")
     
     # SUMMARY
-    # Property names based on textOutput
+    # Property names based on htmlOutput (from section 4.2.2.)
     summary_properties <- c("flow_source", "flow_sink", "flow_type",
                     "subcomponent", "p_subcomponent","exact_match")
     
     # Create intermediary objects to hold unique strings from dataframe "component_info"
-    # multiple values for a property are separated by commas
-    if (input$states1 == "NM"){
+    # Multiple values for a property are separated by commas
+    if (input$states1 == "NM"){ #different for NM because in graph database it is written as NMSOE not just NM
       summary_title <- paste(input$components, input$states1, 
                              sep = "-")
       summary_title <- paste0(summary_title, "OSE")
@@ -436,9 +448,11 @@ server <- function(input, output, session){
       summary_title <- paste(input$components, input$states1, 
                              sep = "-")
     }
-
+    
+    # Concatenating "summary" string to property names separated by "_"
     summary_list <- paste("summary", summary_properties, sep="_")
     
+    # Iterate through each property defined above
     for (i in 1:length(summary_properties)) {
       assign(paste(summary_list[i]), 
              paste(unlist(unique(component_info[i]), use.names = FALSE), collapse=", "))
@@ -456,8 +470,8 @@ server <- function(input, output, session){
     
     # if an attribute has multiple values, it would add 1 hyperlink
     # to all values
-    # so first we split each character in a string and see if it has a comma
-    # if it does then we split it by comma and store each value as a list in
+    # so first we split each character in a string and see if it is a comma
+    # if it is then we split it by comma and store each value as a list in
     # a signle variable
     # then we run two different render options depending if a field has  a
     # single value or multiple value
@@ -483,23 +497,38 @@ server <- function(input, output, session){
                                                     get(summary_list[i]), "</a>"))
       }
     })
-})
-
-# Chart by component on Component tab
+  })
+  
+  # ---- 5.1.3. Framework chart of a selected component on Component tab 
+  
   observeEvent(input$runButton1, 
                autoDestroy = FALSE, {
     selection_df_1 <- df_component %>%
+      # Filter dataframe by user inputs
       filter(jL %in% input$states1) %>%
       filter(cL %in% input$components) %>%
       as.data.frame()
+    
+    # Dropping column containing state and component names
     selection_df_1 <- select(selection_df_1, -jL, -cL)
+    
+    # Construct hierarchical JSON
     selection_json_1 <- d3_nest(data = selection_df_1, root = "")
+    
+    # Count number of leaf nodes, this will help size the div dyanamically
+    # In other words, a component with fewer number of leaf nodes (data sources)
+    # will be encapsulated within a smaller rectangular div.
     leaf_nodes_1 <- nrow(selection_df_1)
+    
+    # Send number of leaf node to JavaScript file creating the hierarchical d3 chart
     session$sendCustomMessage(type = "component_height", leaf_nodes_1)
+    
+    # Send JSON to JavaScript file as well
     session$sendCustomMessage(type = "component_json", selection_json_1)
   })
   
-# State charts on State tabs
+  # ---- 5.2. State ---- #
+  
   observeEvent(input$runButton2, {
     selection_df_2 <- df_state %>%
       filter(jL %in% input$states2) %>%
@@ -511,7 +540,8 @@ server <- function(input, output, session){
     session$sendCustomMessage(type = "state_json", selection_json_2)
   })
   
-# Data source chart
+  # ---- 5.3. Data Source ---- #
+
   observeEvent(input$runButton3, {
     selection_df_3 <- df_data_source %>%
       filter(dsL %in% input$data_source) %>%
