@@ -38,12 +38,12 @@ function (message) {
       colorout = "#00AFA8";
       colornone = "#bbb";
 
-      var diameter = 1200 //number_of_components * 25; //approximately 960
+      var diameter = 1000 //number_of_components * 25; //approximately 960
       var radius = diameter / 2;
       var innerRadius = radius - 300;
 
       line = d3.lineRadial()
-          .curve(d3.curveBundle.beta(0.85))
+          .curve(d3.curveBundle.beta(0.95))
           .radius(d => d.y)
           .angle(d => d.x)
 
@@ -100,16 +100,16 @@ function (message) {
           .on("mouseout", outed)
           .attr('cursor', 'pointer')
           .call(text => text.append("title").text(d => `${id(d)}
-b. Has ${d.outgoing.length} partial subcomponents (in green)
-c. Is partial subcomponent of ${d.incoming.length} (in red)`));
+b. Has partial subcomponents (in green)
+c. Is partial subcomponent of (in red)`)); // count by ${d.outgoing.length} and ${d.incoming.length} for dynamic counting
 
       link = svg.append("g")
-          .attr("stroke", "lightgray")
+          .attr("stroke", "#ececec")
           .attr("fill", "none")
           .selectAll("path")
           .data(root.leaves().flatMap(leaf => leaf.outgoing))
           .join("path")
-          .style("mix-blend-mode", "multiply") //what to do if multiple path lines overlaps
+          .style("mix-blend-mode", null) //what to do if multiple path lines overlaps, "multiply" or "null" are 2 good options
           .attr("d", ([i, o]) => line(i.path(o)))
           .each(function (d) { d.path = this; });
 
@@ -125,13 +125,13 @@ c. Is partial subcomponent of ${d.incoming.length} (in red)`));
       }
 
       function outed(d) { // set colornone to restore default gray text color after hover out
-          link.style("mix-blend-mode", "multiply");
+          link.style("mix-blend-mode", null);
           d3.select(this).attr("font-weight", "bold");
           d3.select(this).attr("fill", colornone); //on hover out, restores text color of selected node
 
-          d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", "lightgray");
+          d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", "#ececec");
           d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
-          d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", "lightgray");
+          d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", "#ececec");
           d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
       }
 

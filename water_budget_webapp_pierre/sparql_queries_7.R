@@ -1,3 +1,5 @@
+# Link for graph database https://terminology.internetofwater.app
+
 # Import packages
 library(tidyverse)
 library(rdflib)
@@ -56,6 +58,71 @@ df_component_flow <- df_component_full[c(1,2,(seq(4,length(df_component_full), 2
 write_csv(df_component_full, "www/df_component_full.csv")
 write_csv(df_component_flow, "www/df_component_flow.csv")
 
+#----------------------------REMOVER THIS LATER-------------------------------#
+query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    
+SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
+    ?c wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    ?c rdf:type wb:Component.
+    
+    OPTIONAL {
+    ?c wb:hasEstimationMethod ?em.
+    
+    ?em wb:usedBy ?j.
+    ?em rdf:type wb:EstimationMethod.
+    ?em rdfs:label ?emL.
+    ?em wb:hasParameter ?p.
+    
+    ?p wb:usedBy ?j.
+    ?p rdf:type wb:Parameter.
+    ?p rdfs:label ?pL.
+    ?p wb:hasDataSource ?ds.
+    
+    ?ds wb:usedBy ?j.
+    ?ds rdf:type wb:DataSource.
+    ?ds rdfs:label ?dsL.
+    }
+}
+"
+results_state <- rdf_query(file, query_state)
+#----------------------------REMOVER THIS LATER (above)-------------------------------#
+
+#----------------------------REMOVER THIS LATER-------------------------------#
+query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    
+SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
+    ?c wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    ?c rdf:type wb:Component.
+    
+    OPTIONAL {
+#    	?em wb:usedBy ?j.
+      ?c wb:hasEstimationMethod ?em.
+    
+    	?em rdfs:label ?emL.
+#      ?p wb:usedBy ?j.
+    	?em wb:hasParameter ?p.
+    
+    	?p rdfs:label ?pL.
+    	?ds wb:usedBy ?j.
+      ?p wb:hasDataSource ?ds.
+    
+    	?ds rdfs:label ?dsL.
+    }
+} 
+"
+results_state <- rdf_query(file, query_state)
+#----------------------------REMOVER THIS LATER (above)-------------------------------#
+
 # ---- 2. creating dataframe state-wise info ---- #
 query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -70,10 +137,13 @@ SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
     
     OPTIONAL {
     ?c wb:hasEstimationMethod ?em.
+
     ?em rdfs:label ?emL.
     ?em wb:hasParameter ?p.
+
     ?p rdfs:label ?pL.
     ?p wb:hasDataSource ?ds.
+
     ?ds rdfs:label ?dsL.
     }
 }
