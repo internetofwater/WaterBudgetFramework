@@ -50,6 +50,8 @@ SELECT ?jL ?cL ?c ?fsourceL ?fsource ?fsinkL ?fsink ?ftypeL ?ftype ?scL ?sc ?psc
     }
 }
 "
+
+# Submit query to get a dataframe
 df_component_full <- submit_sparql(query_component,access_options=file)
 
 # Assign NA to empty values
@@ -80,7 +82,7 @@ index_no_state <- which(!grepl("-[A-Z]*", df_component_full$exmL), arr.ind=TRUE)
 # Remove those rows
 df_component_full <- df_component_full[-c(index_no_state),]
 
-# Rearrange columns
+# Sort column values in ascending order
 df_component_full <- arrange(df_component_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
 
 # Replace NMSOE for New Mexico to NM
@@ -105,8 +107,9 @@ query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX onto: <http://www.ontotext.com/>
     
-SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL ?typeL WHERE {
+SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -118,7 +121,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL ?typeL WHERE {
     ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     ?em wb:hasParameter ?p.
-    ?em wb:usedBy ?state.
+    ?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     
     ?p rdf:type wb:Parameter.
     ?p rdfs:label ?pL.
@@ -132,19 +135,21 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL ?typeL WHERE {
     ?state rdfs:label ?stateL.
     }
 }
-" 
+"
 
+# Submit query to get a dataframe
 df_state <- submit_sparql(query_state,access_options=file)
 
 # Assign NA to empty values
 df_state[df_state == ""] <- NA
 
-# Remove rows with components not having state name at the end "-__"
-df_state <- df_state[grepl("-[A-Z]*", df_state$cL),]
+# Check if the jurisdiction is same as the state usedBy property
+# get index for the rows where usedBy state is not same as jurisdiction 
+index <- which(!df_state$jL == df_state$stateL)
+df_state <- df_state[-c(index), ]
 
-# Parameters (pL) is also showing components for some reason, so we'll remove those rows
-index <- which(grepl("-[A-Z][A-Z]", df_state$pL), arr.ind=TRUE)
-df_state$pl2 <- NA   #################################################################
+# Drop column stateL
+df_state <- df_state[,-6]
 
 # Remove components usedBy river basins
 df_state <- df_state[(df_state$jL %in% c("CA", "CO", "NM", "UT", "WY")),]
@@ -154,30 +159,31 @@ df_state <- df_state[grep(".-CA|.-CO|.-NMOSE|.-UT|.-WY", df_state$cL),] #Exclude
 df_data_source <- select(df_state, -jL)
 df_data_source <- df_data_source[,c(4,3,2,1)]
 df_data_source$dsL <- gsub(",","", df_data_source$dsL)
-write_csv(df_data_source, "www/df_data_source.csv")
+write_csv(df_data_source, "www/df_data_source2.csv")
 
 # Component tab
 df_component <- arrange(df_state, jL, cL, emL, pL, dsL) # each column in ascending alphabetical order
 df_component$cL <- gsub("-[A-Z][A-Z][A-Z][A-Z][A-Z]","", df_component$cL) #remove "-NMOSE" for New mexico in output
 df_component$cL <- gsub("-[A-Z][A-Z]","", df_component$cL) # remove state initials from components
 df_component$dsL <- gsub(",","", df_component$dsL)
-write_csv(df_component, "www/df_component.csv")
+write_csv(df_component, "www/df_component2.csv")
 
 # State tab
 df_state <- arrange(df_state, jL, cL, emL, pL, dsL) # each column in ascending alphabetical order
 df_state$cL <- gsub("-[A-Z][A-Z][A-Z][A-Z][A-Z]","", df_state$cL)
 df_state$cL <- gsub("-[A-Z][A-Z]","", df_state$cL) # remove state initials from components
 df_state$dsL <- gsub(",","", df_state$dsL)
-write_csv(df_state, "www/df_state.csv")
+write_csv(df_state, "www/df_state2.csv")
 
 
-# Everything (including url)
+# Everything (including uri & excluding exact matches and subcomponent stuff)
 query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX onto: <http://www.ontotext.com/>
 
-SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?type WHERE {
+SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?stateL FROM onto:explicit WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -185,24 +191,48 @@ SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?type WHERE {
     
     OPTIONAL {
     ?c wb:hasEstimationMethod ?em.
+    
+    #?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     ?em wb:hasParameter ?p.
+    #?em wb:usedBy ?state. #this line reduced the number of rows by 50
+    
+    #?p rdf:type wb:Parameter.
     ?p rdfs:label ?pL.
     ?p wb:hasDataSource ?ds.
+    #?p wb:usedBy ?state.
+    
+    #?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
+    ?ds wb:usedBy ?state.
+    
+    ?state rdfs:label ?stateL.
     }
 }
 "
 
-res <- rdf_query(file, query)
+# Submit query to get a dataframe
+df <- submit_sparql(query,access_options=file)
 
-# Exporting as dataframe
-df <- as.data.frame(res)
-#df <- df[which(df$type == 'Component'),]
-df <- arrange(df, cL, emL, pL, dsL) # each column in ascending order
-#df <- select(df, -type)
+# Assign NA to empty values
+df[df == ""] <- NA
+
+# Check if the jurisdiction is same as the state usedBy property
+# get index for the rows where usedBy state is not same as jurisdiction 
+index <- which(!df$jL == df$stateL)
+df <- df[-c(index), ]
+
+# Drop column stateL
+df_state <- df_state[,-10]
+
+# Sort columns in ascending order
+df <- arrange(df, cL, emL, pL, dsL) 
+
+# Substitute comma with empty character
 df$dsL <- gsub(",","", df$dsL)
-write.table(df, file = "./www/hyperlink.csv", sep = ",",
+
+# Export as a table
+write.table(df, file = "./www/hyperlink2.csv", sep = ",",
             qmethod = "double", quote=FALSE, 
             row.name = FALSE)
 
