@@ -1,10 +1,11 @@
 # Link for graph database https://terminology.internetofwater.app
-devtools::install_github("vsenderov/rdf4r")
+
 # Import packages
 library(tidyverse)
 library(rdflib)
 library(jsonlite)
 library(d3r)
+#devtools::install_github("vsenderov/rdf4r")
 library(rdf4r)
 
 # Load and parse TTL file from graphDB
@@ -58,96 +59,46 @@ df_component_full[df_component_full == ""] <- NA
 df_component_full <- df_component_full[grepl("-[A-Z]*", df_component_full$cL),]
 
 # Similarly remove rows with subcomponents, partial subcomponents and exact matches without state names at the end
-# for subcomponents
-for (i in 1:nrow(df_component_full)){
-  # Retain rows with NAs and remove others with names other than the ones that have state at the end
-  if (!is.na(df_component_full$scL[i])){
-    df_component_full <- df_component_full[-i] #drop the rows that are not NA (checking)(NOT WORKING)
-  }
-}
 
-# for subcomponents
-df_component_full <- df_component_full[grepl("-[A-Z]*", df_component_full$scL),]
+# For subcomponents
+# get row number for which subcomponent are not NAs
+# index_NA <- which(!is.na(df_component_full$scL), arr.ind=TRUE)
+# get row numbers for which subcomponents DO NOT have a state at the end of their name
+index_no_state <- which(!grepl("-[A-Z]*", df_component_full$scL), arr.ind=TRUE)
+# Remove those rows
+df_component_full <- df_component_full[-c(index_no_state),]
 
-# for partial subcomponents
-df_component_full <- df_component_full[grepl("-[A-Z]*", df_component_full$pscL),]
+# For partial subcomponents
+# get row numbers for which parrtial subcomponents DO NOT have a state at the end of their name
+index_no_state <- which(!grepl("-[A-Z]*", df_component_full$pscL), arr.ind=TRUE)
+# Remove those rows
+df_component_full <- df_component_full[-c(index_no_state),]
 
-# for exact matches
-df_component_full <- df_component_full[grepl("-[A-Z]*", df_component_full$exmL),]
+# For exact matches
+# get row numbers for which exact matches DO NOT have a state at the end of their name
+index_no_state <- which(!grepl("-[A-Z]*", df_component_full$exmL), arr.ind=TRUE)
+# Remove those rows
+df_component_full <- df_component_full[-c(index_no_state),]
 
-
+# Rearrange columns
 df_component_full <- arrange(df_component_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
+
+# Replace NMSOE for New Mexico to NM
 df_component_full$cL <- gsub("-NMOSE","-NM", df_component_full$cL)
+
+# Only keep the rows that are associated to the 5 US states (excluding Australia and US river basins)
 df_component_full <- df_component_full[grep(".-CA|.-CO|.-NM|.-UT|.-WY", df_component_full$cL),] 
+
+# Remove state names from components
 df_component_full$cL <- gsub("-[A-Z][A-Z]","", df_component_full$cL)
+
+# Remove URIs and store in a new dataframe
 df_component_flow <- df_component_full[c(1,2,(seq(4,length(df_component_full), 2)))]
-write_csv(df_component_full, "www/df_component_full.csv")
-write_csv(df_component_flow, "www/df_component_flow.csv")
 
-#----------------------------REMOVER THIS LATER-------------------------------#
-query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    
-SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
-    ?c wb:usedBy ?j.
-    ?j rdfs:label ?jL.
-    ?c rdfs:label ?cL.
-    ?c rdf:type wb:Component.
-    
-    OPTIONAL {
-    ?c wb:hasEstimationMethod ?em.
-    
-    ?em wb:usedBy ?j.
-    ?em rdf:type wb:EstimationMethod.
-    ?em rdfs:label ?emL.
-    ?em wb:hasParameter ?p.
-    
-    ?p wb:usedBy ?j.
-    ?p rdf:type wb:Parameter.
-    ?p rdfs:label ?pL.
-    ?p wb:hasDataSource ?ds.
-    
-    ?ds wb:usedBy ?j.
-    ?ds rdf:type wb:DataSource.
-    ?ds rdfs:label ?dsL.
-    }
-}
-"
-results_state <- rdf_query(file, query_state)
-#----------------------------REMOVER THIS LATER (above)-------------------------------#
+# Save as CSVs
+write_csv(df_component_full, "www/df_component_full2.csv")
+write_csv(df_component_flow, "www/df_component_flow2.csv")
 
-#----------------------------REMOVER THIS LATER-------------------------------#
-query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    
-SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
-    ?c wb:usedBy ?j.
-    ?j rdfs:label ?jL.
-    ?c rdfs:label ?cL.
-    ?c rdf:type wb:Component.
-    
-    OPTIONAL {
-#    	?em wb:usedBy ?j.
-      ?c wb:hasEstimationMethod ?em.
-    
-    	?em rdfs:label ?emL.
-#      ?p wb:usedBy ?j.
-    	?em wb:hasParameter ?p.
-    
-    	?p rdfs:label ?pL.
-    	?ds wb:usedBy ?j.
-      ?p wb:hasDataSource ?ds.
-    
-    	?ds rdfs:label ?dsL.
-    }
-} 
-"
-results_state <- rdf_query(file, query_state)
-#----------------------------REMOVER THIS LATER (above)-------------------------------#
 
 # ---- 2. creating dataframe state-wise info ---- #
 query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -155,7 +106,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     
-SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
+SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL ?typeL WHERE {
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -163,25 +114,41 @@ SELECT ?jL ?cL ?emL ?pL ?dsL WHERE {
     
     OPTIONAL {
     ?c wb:hasEstimationMethod ?em.
-
+    
+    ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     ?em wb:hasParameter ?p.
-
+    ?em wb:usedBy ?state.
+    
+    ?p rdf:type wb:Parameter.
     ?p rdfs:label ?pL.
     ?p wb:hasDataSource ?ds.
-
+    ?p wb:usedBy ?state.
+    
+    ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
+    ?ds wb:usedBy ?state.
+    
+    ?state rdfs:label ?stateL.
     }
 }
 " 
 
-results_state <- rdf_query(file, query_state)
-df_state <- as.data.frame(results_state) 
-# remove components usedBy river basins
+df_state <- submit_sparql(query_state,access_options=file)
+
+# Assign NA to empty values
+df_state[df_state == ""] <- NA
+
+# Remove rows with components not having state name at the end "-__"
+df_state <- df_state[grepl("-[A-Z]*", df_state$cL),]
+
+# Parameters (pL) is also showing components for some reason, so we'll remove those rows
+index <- which(grepl("-[A-Z][A-Z]", df_state$pL), arr.ind=TRUE)
+df_state$pl2 <- NA   #################################################################
+
+# Remove components usedBy river basins
 df_state <- df_state[(df_state$jL %in% c("CA", "CO", "NM", "UT", "WY")),]
-#df_state <- select(df_state, -type)
 df_state <- df_state[grep(".-CA|.-CO|.-NMOSE|.-UT|.-WY", df_state$cL),] #Exclude NM
-#$cL <- gsub("-NMOSE","-NM", df_state$cL) 
 
 # Data source tab
 df_data_source <- select(df_state, -jL)
