@@ -105,10 +105,10 @@ Shiny.addCustomMessageHandler("exact_match",
                 .join("g")
                 .attr("transform", d => `rotate(${d.x * 180 / Math.PI - 90}) translate(${d.y},0)`)
                 .append("text")
-                .attr("dy", "0.31em")
-                .attr("x", d => d.x < Math.PI ? 6 : -6)
-                .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
-                .attr("transform", d => d.x >= Math.PI ? "rotate(180)" : null)
+                    .attr("dy", "0.31em")
+                    .attr("x", d => d.x < Math.PI ? 6 : -6)
+                    .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
+                    .attr("transform", d => d.x >= Math.PI ? "rotate(180)" : null)
                 .append("a")
                 .attr("xlink:href", d => { return d.data.uri; })
                 .attr("target", "_blank")
@@ -132,7 +132,7 @@ Shiny.addCustomMessageHandler("exact_match",
                 .style("mix-blend-mode", "null") //what to do if multiple path lines overlaps, "multiply" or "null" are 2 good options
                 .attr("d", ([i, o]) => line(i.path(o)))
                 .each(function (d) { d.path = this; });
-
+            
             function overed(d) {
                 link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
                 //link.style("stroke-width", 10); //line thickness

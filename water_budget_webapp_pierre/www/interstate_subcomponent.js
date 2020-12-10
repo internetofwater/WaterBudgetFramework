@@ -99,8 +99,8 @@ Shiny.addCustomMessageHandler("subcomponent",
                 .on("mouseout", outed)
                 .attr('cursor', 'pointer')
                 .call(text => text.append("title").text(d => `${id(d)}
-b. Has subcomponents (in green)
-c. Is subcomponent of (in red)`)); // count by ${d.outgoing.length} and ${d.incoming.length} for dynamic counting
+b. Green: Has subcomponents
+c. Red: Subcomponent of`)); // count by ${d.outgoing.length} and ${d.incoming.length} for dynamic counting
 
             link = svg.append("g")
                 .attr("stroke", "#ececec")

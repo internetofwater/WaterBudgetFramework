@@ -40,7 +40,7 @@ function (message) {
 
       var diameter = 1000 //number_of_components * 25; //approximately 960
       var radius = diameter / 2;
-      var innerRadius = radius - 300;
+      var innerRadius = radius - 250;
 
       line = d3.lineRadial()
           .curve(d3.curveBundle.beta(0.95))
@@ -100,8 +100,8 @@ function (message) {
           .on("mouseout", outed)
           .attr('cursor', 'pointer')
           .call(text => text.append("title").text(d => `${id(d)}
-b. Has partial subcomponents (in green)
-c. Is partial subcomponent of (in red)`)); // count by ${d.outgoing.length} and ${d.incoming.length} for dynamic counting
+b. Green: Has partial subcomponents
+c. Red: Partial subcomponent of`)); // count by ${d.outgoing.length} and ${d.incoming.length} for dynamic counting
 
       link = svg.append("g")
           .attr("stroke", "#ececec")
