@@ -73,7 +73,11 @@ Midwest Plan Service Structures and Environmental Handbook 1977,Average Use Rate
 State Agricultural Statistics,Livestock Count,CO Livestock Method,Livestock Consumptive Use-CO
 Colorado Census Bureau,Population,CO Municipal and Industrial Method,Municipal and Industrial Consumptive Use-CO
 US Census Bureau,Population,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Consumptive Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Consumptive Use-WY
 US Census Bureau,Population,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Municipal Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Municipal Total Use-WY
 NA,NA,NA,Surface Water Diversions-CA
 NA,NA,NA,Agricultural and Municipal Diversions-UT
 NA,NA,NA,Applied Water-CA
@@ -237,6 +241,9 @@ Emery Water Conservancy District Stations,Effective Precipitation,UT Consumptive
 MesoWest Stations,Effective Precipitation,UT Consumptive Use Method,Agricultural Depletions-UT
 Fruit Growers Network Stations (FGNET),Effective Precipitation,UT Consumptive Use Method,Agricultural Depletions-UT
 Soil Climate Analysis Network (SCAN),Effective Precipitation,UT Consumptive Use Method,Agricultural Depletions-UT
+Historical Data,Irrigated Acreage,UT Consumptive Use Method,Agricultural Depletions-UT
+Satellite and Aerial Photos,Irrigated Acreage,UT Consumptive Use Method,Agricultural Depletions-UT
+Ground Survey,Irrigated Acreage,UT Consumptive Use Method,Agricultural Depletions-UT
 USGS Stream Gages,Water Supply,UT Consumptive Use Method,Agricultural Depletions-UT
 UT Diversion Records from River Commissioners,Water Supply,UT Consumptive Use Method,Agricultural Depletions-UT
 NA,NA,NA,Surface Diversion to Cropland-UT
@@ -391,6 +398,8 @@ USGS Stream Gages,Water Supply,NM Consumptive Use Method,Irrigated Agriculture D
 NM Diversion Records,Water Supply,NM Consumptive Use Method,Irrigated Agriculture Depletions-NMOSE
 USGS Stream Gages,Streamflow,NM Consumptive Use Method,Irrigated Agriculture Depletions-NMOSE
 US Census Bureau,Population,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Domestic Total Use-WY
+US Census Bureau,Self Supplied Domestic Population,Withdrawal Method,Domestic Total Use-WY
 PRISM,Monthly Precipitation Volume,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 Weather Stations,Monthly Precipitation Volume,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
 National Oceanic and Atmospheric Administration Stations,Rainfall,Empirical Data for Small Reservoirs,Evaporation from Reservoirs-NMOSE
@@ -420,10 +429,10 @@ US Army Corps of Engineers,Reservoir Surface Area,Pan Approach,Evaporation from 
 US Bureau of Reclamation Stations,Reservoir Surface Area,Pan Approach,Evaporation from Reservoirs-NMOSE
 New Mexico Interstate Stream Commission (NMISC),Reservoir Surface Area,Pan Approach,Evaporation from Reservoirs-NMOSE
 US Bureau of Reclamation Stations,Monthly Gross Evaporation Rate,Pan Approach,Evaporation from Reservoirs-NMOSE
-NA,NA,NA,Lake Evaporation-CA
 NOAA Technical Report NWS 33,Gross Monthly Free Water Surface Evaporation,Reservoir Estimation Method,Reservoir Evaporation-CO
 National Oceanic and Atmospheric Administration Stations,Monthly Effective Precipitation,Reservoir Estimation Method,Reservoir Evaporation-CO
 CO Agricultural Meteorology Network Station (COAGM),Monthly Effective Precipitation,Reservoir Estimation Method,Reservoir Evaporation-CO
+CO GIS Exercise,Surface Area of Reservoir,Reservoir Estimation Method,Reservoir Evaporation-CO
 NA,NA,NA,Total Land System Outflow-CA
 NA,NA,NA,Groundwater Export-CA
 NA,NA,NA,Stored Water Export-CA
@@ -482,6 +491,7 @@ Wyoming State Engineer's Office Stations,Precipitation,Pan Method (Net Evaporati
 Wyoming Water Resources Data Systems Water and Climate Map Server,Precipitation,Pan Method (Net Evaporation),Reservoir Evaporation-WY
 High Plains Climate Center - University of Nebraska,Gross Pan Evaportation (inches),Pan Method (Net Evaporation),Reservoir Evaporation-WY
 NA,NA,NA,River Use By Wet Pasture-UT
+PRISM,Precipitation,Runoff Curve Number Method,Runoff-CA
 California Data Exchange Center (CDEC),Daily Max and Min Air Temperature,USGS Precipitation-Runoff Modeling System (PRMS),Runoff-CA
 California Irrigation Management Information System (CIMIS),Daily Max and Min Air Temperature,USGS Precipitation-Runoff Modeling System (PRMS),Runoff-CA
 California Data Exchange Center (CDEC),Daily Precipitation,USGS Precipitation-Runoff Modeling System (PRMS),Runoff-CA
@@ -489,6 +499,7 @@ California Irrigation Management Information System (CIMIS),Daily Precipitation,
 California Data Exchange Center (CDEC),Daily Short-Wave Solar Radiation,USGS Precipitation-Runoff Modeling System (PRMS),Runoff-CA
 California Irrigation Management Information System (CIMIS),Daily Short-Wave Solar Radiation,USGS Precipitation-Runoff Modeling System (PRMS),Runoff-CA
 USDA Natural Resources Conservation Service Geospatial Web Soil Survey,"Descriptive Data of Topography, Soils, and Vegetation",USGS Precipitation-Runoff Modeling System (PRMS),Runoff-CA
+US Census Bureau,Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Self-Supplied Domestic-NMOSE
 US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Self-Supplied Domestic-NMOSE
@@ -502,7 +513,6 @@ Military Base Population Data,Self Supplied Domestic Population,Withdrawal Metho
 New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
 University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Self-Supplied Domestic-NMOSE
 NA,NA,NA,Stored Water Extraction-CA
-NA,NA,NA,Stream Evaporation-CA
 NA,NA,NA,Stream Gain from Groundwater-CA
 NA,NA,NA,Stream Loss to Groundwater-CA
 NA,NA,NA,Surface Water Flows-UT
@@ -521,6 +531,7 @@ NA,NA,NA,Applied Water Reuse/Recycled Water-CA
 Facility Director or Operator,Water Use Estimate,Personal Outreach,Commercial: Unmetered-NMOSE
 NA,NA,NA,Commercial: Incomplete Metered-NMOSE
 NA,NA,NA,Commercial: Metered-NMOSE
+US Census Bureau,Population,Withdrawal Method,Commercial: Schools-NMOSE
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Commercial: Schools-NMOSE
 US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Commercial: Schools-NMOSE
@@ -544,6 +555,7 @@ Wyoming Oil and Gas Conservation Commission (WYOGCC),Monthly Coalbed Methane Gas
 Wyoming Oil and Gas Conservation Commission (WYOGCC),Natural Gas Processing Volumes,WY Industrial Production Method,Industrial: Oil and Gas-WY
 Wyoming Oil and Gas Conservation Commission (WYOGCC),"Monthly Oil, Gas, and Produced Water",WY Industrial Production Method,Industrial: Oil and Gas-WY
 NA,NA,NA,Livestock: Metered-NMOSE
+US Census Bureau,Population,Withdrawal Method,Livestock: Unmetered-NMOSE
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Livestock: Unmetered-NMOSE
 US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Livestock: Unmetered-NMOSE
@@ -558,6 +570,7 @@ New Mexico Environment Department (NMED),Self Supplied Domestic Population,Withd
 University of New Mexico Geospatial and Population Studies (UNM GPS),Self Supplied Domestic Population,Withdrawal Method,Livestock: Unmetered-NMOSE
 Facility Director or Operator,Water Use Estimate,Personal Outreach,Power: Unreported-NMOSE
 NA,NA,NA,Public Water Supply: Metered-NMOSE
+US Census Bureau,Population,Withdrawal Method,Public Water Supply: Unmetered-NMOSE
 NMOSE Technical Report No. 48,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Public Water Supply: Unmetered-NMOSE
 Brown and Caldwell1984,Gallons Per Capita Per Day (GPDPC),Withdrawal Method,Public Water Supply: Unmetered-NMOSE
 US Census Bureau,Population Served by Public Water Supply,Withdrawal Method,Public Water Supply: Unmetered-NMOSE

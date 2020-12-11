@@ -62,25 +62,29 @@ df_component_full <- df_component_full[grepl("-[A-Z]*", df_component_full$cL),]
 
 # Similarly remove rows with subcomponents, partial subcomponents and exact matches without state names at the end
 
-# For subcomponents
+#--- For subcomponents
 # get row number for which subcomponent are not NAs
-# index_NA <- which(!is.na(df_component_full$scL), arr.ind=TRUE)
+index_NA <- which(is.na(df_component_full$scL), arr.ind=TRUE)
 # get row numbers for which subcomponents DO NOT have a state at the end of their name
-index_no_state <- which(!grepl("-[A-Z]*", df_component_full$scL), arr.ind=TRUE)
+index_state <- which(grepl("-[A-Z]*", df_component_full$scL), arr.ind=TRUE)
 # Remove those rows
-df_component_full <- df_component_full[-c(index_no_state),]
+df_component_full <- df_component_full[c(index_NA, index_state),]
 
-# For partial subcomponents
+#--- For partial subcomponents
+# get row number for which subcomponent are not NAs
+index_NA <- which(is.na(df_component_full$pscL), arr.ind=TRUE)
 # get row numbers for which parrtial subcomponents DO NOT have a state at the end of their name
-index_no_state <- which(!grepl("-[A-Z]*", df_component_full$pscL), arr.ind=TRUE)
+index_state <- which(grepl("-[A-Z]*", df_component_full$pscL), arr.ind=TRUE)
 # Remove those rows
-df_component_full <- df_component_full[-c(index_no_state),]
+df_component_full <- df_component_full[c(index_NA, index_state),]
 
-# For exact matches
+#--- For exact matches
+# get row number for which subcomponent are not NAs
+index_NA <- which(is.na(df_component_full$exmL), arr.ind=TRUE)
 # get row numbers for which exact matches DO NOT have a state at the end of their name
-index_no_state <- which(!grepl("-[A-Z]*", df_component_full$exmL), arr.ind=TRUE)
+index_state <- which(grepl("-[A-Z]*", df_component_full$exmL), arr.ind=TRUE)
 # Remove those rows
-df_component_full <- df_component_full[-c(index_no_state),]
+df_component_full <- df_component_full[c(index_NA, index_state),]
 
 # Sort column values in ascending order
 df_component_full <- arrange(df_component_full, jL, cL, fsourceL, fsinkL, ftypeL, scL, pscL, exmL)
@@ -121,12 +125,12 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE {
     ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     ?em wb:hasParameter ?p.
-    ?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
+    #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     
     ?p rdf:type wb:Parameter.
     ?p rdfs:label ?pL.
     ?p wb:hasDataSource ?ds.
-    ?p wb:usedBy ?state.
+    #?p wb:usedBy ?state.
     
     ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
@@ -223,7 +227,7 @@ index <- which(!df$jL == df$stateL)
 df <- df[-c(index), ]
 
 # Drop column stateL
-df_state <- df_state[,-10]
+df <- df[,-11]
 
 # Sort columns in ascending order
 df <- arrange(df, cL, emL, pL, dsL) 

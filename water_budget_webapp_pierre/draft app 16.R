@@ -407,7 +407,7 @@ server <- function(input, output, session){
     df_uri <- df_component_full %>%
       filter(jL %in% input$states1) %>% #filter by user-selected state
       filter(cL %in% input$components) %>% #filter by user-selected component
-      select(-c(1,2,3,4,6,8,10,12,14)) %>% #dropping jL, cL, c columns and retaining uri columns
+      select(-c(1,2,3,4,6,8,10,12,14)) %>% #dropping jL, cL, c columns and retaining uri columns for flow and subcomponent info
       as.data.frame() #convert to dataframe
     
     # Extracting component URI for the title of the Summary div

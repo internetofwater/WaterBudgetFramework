@@ -1012,3 +1012,133 @@ results <- as.data.frame(results)
 
 # lookup optional sparql
 
+
+
+################################################# December 2020 #######################################
+# It broke after updating the data from local file to endpoint
+
+# ----- 2.1. Importing CSVs for Component tab ----- #
+df_component_full <- read_csv("www/df_component_full2.csv") #dataframe for component summary (including URIs)
+df_component_flow <- read_csv("www/df_component_flow2.csv") #dataframe for component summary including flow and interstate information
+df_component <- read_csv("www/df_component2.csv") #dataframe for d3 chart on component tab
+
+# ----- 2.2. Importing CSVs for State tab ----- #
+df_state <- read_csv("www/df_state2.csv")
+
+# ----- 2.3. Importing CSVs for Data Source tab ----- #
+df_data_source <- read_csv("www/df_data_source2.csv")
+
+# Filter dataframe by state selected by user and store in a separate dataframe 
+choices_components <- df_component %>%
+  filter(jL %in% 'CA') 
+
+# Select rows having unique components
+choices_components <- c(unique(choices_components$cL)) 
+
+# Update input choices for components
+updateSelectInput(session, "components",
+                  choices = choices_components)
+})
+
+# ---- 5.1.2. Summary of a component on Component tab
+
+observeEvent(input$runButton1, {
+  
+  # Activate div containig summary information of a component
+  show("component_summary")
+  
+  # Retaining columns only containing URIs
+  df_uri <- df_component_full %>%
+    filter(jL %in% input$states1) %>% #filter by user-selected state
+    filter(cL %in% input$components) %>% #filter by user-selected component
+    select(-c(1,2,3,4,6,8,10,12,14)) %>% #dropping jL, cL, c columns and retaining uri columns for flow and subcomponent info
+    as.data.frame() #convert to dataframe
+  
+  # Extracting component URI for the title of the Summary div
+  uri_title <- df_component_full %>%
+    filter(jL %in% input$states1) %>%
+    filter(cL %in% input$components) %>%
+    .$c #selecting component
+  
+  # Selecting column with component name
+  uri_title <- uri_title[1] 
+  
+  # Storing summary information in a separate dataframe except state and component name 
+  component_info <- df_component_flow %>%
+    filter(jL %in% input$states1) %>%
+    filter(cL %in% input$components) %>%
+    select(3:length(df_component_flow)) %>% #dropping jL, cL columns 
+    as.data.frame()
+  
+  # URIs
+  uri_properties <- c("flow_source", "flow_sink", "flow_type",
+                      "subcomponent", "p_subcomponent", "exact_match")
+  
+  # Property names attached with term "uri"
+  uri_list <- paste("uri", uri_properties, sep="_")
+  
+  # SUMMARY
+  # Property names based on htmlOutput (from section 4.2.2.)
+  summary_properties <- c("flow_source", "flow_sink", "flow_type",
+                          "subcomponent", "p_subcomponent","exact_match")
+  
+  # Create intermediary objects to hold unique strings from dataframe "component_info"
+  # Multiple values for a property are separated by commas
+  if (input$states1 == "NM"){ #different for NM because in graph database it is written as NMSOE not just NM
+    summary_title <- paste(input$components, input$states1, 
+                           sep = "-")
+    summary_title <- paste0(summary_title, "OSE")
+  } else {
+    summary_title <- paste(input$components, input$states1, 
+                           sep = "-")
+  }
+  
+  # Concatenating "summary" string to property names separated by "_"
+  summary_list <- paste("summary", summary_properties, sep="_")
+  
+  # Iterate through each property defined above
+  for (i in 1:length(summary_properties)) {
+    assign(paste(summary_list[i]), 
+           paste(unlist(unique(component_info[i]), use.names = FALSE), collapse=", "))
+    assign(paste(uri_list[i]), 
+           paste(unlist(unique(df_uri[i]), use.names = FALSE), collapse=", "))
+  }
+  
+  # Render output
+  output$component_title <- renderText(paste('<a href="', uri_title,
+                                             '" target="_blank">',
+                                             summary_title, '</a>'))
+  
+  properties_display <- c("Flow Source:", "Flow Sink:", "Flow Type:",
+                          "Subcomponent of:", "Partial Subcomponent of:","Exact Match:")
+  
+  # if an attribute has multiple values, it would add 1 hyperlink
+  # to all values
+  # so first we split each character in a string and see if it is a comma
+  # if it is then we split it by comma and store each value as a list in
+  # a signle variable
+  # then we run two different render options depending if a field has  a
+  # single value or multiple value
+  lapply(1:length(summary_list), function(i){
+    split_property <- strsplit(get(summary_list[i]), "")[[1]]
+    if ("," %in% split_property){
+      split_value <- unlist(strsplit(get(summary_list[i]), "[,]")) %>%
+        trimws()
+      split_uri <- unlist(strsplit(get(uri_list[i]), "[,]")) %>%
+        trimws()
+      output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
+                                                          '<a href="', split_uri[1],'" target="_blank">',
+                                                          split_value[1], "</a>", 
+                                                          '<a href="', split_uri[2], '" target="_blank">',
+                                                          ",",
+                                                          split_value[2], "</a>"))
+    }else if (get(summary_list[i]) == "NA") {
+      output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
+                                                          get(summary_list[i])))
+    }else {
+      output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
+                                                          '<a href="', get(uri_list[i]),'" target="_blank">',
+                                                          get(summary_list[i]), "</a>"))
+    }
+  })
+})

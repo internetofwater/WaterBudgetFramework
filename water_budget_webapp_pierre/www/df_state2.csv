@@ -14,7 +14,6 @@ CA,Evapotranspiration,Crop Coefficient Approach,Reference Crop ET (ETo),Californ
 CA,Groundwater Export,NA,NA,NA
 CA,Groundwater Extraction,NA,NA,NA
 CA,Imported Water,NA,NA,NA
-CA,Lake Evaporation,NA,NA,NA
 CA,Lake Gain from Groundwater,NA,NA,NA
 CA,Lake Inflow from Streams,NA,NA,NA
 CA,Lake Loss to Groundwater,NA,NA,NA
@@ -37,6 +36,7 @@ CA,Recharge of Applied Water,NA,NA,NA
 CA,Recharge of Precipitation,NA,NA,NA
 CA,Recycled Water Export,NA,NA,NA
 CA,Return Flow,NA,NA,NA
+CA,Runoff,Runoff Curve Number Method,Precipitation,PRISM
 CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Data Exchange Center (CDEC)
 CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Irrigation Management Information System (CIMIS)
 CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Precipitation,California Data Exchange Center (CDEC)
@@ -46,7 +46,6 @@ CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Short-Wave Sola
 CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),"Descriptive Data of Topography, Soils, and Vegetation",USDA Natural Resources Conservation Service Geospatial Web Soil Survey
 CA,Stored Water Export,NA,NA,NA
 CA,Stored Water Extraction,NA,NA,NA
-CA,Stream Evaporation,NA,NA,NA
 CA,Stream Gain from Groundwater,NA,NA,NA
 CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Data Exchange Center (CDEC)
 CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Irrigation Management Information System (CIMIS)
@@ -166,6 +165,7 @@ CO,Precipitation,NA,NA,NA
 CO,Reservoir Evaporation,Reservoir Estimation Method,Gross Monthly Free Water Surface Evaporation,NOAA Technical Report NWS 33
 CO,Reservoir Evaporation,Reservoir Estimation Method,Monthly Effective Precipitation,CO Agricultural Meteorology Network Station (COAGM)
 CO,Reservoir Evaporation,Reservoir Estimation Method,Monthly Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Reservoir Evaporation,Reservoir Estimation Method,Surface Area of Reservoir,CO GIS Exercise
 CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,CO Division of Water Resources Gages
 CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,USGS Stream Gages
 NM,Commercial,NA,NA,NA
@@ -173,6 +173,7 @@ NM,Commercial: Incomplete Metered,NA,NA,NA
 NM,Commercial: Metered,NA,NA,NA
 NM,Commercial: Schools,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
 NM,Commercial: Schools,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Commercial: Schools,Withdrawal Method,Population,US Census Bureau
 NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
 NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
 NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
@@ -286,6 +287,7 @@ NM,Livestock,NA,NA,NA
 NM,Livestock: Metered,NA,NA,NA
 NM,Livestock: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
 NM,Livestock: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Livestock: Unmetered,Withdrawal Method,Population,US Census Bureau
 NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
 NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
 NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
@@ -303,6 +305,7 @@ NM,Public Water Supply,NA,NA,NA
 NM,Public Water Supply: Metered,NA,NA,NA
 NM,Public Water Supply: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
 NM,Public Water Supply: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population,US Census Bureau
 NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
 NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
 NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
@@ -315,6 +318,7 @@ NM,Public Water Supply: Unmetered,Withdrawal Method,Self Supplied Domestic Popul
 NM,Public Water Supply: Unmetered,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
 NM,Self-Supplied Domestic,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
 NM,Self-Supplied Domestic,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Self-Supplied Domestic,Withdrawal Method,Population,US Census Bureau
 NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
 NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
 NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
@@ -349,6 +353,9 @@ UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,PRI
 UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Soil Climate Analysis Network (SCAN)
 UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,US Bureau of Reclamation AgriMet Stations
 UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Weather Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Ground Survey
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Historical Data
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Satellite and Aerial Photos
 UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Emery Water Conservancy District Stations
 UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Fruit Growers Network Stations (FGNET)
 UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),MesoWest Stations
@@ -543,6 +550,8 @@ WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Weather Stati
 WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,WY Department of Environmental Quality (DEQ)
 WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Wyoming State Engineer's Office Stations
 WY,Domestic Total Use,Withdrawal Method,Population,US Census Bureau
+WY,Domestic Total Use,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+WY,Domestic Total Use,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
 WY,Gaged Stream Inflow,NA,NA,NA
 WY,Gaged Stream Outflow,NA,NA,NA
 WY,Industrial Consumptive Use,NA,NA,NA
@@ -563,7 +572,11 @@ WY,Industrial: Oil and Gas,WY Industrial Production Method,Natural Gas Processin
 WY,Irrigation Surface Water Diversions,NA,NA,NA
 WY,Livestock Consumptive Use,NA,NA,NA
 WY,Municipal Consumptive Use,Withdrawal Method,Population,US Census Bureau
+WY,Municipal Consumptive Use,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+WY,Municipal Consumptive Use,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
 WY,Municipal Total Use,Withdrawal Method,Population,US Census Bureau
+WY,Municipal Total Use,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+WY,Municipal Total Use,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
 WY,Precipitation,NA,NA,NA
 WY,Reservoir Evaporation,Pan Method (Net Evaporation),Gross Pan Evaportation (inches),High Plains Climate Center - University of Nebraska
 WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,National Oceanic and Atmospheric Administration Stations
