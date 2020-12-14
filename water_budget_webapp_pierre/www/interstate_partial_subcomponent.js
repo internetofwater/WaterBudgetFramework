@@ -38,7 +38,7 @@ function (message) {
       colorout = "#00AFA8";
       colornone = "#bbb";
 
-      var diameter = 1000 //number_of_components * 25; //approximately 960
+      var diameter = 1050 //number_of_components * 25; //approximately 960
       var radius = diameter / 2;
       var innerRadius = radius - 250;
 
@@ -57,13 +57,13 @@ function (message) {
         .attr("width", diameter + 400)
         .attr("height", diameter + 400)
         .append("g")
-        .attr("transform", "translate(" + (radius + 200) + "," + (radius) + ")");
+        .attr("transform", "translate(" + (radius + 140) + "," + (radius + 180) + ")");
 
       // Background rectangle
       svg.append("rect")
-      .attr("width", diameter + 200)
-      .attr("height", diameter + 50)
-      .attr("transform", "translate(" + -(radius + 100)  + "," + -(radius) + ")")
+      .attr("width", diameter + 300)
+      .attr("height", diameter + 180)
+      .attr("transform", "translate(" + -(radius + 100)  + "," + -(radius + 180) + ")")
       .attr("fill", "#F8F8F8")
       .attr('rx', 20);
 
@@ -79,7 +79,7 @@ function (message) {
 
       node = svg.append("g")
           .attr("font-family", "arial")
-          .attr("font-size", 12)
+          .attr("font-size", 10)
           .selectAll("g")
           .data(root.leaves())
           .join("g")
@@ -95,7 +95,7 @@ function (message) {
           .text(d => d.data.name)
           .each(function (d) { d.text = this; })
           .attr("fill", colornone)  // default text color
-          .attr("font-weight", "bold")
+          //.attr("font-weight", "bold")
           .on("mouseover", overed)
           .on("mouseout", outed)
           .attr('cursor', 'pointer')
@@ -114,10 +114,13 @@ c. Red: Partial subcomponent of`)); // count by ${d.outgoing.length} and ${d.inc
           .each(function (d) { d.path = this; });
 
       function overed(d) {
-          link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
-          d3.select(this).attr("font-weight", "bold");
-          d3.select(this).attr("fill", "#777777"); //on hover in, it darkens selected node
 
+          // For empty nodes
+          link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
+          //d3.select(this).attr("font-weight", "bold");
+          d3.select(this).attr("fill", "#333333"); //on hover in, it darkens selected node
+
+          // For nodes with interstate relationships
           d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", colorin).raise();
           d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colorin).attr("font-weight", "bold");
           d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", colorout).raise();
@@ -125,14 +128,17 @@ c. Red: Partial subcomponent of`)); // count by ${d.outgoing.length} and ${d.inc
       }
 
       function outed(d) { // set colornone to restore default gray text color after hover out
+
+          //For empty nodes
           link.style("mix-blend-mode", null);
-          d3.select(this).attr("font-weight", "bold");
+          //d3.select(this).attr("font-weight", "bold");
           d3.select(this).attr("fill", colornone); //on hover out, restores text color of selected node
 
+          // For nodes with interstate relationships
           d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", "#ececec");
-          d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
+          d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone).attr("font-weight", null);
           d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", "#ececec");
-          d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
+          d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone).attr("font-weight", null);
       }
 
       //return svg.node();

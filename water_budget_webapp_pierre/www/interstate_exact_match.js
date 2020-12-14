@@ -58,9 +58,9 @@ Shiny.addCustomMessageHandler("exact_match",
             colorout = "#182856";
             colornone = "#bbb";
 
-            var diameter = 1100; //approximately 1300, USE "NUMBER OF COMPONENTS" for dyanmic size
+            var diameter = 1050; //approximately 1300, COULD USE "NUMBER OF COMPONENTS" for dyanmic size
             var radius = diameter / 2;
-            var innerRadius = radius - 300;
+            var innerRadius = radius - 250;
 
             line = d3.lineRadial()
                 .curve(d3.curveBundle.beta(0.95))
@@ -77,13 +77,13 @@ Shiny.addCustomMessageHandler("exact_match",
                 .attr("width", diameter + 400)
                 .attr("height", diameter + 400)
                 .append("g")
-                .attr("transform", "translate(" + (radius + 200) + "," + (radius) + ")");
+                .attr("transform", "translate(" + (radius + 140) + "," + (radius + 180) + ")");
 
             // Background rectangle
             svg.append("rect")
-                .attr("width", diameter + 200)
-                .attr("height", diameter + 50)
-                .attr("transform", "translate(" + -(radius + 100) + "," + -(radius) + ")")
+                .attr("width", diameter + 300)
+                .attr("height", diameter + 180)
+                .attr("transform", "translate(" + -(radius + 100) + "," + -(radius + 180) + ")")
                 .attr("fill", "#F8F8F8")
                 .attr('rx', 20);
 
@@ -99,7 +99,7 @@ Shiny.addCustomMessageHandler("exact_match",
 
             node = svg.append("g")
                 .attr("font-family", "arial")
-                .attr("font-size", 12)
+                .attr("font-size", 10)
                 .selectAll("g")
                 .data(root.leaves())
                 .join("g")
@@ -112,14 +112,14 @@ Shiny.addCustomMessageHandler("exact_match",
                 .append("a")
                 .attr("xlink:href", d => { return d.data.uri; })
                 .attr("target", "_blank")
-                .text(d => d.data.name)
+                .text(d => d.data.key)
                 .each(function (d) { d.text = this; })
                 .attr("fill", colornone)  // default text color
                 .attr("font-weight", "bold")
                 .on("mouseover", overed)
                 .on("mouseout", outed)
-                .attr('cursor', 'pointer')
-            //                 .call(text => text.append("title").text(d => `${id(d)}
+               // .attr('cursor', 'pointer')
+                             .call(text => text.append("title").text(d => `${id(d)}
             // b. Has ${d.outgoing.length} subcomponents (in green)
             // c. Is subcomponent of ${d.incoming.length} (in red)`));
 
@@ -134,26 +134,32 @@ Shiny.addCustomMessageHandler("exact_match",
                 .each(function (d) { d.path = this; });
             
             function overed(d) {
+                
+                // For empty nodes
                 link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
                 //link.style("stroke-width", 10); //line thickness
-                d3.select(this).attr("font-weight", "bold");
-                d3.select(this).attr("fill", "#777777"); //on hover in, it darkens selected node
+                //d3.select(this).attr("font-weight", "bold");
+                d3.select(this).attr("fill", "#333333"); //on hover in, it darkens selected node
 
+                // For nodes with interstate relationships
                 d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", colorin).raise();
-                d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colorin).attr("font-weight", "bold");
+                d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colorin)//.attr("font-weight", "bold");
                 d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", colorout).raise();
-                d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colorout).attr("font-weight", "bold");
+                d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colorout)//.attr("font-weight", "bold");
             }
 
             function outed(d) { // set colornone to restore default gray text color after hover out
+                
+                // For empty nodes
                 link.style("mix-blend-mode", "null");
-                d3.select(this).attr("font-weight", "bold");
+                //d3.select(this).attr("font-weight", "bold");
                 d3.select(this).attr("fill", colornone); //on hover out, restores text color of selected node
 
+                // For nodes with interstate relationships
                 d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", "#ececec");
-                d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
+                d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone)//.attr("font-weight", null);
                 d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", "#ececec");
-                d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
+                d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone)//.attr("font-weight", null);
             }
 
             //return svg.node();

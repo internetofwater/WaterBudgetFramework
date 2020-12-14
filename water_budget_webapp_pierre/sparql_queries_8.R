@@ -12,7 +12,11 @@ library(rdf4r)
 #file <- rdf_parse("graphDB2.ttl", format="turtle")
 file <- basic_triplestore_access("https://terminology.internetofwater.app", repository="WaterBudgetingFramework_core")
 
-# ----- 1. creating dataframe for flow and component-subcomponent info ----- #
+#***************************************************#
+#***** I. TABS - COMPONENT, STATE, DATA SOURCE *****#
+#***************************************************#
+
+# ----- 1. Creating dataframe for flow and component-subcomponent info ----- #
 query_component <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -63,27 +67,27 @@ df_component_full <- df_component_full[grepl("-[A-Z]*", df_component_full$cL),]
 # Similarly remove rows with subcomponents, partial subcomponents and exact matches without state names at the end
 
 #--- For subcomponents
-# get row number for which subcomponent are not NAs
+# get row number for which subcomponents are not NAs
 index_NA <- which(is.na(df_component_full$scL), arr.ind=TRUE)
-# get row numbers for which subcomponents DO NOT have a state at the end of their name
+# get row numbers for which subcomponents do have a state at the end of their name
 index_state <- which(grepl("-[A-Z]*", df_component_full$scL), arr.ind=TRUE)
-# Remove those rows
+# keep those rows
 df_component_full <- df_component_full[c(index_NA, index_state),]
 
 #--- For partial subcomponents
-# get row number for which subcomponent are not NAs
+# get row number for which partial subcomponents are not NAs
 index_NA <- which(is.na(df_component_full$pscL), arr.ind=TRUE)
-# get row numbers for which parrtial subcomponents DO NOT have a state at the end of their name
+# get row numbers for which parrtial subcomponents do have a state at the end of their name
 index_state <- which(grepl("-[A-Z]*", df_component_full$pscL), arr.ind=TRUE)
-# Remove those rows
+# keep those rows
 df_component_full <- df_component_full[c(index_NA, index_state),]
 
 #--- For exact matches
-# get row number for which subcomponent are not NAs
+# get row number for which exact matches are not NAs
 index_NA <- which(is.na(df_component_full$exmL), arr.ind=TRUE)
-# get row numbers for which exact matches DO NOT have a state at the end of their name
+# get row numbers for which exact matches do have a state at the end of their name
 index_state <- which(grepl("-[A-Z]*", df_component_full$exmL), arr.ind=TRUE)
-# Remove those rows
+# keep those rows
 df_component_full <- df_component_full[c(index_NA, index_state),]
 
 # Sort column values in ascending order
@@ -180,7 +184,7 @@ df_state$dsL <- gsub(",","", df_state$dsL)
 write_csv(df_state, "www/df_state2.csv")
 
 
-# Everything (including uri & excluding exact matches and subcomponent stuff)
+#---- 3. Everything (including uri & excluding exact matches and subcomponent stuff) ----#
 query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -243,22 +247,24 @@ write.table(df, file = "./www/hyperlink2.csv", sep = ",",
 
 
 
-##########################################################################################################################
-##########################################################################################################################
-##########################################################################################################################
-# INTERSTATE
+#*********************************#
+#***** II. TABS - INTERSTATE *****#
+#*********************************#
 
-# --- Exact Match --- # 
-# containing all the relevant flow information
+
+# ----- 1. Exact Match ----- #
+
+# Containing all the relevant flow information
 # properties like flow type, flowsink and source are put in a separat optional tag for c and with the same optional tag for ex
 
 query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX onto: <http://www.ontotext.com/>
+#PREFIX onto: <http://www.ontotext.com/>
+#FROM onto:readwrite (insert at the end of SELECT statement)
 
-SELECT ?state_cL ?ftype_cL ?fsource_cL ?fsink_cL ?cL ?exmL ?state_exmL ?ftype_exmL ?fsource_exmL ?fsink_exmL ?c ?exm FROM onto:readwrite WHERE {
+SELECT ?state_cL ?ftype_cL ?fsource_cL ?fsink_cL ?cL ?exmL ?state_exmL ?ftype_exmL ?fsource_exmL ?fsink_exmL ?c ?exm WHERE {
     ?c wb:usedBy ?state_c.
     ?state_c rdfs:label ?state_cL.
     ?c rdfs:label ?cL.
@@ -296,25 +302,34 @@ SELECT ?state_cL ?ftype_cL ?fsource_cL ?fsink_cL ?cL ?exmL ?state_exmL ?ftype_ex
   }
 }
 "
-# Getting dataframe from SPARQL query
+
+# Submit query to get a dataframe
 df <- submit_sparql(query,access_options=file)
 
-# Remove rows with components and exact matches not having state name at the end "-__"
-df <- df[grepl("-[A-Z]*", df$cL),]
-df <- df[grepl("-[A-Z]*", df$exmL),]
-
 # Assign NA to empty values
-df_component_full[df_component_full == ""] <- NA
+df[df == ""] <- NA
 
-# remove components usedBy river basins
-df <- df[(df$state_cL %in% c("CA", "CO", "NM", "UT", "WY")),]
-df <- df[(df$state_exmL %in% c("CA", "CO", "NM", "UT", "WY", NA)),]
+# Remove rows with components not having state name at the end "-__"
+df <- df[grepl("-[A-Z]*", df$cL),]
+
+# Remove rows where exact matches do not have state name at the end
+# get row number for which exact matches are not NAs
+index_NA <- which(is.na(df$exmL), arr.ind=TRUE)
+# get row numbers for which exact matches have a state at the end of their name
+index_state <- which(grepl("-[A-Z]*", df$exmL), arr.ind=TRUE)
+# keep those rows
+df <- df[c(index_NA, index_state),] 
+
+# Remove components usedBy river basins
+df <- df[(df$state_cL %in% c("CA", "CO", "NM", "NMOSE", "UT", "WY")),]
+df <- df[(df$state_exmL %in% c("CA", "CO", "NM", "NMOSE", "UT", "WY", NA)),]
 df$empty <- NA
-# check how will user input work in R shiny based on 
-write_csv(df, "www/df_exact_match.csv")
+
+# Export as csv 
+write_csv(df, "www/df_exact_match2.csv")
 
 
-#--- Subcomponent ---#
+#---- 2. Subcomponent ----#
 query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -358,21 +373,34 @@ SELECT ?state_cL ?ftype_cL ?fsource_cL ?fsink_cL ?cL ?scL ?state_scL ?ftype_scL 
   }
 }
 "
-results <- rdf_query(file, query)
-df <- as.data.frame(results)
 
-# remove components usedBy river basins
-df <- df[(df$state_cL %in% c("CA", "CO", "NM", "UT", "WY")),]
-df <- df[(df$state_scL %in% c("CA", "CO", "NM", "UT", "WY", NA)),]
+# Submit query to get a dataframe
+df <- submit_sparql(query,access_options=file)
+
+# Assign NA to empty values
+df[df == ""] <- NA
+
+# Remove rows with components not having state name at the end "-__"
+df <- df[grepl("-[A-Z]*", df$cL),]
+
+# Remove rows where subcomponents do not have state name at the end
+# get row number for which subcomponents are not NAs
+index_NA <- which(is.na(df$scL), arr.ind=TRUE)
+# get row numbers for which subcomponents have a state at the end of their name
+index_state <- which(grepl("-[A-Z]*", df$scL), arr.ind=TRUE)
+# keep those rows
+df <- df[c(index_NA, index_state),] 
+
+# Remove components usedBy river basins
+df <- df[(df$state_cL %in% c("CA", "CO", "NM", "NMOSE", "UT", "WY")),]
+df <- df[(df$state_scL %in% c("CA", "CO", "NM", "NMOSE", "UT", "WY", NA)),]
 df$empty <- NA
-# export dataframe for R shiny 
-# df_subcomponent.csv right now has components without flow info and D3 works with that
-# but with flow information d3 doesnt work...
-# so change the file name below so i can go back and forth between flow info/no flow info
-write_csv(df, "www/df_subcomponent.csv")
+
+# Export as CSV
+write_csv(df, "www/df_subcomponent2.csv")
 
 
-#--- Partial Subcomponent ---#
+#---- 3. Partial Subcomponent ----#
 query <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -416,17 +444,30 @@ SELECT ?state_cL ?ftype_cL ?fsource_cL ?fsink_cL ?cL ?pscL ?state_pscL ?ftype_ps
   }
 }
 "
-results <- rdf_query(file, query)
-df <- as.data.frame(results)
 
-# remove components usedBy river basins
+# Submit query to get a dataframe
+df <- submit_sparql(query,access_options=file)
+
+# Assign NA to empty values
+df[df == ""] <- NA
+
+# Remove rows with components not having state name at the end "-__"
+df <- df[grepl("-[A-Z]*", df$cL),]
+
+# Remove rows where partial subcomponents do not have state name at the end
+# get row number for which partial subcomponents are not NAs
+index_NA <- which(is.na(df$pscL), arr.ind=TRUE)
+# get row numbers for which partial subcomponents have a state at the end of their name
+index_state <- which(grepl("-[A-Z]*", df$pscL), arr.ind=TRUE)
+# keep those rows
+df <- df[c(index_NA, index_state),] 
+
+# Remove components usedBy river basins
 df <- df[(df$state_cL %in% c("CA", "CO", "NM", "UT", "WY")),]
 df <- df[(df$state_pscL %in% c("CA", "CO", "NM", "UT", "WY", NA)),]
 df$empty <- NA
-# export dataframe for R shiny 
-# df_subcomponent.csv right now has components without flow info and D3 works with that
-# but with flow information d3 doesnt work...
-# so change the file name below so i can go back and forth between flow info/no flow info
-write_csv(df, "www/df_partial_subcomponent.csv")
+
+# Export as CSV
+write_csv(df, "www/df_partial_subcomponent2.csv")
 
 # ---X--- #

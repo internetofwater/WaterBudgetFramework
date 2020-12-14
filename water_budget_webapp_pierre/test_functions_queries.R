@@ -1142,3 +1142,36 @@ observeEvent(input$runButton1, {
     }
   })
 })
+
+################################################# A function to add states at the end #######################################
+state <- c("CA", "NM", "UT", "NC", "DC")
+component <- c("CA-Applied Water", "NM-Applied Water", "UT-Applied Water", "NC-Applied Water", "DC-Applied Water")
+df <- data.frame(state, component)
+
+len <- nrow(df)
+
+
+if (len%%2==0){
+  rows_drop <- (len)/2
+  df_reverse_name <- slice(df, -(1:rows_drop))
+} else {
+  rows_drop <- (len+1)/2
+  df_reverse_name <- slice(df, -(1:rows_drop))
+}
+
+df2 <- slice(df, (1:rows_drop))
+
+df_reverse_name$component <- gsub('[A-Z]*-', "", df_reverse_name$component)
+
+df_reverse_name$component <- paste0(df_reverse_name$component, "-", df_reverse_name$state)
+
+df <- rbind(df2, df_reverse_name)
+
+
+hello <- function (a){
+  b <- gsub('[A-Z]*-', "", a)
+  c <- paste0(b, "-", state)
+  return (c)
+}
+
+hello(component)

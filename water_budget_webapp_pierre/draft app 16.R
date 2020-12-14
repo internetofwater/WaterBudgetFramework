@@ -30,9 +30,9 @@ df_state <- read_csv("www/df_state2.csv")
 df_data_source <- read_csv("www/df_data_source2.csv")
 
 # ----- 2.4. Importing CSVs for Data Source tab ----- #
-df_exact_match <- read_csv("www/df_exact_match.csv") #dataframe for exact matches
-df_subcomponent <- read_csv("www/df_subcomponent.csv") #dataframe for subcomponents
-df_partial_subcomponent <- read_csv("www/df_partial_subcomponent.csv") #dataframe for partial subcomponents
+df_exact_match <- read_csv("www/df_exact_match2.csv") #dataframe for exact matches
+df_subcomponent <- read_csv("www/df_subcomponent2.csv") #dataframe for subcomponents
+df_partial_subcomponent <- read_csv("www/df_partial_subcomponent2.csv") #dataframe for partial subcomponents
 
 # --------------- 3. Input choices --------------- # ####
 
@@ -883,7 +883,29 @@ server <- function(input, output, session){
                                        replacement="No", exact_match_final$name )
       
       # Drop string 'NA-NA'
-      clean <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
+      exact_match_final <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
+      
+      # To easily navigate through visualization, add state name at the end to the latter half of the data frame
+      # get number of rows
+      len <- nrow(exact_match_final)
+      # if number of rows is even number, divide by 2 or else add 1 and then divide by 2
+      if (len%%2==0){
+      rows_drop <- (len)/2
+      } else {
+      rows_drop <- (len+1)/2
+      }
+      #drop the first half of the dataframe
+      latter_half <- exact_match_final[-c(1:rows_drop),] #drop the initial half of the dataframe
+      print(class(latter_half))
+      # extract first half of dataframe
+      first_half <- exact_match_final[c(1:rows_drop),]
+      # remove state name 
+      latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
+      # add state name at the end of the component
+      latter_half$key <- paste0(latter_half$key, "-", latter_half$state)
+      
+      # Combining the two halves back together
+      clean <- rbind(first_half, latter_half)
       
       # Converting dataframe to JSON for D3 compatibility
       df_exact_matchJSON <- toJSON(clean)
