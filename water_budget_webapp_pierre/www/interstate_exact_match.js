@@ -118,8 +118,8 @@ Shiny.addCustomMessageHandler("exact_match",
                 .attr("font-weight", "bold")
                 .on("mouseover", overed)
                 .on("mouseout", outed)
-               // .attr('cursor', 'pointer')
-                             .call(text => text.append("title").text(d => `${id(d)}
+                .attr('cursor', 'pointer')
+                //.call(text => text.append("title").text(d => `${id(d)}
             // b. Has ${d.outgoing.length} subcomponents (in green)
             // c. Is subcomponent of ${d.incoming.length} (in red)`));
 

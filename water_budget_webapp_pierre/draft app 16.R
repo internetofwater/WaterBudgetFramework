@@ -1,4 +1,4 @@
-# In R Studio, code sections can be expanded using ALT+O or collapsed using SHIFT+ALT+O
+# Code sections can be expanded using ALT+O or collapsed using SHIFT+ALT+O
 # Code structure is provided in 'App code structure.docx' file
 # The code is divided into 2 main parts: Data processing & Shiny app development
 #-------------------------------------------------------------------------------
@@ -155,7 +155,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$br(),
                           tags$br(),
                           tags$h1("How to use Water Budget Navigator?"),
-                          tags$h3("It has follwoing tabs: (explain each tab)s")
+                          tags$h3("It has follwoing tabs: (explain each tabs)")
                           ),
                  tags$div(class = "text-area",
                           tags$h3("More coming soon...")),
@@ -217,7 +217,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
       
       # -X-X-X- Tab - Component - End -X-X-X- 
       
-      # ----- 4.2.3. Tab - Component - Begin
+      # ----- 4.2.3. Tab - State - Begin
       
       tabPanel(title = "State",
         tags$div(class = "banner", 
@@ -304,7 +304,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                            tags$p(" "),
                            # User instructions to see all components
                            tags$p("1. Choose the type of interstate relationship among water budget components"),
-                           tags$p('2. Click on the button to include components with no relationships as well'),
+                           tags$p('2. Click on the button below to include all components'),
                            tags$p('3. Hover over a component to explore relationships')
                            )
              ),
@@ -325,11 +325,12 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                            tags$b("See Selected Components", style = "font-size: 130%"),
                            tags$p(" "),
                            # User instructions to see selected components
-                           tags$p('1. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
-                           tags$p('2. Select the states of interest'),
-                           tags$p('3. Filter the components by flow type, flow source and flow sink'),
-                           tags$p('4. Click on the button to see the relationships of selected components'),
-                           tags$p('5. Hover over a component to explore relationships')
+                           tags$p('1. Choose the type of interstate relationship among water budget components above'),
+                           tags$p('2. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
+                           tags$p('3. Select the states of interest'),
+                           tags$p('4. Filter the components by flow type, flow source and flow sink'),
+                           tags$p('5. Click on the button to see the relationships of selected components'),
+                           tags$p('6. Hover over a component to explore relationships')
                            )
                     ),
              column(width = 12,
@@ -896,7 +897,6 @@ server <- function(input, output, session){
       }
       #drop the first half of the dataframe
       latter_half <- exact_match_final[-c(1:rows_drop),] #drop the initial half of the dataframe
-      print(class(latter_half))
       # extract first half of dataframe
       first_half <- exact_match_final[c(1:rows_drop),]
       # remove state name 
@@ -906,6 +906,12 @@ server <- function(input, output, session){
       
       # Combining the two halves back together
       clean <- rbind(first_half, latter_half)
+      
+      print(len)
+      print(rows_drop)
+      print(nrow(latter_half))
+      print(nrow(first_half))
+      write_csv(clean, "www/checkingExactMatch.csv")
       
       # Converting dataframe to JSON for D3 compatibility
       df_exact_matchJSON <- toJSON(clean)
