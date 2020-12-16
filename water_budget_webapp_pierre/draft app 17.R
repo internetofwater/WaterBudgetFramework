@@ -928,28 +928,20 @@ server <- function(input, output, session){
       len <- nrow(exact_match_final)
       # get number of unique rows (because some components because of different flow information)
       len_unique <- length(unique(exact_match_final$name))
-      # # for some reason the D3 round chart doesn't reverse text at exact half way
-      # # it reverses at 162.3829787234 degrees
-      # half_degree <- 162.3829787234
-      # # degree for each component
-      # each_degree <- 360/len
-      # halfwayD3 <- half_degree/each_degree
-      # # if number of rows is even number, divide by 2 or else add 1 and then divide by 2
-      # if (len%%2==0){
-      #   rows_drop <- halfwayD3
-      # } else {
-      #   rows_drop <- halfwayD3-1
-      # }
+      # get unique component names to filter later
+      comp_unique <- unique(exact_match_final$name)
       # if number of unique rows is even number, divide total row number by 2 or else add 1 and then divide by 2
       if (len_unique%%2==0){
-        rows_drop <- ((len)/2) - 1
+        rows_drop <- (len_unique)/2
       } else {
-        rows_drop <- (len-1)/2
+        rows_drop <- (len_unique-1)/2
       }
-      #drop the first half of the dataframe
-      latter_half <- exact_match_final[-c(1:rows_drop),] #drop the initial half of the dataframe
+      # separate first and second half of unique component list
+      comp_unique_latter <- comp_unique[-(1:rows_drop)]
+      # drop the first half of the dataframe
+      latter_half <- exact_match_final[exact_match_final$name %in% c(comp_unique_latter), ]
       # extract first half of dataframe
-      first_half <- exact_match_final[c(1:rows_drop),]
+      first_half <- exact_match_final[!exact_match_final$name %in% c(comp_unique_latter), ]
       # remove state name 
       latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
       # add state name at the end of the component
@@ -957,49 +949,6 @@ server <- function(input, output, session){
       
       # Combining the two halves back together
       clean <- rbind(first_half, latter_half)
-      
-      # # To easily navigate through visualization, add state name at the end to the latter half of the data frame
-      # # get number of rows
-      # len <- nrow(exact_match_final)
-      # # for some reason the D3 round chart doesn't reverse text at exact half way
-      # # it reverses at 162.3829787234 degrees
-      # half_degree <- 162.3829787234
-      # # degree for each component
-      # each_degree <- 360/len
-      # halfwayD3 <- half_degree/each_degree
-      # # if number of rows is even number, divide by 2 or else add 1 and then divide by 2
-      # if (halfwayD3%%2==0){
-      # rows_drop <- halfwayD3-1
-      # } else {
-      # rows_drop <- halfwayD3
-      # }
-      # # # if number of rows is even number, divide by 2 or else add 1 and then divide by 2
-      # # if (len%%2==0){
-      # # rows_drop <- (len)/2
-      # # } else {
-      # # rows_drop <- (len+1)/2
-      # # }
-      # #drop the first half of the dataframe
-      # latter_half <- exact_match_final[-c(1:rows_drop),] #drop the initial half of the dataframe
-      # # extract first half of dataframe
-      # first_half <- exact_match_final[c(1:rows_drop),]
-      # # remove state name 
-      # latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
-      # # add state name at the end of the component
-      # latter_half$key <- paste0(latter_half$key, "-", latter_half$state)
-      # 
-      # # Combining the two halves back together
-      # clean <- rbind(first_half, latter_half)
-      
-      print(len)
-      print(len_unique)
-      # print(half_degree) 
-      # print(each_degree)
-      # print(halfwayD3)
-      # print(rows_drop)
-      # print(nrow(latter_half))
-      # print(nrow(first_half))
-      # write_csv(clean, "www/checkingExactMatch2.csv")
       
       # Converting dataframe to JSON for D3 compatibility
       df_exact_matchJSON <- toJSON(clean)
@@ -1074,7 +1023,34 @@ server <- function(input, output, session){
                                         replacement="No", subcomponent_final$name )
       
       # Drop string 'NA-NA'
-      clean <- subcomponent_final[!(subcomponent_final$name == "a. NA-NA"),]
+      subcomponent_final <- subcomponent_final[!(subcomponent_final$name == "a. NA-NA"),]
+      
+      # To easily navigate through visualization, add state name at the end to the latter half of the data frame
+      # get number of rows
+      len <- nrow(subcomponent_final)
+      # get number of unique rows (because some components because of different flow information)
+      len_unique <- length(unique(subcomponent_final$name))
+      # get unique component names to filter later
+      comp_unique <- unique(subcomponent_final$name)
+      # if number of unique rows is even number, divide total row number by 2 or else add 1 and then divide by 2
+      if (len_unique%%2==0){
+        rows_drop <- (len_unique)/2
+      } else {
+        rows_drop <- (len_unique-1)/2
+      }
+      # separate first and second half of unique component list
+      comp_unique_latter <- comp_unique[-(1:rows_drop)]
+      # drop the first half of the dataframe
+      latter_half <- subcomponent_final[subcomponent_final$name %in% c(comp_unique_latter), ]
+      # extract first half of dataframe
+      first_half <- subcomponent_final[!subcomponent_final$name %in% c(comp_unique_latter), ]
+      # remove state name 
+      latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
+      # add state name at the end of the component
+      latter_half$key <- paste0(latter_half$key, "-", latter_half$state)
+      
+      # Combining the two halves back together
+      clean <- rbind(first_half, latter_half)
       
       # Converting dataframe to JSON for D3 compatibility
       df_subcomponentJSON <- toJSON(clean)
@@ -1149,7 +1125,34 @@ server <- function(input, output, session){
                                                   replacement="No", partial_subcomponent_final$name )
         
         # Drop string 'NA-NA'
-        clean <- partial_subcomponent_final[!(partial_subcomponent_final$name == "a. NA-NA"),]
+        partial_subcomponent_final <- partial_subcomponent_final[!(partial_subcomponent_final$name == "a. NA-NA"),]
+        
+        # To easily navigate through visualization, add state name at the end to the latter half of the data frame
+        # get number of rows
+        len <- nrow(partial_subcomponent_final)
+        # get number of unique rows (because some components because of different flow information)
+        len_unique <- length(unique(partial_subcomponent_final$name))
+        # get unique component names to filter later
+        comp_unique <- unique(partial_subcomponent_final$name)
+        # if number of unique rows is even number, divide total row number by 2 or else add 1 and then divide by 2
+        if (len_unique%%2==0){
+          rows_drop <- (len_unique)/2
+        } else {
+          rows_drop <- (len_unique-1)/2
+        }
+        # separate first and second half of unique component list
+        comp_unique_latter <- comp_unique[-(1:rows_drop)]
+        # drop the first half of the dataframe
+        latter_half <- partial_subcomponent_final[partial_subcomponent_final$name %in% c(comp_unique_latter), ]
+        # extract first half of dataframe
+        first_half <- partial_subcomponent_final[!partial_subcomponent_final$name %in% c(comp_unique_latter), ]
+        # remove state name 
+        latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
+        # add state name at the end of the component
+        latter_half$key <- paste0(latter_half$key, "-", latter_half$state)
+        
+        # Combining the two halves back together
+        clean <- rbind(first_half, latter_half)
         
         # Convert dataframe to JSON for D3 compatibility
         df_partial_subcomponentJSON <- toJSON(clean)
@@ -1288,28 +1291,20 @@ server <- function(input, output, session){
           len <- nrow(exact_match_final)
           # get number of unique rows (because some components because of different flow information)
           len_unique <- length(unique(exact_match_final$name))
-          # # for some reason the D3 round chart doesn't reverse text at exact half way
-          # # it reverses at 162.3829787234 degrees
-          # half_degree <- 162.3829787234
-          # # degree for each component
-          # each_degree <- 360/len
-          # halfwayD3 <- half_degree/each_degree
-          # # if number of rows is even number, divide by 2 or else add 1 and then divide by 2
-          # if (len%%2==0){
-          #   rows_drop <- halfwayD3
-          # } else {
-          #   rows_drop <- halfwayD3-1
-          # }
+          # get unique component names to filter later
+          comp_unique <- unique(exact_match_final$name)
           # if number of unique rows is even number, divide total row number by 2 or else add 1 and then divide by 2
           if (len_unique%%2==0){
-          rows_drop <- ((len)/2) - 1
+            rows_drop <- (len_unique)/2
           } else {
-          rows_drop <- (len-1)/2
+            rows_drop <- (len_unique-1)/2
           }
-          #drop the first half of the dataframe
-          latter_half <- exact_match_final[-c(1:rows_drop),] #drop the initial half of the dataframe
+          # separate first and second half of unique component list
+          comp_unique_latter <- comp_unique[-(1:rows_drop)]
+          # drop the first half of the dataframe
+          latter_half <- exact_match_final[exact_match_final$name %in% c(comp_unique_latter), ]
           # extract first half of dataframe
-          first_half <- exact_match_final[c(1:rows_drop),]
+          first_half <- exact_match_final[!exact_match_final$name %in% c(comp_unique_latter), ]
           # remove state name 
           latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
           # add state name at the end of the component
@@ -1317,16 +1312,6 @@ server <- function(input, output, session){
           
           # Combining the two halves back together
           clean <- rbind(first_half, latter_half)
-          
-          print(len)
-          print(len_unique)
-          # print(half_degree)
-          # print(each_degree)
-          # print(halfwayD3)
-          print(rows_drop)
-          print(nrow(latter_half))
-          print(nrow(first_half))
-          write_csv(clean, "www/checkingExactMatch2.csv")
           
           # Converting dataframe to JSON for D3 compatibility
           df_exact_matchJSON <- toJSON(clean)
@@ -1416,7 +1401,34 @@ server <- function(input, output, session){
                                             replacement="No", subcomponent_final$name )
           
           # Drop string 'NA-NA'
-          clean <- subcomponent_final[!(subcomponent_final$name == "a. NA-NA"),]
+          subcomponent_final <- subcomponent_final[!(subcomponent_final$name == "a. NA-NA"),]
+          
+          # To easily navigate through visualization, add state name at the end to the latter half of the data frame
+          # get number of rows
+          len <- nrow(subcomponent_final)
+          # get number of unique rows (because some components because of different flow information)
+          len_unique <- length(unique(subcomponent_final$name))
+          # get unique component names to filter later
+          comp_unique <- unique(subcomponent_final$name)
+          # if number of unique rows is even number, divide total row number by 2 or else add 1 and then divide by 2
+          if (len_unique%%2==0){
+            rows_drop <- (len_unique)/2
+          } else {
+            rows_drop <- (len_unique-1)/2
+          }
+          # separate first and second half of unique component list
+          comp_unique_latter <- comp_unique[-(1:rows_drop)]
+          # drop the first half of the dataframe
+          latter_half <- subcomponent_final[subcomponent_final$name %in% c(comp_unique_latter), ]
+          # extract first half of dataframe
+          first_half <- subcomponent_final[!subcomponent_final$name %in% c(comp_unique_latter), ]
+          # remove state name 
+          latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
+          # add state name at the end of the component
+          latter_half$key <- paste0(latter_half$key, "-", latter_half$state)
+          
+          # Combining the two halves back together
+          clean <- rbind(first_half, latter_half)
           
           # Converting dataframe to JSON for D3 compatibility
           df_subcomponentJSON <- toJSON(clean)
@@ -1506,7 +1518,34 @@ server <- function(input, output, session){
                                                     replacement="No", partial_subcomponent_final$name )
           
           # Drop string 'NA-NA'
-          clean <- partial_subcomponent_final[!(partial_subcomponent_final$name == "a. NA-NA"),]
+          partial_subcomponent_final <- partial_subcomponent_final[!(partial_subcomponent_final$name == "a. NA-NA"),]
+          
+          # To easily navigate through visualization, add state name at the end to the latter half of the data frame
+          # get number of rows
+          len <- nrow(partial_subcomponent_final)
+          # get number of unique rows (because some components because of different flow information)
+          len_unique <- length(unique(partial_subcomponent_final$name))
+          # get unique component names to filter later
+          comp_unique <- unique(partial_subcomponent_final$name)
+          # if number of unique rows is even number, divide total row number by 2 or else add 1 and then divide by 2
+          if (len_unique%%2==0){
+            rows_drop <- (len_unique)/2
+          } else {
+            rows_drop <- (len_unique-1)/2
+          }
+          # separate first and second half of unique component list
+          comp_unique_latter <- comp_unique[-(1:rows_drop)]
+          # drop the first half of the dataframe
+          latter_half <- partial_subcomponent_final[partial_subcomponent_final$name %in% c(comp_unique_latter), ]
+          # extract first half of dataframe
+          first_half <- partial_subcomponent_final[!partial_subcomponent_final$name %in% c(comp_unique_latter), ]
+          # remove state name 
+          latter_half$key <- gsub('[A-Z]*-', "", latter_half$key)
+          # add state name at the end of the component
+          latter_half$key <- paste0(latter_half$key, "-", latter_half$state)
+          
+          # Combining the two halves back together
+          clean <- rbind(first_half, latter_half)
           
           # Convert dataframe to JSON for D3 compatibility
           df_partial_subcomponentJSON <- toJSON(clean)

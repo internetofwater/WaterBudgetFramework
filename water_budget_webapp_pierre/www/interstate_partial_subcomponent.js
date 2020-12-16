@@ -92,10 +92,10 @@ function (message) {
           .append("a")
               .attr("xlink:href", d => {return d.data.uri;})
               .attr("target", "_blank")
-          .text(d => d.data.name)
+          .text(d => d.data.key)
           .each(function (d) { d.text = this; })
           .attr("fill", colornone)  // default text color
-          //.attr("font-weight", "bold")
+          .attr("font-weight", "bold")
           .on("mouseover", overed)
           .on("mouseout", outed)
           .attr('cursor', 'pointer')

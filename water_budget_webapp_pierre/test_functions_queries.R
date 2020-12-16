@@ -1150,15 +1150,29 @@ df <- data.frame(state, component)
 
 len <- nrow(df)
 len_unique <- length(unique(df$component))
+unique_components <- unique(df$component)
+# convert to list
+unique_components <- levels(unique_components)
 
-if (len%%2==0){
-  rows_drop <- (len)/2
-  df_reverse_name <- slice(df, -(1:rows_drop))
+
+if (len_unique%%2==0){
+  rows_drop <- (len_unique)/2
+  unique_latter_components <- unique_components[1:rows_drop]
 } else {
-  rows_drop <- (len+1)/2
-  df_reverse_name <- slice(df, -(1:rows_drop))
+  rows_drop <- (len_unique-1)/2
+  unique_latter_components <- unique_components[-(1:rows_drop)]
 }
 
+
+latter_half <- df[df$component %in% c(unique_latter_components), ]
+
+first_half <- df[!df$component %in% c(unique_latter_components), ]
+
+
+# latter half
+df_reverse_name <- slice(df, -(1:rows_drop))
+
+# first half
 df2 <- slice(df, (1:rows_drop))
 
 df_reverse_name$component <- gsub('[A-Z]*-', "", df_reverse_name$component)
