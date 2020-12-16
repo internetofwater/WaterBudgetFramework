@@ -1144,12 +1144,12 @@ observeEvent(input$runButton1, {
 })
 
 ################################################# A function to add states at the end #######################################
-state <- c("CA", "NM", "UT", "NC", "DC")
-component <- c("CA-Applied Water", "NM-Applied Water", "UT-Applied Water", "NC-Applied Water", "DC-Applied Water")
+state <- c("CA","CA", "NM", "UT", "UT", "NC", "DC")
+component <- c("CA-Applied Water", "CA-Applied Water", "NM-Applied Water", "UT-Applied Water", "UT-Applied Water", "NC-Applied Water", "DC-Applied Water")
 df <- data.frame(state, component)
 
 len <- nrow(df)
-
+len_unique <- length(unique(df$component))
 
 if (len%%2==0){
   rows_drop <- (len)/2
