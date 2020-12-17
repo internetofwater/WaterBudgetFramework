@@ -245,11 +245,12 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                            tags$p(htmlOutput("p_subcomponent")),
                            tags$p(htmlOutput("exact_match")),
                            tags$p(style = "font-size: 85%",
-                                  tags$i("Estimation methods, 
-                                         parameters and data sources 
+                                  tags$i("If available, the estimation method(s), 
+                                         parameter(s) and data source(s) 
                                          are presented below"))
-                           )),
+                           ),
                   tags$div(id = "component_container")) #div containing D3 visualization from JavaScript code
+                  ) 
       ),
       
       # -X-X-X- Tab - Component - End -X-X-X- 
@@ -448,6 +449,8 @@ server <- function(input, output, session){
       select(-c(1,2,3,4,6,8,10,12,14)) %>% #dropping jL, cL, c columns and retaining uri columns for flow and subcomponent info
       as.data.frame() #convert to dataframe
     
+    
+    
     # Extracting component URI for the title of the Summary div
     uri_title <- df_component_full %>%
       filter(jL %in% input$states1) %>%
@@ -543,9 +546,14 @@ server <- function(input, output, session){
                autoDestroy = FALSE, {
     selection_df_1 <- df_component %>%
       # Filter dataframe by user inputs
-      filter(jL %in% input$states1) %>%
-      filter(cL %in% input$components) %>%
+      subset(jL %in% input$states1) %>%
+      subset(cL %in% input$components) %>%
       as.data.frame()
+    
+    # If there are estimation methods, parameters or data sources, activate the div containing the D3 visualization
+    if (nrow(selection_df_1) > 1){
+    show("component_container")
+    }
     
     # Dropping column containing state and component names
     selection_df_1 <- select(selection_df_1, -jL, -cL)

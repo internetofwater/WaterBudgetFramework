@@ -82,7 +82,7 @@ Shiny.addCustomMessageHandler("exact_match",
             // Background rectangle
             svg.append("rect")
                 .attr("width", diameter + 300)
-                .attr("height", diameter + 180)
+                .attr("height", diameter + 250)
                 .attr("transform", "translate(" + -(radius + 100) + "," + -(radius + 180) + ")")
                 .attr("fill", "#F8F8F8")
                 .attr('rx', 20);
