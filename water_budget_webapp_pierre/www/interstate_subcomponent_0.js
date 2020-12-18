@@ -1,12 +1,14 @@
-Shiny.addCustomMessageHandler("subcomponent2",
+Shiny.addCustomMessageHandler("subcomponent",
     function (message) {
 
-        df = message;
         d3.selectAll("svg").remove();
 
-            console.log(df)
+        d3.json("df_subcomponent.json").then(function (abc) {
+
+
+            console.log(abc)
             //convert typeof import to array
-            df.forEach(item => {
+            abc.forEach(item => {
                 item["imports"] = item["imports"].split(',')
                 // change objects that have "" to empty 
                 //console.log(Object.values(item.imports))
@@ -17,7 +19,7 @@ Shiny.addCustomMessageHandler("subcomponent2",
 
             //Count number of objects in array for setting box and circle dimensions dynamically
             var count = 0;
-            df.forEach(function(item){
+            abc.forEach(function(item){
                 if(!item.__proto__.__proto__){
                     count++;
                 }
@@ -25,7 +27,7 @@ Shiny.addCustomMessageHandler("subcomponent2",
             console.log("There are " + count + " objects in the array")
             number_of_components = count;
 
-            data = hierarchy(df)
+            data = hierarchy(abc)
 
             //console.log(data)
             // //convert typeof import to array
@@ -37,7 +39,7 @@ Shiny.addCustomMessageHandler("subcomponent2",
             colorout = "#00AFA8";
             colornone = "#bbb";
 
-            var diameter = 1000 //number_of_components * 11; //approximately 960
+            var diameter = number_of_components * 11; //approximately 960
             var radius = diameter / 2;
             var innerRadius = radius - 250;
       
@@ -52,7 +54,7 @@ Shiny.addCustomMessageHandler("subcomponent2",
             const root = tree(bilink(d3.hierarchy(data)
                 .sort((a, b) => d3.ascending(a.height, b.height) || d3.ascending(a.data.name, b.data.name))));
       
-            var svg = d3.select("#interstate_container2").append("svg")
+            var svg = d3.select("#interstate_container").append("svg")
               .attr("width", diameter + 400)
               .attr("height", diameter + 400)
               .append("g")
@@ -167,7 +169,7 @@ c. Is subcomponent of ${d.incoming.length} (in red)`));
             }
 
             function autoscroll() {
-                d3.select("#interstate_container2")
+                d3.select("#interstate_container")
                     .transition()
                     .duration(1000)
                     .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight)/2 + 50));
@@ -181,5 +183,6 @@ c. Is subcomponent of ${d.incoming.length} (in red)`));
                 
             }
 
-        })
+        });
 
+    })

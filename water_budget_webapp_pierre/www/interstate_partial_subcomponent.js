@@ -1,14 +1,12 @@
 Shiny.addCustomMessageHandler("partial_subcomponent",
 function (message) {
 
+  df = message;  
   d3.selectAll("svg").remove();
 
-  d3.json("df_partial_subcomponent.json").then(function (abc) {
-
-
-      console.log(abc)
+      console.log(df)
       //convert typeof import to array
-      abc.forEach(item => {
+      df.forEach(item => {
           item["imports"] = item["imports"].split(',')
           // change objects that have "" to empty 
           //console.log(Object.values(item.imports))
@@ -19,7 +17,7 @@ function (message) {
 
       //Count number of objects in array for setting box and circle dimensions dynamically
       var count = 0;
-      abc.forEach(function(item){
+      df.forEach(function(item){
           if(!item.__proto__.__proto__){
               count++;
           }
@@ -27,7 +25,7 @@ function (message) {
       console.log("There are " + count + " objects in the array")
       number_of_components = count;
 
-      data = hierarchy(abc)
+      data = hierarchy(df)
 
       //console.log(data)
       // //convert typeof import to array
@@ -40,12 +38,12 @@ function (message) {
       colorout = "#00AFA8";
       colornone = "#bbb";
 
-      var diameter = number_of_components * 25; //approximately 960
+      var diameter = 1050 //number_of_components * 25; //approximately 960
       var radius = diameter / 2;
-      var innerRadius = radius - 300;
+      var innerRadius = radius - 250;
 
       line = d3.lineRadial()
-          .curve(d3.curveBundle.beta(0.85))
+          .curve(d3.curveBundle.beta(0.95))
           .radius(d => d.y)
           .angle(d => d.x)
 
@@ -55,17 +53,17 @@ function (message) {
       const root = tree(bilink(d3.hierarchy(data)
           .sort((a, b) => d3.ascending(a.height, b.height) || d3.ascending(a.data.name, b.data.name))));
 
-      var svg = d3.select("#interstate_container").append("svg")
+      var svg = d3.select("#interstate_container2").append("svg")
         .attr("width", diameter + 400)
         .attr("height", diameter + 400)
         .append("g")
-        .attr("transform", "translate(" + (radius + 200) + "," + (radius) + ")");
+        .attr("transform", "translate(" + (radius + 140) + "," + (radius + 180) + ")");
 
       // Background rectangle
       svg.append("rect")
-      .attr("width", diameter + 200)
-      .attr("height", diameter + 50)
-      .attr("transform", "translate(" + -(radius + 100)  + "," + -(radius) + ")")
+      .attr("width", diameter + 300)
+      .attr("height", diameter + 250)
+      .attr("transform", "translate(" + -(radius + 100)  + "," + -(radius + 180) + ")")
       .attr("fill", "#F8F8F8")
       .attr('rx', 20);
 
@@ -81,7 +79,7 @@ function (message) {
 
       node = svg.append("g")
           .attr("font-family", "arial")
-          .attr("font-size", 12)
+          .attr("font-size", 10)
           .selectAll("g")
           .data(root.leaves())
           .join("g")
@@ -94,7 +92,7 @@ function (message) {
           .append("a")
               .attr("xlink:href", d => {return d.data.uri;})
               .attr("target", "_blank")
-          .text(d => d.data.name)
+          .text(d => d.data.key)
           .each(function (d) { d.text = this; })
           .attr("fill", colornone)  // default text color
           .attr("font-weight", "bold")
@@ -102,24 +100,27 @@ function (message) {
           .on("mouseout", outed)
           .attr('cursor', 'pointer')
           .call(text => text.append("title").text(d => `${id(d)}
-b. Has ${d.outgoing.length} partial subcomponents (in green)
-c. Is partial subcomponent of ${d.incoming.length} (in red)`));
+b. Green: Has partial subcomponents
+c. Red: Partial subcomponent of`)); // count by ${d.outgoing.length} and ${d.incoming.length} for dynamic counting
 
       link = svg.append("g")
-          .attr("stroke", "lightgray")
+          .attr("stroke", "#ececec")
           .attr("fill", "none")
           .selectAll("path")
           .data(root.leaves().flatMap(leaf => leaf.outgoing))
           .join("path")
-          .style("mix-blend-mode", "multiply") //what to do if multiple path lines overlaps
+          .style("mix-blend-mode", null) //what to do if multiple path lines overlaps, "multiply" or "null" are 2 good options
           .attr("d", ([i, o]) => line(i.path(o)))
           .each(function (d) { d.path = this; });
 
       function overed(d) {
-          link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
-          d3.select(this).attr("font-weight", "bold");
-          d3.select(this).attr("fill", "#777777"); //on hover in, it darkens selected node
 
+          // For empty nodes
+          link.style("mix-blend-mode", null); //remove multiply effect when hovering a node
+          //d3.select(this).attr("font-weight", "bold");
+          d3.select(this).attr("fill", "#333333"); //on hover in, it darkens selected node
+
+          // For nodes with interstate relationships
           d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", colorin).raise();
           d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colorin).attr("font-weight", "bold");
           d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", colorout).raise();
@@ -127,14 +128,17 @@ c. Is partial subcomponent of ${d.incoming.length} (in red)`));
       }
 
       function outed(d) { // set colornone to restore default gray text color after hover out
-          link.style("mix-blend-mode", "multiply");
-          d3.select(this).attr("font-weight", "bold");
+
+          //For empty nodes
+          link.style("mix-blend-mode", null);
+          //d3.select(this).attr("font-weight", "bold");
           d3.select(this).attr("fill", colornone); //on hover out, restores text color of selected node
 
-          d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", "lightgray");
-          d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
-          d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", "lightgray");
-          d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone).attr("font-weight", "bold");
+          // For nodes with interstate relationships
+          d3.selectAll(d.incoming.map(d => d.path)).attr("stroke", "#ececec");
+          d3.selectAll(d.incoming.map(([d]) => d.text)).attr("fill", colornone).attr("font-weight", null);
+          d3.selectAll(d.outgoing.map(d => d.path)).attr("stroke", "#ececec");
+          d3.selectAll(d.outgoing.map(([, d]) => d.text)).attr("fill", colornone).attr("font-weight", null);
       }
 
       //return svg.node();
@@ -170,7 +174,7 @@ c. Is partial subcomponent of ${d.incoming.length} (in red)`));
       }
 
       function autoscroll() {
-        d3.select("#interstate_container")
+        d3.select("#interstate_container2")
             .transition()
             .duration(1000)
             .tween("scroll", scrollTween((document.body.getBoundingClientRect().height - window.innerHeight)/2 + 50));
@@ -184,7 +188,4 @@ c. Is partial subcomponent of ${d.incoming.length} (in red)`));
         
     }
 
-  });
-  
-
-})
+  })

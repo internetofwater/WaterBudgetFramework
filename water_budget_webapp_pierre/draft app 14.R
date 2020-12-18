@@ -1,3 +1,4 @@
+# Import packages
 library(shiny)
 library(shinyjs)
 library(tidyverse)
@@ -14,14 +15,10 @@ df_component <- read_csv("www/df_component.csv") # dataframe for d3 chart on com
 df_data_source <- read_csv("www/df_data_source.csv") # dataframe for d3 chart on data source tab
 df_state <- read_csv("www/df_state.csv") # dataframe for d3 chart on state tab
 
-# ---- 3. Loading dataframe for interstate tab ---- #
-#df_exact_match <- read_csv("www/exact_match_test.csv") 
-# Not required, choice is sent to JS where relevant csv is read and used for D3
-
-# ---- 4. Importing dataframe for Interstate v2 tab --- #
-df_exact_match <- read_csv("www/df_exact_match_v2.csv")
-df_subcomponent <- read_csv("www/df_subcomponent_v2.csv")
-df_partial_subcomponent <- read_csv("www/df_partial_subcomponent_v2.csv")
+# ---- 3. Importing dataframe for Interstate tab --- #
+df_exact_match <- read_csv("www/df_exact_match.csv")
+df_subcomponent <- read_csv("www/df_subcomponent.csv")
+df_partial_subcomponent <- read_csv("www/df_partial_subcomponent.csv")
 
 #drop-down choices
 state_choices <- c("CA","CO","NM","UT","WY") # later change it to unique values from dataframe
@@ -53,9 +50,9 @@ ui <- fluidPage(id = "page", theme = "styles.css",
               tags$script(src = "https://d3js.org/d3.v5.min.js"),
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"),
               tags$script(src = "index_v8.js"),
-              tags$script(src = "interstate_exact_match_v2.js"),
-              tags$script(src = "interstate_subcomponent_v2.js"),
-              tags$script(src = "interstate_partial_subcomponent_v2.js")
+              tags$script(src = "interstate_exact_match.js"),
+              tags$script(src = "interstate_subcomponent.js"),
+              tags$script(src = "interstate_partial_subcomponent.js")
               ),
     tags$body(HTML('<link rel="shortcut icon", href="favicon.png",
                        type="image/png" />')), # add logo in the tab
@@ -249,7 +246,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 # ------- Tab - Data Sources (reverse chart) - End ------- #
 
 
-# ------- Tab - Interstate v2 - Begin ------- #
+# ------- Tab - Interstate - Begin ------- #
                 tabPanel(title = "Interstate",
                          tags$div(class = "banner", 
                                   tags$img(class = "banner-img-state",
@@ -325,7 +322,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                 ),
                          tags$body(tags$div(id = "interstate_container2"))
 ),
-# ------- Tab - Interstate v2 - End ------- #
+# ------- Tab - Interstate - End ------- #
 
 
       navbarMenu(title = "About",
@@ -483,7 +480,7 @@ server <- function(input, output, session){
   
   # Interstate relationship select states
   
-  # Interstate v2
+  # Interstate
   # Update choices
   observe({
     
@@ -671,7 +668,7 @@ server <- function(input, output, session){
   
   # Interstate relationship chart
 
-  # Interstate v2
+  # Interstate
   
   ### --- SEE ALL COMPONENTS --- ###
   observeEvent(input$runButton4.1, {
@@ -743,7 +740,7 @@ server <- function(input, output, session){
       clean <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
       
       # Export to csv 
-      # write_csv(abc, "www/df_exact_match_v2.csv")
+      # write_csv(abc, "www/df_exact_match.csv")
       
       
       # Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
@@ -751,7 +748,7 @@ server <- function(input, output, session){
       # abc$imports <- with(abc, ifelse(imports == "", name, imports ) )
       
       df_exact_matchJSON <- toJSON(clean)
-      session$sendCustomMessage(type = "exact_match2", df_exact_matchJSON)
+      session$sendCustomMessage(type = "exact_match", df_exact_matchJSON)
     
       ### - SUBCOMPONENT - ###
       
@@ -893,7 +890,7 @@ server <- function(input, output, session){
         clean <- partial_subcomponent_final[!(partial_subcomponent_final$name == "a. NA-NA"),]
         
         df_partial_subcomponentJSON <- toJSON(clean)
-        session$sendCustomMessage(type = "partial_subcomponent2", df_partial_subcomponentJSON)
+        session$sendCustomMessage(type = "partial_subcomponent", df_partial_subcomponentJSON)
       
       }
     
@@ -1009,7 +1006,7 @@ server <- function(input, output, session){
           clean <- exact_match_final[!(exact_match_final$name == "a. NA-NA"),]
           
           # Export to csv 
-          # write_csv(abc, "www/df_exact_match_v2.csv")
+          # write_csv(abc, "www/df_exact_match.csv")
           
           
           # Empty imports dont work in d3, so assigning imports same as name for ones that dont have imports
@@ -1100,7 +1097,7 @@ server <- function(input, output, session){
           clean <- subcomponent_final[!(subcomponent_final$name == "a. NA-NA"),]
           
           df_subcomponentJSON <- toJSON(clean)
-          session$sendCustomMessage(type = "subcomponent2", df_subcomponentJSON)
+          session$sendCustomMessage(type = "subcomponent", df_subcomponentJSON)
           
           ### - PARTIAL SUBCOMPONENT - ###
         } else if (interstate_relationship2 == "Partial Subcomponent"){

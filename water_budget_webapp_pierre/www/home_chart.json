@@ -1,39 +1,129 @@
 {
     "name": "Jurisdiction",
+    "color": "#E55E69",
     "children": [
         {
             "name": "Component",
+            "color": "#E55E69",
             "children": [
                 {
                     "name": "Estimation Method",
+                    "color": "#E55E69",
                     "children": [
                         {
                             "name": "Parameter",
+                            "color": "#E55E69",
                             "children": [
                                 {
-                                    "name": "Data Source"
+                                    "name": "Data Source",
+                                    "color": "#E55E69"
                                 }
                             ]
                         }
                     ]
                 },
                 {
-                    "name": "Flow Type"
+                    "name": "Flow Type",
+                    "color": "#E55E69",
+                    "children": [
+                        {
+                            "name": "Inflow",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Internal Transfer",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Outflow",
+                            "color": "#E55E69"
+                        }
+                    ]
                 },
                 {
-                    "name": "Flow Source"
+                    "name": "Flow Source",
+                    "children": [
+                        {
+                            "name": "Atmosphere",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "External Groundwater",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "External Surface Water",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Zone Groundwater",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Zone Land System",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Zone Surface Water",
+                            "color": "#E55E69"
+                        }
+                    ]
                 },
                 {
-                    "name": "Flow Sink"
+                    "name": "Flow Sink",
+                    "children": [
+                        {
+                            "name": "Atmosphere",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "External Groundwater",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "External Surface Water",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Zone Groundwater",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Zone Land System",
+                            "color": "#E55E69"
+                        },
+                        {
+                            "name": "Zone Surface Water",
+                            "color": "#E55E69"
+                        }
+                    ]
                 },
                 {
-                    "name": "Subcomponent of"
+                    "name": "Subcomponent",
+                    "children": [
+                        {
+                            "name": "Component",
+                            "color": "#E55E69"
+                        }
+                    ]
                 },
                 {
-                    "name": "Partial Subcomponent of"
+                    "name": "Partial Subcomponent of",
+                    "children": [
+                        {
+                            "name": "Component",
+                            "color": "#E55E69"
+                        }
+                    ]
                 },
                 {
-                    "name": "Exact Match"
+                    "name": "Exact Match",
+                    "children": [
+                        {
+                            "name": "Component",
+                            "color": "#E55E69"
+                        }
+                    ]
                 }
 
             ]

@@ -42,7 +42,7 @@ d3.json("df_exact_match_v2.json").then(function(abc) {
   colornone = "#bbb";
 
   line = d3.lineRadial()
-    .curve(d3.curveBundle.beta(0.85))
+    .curve(d3.curveBundle.beta(1))
     .radius(d => d.y)
     .angle(d => d.x)
 

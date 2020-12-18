@@ -372,7 +372,7 @@ Tab - Data Source
 
 #data_source_sticky {
     position: sticky;
-    top: -50px;
+    top: -170px;
     text-align: center;
 }
  
@@ -611,5 +611,5 @@ Tab - Interstate D3
   }
   
   .link--target {
-    stroke: #00AFA8; */
-  }
+    stroke: #00AFA8; 
+  } */

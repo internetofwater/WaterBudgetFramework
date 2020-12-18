@@ -15,7 +15,7 @@ function (message) {
 
     // Loading csv containing URIs for each property (components, estimation methods etc.)
     // and then run the following code chunk
-    d3.csv("hyperlink.csv").then(function(uri_data) {
+    d3.csv("hyperlink2.csv").then(function(uri_data) {
         
         // Storing nested json data to 'data'
         var data = message;
@@ -316,7 +316,7 @@ function (message) {
 
     // Loading csv containing URIs for each property (components, estimation methods etc.)
     // and then run the following code chunk
-    d3.csv("hyperlink.csv").then(function(uri_data) {
+    d3.csv("hyperlink2.csv").then(function(uri_data) {
         
         // Storing nested json data to 'data'
         var data = message;
@@ -428,7 +428,7 @@ function (message) {
         var svg = d3.select("#state_container")   
             .append("svg")
                 .attr("width", width + margin.right + margin.left)
-                .attr("height", d => { return leaf_nodes_2 < 50 ? height + margin.top + margin.bottom + 350 : height + margin.top + margin.bottom;})
+                .attr("height", d => { return leaf_nodes_2 < 85 ? height + margin.top + margin.bottom + 500 : height + margin.top + margin.bottom;})
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -437,7 +437,7 @@ function (message) {
         // Background rectangle
         svg.append("rect")
             .attr("width", width + margin.right + margin.left)
-            .attr("height", d => { return leaf_nodes_2 < 50 ? height + 350 : height + margin.top + margin.bottom;})
+            .attr("height", d => { return leaf_nodes_2 < 85 ? height + 550 : height + margin.top + margin.bottom;})
             .attr("transform", "translate(" + - margin.left + "," + - margin.top + ")")
             .attr("fill", "#F8F8F8")
             .attr('rx', 20);
@@ -463,9 +463,9 @@ function (message) {
             scrollCount++ ;
         } 
 
-        // adjusting height dynamizally
-        if (leaf_nodes_2 < 50) {
-            var treeHeight = height + 300;
+        // adjusting height dynamizally, because CA having lesser leaf nodes is too mushed
+        if (leaf_nodes_2 < 85) {
+            var treeHeight = height + 500;
         }
         else {
             var treeHeight = height;
@@ -776,7 +776,7 @@ function (message) {
 
     // Loading csv containing URIs for each property (components, estimation methods etc.)
     // and then run the following code chunk
-    d3.csv("hyperlink.csv").then(function(uri_data) {
+    d3.csv("hyperlink2.csv").then(function(uri_data) {
         
         // Storing nested json data to 'data'
         var data = message;
@@ -881,14 +881,14 @@ function (message) {
         var svg = d3.select("#data_source_container")   
             .append("svg")
                 .attr("width", width + margin.right + margin.left)
-                .attr("height", d => { return leaf_nodes_3 < 3 ? height + margin.top + margin.bottom + 150 : height + margin.top + margin.bottom + 30 ;})
+                .attr("height", d => { return leaf_nodes_3 < 3 ? height + margin.top + margin.bottom + 200 : height + margin.top + margin.bottom + 30 ;})
             .append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // Background rectangle
         svg.append("rect")
         .attr("width", width + margin.right + margin.left)
-        .attr("height", d => { return leaf_nodes_3 < 3 ? height + 150 : height + margin.top + margin.bottom + 20 ;})
+        .attr("height", d => { return leaf_nodes_3 < 3 ? height + 200 : height + margin.top + margin.bottom + 20 ;})
         .attr("transform", "translate(" + - margin.left + "," + - margin.top + ")")
         .attr("fill", "#F8F8F8")
         .attr('rx', 20);
