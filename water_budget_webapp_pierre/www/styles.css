@@ -372,7 +372,7 @@ Tab - Data Source
 
 #data_source_sticky {
     position: sticky;
-    top: -170px;
+    top: -210px;
     text-align: center;
 }
  
@@ -386,7 +386,7 @@ Tab - Data Source
 @media (max-width: 766px) {
     #data_source_sticky {
         position: sticky;
-        top: 50px;
+        top: 45px;
     }
 
 }

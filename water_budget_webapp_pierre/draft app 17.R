@@ -3,10 +3,6 @@
 # The code is divided into 2 main parts: Data processing & Shiny app development
 #-------------------------------------------------------------------------------
 
-#*******************************#
-#***** I. DATA PREPARATION *****#
-#*******************************#
-
 # --------------- 1. Import packages --------------- # ####
 
 library(shiny)
@@ -15,6 +11,11 @@ library(tidyverse)
 library(rdflib)
 library(jsonlite)
 library(d3r)
+
+
+#*******************************#
+#***** I. DATA PREPARATION *****#
+#*******************************#
 
 # --------------- 2. Loading CSV files --------------- # ####
 

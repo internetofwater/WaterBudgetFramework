@@ -1,0 +1,275 @@
+jL,cL,emL,pL,dsL
+NM,Irrigated Agriculture Depletions-NMOSE,NM Consumptive Use Method,,
+NM,Livestock-NMOSE,,,
+NM,Commercial-NMOSE,,,
+NM,Industrial-NMOSE,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Mining-NMOSE,,,
+NM,Power-NMOSE,,,
+NM,Public Water Supply-NMOSE,,,
+NM,Recharge-NM,,,
+NM,Precipitation-NM,Monthly Precipitation Volume,,
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),PRISM
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),NM Office of the State Engineer (NMOSE)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),US Bureau of Reclamation Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),Historical Diversions File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),New Mexico Interstate Stream Commission (NMISC)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),USDA Cropland Data Layer (CDL)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),National Agricultural Statistics Service
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),USDA Farm Service Agency
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),NMOSE Crop Acreage File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),NMOSE Growing Season File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,PRISM
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,Weather Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,NM Office of the State Engineer (NMOSE)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,US Bureau of Reclamation Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,Historical Diversions File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,New Mexico Interstate Stream Commission (NMISC)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,USDA Cropland Data Layer (CDL)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,National Agricultural Statistics Service
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,USDA Farm Service Agency
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,NMOSE Crop Acreage File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Monthly Precipitation Volume,NMOSE Growing Season File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,PRISM
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,Weather Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,NM Office of the State Engineer (NMOSE)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,US Bureau of Reclamation Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,Historical Diversions File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,New Mexico Interstate Stream Commission (NMISC)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,USDA Cropland Data Layer (CDL)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,National Agricultural Statistics Service
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,USDA Farm Service Agency
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,NMOSE Crop Acreage File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,NMOSE Growing Season File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),PRISM
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),Weather Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),NM Office of the State Engineer (NMOSE)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),US Bureau of Reclamation Stations
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),Historical Diversions File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),New Mexico Interstate Stream Commission (NMISC)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),USDA Cropland Data Layer (CDL)
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),National Agricultural Statistics Service
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),USDA Farm Service Agency
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),NMOSE Crop Acreage File
+NM,Commercial: Golf Courses-NMOSE,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),NMOSE Growing Season File
+NM,Commercial: Unmetered-NMOSE,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Commercial: Incomplete Metered-NMOSE,Interpolation from Other Records,,NM Office of the State Engineer (NMOSE)
+NM,Commercial: Metered-NMOSE,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Commercial: Schools-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NM Office of the State Engineer (NMOSE)
+NM,Commercial: Schools-NMOSE,Withdrawal Method,Student Population,NM Office of the State Engineer (NMOSE)
+NM,Irrigated Agriculture-NMOSE,,,
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),PRISM
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),NM Office of the State Engineer (NMOSE)
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),Irrigation Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),New Mexico Interstate Stream Commission (NMISC)
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),US Bureau of Reclamation
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),National Agricultural Statistics Service
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),USDA Farm Service Agency
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),NMOSE Crop Acreage File
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),NMOSE Growing Season File
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),Conservancy Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Mean Monthly Air Temperatures (T),NMOSE Temperature and Precipitation File
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,PRISM
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,Weather Stations
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,NM Office of the State Engineer (NMOSE)
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,Irrigation Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,New Mexico Interstate Stream Commission (NMISC)
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,US Bureau of Reclamation
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,National Agricultural Statistics Service
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,USDA Farm Service Agency
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,NMOSE Crop Acreage File
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,NMOSE Growing Season File
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,Conservancy Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Monthly Precipitation Volume,NMOSE Temperature and Precipitation File
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,PRISM
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,Weather Stations
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,NM Office of the State Engineer (NMOSE)
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,Irrigation Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,New Mexico Interstate Stream Commission (NMISC)
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,US Bureau of Reclamation
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,National Agricultural Statistics Service
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,USDA Farm Service Agency
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,NMOSE Crop Acreage File
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,NMOSE Growing Season File
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,Conservancy Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Gross Actively Irrigated Acreage,NMOSE Temperature and Precipitation File
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),PRISM
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),Weather Stations
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),NM Office of the State Engineer (NMOSE)
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),Irrigation Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),New Mexico Interstate Stream Commission (NMISC)
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),US Bureau of Reclamation
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),National Agricultural Statistics Service
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),USDA Farm Service Agency
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),NMOSE Crop Acreage File
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),NMOSE Growing Season File
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),Conservancy Districts
+NM,Irrigated Agriculture Diversions-NMOSE,,Consumptive Irrigation Requirement (CIR),NMOSE Temperature and Precipitation File
+NM,Evaporation-NM,,,
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Annual Evaporation,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Annual Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Annual Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Annual Evaporation,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Annual Evaporation,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Annual Evaporation,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Evaporation,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Evaporation,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Evaporation,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Evaporation,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Average Monthly Reservoir Gage Height,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Average Monthly Reservoir Gage Height,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Average Monthly Reservoir Gage Height,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Average Monthly Reservoir Gage Height,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Average Monthly Reservoir Gage Height,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Average Monthly Reservoir Gage Height,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Class A Pan Evaporation Data,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Class A Pan Evaporation Data,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Class A Pan Evaporation Data,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Class A Pan Evaporation Data,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Class A Pan Evaporation Data,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Class A Pan Evaporation Data,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Rainfall,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Rainfall,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Rainfall,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Rainfall,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Rainfall,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Gross Evaporation Rate,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Gross Evaporation Rate,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Gross Evaporation Rate,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Gross Evaporation Rate,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Gross Evaporation Rate,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Monthly Gross Evaporation Rate,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Winter Ice Surface Area,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Winter Ice Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Winter Ice Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Winter Ice Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Winter Ice Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Empirical Data for Small Reservoirs,Winter Ice Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Annual Evaporation,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Annual Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Annual Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Annual Evaporation,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Annual Evaporation,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Annual Evaporation,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Evaporation,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Evaporation,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Evaporation,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Evaporation,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Average Monthly Reservoir Gage Height,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Average Monthly Reservoir Gage Height,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Average Monthly Reservoir Gage Height,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Average Monthly Reservoir Gage Height,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Average Monthly Reservoir Gage Height,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Average Monthly Reservoir Gage Height,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Class A Pan Evaporation Data,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Class A Pan Evaporation Data,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Class A Pan Evaporation Data,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Class A Pan Evaporation Data,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Class A Pan Evaporation Data,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Class A Pan Evaporation Data,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Precipitation Volume,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Precipitation Volume,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Precipitation Volume,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Precipitation Volume,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Precipitation Volume,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Precipitation Volume,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Rainfall,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Rainfall,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Rainfall,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Rainfall,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Rainfall,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Reservoir Surface Area,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Gross Evaporation Rate,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Gross Evaporation Rate,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Gross Evaporation Rate,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Gross Evaporation Rate,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Gross Evaporation Rate,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Monthly Gross Evaporation Rate,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Winter Ice Surface Area,USGS Stream Gages
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Winter Ice Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Winter Ice Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Winter Ice Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Winter Ice Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs-NMOSE,Pan Approach,Winter Ice Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Groundwater Diversions-NM,,,
+NM,Groundwater ET-NM,,,
+NM,Riparian Consumption-NM,,,
+NM,Groundwater Inflows-NM,,,
+NM,Groundwater Outflows-NM,,,
+NM,Groundwater Return-NM,,,
+NM,Groundwater Stock-NM,,,
+NM,Human Storage and Distribution System Stock-NM,,,
+NM,Land Surface Evapotranspiration-NM,,,
+NM,Land Surface Stock-NM,,,
+NM,Livestock: Metered-NMOSE,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Livestock: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),New Mexico Department of Agriculture
+NM,Livestock: Unmetered-NMOSE,Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Mining: Reported-NMOSE,,,
+NM,Mining: Unreported-NMOSE,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Power: Reported-NMOSE,,,
+NM,Power: Unreported-NMOSE,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Public Water Supply: Metered-NMOSE,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply: Metered-NMOSE,Metered,Flow,NMOSE’s Water Use and Conservation Bureau (WUCB) Survey
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),US Census Bureau
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),New Mexico Environment Department (NMED)
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),GPS Population Data
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Military Base Population Data
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Population Served by Public Water Supply,NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Population Served by Public Water Supply,NMOSE Technical Report No. 48
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Public Water Supply: Unmetered-NMOSE,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,River Evaporation-NM,,,
+NM,Runoff-NM,,,
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),US Census Bureau
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),New Mexico Environment Department (NMED)
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Population Served by Public Water Supply
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),GPS Population Data
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Military Base Population Data
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Self Supplied Domestic Population,Population Served by Public Water Supply
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Self Supplied Domestic Population,NMOSE Technical Report No. 48
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Self-Supplied Domestic-NMOSE,Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Surface Water Diversions-NM,,,
+NM,Surface Water Inflows-NM,Streamflow,,
+NM,Surface Water Outflows-NM,,,
+NM,Surface Water Returns-NM,,,
+NM,Surface Water Stock-NM,,,
