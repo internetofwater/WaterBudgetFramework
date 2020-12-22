@@ -258,8 +258,11 @@ index_na_c2ds <- which(is.na(df_state_c2ds$dsL), arr.ind=TRUE)
 common_na <- intersect(intersect(index_na_c2em, index_na_c2p), index_na_c2ds)
 
 df_state_c2em <- df_state_c2em[-c(common_na),]
+df_state_c2em$emL <- replace_na(df_state_c2em$emL,"Unknown/NA")
 df_state_c2p <- df_state_c2p[-c(common_na),]
+df_state_c2p$pL <- replace_na(df_state_c2p$pL,"Unknown/NA")
 df_state_c2ds <- df_state_c2ds[-c(common_na),]
+df_state_c2ds$dsL <- replace_na(df_state_c2ds$dsL,"Unknown/NA")
 
 # Query for components that are  linked in sequential chain (not directly linked to data sources)
 query_state <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -323,6 +326,59 @@ df_state <- df_state[-c(index), ]
 df_state <- df_state[,-6]
 
 # Use dataframe having components with direct links to filter this dataframe
+# this helps to drop comonents that do not have any estimtion methods, parameters and data sources
+check <- df_state %>%
+  filter(cL %in% df_state_c2em$cL)
+
+# for a specific component, we only want to keep rows that have those specific parameters
+
+unique_c <- unique(df_state_c2p$cL)
+n_components <- length(unique(df_state_c2p$cL))
+for (i in 1:n_components){
+  index <- which(df_state$cL == unique_c[i], arr.ind = TRUE)
+}
+
+### Think about it,
+### What if there are 3 estimation methods, 1 of which has unknown parameters, wtf!!!!
+### think about unknown cases :(
+### seems to be working so far, comment later
+
+# try an example with 1 component in NM
+index_c <- which(df_state$cL == "Irrigated Agriculture Diversions-NMOSE", arr.ind = TRUE)
+unique_em <- unique(df_state[c(index_c),3]) #get unique estimation method
+n_em <- length(unique(unique_em))
+for (j in 1:n_em){
+  index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE)
+  check_df <- df_state_c2p[which(df_state_c2p$cL == "Irrigated Agriculture Diversions-NMOSE"),]
+  # if estimation method is unknown and parameter is also unknown  
+  if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
+      df_state[c(index_em),]$pL <- "Unknown/NA"
+  # or else
+  } else {
+      # rows where parameters dont match, drop
+      index_drop <- which(!df_state$pL %in% check_df$pL)
+      df_state <- df_state[-index_drop, ]
+  }
+  
+  
+  # Similarly for data source
+  check_df <- df_state_c2ds[which(df_state_c2ds$cL == "Irrigated Agriculture Diversions-NMOSE"),]
+  if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) {
+    df_state[c(index_em),]$dsL <- "Unknown/NA"
+    # or else
+  } else {
+    # rows where parameters dont match, drop
+    index_drop <- which(!df_state$dsL %in% check_df$dsL)
+    df_state <- df_state[-index_drop, ]
+  }
+} 
+
+index_drop <- which(!df_state[c(index_em),]$pL %in% check_df$pL)
+
+
+
+check <- check %>%
+  filter((emL %in% df_state_c2em$emL) | (pL %in% df_state_c2p$pL) | (pL %in% df_state_c2p$pL) | (dsL %in% df_state_c2ds$dsL))
 
 check <- df_state %>%
   filter((cL %in% df_state_c2em$cL) & (emL %in% df_state_c2em$emL))
