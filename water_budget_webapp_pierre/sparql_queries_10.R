@@ -193,7 +193,7 @@ SELECT ?jL ?cL ?emL FROM onto:explicit WHERE {
     
     OPTIONAL {
     ?c wb:hasEstimationMethod ?em.
-    #?em rdf:type wb:EstimationMethod.
+    ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     }
     FILTER regex(?jL, 'NM')
@@ -213,7 +213,7 @@ SELECT ?jL ?cL ?pL FROM onto:explicit WHERE {
     
     OPTIONAL {
     ?c wb:hasParameter ?p.
-    #?p rdf:type wb:Parameter.
+    ?p rdf:type wb:Parameter.
     ?p rdfs:label ?pL.
     #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     }
@@ -234,7 +234,7 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     
     OPTIONAL {
     ?c wb:hasDataSource ?ds.
-    #?ds rdf:type wb:DataSource.
+    ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
     #?p wb:usedBy ?state.
     #?ds wb:usedBy ?state.
@@ -332,10 +332,39 @@ check <- df_state %>%
 
 # for a specific component, we only want to keep rows that have those specific parameters
 
-unique_c <- unique(df_state_c2p$cL)
-n_components <- length(unique(df_state_c2p$cL))
+unique_c <- unique(df_state_c2p$cL) #get unique components
+n_components <- length(unique(df_state_c2p$cL)) #number of unique components
 for (i in 1:n_components){
-  index <- which(df_state$cL == unique_c[i], arr.ind = TRUE)
+  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) 
+  unique_em <- unique(df_state[c(index_c),3])
+  n_em <- length(unique(unique_em))
+  print(index_c)
+  print(unique_c[i])
+  for (j in 1:n_em){
+    index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE)
+    check_df <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),]
+    print(index_em)
+    print(check_df)
+    if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
+      df_state[c(index_em),]$pL <- "Unknown/NA"
+      # or else
+    } else {
+      # rows where parameters dont match, drop
+      index_drop <- which(!df_state$pL %in% check_df$pL)
+      df_state <- df_state[-index_drop, ]
+    }
+    # Similarly for data source (we might not need this coz this in normal case, but might need for unknown case)
+    # check_df <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]
+    # if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
+    #   df_state[c(index_em),]$dsL <- "Unknown/NA"
+    #   # or else
+    # } else {
+    #   # rows where parameters dont match, drop
+    #   index_drop <- which(!df_state$dsL %in% check_df$dsL)
+    #   df_state <- df_state[-index_drop, ]
+    # }
+  } 
+    
 }
 
 ### Think about it,
@@ -344,12 +373,15 @@ for (i in 1:n_components){
 ### seems to be working so far, comment later
 
 # try an example with 1 component in NM
-index_c <- which(df_state$cL == "Irrigated Agriculture Diversions-NMOSE", arr.ind = TRUE)
-unique_em <- unique(df_state[c(index_c),3]) #get unique estimation method
-n_em <- length(unique(unique_em))
+index_c <- which(df_state$cL == "Irrigated Agriculture Diversions-NMOSE", arr.ind = TRUE) #get index of a specific component
+unique_em <- unique(df_state[c(index_c),3]) #for that component, get unique estimation methods
+n_em <- length(unique(unique_em)) #number of unique estimation methods
+print(index_c)
+print(unique_c[i])
+# iterate through each estimation method
 for (j in 1:n_em){
-  index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE)
-  check_df <- df_state_c2p[which(df_state_c2p$cL == "Irrigated Agriculture Diversions-NMOSE"),]
+  index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in main df
+  check_df <- df_state_c2p[which(df_state_c2p$cL == "Irrigated Agriculture Diversions-NMOSE"),] #subset parameter df for that specific component
   # if estimation method is unknown and parameter is also unknown  
   if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
       df_state[c(index_em),]$pL <- "Unknown/NA"
@@ -363,7 +395,7 @@ for (j in 1:n_em){
   
   # Similarly for data source
   check_df <- df_state_c2ds[which(df_state_c2ds$cL == "Irrigated Agriculture Diversions-NMOSE"),]
-  if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) {
+  if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
     df_state[c(index_em),]$dsL <- "Unknown/NA"
     # or else
   } else {
@@ -395,13 +427,10 @@ check <- unique(check)
 index <- which(df_state$cL %in% df_state_c2em$cL)
 check <- df_state[index,]
 
-################### compare Commercial: Schools-NMOSE in "check" dataframe with df_nm.csv in www folder. Its still repeating... :(
-
-         
-  #        
-  #        %>%
-  # filter(pL %in% df_state_c2p$pL) %>%
-  # filter(dsL %in% df_state_c2ds$dsL)
+#        
+#        %>%
+# filter(pL %in% df_state_c2p$pL) %>%
+# filter(dsL %in% df_state_c2ds$dsL)
 
 
 
@@ -410,6 +439,10 @@ check <- df_state[index,]
 length(unique(df_state$cL))
 length(unique(df_state_direct$cL))
 
+
+################### compare Commercial: Schools-NMOSE in "check" dataframe with df_nm.csv in www folder. Its still repeating... :(
+
+         
 
 # Remove components usedBy river basins
 df_state <- df_state[(df_state$jL %in% c("CA", "CO", "NM", "UT", "WY")),]
