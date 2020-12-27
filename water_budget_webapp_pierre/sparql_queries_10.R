@@ -325,6 +325,8 @@ df_state <- df_state[-c(index), ]
 # Drop column stateL
 df_state <- df_state[,-6]
 
+df_state <- unique(df_state)
+
 # Use dataframe having components with direct links to filter this dataframe
 # this helps to drop comonents that do not have any estimtion methods, parameters and data sources
 check <- df_state %>%
@@ -377,79 +379,103 @@ for (i in 1:n_components){
 ### think about unknown cases :(
 ### seems to be working so far, comment later
 
+
+
 # try an example with 1 component in NM, these 3 components work individually
-unique_c <-c("Irrigated Agriculture Diversions-NMOSE", "Commercial: Incomplete Metered-NMOSE", "Evaporation from Reservoirs-NMOSE")
+unique_c <-c("Irrigated Agriculture Diversions-NMOSE", "Commercial: Incomplete Metered-NMOSE", "Evaporation from Reservoirs-NMOSE",
+             "Irrigated Agriculture Depletions-NMOSE")
 
-index_c <- which(df_state$cL == "Evaporation from Reservoirs-NMOSE", arr.ind = TRUE) #get index of a specific component
-unique_em <- unique(df_state[c(index_c),3]) #for that component, get unique estimation methods
-n_em <- length(unique(unique_em)) #number of unique estimation methods
-print(index_c)
-#print(unique_c[i])
-# iterate through each estimation method
-for (j in 1:n_em){
-  index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in main df
-  check_df <- df_state_c2p[which(df_state_c2p$cL == "Evaporation from Reservoirs-NMOSE"),] #subset parameter df for that specific component
-  # if estimation method is unknown and parameter is also unknown  
-  if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
-      df_state[c(index_em),]$pL <- "Unknown/NA"
-  # or else
-  } else {
-      # rows where parameters dont match, drop
-      index_drop <- which(!df_state$pL %in% check_df$pL)
-      abc <- df_state[-index_drop, ]
-  }
-  
-  
-  # Similarly for data source
-  check_df <- df_state_c2ds[which(df_state_c2ds$cL == "Evaporation from Reservoirs-NMOSE"),]
-  if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
-    df_state[c(index_em),]$dsL <- "Unknown/NA"
-    # or else
-  } else {
-    # rows where parameters dont match, drop
-    index_drop <- which(!df_state$dsL %in% check_df$dsL)
-    abc <- df_state[-index_drop, ]
-  }
-} 
+# Make an empty dataframe to store filtered and processed dataframe
+main <- data.frame()
 
-# add a line to get unique rows
-
-# now trying to make those components work in a loop
-unique_c <- c("Irrigated Agriculture Diversions-NMOSE", "Commercial: Incomplete Metered-NMOSE", "Evaporation from Reservoirs-NMOSE")
-n_components <- 3
-for (i in 1:n_components){
-  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
+#for (i in 1:length(unique_c)){
+  index_c <- which(df_state$cL == "Irrigated Agriculture Depletions-NMOSE", arr.ind = TRUE) #get index of a specific component
   unique_em <- unique(df_state[c(index_c),3]) #for that component, get unique estimation methods
   n_em <- length(unique(unique_em)) #number of unique estimation methods
+  #print(unique_c)
+  print(unique_em)
   print(index_c)
   #print(unique_c[i])
   # iterate through each estimation method
   for (j in 1:n_em){
     index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in main df
+    check_df <- df_state_c2p[which(df_state_c2p$cL == "Irrigated Agriculture Depletions-NMOSE"),] #subset parameter df for that specific component
+    #if estimation method is unknown and parameter is also unknown
+    # if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
+    #     df_state[c(index_em),]$pL <- "Unknown/NA"
+    # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df_state's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
+    if ((df_state$pL %in% "Unknown/NA") && !(check_df$pL %in% "Unknown/NA")){
+      new_row <- data.frame("","Irrigated Agriculture Depletions-NMOSE","Unknown/NA")
+      names(new_row) <- c("jL", "cL", "pL")
+      check_df <- rbind(check_df, new_row)
+      
+    } 
+    
+    # rows where parameters dont match, drop
+    index_selected <- which(df_state$pL %in% check_df$pL & df_state$emL %in% unique_em[j] & df_state$cL %in% "Irrigated Agriculture Depletions-NMOSE")
+    abc <- df_state[index_selected, ]
+    # above this point looks all good... something is happening below
+    
+    
+    # #Similarly for data source
+    check_df <- df_state_c2ds[which(df_state_c2ds$cL %in% "Irrigated Agriculture Depletions-NMOSE"),]
+    # if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
+    #   df_state[c(index_em),]$dsL <- "Unknown/NA"
+    #   # or else
+    # } else {
+      # rows where parameters dont match, drop
+      index_drop <- which(!abc$dsL %in% check_df$dsL)
+      abc <- abc[-index_drop, ] #*#*#*# START FROM: "NM Irrigated Acreage Assessment" and "Indicator gage approach" ds is gone...why though :(
+    #}
+  
+    # Append to main dataframe
+    main <- rbind(main, abc)
+  } 
+  
+#}
+# later change df_state to some other name and main to df_state so it works with the remaining code.
+  
+
+# now trying to make those components work in a loop
+unique_c <- c("Irrigated Agriculture Diversions-NMOSE", "Commercial: Incomplete Metered-NMOSE", "Evaporation from Reservoirs-NMOSE")
+n_components <- 3
+for (i in 1:length(unique_c)){
+  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
+  unique_em <- unique(df_state[c(index_c),3]) #for that component, get unique estimation methods
+  n_em <- length(unique(unique_em)) #number of unique estimation methods
+  # print(unique_c)
+  # print(unique_em)
+  # print(index_c)
+  #print(unique_c[i])
+  # iterate through each estimation method
+  for (j in 1:n_em){
+    index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in main df
     check_df <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),] #subset parameter df for that specific component
-    # if estimation method is unknown and parameter is also unknown  
+    #if estimation method is unknown and parameter is also unknown
     if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
       df_state[c(index_em),]$pL <- "Unknown/NA"
       # or else
     } else {
       # rows where parameters dont match, drop
-      index_drop <- which(!df_state$pL %in% check_df$pL)
-      abc <- df_state[-index_drop, ]
-    }
-    
-    
-    # Similarly for data source
-    check_df <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]
-    if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
-      df_state[c(index_em),]$dsL <- "Unknown/NA"
-      # or else
-    } else {
-      # rows where parameters dont match, drop
-      index_drop <- which(!df_state$dsL %in% check_df$dsL)
-      abc <- df_state[-index_drop, ] #### START FROM HERE: if I replace abc with df_state, the output is zero, may be index is getting messed up...try adding these dataframmes by row.
-    }
-  } 
-}
+      index_drop <- which(df_state$pL %in% check_df$pL & df_state$emL %in% unique_em[j] & df_state$cL %in% unique_c[i])
+      abc <- df_state[index_drop, ]
+      }
+      
+      
+      #Similarly for data source
+      check_df <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]
+      if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
+        df_state[c(index_em),]$dsL <- "Unknown/NA"
+        # or else
+      } else {
+        # rows where parameters dont match, drop
+        index_drop <- which(!abc$dsL %in% check_df$dsL)
+        abc <- abc[-index_drop, ]
+      }
+    } 
+    # Append to main dataframe
+    main <- rbind(main, abc)
+  }
 
 ######################## something is wrong with the for loop
 ######################## ohhhh isee, same estimation can apply to multiple components :(
