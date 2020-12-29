@@ -9,7 +9,6 @@ library(d3r)
 library(rdf4r)
 
 # Load and parse TTL file from graphDB
-#file <- rdf_parse("graphDB2.ttl", format="turtle")
 file <- basic_triplestore_access("https://terminology.internetofwater.app", repository="WaterBudgetingFramework_v2_core")
 
 #***************************************************#
@@ -113,66 +112,45 @@ write_csv(df_component_flow, "www/df_component_flow2.csv")
 
 # ---- 2. creating dataframe state-wise info ---- #
 
-# # Query for components that are directly linked with data sources
-# query_state_c2ds <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
-# PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-# PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-# PREFIX onto: <http://www.ontotext.com/>
-#     
-# SELECT ?jL ?cL ?dsL ?stateL FROM onto:explicit WHERE {
-#     ?c wb:usedBy ?j.
-#     ?j rdfs:label ?jL.
-#     ?c rdfs:label ?cL.
-#     ?c rdf:type wb:Component.
-#     
-#     ?c wb:hasDataSource ?ds.
-#     
-#     ?ds rdfs:label ?dsL.
-#     ?ds wb:usedBy ?state.
-#     
-#     ?state rdfs:label ?stateL.
-#   
-# }"
-# 
-# # Submit query to get a dataframe
-# df_state_c2ds <- submit_sparql(query_state_c2ds,access_options=file)
-# 
-# # Assign NA to empty values
-# df_state_c2ds[df_state_c2ds == ""] <- NA
-# 
-# # Query for estimation methods that are directly linked with data sources
-# query_state_em2ds <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
-# PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-# PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-# PREFIX onto: <http://www.ontotext.com/>
-#     
-# SELECT ?jL ?cL ?emL ?dsL ?stateL FROM onto:explicit WHERE {
-#     ?c wb:usedBy ?j.
-#     ?j rdfs:label ?jL.
-#     ?c rdfs:label ?cL.
-#     ?c rdf:type wb:Component.
-#     
-#   OPTIONAL {
-#     ?c wb:hasEstimationMethod ?em.
-#     ?em wb:hasDataSource ?ds.
-#     
-#     ?em rdf:type wb:EstimationMethod.
-#     ?em rdfs:label ?emL.
-#     
-#     ?ds rdfs:label ?dsL.
-#     ?ds wb:usedBy ?state.
-#     
-#     ?state rdfs:label ?stateL.
-#   }
-# }"
-# 
-# # Submit query to get a dataframe
-# df_state_em2ds <- submit_sparql(query_state_em2ds,access_options=file)
-# 
-# # Assign NA to empty values
-# df_state_em2ds[df_state_em2ds == ""] <- NA
+# Get specific state's data to check which ones are unknown
+check <- "
+PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX onto: <http://www.ontotext.com/>
+
+SELECT ?jL ?cL ?emL ?pL ?dsL FROM onto:explicit WHERE {
+    ?c wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?c rdfs:label ?cL.
+    ?c rdf:type wb:Component.
+    
+    OPTIONAL {
+    ?c wb:hasEstimationMethod ?em.
+    ?em rdf:type wb:EstimationMethod.
+    ?em rdfs:label ?emL.
+    }
+    
+    OPTIONAL {
+    ?c wb:hasParameter ?p.
+    ?p rdf:type wb:Parameter.
+    ?p rdfs:label ?pL.
+    }
+    
+    OPTIONAL {
+    ?c wb:hasDataSource ?ds.
+    ?ds rdf:type wb:DataSource.
+    ?ds rdfs:label ?dsL.
+    }
+    
+    FILTER regex(?jL, 'CA')
+}
+"
+
+check_df <- submit_sparql(check,access_options=file)
+write_csv(check_df, "df_ca.csv")
+
 
 # Query for components that are directly linked to estimation methods, parameters, and data sources
 query_state_c2em <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -239,28 +217,36 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     FILTER regex(?jL, 'NM')
 }"
     
-
+# Converting payload to dataframe
 df_state_c2em <- submit_sparql(query_state_c2em,access_options=file)
-df_state_c2em[df_state_c2em == ""] <- NA
+df_state_c2em[df_state_c2em == ""] <- NA  #assign NA to blank cells
 df_state_c2p <- submit_sparql(query_state_c2p,access_options=file)
 df_state_c2p[df_state_c2p == ""] <- NA
 df_state_c2ds <- submit_sparql(query_state_c2ds,access_options=file)
 df_state_c2ds[df_state_c2ds == ""] <- NA
 
+# Get components with no estimation methods
 na_c2em <- df_state_c2em[which(is.na(df_state_c2em$emL), arr.ind=TRUE),]$cL
+# Get components with no parameters
 na_c2p <- df_state_c2p[which(is.na(df_state_c2p$pL), arr.ind=TRUE), ]$cL
+# Get components with no data sources
 na_c2ds <- df_state_c2ds[which(is.na(df_state_c2ds$dsL), arr.ind=TRUE), ]$cL
-
+# Intersect the 3 dataframes to get components with no estimation methods, parameters and data sources
 common_na <- intersect(intersect(na_c2em, na_c2p), na_c2ds)
 
+# Drop rows with no info
 df_state_c2em <- df_state_c2em[-which(df_state_c2em$cL %in% common_na),]
-df_state_c2em$emL <- replace_na(df_state_c2em$emL,"Unknown/NA")
 df_state_c2p <- df_state_c2p[-which(df_state_c2p$cL %in% common_na),]
-df_state_c2p$pL <- replace_na(df_state_c2p$pL,"Unknown/NA")
 df_state_c2ds <- df_state_c2ds[-which(df_state_c2ds$cL %in% common_na),]
-df_state_c2ds$dsL <- replace_na(df_state_c2ds$dsL,"Unknown/NA")
 
-# Query for components that are  linked in sequential chain (not directly linked to data sources)
+# Replace NAs with "Unknown" value
+df_state_c2em$emL <- replace_na(df_state_c2em$emL,"Unknown")
+df_state_c2p$pL <- replace_na(df_state_c2p$pL,"Unknown")
+df_state_c2ds$dsL <- replace_na(df_state_c2ds$dsL,"Unknown")
+
+# The above 3 dataframes will be used to filter the master dataframe below
+
+# Query for components that are  linked in sequential chain (not directly linked)
 query_state <- "
 PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -301,76 +287,26 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE {
 "
 
 # Submit query to get a dataframe, returns 3 millions relationships
-df_state <- submit_sparql(query_state,access_options=file)
+df <- submit_sparql(query_state,access_options=file)
 
 # Assign NA to empty values
-df_state[df_state == ""] <- "Unknown/NA"
-#df_state[df_state == ""] <- NA
-
-##################################################3
-# remove duplicates!!!!
-# see components for exsample, sooo manyyyy duplicates!!!
-###################################################
+df[df == ""] <- "Unknown"
 
 # Check if the jurisdiction is same as the state usedBy property
 # get index for the rows where usedBy state is not same as jurisdiction 
-index <- which(!df_state$jL == df_state$stateL)
+index <- which(!df$jL == df$stateL)
 # subset using the index
-df_state <- df_state[-c(index), ]
+df <- df[-c(index), ]
 
 
 # Drop column stateL
-df_state <- df_state[,-6]
+df <- df[,-6]
 
 # Remove identical rows
-df_state <- unique(df_state)
-
-# Use dataframe having components with direct links to filter this dataframe
-# this helps to drop comonents that do not have any estimtion methods, parameters and data sources
-check <- df_state %>%
-  filter(cL %in% df_state_c2em$cL)
+df <- unique(df)
 
 # for a specific component, we only want to keep rows that have those specific parameters
 
-unique_c <- unique(df_state_c2p$cL) #get unique components
-n_components <- length(unique(df_state_c2p$cL)) #number of unique components
-for (i in 1:n_components){
-  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) 
-  unique_em <- unique(df_state[c(index_c),3])
-  n_em <- length(unique(unique_em))
-  #print(index_c)
-  #print(unique_c[i])
-  for (j in 1:n_em){
-    index_em <- which((df_state_c2p$cL == unique_c[i]) & (df_state$emL == unique_em[j]), arr.ind = TRUE)
-    check_df <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),]
-    print(paste("i:", i))
-    print(paste("j:", j))
-    print(index_em)
-    print(df_state[index_em, ])
-    print(check_df)
-    
-    # if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
-    #   df_state[c(index_em),]$pL <- "Unknown/NA"
-    #   # or else
-    # } else {
-      # rows where parameters dont match, drop
-      index_drop <- which(!df_state$pL %in% check_df$pL)
-      abc <- df_state[-index_drop, ]
-      #print(df_state)
-    # }
-    # Similarly for data source (we might not need this coz this in normal case, but might need for unknown case)
-    # check_df <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]
-    # if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
-    #   df_state[c(index_em),]$dsL <- "Unknown/NA"
-    #   # or else
-    # } else {
-    #   # rows where parameters dont match, drop
-    #   index_drop <- which(!df_state$dsL %in% check_df$dsL)
-    #   df_state <- df_state[-index_drop, ]
-    # }
-  } 
-    
-}
 
 ### Think about it,
 ### What if there are 3 estimation methods, 1 of which has unknown parameters, wtf!!!!
@@ -384,11 +320,11 @@ unique_c <-c("Irrigated Agriculture Diversions-NMOSE", "Commercial: Incomplete M
              "Irrigated Agriculture Depletions-NMOSE")
 
 # Make an empty dataframe to store filtered and processed dataframe
-main <- data.frame()
+df_state <- data.frame()
 
 #for (i in 1:length(unique_c)){
-  index_c <- which(df_state$cL == "Irrigated Agriculture Depletions-NMOSE", arr.ind = TRUE) #get index of a specific component
-  unique_em <- unique(df_state[c(index_c),3]) #for that component, get unique estimation methods
+  index_c <- which(df$cL == "Irrigated Agriculture Depletions-NMOSE", arr.ind = TRUE) #get index of a specific component
+  unique_em <- unique(df[c(index_c),3]) #for that component, get unique estimation methods
   n_em <- length(unique(unique_em)) #number of unique estimation methods
   #print(unique_c)
   print(unique_em)
@@ -396,29 +332,29 @@ main <- data.frame()
   #print(unique_c[i])
   # iterate through each estimation method
   for (j in 1:n_em){
-    index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in main df
+    index_em <- which(df$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in df_state df
     check_df <- df_state_c2p[which(df_state_c2p$cL == "Irrigated Agriculture Depletions-NMOSE"),] #subset parameter df for that specific component
     #if estimation method is unknown and parameter is also unknown
-    # if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
-    #     df_state[c(index_em),]$pL <- "Unknown/NA"
-    # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df_state's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
-    if ((df_state$pL %in% "Unknown/NA") && !(check_df$pL %in% "Unknown/NA")){
-      new_row <- data.frame("","Irrigated Agriculture Depletions-NMOSE","Unknown/NA")
+    # if ((check_df$pL[1] %in% "Unknown") & (df[index_em,3][1] %in% "Unknown")) {
+    #     df[c(index_em),]$pL <- "Unknown"
+    # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
+    if ((df$pL %in% "Unknown") && !(check_df$pL %in% "Unknown")){
+      new_row <- data.frame("","Irrigated Agriculture Depletions-NMOSE","Unknown")
       names(new_row) <- c("jL", "cL", "pL")
       check_df <- rbind(check_df, new_row) #add new row with unknowns to the check_df 
       
     } 
     
     # rows where parameters dont match, drop
-    index_selected <- which(df_state$pL %in% check_df$pL & df_state$emL %in% unique_em[j] & df_state$cL %in% "Irrigated Agriculture Depletions-NMOSE")
-    abc <- df_state[index_selected, ]
+    index_selected <- which(df$pL %in% check_df$pL & df$emL %in% unique_em[j] & df$cL %in% "Irrigated Agriculture Depletions-NMOSE")
+    abc <- df[index_selected, ]
     # above this point looks all good... something is happening below
     
 
     # #Similarly for data source
     check_df <- df_state_c2ds[which(df_state_c2ds$cL == "Irrigated Agriculture Depletions-NMOSE"),]
-    # if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
-    #   df_state[c(index_em),]$dsL <- "Unknown/NA"
+    # if ((check_df$dsL[1] %in% "Unknown") & (df[index_em,4][1] %in% "Unknown")) { #probably there is no data source that will be unknown.
+    #   df[c(index_em),]$dsL <- "Unknown"
     #   # or else
     # } else {
       # rows where parameters dont match, drop
@@ -427,14 +363,14 @@ main <- data.frame()
     #}
     
   
-    # Append to main dataframe
-    main <- rbind(main, abc)
+    # Append to df_state dataframe
+    df_state <- rbind(df_state, abc)
     
   } 
 
-main <- unique(main)
+df_state <- unique(df_state)
 #}
-# later change df_state to some other name and "main" to df_state so it works with the remaining code.
+
   
 
 # now trying to make those components work in a loop
@@ -443,38 +379,34 @@ unique_c <- c("Irrigated Agriculture Diversions-NMOSE", "Commercial: Incomplete 
 #if i added Livestock-NMOSE which have unknown em, p and ds, it gave error
 
 for (i in 1:length(unique_c)){
-  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
-  unique_em <- unique(df_state[c(index_c),3]) #for that component, get unique estimation methods
+  index_c <- which(df$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
+  unique_em <- unique(df[c(index_c),3]) #for that component, get unique estimation methods
   n_em <- length(unique(unique_em)) #number of unique estimation methods
-  #print(unique_c)
-  print(unique_em)
-  print(index_c)
-  #print(unique_c[i])
   # iterate through each estimation method
   for (j in 1:n_em){
-    index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in main df
+    index_em <- which(df$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in df_state df
     check_df <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),] #subset parameter df for that specific component
     #if estimation method is unknown and parameter is also unknown
-    # if ((check_df$pL[1] %in% "Unknown/NA") & (df_state[index_em,3][1] %in% "Unknown/NA")) {
-    #     df_state[c(index_em),]$pL <- "Unknown/NA"
-    # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df_state's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
-    if ((df_state$pL %in% "Unknown/NA") && !(check_df$pL %in% "Unknown/NA")){
-      new_row <- data.frame("",unique_c[i],"Unknown/NA")
+    # if ((check_df$pL[1] %in% "Unknown") & (df[index_em,3][1] %in% "Unknown")) {
+    #     df[c(index_em),]$pL <- "Unknown"
+    # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
+    if ((df$pL %in% "Unknown") && !(check_df$pL %in% "Unknown")){
+      new_row <- data.frame("",unique_c[i],"Unknown")
       names(new_row) <- c("jL", "cL", "pL")
       check_df <- rbind(check_df, new_row) #add new row with unknowns to the check_df 
       
     } 
     
     # rows where parameters dont match, drop
-    index_selected <- which(df_state$pL %in% check_df$pL & df_state$emL %in% unique_em[j] & df_state$cL %in% unique_c[i])
-    abc <- df_state[index_selected, ]
+    index_selected <- which(df$pL %in% check_df$pL & df$emL %in% unique_em[j] & df$cL %in% unique_c[i])
+    abc <- df[index_selected, ]
     # above this point looks all good... something is happening below
     
     
     # #Similarly for data source
     check_df <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]
-    # if ((check_df$dsL[1] %in% "Unknown/NA") & (df_state[index_em,4][1] %in% "Unknown/NA")) { #probably there is no data source that will be unknown.
-    #   df_state[c(index_em),]$dsL <- "Unknown/NA"
+    # if ((check_df$dsL[1] %in% "Unknown") & (df[index_em,4][1] %in% "Unknown")) { #probably there is no data source that will be unknown.
+    #   df[c(index_em),]$dsL <- "Unknown"
     #   # or else
     # } else {
     # rows where parameters dont match, drop
@@ -483,69 +415,18 @@ for (i in 1:length(unique_c)){
     #}
     
     
-    # Append to main dataframe
-    main <- rbind(main, abc)
+    # Append to df_state dataframe
+    df_state <- rbind(df_state, abc)
     
   }
 }
-  
-main <- unique(main)
 
-######################## something is wrong with the for loop
-######################## ohhhh isee, same estimation can apply to multiple components :(
-
-
-unique_c <- unique(df_state_c2p$cL) #get unique components
-n_components <- length(unique(df_state_c2p$cL)) #number of unique components
-for (i in 1:n_components){
-  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) 
-  unique_em <- unique(df_state[c(index_c),3])
-  n_em <- length(unique(unique_em))
-  #print(index_c)
-  #print(unique_c[i])
-  for (j in 1:n_em){
-    print(paste("i", i))
-    print(paste("j", j))
-  }
-}
+# Keep unique rows to prevent duplicate rows
+df_state <- unique(df_state)
 
 
 
 
-
-index_drop <- which(!df_state[c(index_em),]$pL %in% check_df$pL)
-
-
-
-check <- check %>%
-  filter((emL %in% df_state_c2em$emL) | (pL %in% df_state_c2p$pL) | (pL %in% df_state_c2p$pL) | (dsL %in% df_state_c2ds$dsL))
-
-check <- df_state %>%
-  filter((cL %in% df_state_c2em$cL) & (emL %in% df_state_c2em$emL))
-
-check <- check %>%
-  filter((cL %in% df_state_c2p$cL) & (pL %in% df_state_c2p$pL))
-
-check <- check %>%
-  filter((cL %in% df_state_c2ds$cL) & (dsL %in% df_state_c2ds$dsL))
-
-check <- unique(check)
-
-
-index <- which(df_state$cL %in% df_state_c2em$cL)
-check <- df_state[index,]
-
-#        
-#        %>%
-# filter(pL %in% df_state_c2p$pL) %>%
-# filter(dsL %in% df_state_c2ds$dsL)
-
-
-
-
-
-length(unique(df_state$cL))
-length(unique(df_state_direct$cL))
 
 
 ################### compare Commercial: Schools-NMOSE in "check" dataframe with df_nm.csv in www folder. Its still repeating... :(
