@@ -112,44 +112,44 @@ write_csv(df_component_flow, "www/df_component_flow2.csv")
 
 # ---- 2. creating dataframe state-wise info ---- #
 
-# Get specific state's data to check which ones are unknown
-check <- "
-PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX onto: <http://www.ontotext.com/>
-
-SELECT ?jL ?cL ?emL ?pL ?dsL FROM onto:explicit WHERE {
-    ?c wb:usedBy ?j.
-    ?j rdfs:label ?jL.
-    ?c rdfs:label ?cL.
-    ?c rdf:type wb:Component.
-    
-    OPTIONAL {
-    ?c wb:hasEstimationMethod ?em.
-    ?em rdf:type wb:EstimationMethod.
-    ?em rdfs:label ?emL.
-    }
-    
-    OPTIONAL {
-    ?c wb:hasParameter ?p.
-    ?p rdf:type wb:Parameter.
-    ?p rdfs:label ?pL.
-    }
-    
-    OPTIONAL {
-    ?c wb:hasDataSource ?ds.
-    ?ds rdf:type wb:DataSource.
-    ?ds rdfs:label ?dsL.
-    }
-    
-    FILTER regex(?jL, 'CA')
-}
-"
-
-check_df <- submit_sparql(check,access_options=file)
-write_csv(check_df, "df_ca.csv")
+# # Get specific state's data to check which ones are unknown
+# check <- "
+# PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
+# PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+# PREFIX onto: <http://www.ontotext.com/>
+# 
+# SELECT ?jL ?cL ?emL ?pL ?dsL FROM onto:explicit WHERE {
+#     ?c wb:usedBy ?j.
+#     ?j rdfs:label ?jL.
+#     ?c rdfs:label ?cL.
+#     ?c rdf:type wb:Component.
+#     
+#     OPTIONAL {
+#     ?c wb:hasEstimationMethod ?em.
+#     ?em rdf:type wb:EstimationMethod.
+#     ?em rdfs:label ?emL.
+#     }
+#     
+#     OPTIONAL {
+#     ?c wb:hasParameter ?p.
+#     ?p rdf:type wb:Parameter.
+#     ?p rdfs:label ?pL.
+#     }
+#     
+#     OPTIONAL {
+#     ?c wb:hasDataSource ?ds.
+#     ?ds rdf:type wb:DataSource.
+#     ?ds rdfs:label ?dsL.
+#     }
+#     
+#     FILTER regex(?jL, 'CA')
+# }
+# "
+# 
+# check_df <- submit_sparql(check,access_options=file)
+# write_csv(check_df, "df_ca.csv")
 
 
 # Query for components that are directly linked to estimation methods, parameters, and data sources
@@ -170,7 +170,7 @@ SELECT ?jL ?cL ?emL FROM onto:explicit WHERE {
     ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     }
-    FILTER regex(?jL, 'NM')
+    FILTER regex(?jL, 'CA')
 }"
 
 query_state_c2p <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -191,7 +191,7 @@ SELECT ?jL ?cL ?pL FROM onto:explicit WHERE {
     ?p rdfs:label ?pL.
     #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     }
-    FILTER regex(?jL, 'NM')
+    FILTER regex(?jL, 'CA')
 }"
 
 query_state_c2ds <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -214,7 +214,7 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     #?ds wb:usedBy ?state.
     #?state rdfs:label ?stateL.
     }
-    FILTER regex(?jL, 'NM')
+    FILTER regex(?jL, 'CA')
 }"
     
 # Converting payload to dataframe
@@ -282,7 +282,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE {
     ?state rdfs:label ?stateL.
     }
     
-    FILTER regex(?jL, 'NM')
+    FILTER regex(?jL, 'CA')
 }
 "
 
@@ -314,16 +314,17 @@ df <- unique(df)
 ### seems to be working so far, comment later
 
 
-
+# Check for 1 component
 # try an example with 1 component in NM, these 3 components work individually
 unique_c <-c("Irrigated Agriculture Diversions-NMOSE", "Commercial: Incomplete Metered-NMOSE", "Evaporation from Reservoirs-NMOSE",
              "Irrigated Agriculture Depletions-NMOSE")
 
+component <- "Stored Water Export-CA"
 # Make an empty dataframe to store filtered and processed dataframe
 df_state <- data.frame()
 
 #for (i in 1:length(unique_c)){
-  index_c <- which(df$cL == "Irrigated Agriculture Depletions-NMOSE", arr.ind = TRUE) #get index of a specific component
+  index_c <- which(df$cL == component, arr.ind = TRUE) #get index of a specific component
   unique_em <- unique(df[c(index_c),3]) #for that component, get unique estimation methods
   n_em <- length(unique(unique_em)) #number of unique estimation methods
   #print(unique_c)
@@ -333,26 +334,40 @@ df_state <- data.frame()
   # iterate through each estimation method
   for (j in 1:n_em){
     index_em <- which(df$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in df_state df
-    check_df <- df_state_c2p[which(df_state_c2p$cL == "Irrigated Agriculture Depletions-NMOSE"),] #subset parameter df for that specific component
-    #if estimation method is unknown and parameter is also unknown
-    # if ((check_df$pL[1] %in% "Unknown") & (df[index_em,3][1] %in% "Unknown")) {
-    #     df[c(index_em),]$pL <- "Unknown"
+    check_df <- df_state_c2p[which(df_state_c2p$cL == component),] #subset parameter df for that specific component
+    
+    #if estimation method is unknown and parameter is also unknown, directly connect to data source using filtering dataframe for data source
+    if ((check_df$pL %in% "Unknown") && (df[index_em,3] %in% "Unknown")) {
+      direct_connect <- df_state_c2ds[which(df_state_c2ds$cL == component),]  
+      direct_connect$emL <- "Unknown"
+      direct_connect$pL <- "Unknown"
+      direct_connect <- direct_connect[ ,c("jL", "cL", "emL", "pL", "dsL")]
+      #df[c(index_em),]$pL <- "Unknown"
+      print(direct_connect)
+      print("yes")
+      df_state <- rbind(df_state, direct_connect)
+    }
+    
     # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
     if ((df$pL %in% "Unknown") && !(check_df$pL %in% "Unknown")){
-      new_row <- data.frame("","Irrigated Agriculture Depletions-NMOSE","Unknown")
-      names(new_row) <- c("jL", "cL", "pL")
-      check_df <- rbind(check_df, new_row) #add new row with unknowns to the check_df 
+      new_row_p <- data.frame("", component, "Unknown")
+      names(new_row_p) <- c("jL", "cL", "pL")
+      check_df <- rbind(check_df, new_row_p) #add new row with unknowns to the check_df 
       
-    } 
+    }
+    
+    #if em and p both are unknown, in df it will populate p with all values that are connected to an unknown em, so we will use check_df's p to see if it also has unknown
+    
+    
     
     # rows where parameters dont match, drop
-    index_selected <- which(df$pL %in% check_df$pL & df$emL %in% unique_em[j] & df$cL %in% "Irrigated Agriculture Depletions-NMOSE")
+    index_selected <- which(df$pL %in% check_df$pL & df$emL %in% unique_em[j] & df$cL %in% component)
     abc <- df[index_selected, ]
     # above this point looks all good... something is happening below
     
 
     # #Similarly for data source
-    check_df <- df_state_c2ds[which(df_state_c2ds$cL == "Irrigated Agriculture Depletions-NMOSE"),]
+    check_df <- df_state_c2ds[which(df_state_c2ds$cL == component),]
     # if ((check_df$dsL[1] %in% "Unknown") & (df[index_em,4][1] %in% "Unknown")) { #probably there is no data source that will be unknown.
     #   df[c(index_em),]$dsL <- "Unknown"
     #   # or else
