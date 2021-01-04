@@ -562,13 +562,15 @@ server <- function(input, output, session){
           trimws()
         split_uri <- unlist(strsplit(get(uri_list[i]), "[,]")) %>%
           trimws()
-        # the first condition is only letting a maximum of 2 values show up for each...change it later
-        output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
-                                              '<a href="', split_uri[1],'" target="_blank">',
-                                              split_value[1], "</a>", 
-                                              '<a href="', split_uri[2], '" target="_blank">',
-                                              ",",
-                                              split_value[2], "</a>"))
+        # several "paste" functions are nested to separate the property name and put commas after each value but not after the last value
+        output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>", 
+                                                            paste(
+                                                                  paste(
+                                                                        '<a href="', split_uri,'" target="_blank">',
+                                                                          split_value, "</a>"),
+                                                                          sep=", ", collapse=", "),
+                                                            sep="")
+                                              )
       }else if (get(summary_list[i]) == "NA") {
         output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
                                                     get(summary_list[i])))
