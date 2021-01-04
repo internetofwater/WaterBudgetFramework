@@ -220,21 +220,22 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                   tags$ul(type="disc",
                                           tags$br(),
                                           tags$li(tags$b("Component"), ": This tab provides information on a specific component. A user can select a component from a state to view its 
-                                                  flow source, flow sink, flow type, estimation method(s), parameter(s), and data source(s). This tab also informs about the component's interstate relationship such as its subcomponents, 
+                                                  flow source, flow sink, flow type, estimation method(s), parameter(s), and data source(s). This tab also displays a component's relationship with other components such as its subcomponents, 
                                                   partial subcomponents or exact matches."),
                                           tags$br(),
-                                          tags$li(tags$b("State"), ": This tab allows a user view and interact with a specifc state's water budget framework. The user can click on colored nodes to see 
+                                          tags$li(tags$b("State"), ": This tab allows a user to view and interact with a specifc state's water budget framework. The user can click on colored nodes to see a state's 
                                                   components, estimation methods, parameters, and data sources, in that order."),
                                           tags$br(),
-                                          tags$li(tags$b("Data Source"), ": This tab allows a user to interact by clicking on colored nodes to view paramter(s), estimation method(s), and component(s) that are derived from a specific data source."),
+                                          tags$li(tags$b("Data Source"), ": This tab allows a user to interact by clicking on colored nodes to expand paramter(s), estimation method(s), and component(s) that are derived from a specific data source."),
                                           tags$br(),
                                           tags$li(tags$b("Interstate"), ": This tab allows a user to select a relationship type to view how components are connected to each other from different states. 
                                                   The user can also specify states and flow information to limit the number of componets shown in the visualization.")
                                           )
                                   )
-                          ),
-                 tags$div(class = "text-area",
-                          tags$h3("More coming soon...")),
+                          )
+                 # ,
+                 # tags$div(class = "text-area",
+                 #          tags$h3("More coming soon...")),
                  ),
           ),
           
