@@ -170,7 +170,7 @@ SELECT ?jL ?cL ?emL FROM onto:explicit WHERE {
     ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     }
-    FILTER regex(?jL, 'CO')
+    FILTER regex(?jL, 'UT')
 }"
 
 query_state_c2p <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -191,7 +191,7 @@ SELECT ?jL ?cL ?pL FROM onto:explicit WHERE {
     ?p rdfs:label ?pL.
     #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     }
-    FILTER regex(?jL, 'CO')
+    FILTER regex(?jL, 'UT')
 }"
 
 query_state_c2ds <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -214,7 +214,7 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     #?ds wb:usedBy ?state.
     #?state rdfs:label ?stateL.
     }
-    FILTER regex(?jL, 'CO')
+    FILTER regex(?jL, 'UT')
 }"
     
 # Converting to dataframe
@@ -256,7 +256,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX onto: <http://www.ontotext.com/>
     
-SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE {
+SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL WHERE { #removed from onto:explicit
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
@@ -284,7 +284,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE {
     ?state rdfs:label ?stateL.
     }
     
-    FILTER regex(?jL, 'CO')
+    #FILTER regex(?jL, 'UT')
 }
 "
 
@@ -319,6 +319,11 @@ for (i in 1:length(unique_c)){
   index_c <- which(df$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
   unique_em <- unique(df[c(index_c),3]) #for that component, get unique estimation methods
   n_em <- length(unique(unique_em)) #number of unique estimation methods
+  
+  print(".........COMPONENT............")
+  print(unique_c[i])
+  print(".........ESTIMATION METHOD..........")
+  
   # iterate through each estimation method
   for (j in 1:n_em){
     index_em <- which(df$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in df_state df
@@ -326,8 +331,7 @@ for (i in 1:length(unique_c)){
     #if estimation method is unknown and parameter is also unknown
     # if ((check_df$pL[1] %in% "Unknown") & (df[index_em,3][1] %in% "Unknown")) {
     #     df[c(index_em),]$pL <- "Unknown"
-    
-    print(unique_c[i])
+  
     print(unique_em[j])
     
     #if estimation method is unknown and parameter is also unknown, directly connect to data source using filtering dataframe for data source
