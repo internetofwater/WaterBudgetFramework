@@ -124,11 +124,19 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$p("  "),
                           tags$h1("What is the Water Budget Navigator?"),
                           tags$br(),
-                          tags$h3("Water Budget Navigator is a web application developed by Internet of Water (IoW). It allows users to explore water budget frameworks
-                                 across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
-                                 estimation methods, parameters and data sources in an ordered manner. The components have additional properties describing
-                                  their flow information and relationships with other components within and across states. Here is the framework we use for this tool.
-                                  Definition for each term of our framework is provided below."),
+                          tags$h3("The Water Budget Navigator is a web application developed by the Internet of Water (IoW)
+                                  that allows users to compare the water budgeting and water use estimation frameworks used
+                                  by a variety of water resources agencies. A water budget is an accounting of all inflows and
+                                  outflows of water within an area of interest. It is similar conceptually to a banking account
+                                  statement that tracks deposits, withdrawals, and transfers between accounts. Just as a banking
+                                  account statement is essential for prudent financial management, a water budget is essential 
+                                  for planning and management of water resources. There are many different ways to prepare water
+                                  budgets, with different decisions to be made about defining which inflows, outflows, and transfers
+                                  to keep track of, how to estimate these flows, using which source data. It can be difficult to
+                                  meaningfully compare the numbers used by different agencies in their water budgets due to this
+                                  variability. The purpose of the water budget navigator is to represent any water budgeting
+                                  approach in a standard format that allows different approaches to be compared Currently, 
+                                  the navigator allows comparison of water budget frameworks published by:"),
                           tags$br()
                           ),
                  tags$div(id = "home_container",
