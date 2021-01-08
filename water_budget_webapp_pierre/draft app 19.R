@@ -124,27 +124,92 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$p("  "),
                           tags$h1("What is the Water Budget Navigator?"),
                           tags$br(),
-                          tags$h3("The Water Budget Navigator is a web application developed by the Internet of Water (IoW)
-                                  that allows users to compare the water budgeting and water use estimation frameworks used
-                                  by a variety of water resources agencies. A water budget is an accounting of all inflows and
-                                  outflows of water within an area of interest. It is similar conceptually to a banking account
-                                  statement that tracks deposits, withdrawals, and transfers between accounts. Just as a banking
-                                  account statement is essential for prudent financial management, a water budget is essential 
-                                  for planning and management of water resources. There are many different ways to prepare water
-                                  budgets, with different decisions to be made about defining which inflows, outflows, and transfers
-                                  to keep track of, how to estimate these flows, using which source data. It can be difficult to
-                                  meaningfully compare the numbers used by different agencies in their water budgets due to this
-                                  variability. The purpose of the water budget navigator is to represent any water budgeting
-                                  approach in a standard format that allows different approaches to be compared Currently, 
-                                  the navigator allows comparison of water budget frameworks published by:"),
+                          tags$h3(tags$p(style="text-indent:60px", 
+                                        "The Water Budget Navigator is a web application developed by the Internet of Water (IoW)
+                                        that allows users to compare the water budgeting and water use estimation frameworks used
+                                        by a variety of water resources agencies. Here is the general structure of a water budget 
+                                        framework used in this tool:")
+                                  ),
                           tags$br()
                           ),
-                 tags$div(id = "home_container",
-                          tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
+                tags$div(id = "home_container",
+                   tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
+                
+                tags$div(class = "text-area",
+                         tags$h3(tags$p(style="text-indent:60px",
+                                        "A water budget is an accounting of all inflows and
+                                        outflows of water within an area of interest. It is similar conceptually to a banking account
+                                        statement that tracks deposits, withdrawals, and transfers between accounts. Just as a banking
+                                        account statement is essential for prudent financial management, a water budget is essential 
+                                        for planning and management of water resources."),
+                                  tags$p(style="text-indent:60px", 
+                                        "There are many different ways to prepare water
+                                        budgets, with different decisions to be made about defining which inflows, outflows, and transfers
+                                        to keep track of, how to estimate these flows, using which source data. It can be difficult to
+                                        meaningfully compare the numbers used by different agencies in their water budgets due to this
+                                        variability. The purpose of the water budget navigator is to represent any water budgeting
+                                        approach in a standard format that allows different approaches to be compared Currently, 
+                                        the navigator allows comparison of water budget frameworks published by:")
+                                  ),
+                          tags$h3(tags$ul(type="disc",
+                                          tags$li("California Department of Water Resources"),
+                                          tags$li("New Mexico Office of the State Engineer"),
+                                          tags$li("Colorado’s Decision Support Systems"),
+                                          tags$li("Wyoming Water Development Office"),
+                                          tags$li("Utah Division of Water Resources")
+                                          )
+                                  ),
+                          tags$h3(tags$p(style="text-indent:60px",
+                                         "The Navigator rests on a standardized representation of these frameworks which is based on the
+                                         overall framework of the",
+                                         tags$a(href="https://water.ca.gov/-/media/DWR-Website/Web-Pages/Programs/Groundwater-Management/Data-and-Tools/Files/Water-Budget-Handbook.pdf?la=en&hash=30AD0DFD02468603F21C1038E6CC6BFE32381233&hash=30AD0DFD02468603F21C1038E6CC6BFE32381233", 
+                                                target="_blank",
+                                                tags$u("California Department of Water Resources Handbook")),
+                                         "for Water Budget 
+                                         Development. This handbook is not prescriptive, but provides a useful framework to describe 
+                                         water budgeting using hydrologic concepts. This representation is based around the idea of 
+                                         “water budget zones” and “components” (figure below)")),
+                          
+                          tags$h3(tags$p(style="text-indent:60px",
+                                         "A ", tags$b("component"), "is flow of water for which a numerical estimate is provided in a water budget conducted 
+                                         by an agency in a ", tags$b("Jurisdiction"), ". Typical components might include “precipitation”, “stream inflow”, 
+                                         and “evapotranspiration”. Components are calculated for a particular ", tags$b("water budget zone"), " or three-dimensional
+                                         area of interest where water might exist in one of three systems: ", tags$b("surface water"), " (e.g. rivers and lakes), 
+                                         the ", tags$b("land"), " (e.g. in agricultural fields or enclosed storage tanks), or ", tags$b("groundwater")," . Components must flow as
+                                         an ", tags$b("inflow"), " from a, ", tags$b("flow source"), " outside the water budget zone into a ", tags$b("flow sink"), " of one of three systems; as an ",
+                                         tags$b("outflow"), " from one of the three systems to a system outside the water budget zone; or as an ", tags$b("internal transfer"),
+                                         " between systems within the water budget zone."
+                                         ),
+                                  tags$p(style="text-indent:60px",
+                                         "For a given water budgeting framework, each component has one or more ", tags$b("estimation methods"), " - procedures by which 
+                                         a numerical estimate for the value of a component is produced in a given water budget framework. For example, 
+                                         the estimation method for the component “evapotranspiration” might be “Modified Blaney-Criddle”, the name of a 
+                                         particular mathematical equation. Each estimation method in turn, requires one or more ", tags$b("parameters"), " - discrete 
+                                         quantities or measures that are required by an estimation method. For example, the “Modified Blaney-Criddle” 
+                                         estimation method requires the parameters “mean daily temperature” and “mean daily percentage of annual daytime 
+                                         hours”. Each parameter might be calculated from a variety of different ", tags$b("data sources"), " , such as particular weather 
+                                         stations or remote sensing data products."
+                                         ),
+                                  tags$br()
+                                  
+                                  #,
+                                  # tags$p(style="text-indent:60px",
+                                  #        "Here is the general structure of the water budget framework used for this tool. Descriptions and definitions for each term of the framework is provided below."
+                                  #        )
+                                  
+                                  )
+                          ),
+                 tags$div(style = "text-align: center;",
+                          tags$img(src = "water budget representation.png")
+                          ),
+                 tags$br(),
+                 # tags$div(id = "home_container",
+                 #          tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
                  tags$br(),
                  tags$div(class = "text-area",
                           tags$h1("Why use Water Budget Navigator?"),
-                          tags$h3("Explain why is it important. One-stop place for water budget stuff, first of its kind, each term linked to its definition etc"),
+                          tags$h3("The water budget navigator allows users to compare the various components used by different water budget frameworks in various states, both in terms of 
+                                  their definitions as well as their estimation methods, and data sources."),
                           tags$br(),
                           tags$br(),
                           tags$br(),
