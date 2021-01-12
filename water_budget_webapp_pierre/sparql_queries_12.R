@@ -1,4 +1,5 @@
 # Link for graph database https://terminology.internetofwater.app
+# alterantive https://wtc-gdb.internetofwater.app/  
 
 # Import packages
 library(tidyverse)
@@ -149,7 +150,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL FROM onto:explicit WHERE {
 "
 
 check_df <- submit_sparql(check,access_options=file)
-write_csv(check_df, "df_ut.csv")
+write_csv(check_df, "df_ut2.csv")
 
 
 # Query for components that are directly linked to estimation methods, parameters, and data sources
@@ -256,35 +257,35 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX onto: <http://www.ontotext.com/>
     
-SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL WHERE { #removed from onto:explicit
+SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE { #removed from onto:explicit
     ?c wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?c rdfs:label ?cL.
     ?c rdf:type wb:Component.
     
     OPTIONAL {
-    ?c wb:hasEstimationMethod ?em.
-    ?em rdf:type wb:EstimationMethod.
-    ?em rdfs:label ?emL.
+      ?c wb:hasEstimationMethod ?em.
+      ?em rdf:type wb:EstimationMethod.
+      ?em rdfs:label ?emL.
     }
     
     OPTIONAL {
-    ?em wb:hasParameter ?p.
-    ?p rdf:type wb:Parameter.
-    ?p rdfs:label ?pL.
-    #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
+      ?em wb:hasParameter ?p.
+      ?p rdf:type wb:Parameter.
+      ?p rdfs:label ?pL.
+      #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     }
     
     OPTIONAL {
-    ?p wb:hasDataSource ?ds.
-    ?ds rdf:type wb:DataSource.
-    ?ds rdfs:label ?dsL.
-    #?p wb:usedBy ?state.
-    ?ds wb:usedBy ?state.
-    ?state rdfs:label ?stateL.
+      ?p wb:hasDataSource ?ds.
+      ?ds rdf:type wb:DataSource.
+      ?ds rdfs:label ?dsL.
+      #?p wb:usedBy ?state.
+      ?ds wb:usedBy ?state.
+      ?state rdfs:label ?stateL.
     }
     
-    #FILTER regex(?jL, 'UT')
+    FILTER regex(?jL, 'UT')
 }
 "
 
