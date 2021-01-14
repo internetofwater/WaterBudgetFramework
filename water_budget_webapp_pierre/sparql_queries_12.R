@@ -286,6 +286,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE { #removed from on
     }
     
     FILTER regex(?jL, 'UT')
+    FILTER regex(?cL, 'Agricultural and Municipal Diversions-UT')
 }
 "
 
@@ -311,7 +312,8 @@ df <- unique(df)
 # for a specific component, we only want to keep rows that have those specific parameters
 
 # Get all unique components having at least 1 info
-unique_c <- unique(df_state_c2em$cL)
+#unique_c <- unique(df_state_c2em$cL)
+unique_c <- c("Agricultural and Municipal Diversions-UT")
 
 # Make an empty dataframe to store filtered and processed dataframe
 df_state <- data.frame()
@@ -327,16 +329,20 @@ for (i in 1:length(unique_c)){
   
   # iterate through each estimation method
   for (j in 1:n_em){
-    index_em <- which(df$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in df_state df
+    index_em <- which(df$emL == unique_em[j], arr.ind = TRUE) #get index for the estimation method in df
     check_df <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),] #subset parameter df for that specific component
+    
     #if estimation method is unknown and parameter is also unknown
     # if ((check_df$pL[1] %in% "Unknown") & (df[index_em,3][1] %in% "Unknown")) {
     #     df[c(index_em),]$pL <- "Unknown"
   
     print(unique_em[j])
     
+    print(!("Unknown" %in% check_df$pL))
+    
+    
     #if estimation method is unknown and parameter is also unknown, directly connect to data source using filtering dataframe for data source
-    if ((check_df$pL %in% "Unknown") && (df[index_em,3] %in% "Unknown")) {
+    if (("Unknown" %in% check_df$pL) & ("Unknown" %in% df[index_em,3])) {
       direct_connect <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]  
       direct_connect$emL <- "Unknown"
       direct_connect$pL <- "Unknown"
@@ -347,11 +353,11 @@ for (i in 1:length(unique_c)){
     }
     
     # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
-    if ((df$pL %in% "Unknown") && !(check_df$pL %in% "Unknown")){
+    if (("Unknown" %in% df[index_c,4]) && !("Unknown" %in% check_df$pL)){ ######### 2nd condition returns TRUE TRUE and firstcondition returns FALSE TRUE TRUE...., apparently && only tests the first value.. :(
       new_row <- data.frame("",unique_c[i],"Unknown")
       names(new_row) <- c("jL", "cL", "pL")
       check_df <- rbind(check_df, new_row) #add new row with unknowns to the check_df 
-      
+      print(check_df)
     } 
     
     # rows where parameters dont match, drop
