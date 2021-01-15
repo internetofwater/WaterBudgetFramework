@@ -217,7 +217,51 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     }
     FILTER regex(?jL, 'UT')
 }"
+
+query_state_em2p <- "
+PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX onto: <http://www.ontotext.com/>
+
+SELECT ?jL ?emL ?pL FROM onto:explicit WHERE { 
+
+    ?em wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?em rdfs:label ?emL.
+    ?em rdf:type wb:EstimationMethod.
     
+    ?em wb:hasParameter ?p.
+    ?p rdf:type wb:Parameter.
+    ?p rdfs:label ?pL.
+    
+    FILTER regex(?jL, 'UT')
+}
+"
+
+query_state_p2ds <- "
+PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX onto: <http://www.ontotext.com/>
+
+SELECT ?jL ?pL ?dsL FROM onto:explicit WHERE { 
+
+    ?p wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?p rdfs:label ?pL.
+    ?p rdf:type wb:Parameter.
+    
+    ?p wb:hasDataSource ?ds.
+    ?ds rdf:type wb:DataSource.
+    ?ds rdfs:label ?dsL.
+    
+    FILTER regex(?jL, 'UT')
+}
+"
+
 # Converting to dataframe
 df_state_c2em <- submit_sparql(query_state_c2em,access_options=file)
 df_state_c2em[df_state_c2em == ""] <- NA  #assign NA to blank cells
@@ -225,6 +269,10 @@ df_state_c2p <- submit_sparql(query_state_c2p,access_options=file)
 df_state_c2p[df_state_c2p == ""] <- NA
 df_state_c2ds <- submit_sparql(query_state_c2ds,access_options=file)
 df_state_c2ds[df_state_c2ds == ""] <- NA
+df_state_em2p <- submit_sparql(query_state_em2p,access_options=file)
+df_state_em2p[df_state_em2p == ""] <- NA
+df_state_p2ds <- submit_sparql(query_state_p2ds,access_options=file)
+df_state_p2ds[df_state_p2ds == ""] <- NA
 
 # Get components with no estimation methods
 na_c2em <- df_state_c2em[which(is.na(df_state_c2em$emL), arr.ind=TRUE),]$cL
@@ -246,8 +294,10 @@ if (length(common_na) > 0){
 df_state_c2em$emL <- replace_na(df_state_c2em$emL,"Unknown")
 df_state_c2p$pL <- replace_na(df_state_c2p$pL,"Unknown")
 df_state_c2ds$dsL <- replace_na(df_state_c2ds$dsL,"Unknown")
+df_state_em2p$pL <- replace_na(df_state_em2p$pL,"Unknown")
+df_state_p2ds$dsL <- replace_na(df_state_p2ds$dsL,"Unknown")
 
-# The above 3 dataframes will be used to filter the master dataframe below
+# The above 5 dataframes will be used to filter the master dataframe (df) below
 
 # Query for components that are  linked in sequential chain (not directly linked)
 query_state <- "
