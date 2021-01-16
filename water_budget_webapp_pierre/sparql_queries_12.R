@@ -262,6 +262,28 @@ SELECT ?jL ?pL ?dsL FROM onto:explicit WHERE {
 }
 "
 
+query_state_em2ds <- "
+PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX onto: <http://www.ontotext.com/>
+
+SELECT ?jL ?emL ?dsL FROM onto:explicit WHERE {
+
+    ?em wb:usedBy ?j.
+    ?j rdfs:label ?jL.
+    ?em rdfs:label ?emL.
+    ?em rdf:type wb:EstimationMethod.
+
+    ?em wb:hasDataSource ?ds.
+    ?ds rdf:type wb:DataSource.
+    ?ds rdfs:label ?dsL.
+
+    FILTER regex(?jL, 'UT')
+}
+"
+
 # Converting to dataframe
 df_state_c2em <- submit_sparql(query_state_c2em,access_options=file)
 df_state_c2em[df_state_c2em == ""] <- NA  #assign NA to blank cells
@@ -273,6 +295,8 @@ df_state_em2p <- submit_sparql(query_state_em2p,access_options=file)
 df_state_em2p[df_state_em2p == ""] <- NA
 df_state_p2ds <- submit_sparql(query_state_p2ds,access_options=file)
 df_state_p2ds[df_state_p2ds == ""] <- NA
+df_state_em2ds <- submit_sparql(query_state_em2ds,access_options=file)
+df_state_em2ds[df_state_em2ds == ""] <- NA
 
 # Get components with no estimation methods
 na_c2em <- df_state_c2em[which(is.na(df_state_c2em$emL), arr.ind=TRUE),]$cL
@@ -433,6 +457,52 @@ for (i in 1:length(unique_c)){
     
   }
 }
+
+# If some esitmation method of a component doesnt exist but directly linked to data sources or parameter
+# Filter stage 2
+unique_c <- unique(df_state$cL)
+
+for (i in 1:length(unique_c)){
+  
+  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
+  unique_em <- unique(df_state[c(index_c),3]) #get unique estimation methods for this component
+  n_em <- length(unique(unique_em)) #number of unique estimation methods
+  
+  # Iterate through each estimation method
+  for (j in 1:n_em){
+    
+    index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index of the estimation method
+    #unique_ds <- unique(df_state[c(index_em),5])
+    real_ds <- unique(df_state_em2ds[df_state_em2ds$emL == unique_em[j],3]) #get data sources that are linked to that em in filtering dataframe em2ds
+    n_ds <- length(real_ds) #number of real data sources for that estimation method
+    
+    # Get index for rows that should be dropped, where data sources for that estmation method are not in filtering dataframe em2ds
+    drop_index <- which(df_state$emL %in% unique_em[j] & !df_state$dsL %in% real_ds)
+    
+    # If there is an index that should be dropped, drop it
+    if (length(drop_index ) > 0) {
+      df_state <- df_state[-c(drop_index),]
+    }
+    
+    print (drop_index)
+    #df_state <- df_state[-c(drop_index),]
+    #print(unique_ds)
+    # for (k in 1:n_ds){
+    #   keep_index <- which(df_state[c(index_em),5] == real_ds[k], arr.ind=TRUE)
+    #   
+    # }
+    
+    
+    # if for this estiamtion method, the data sources is in em2ds, keep that
+    #if (df_state[c(index_em), 5])
+    
+    Next condition if a parameter is not in df but it is in c2p then add an unknown to its estimation method and keep it
+    
+    Next we could get the data source mentioned in the indices drop_index, and attach it to unknown em and unknown p
+  }
+}
+
+df_state[-c(drop_index),]
 
 # Keep unique rows to prevent duplicate rows
 df_state <- unique(df_state)
