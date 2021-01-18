@@ -212,9 +212,12 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
     #?p wb:usedBy ?state.
-    #?ds wb:usedBy ?state.
-    #?state rdfs:label ?stateL.
+    ?ds wb:usedBy ?state.
+    ?state rdfs:label ?stateL.
+    
+    FILTER (?stateL = ?jL)
     }
+    
     FILTER regex(?jL, 'UT')
 }"
 
@@ -254,11 +257,15 @@ SELECT ?jL ?pL ?dsL FROM onto:explicit WHERE {
     ?p rdfs:label ?pL.
     ?p rdf:type wb:Parameter.
     
+    
     ?p wb:hasDataSource ?ds.
     ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
+    ?ds wb:usedBy ?state.
+    ?state rdfs:label ?stateL.
     
     FILTER regex(?jL, 'UT')
+    FILTER (?stateL = ?jL)
 }
 "
 
@@ -279,8 +286,11 @@ SELECT ?jL ?emL ?dsL FROM onto:explicit WHERE {
     ?em wb:hasDataSource ?ds.
     ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
+    ?ds wb:usedBy ?state.
+    ?state rdfs:label ?stateL.
 
     FILTER regex(?jL, 'UT')
+    FILTER (?stateL = ?jL)
 }
 "
 
@@ -361,7 +371,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE { #removed from on
     }
     
     FILTER regex(?jL, 'UT')
-    FILTER regex(?cL, 'Agricultural and Municipal Diversions-UT')
+    #FILTER regex(?cL, 'Agricultural and Municipal Diversions-UT')
 }
 "
 
@@ -387,8 +397,8 @@ df <- unique(df)
 # for a specific component, we only want to keep rows that have those specific parameters
 
 # Get all unique components having at least 1 info
-#unique_c <- unique(df_state_c2em$cL)
-unique_c <- c("Agricultural and Municipal Diversions-UT")
+unique_c <- unique(df_state_c2em$cL)
+#unique_c <- c("Agricultural and Municipal Diversions-UT")
 
 # Make an empty dataframe to store filtered and processed dataframe
 df_state <- data.frame()
@@ -418,6 +428,7 @@ for (i in 1:length(unique_c)){
     
     #if estimation method is unknown and parameter is also unknown, directly connect to data source using filtering dataframe for data source
     if (("Unknown" %in% check_df$pL) & ("Unknown" %in% df[index_em,3])) {
+      print("1")
       direct_connect <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]  
       direct_connect$emL <- "Unknown"
       direct_connect$pL <- "Unknown"
@@ -429,6 +440,7 @@ for (i in 1:length(unique_c)){
     
     # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
     if (("Unknown" %in% df[index_c,4]) && !("Unknown" %in% check_df$pL)){ ######### 2nd condition returns TRUE TRUE and firstcondition returns FALSE TRUE TRUE...., apparently && only tests the first value.. :(
+      print("2")
       new_row <- data.frame("",unique_c[i],"Unknown")
       names(new_row) <- c("jL", "cL", "pL")
       check_df <- rbind(check_df, new_row) #add new row with unknowns to the check_df 
@@ -506,9 +518,11 @@ for (i in 1:length(unique_c)){
 #df_state <- df_state[-c(drop_index),]
 
 ####Next condition if a parameter is not in df but it is in c2p then add an unknown to its estimation method and keep it
+unique_c <- unique(df_state_c2em$cL)
+
 for (i in 1:length(unique_c)){
-  jL <- unique(df_state_c2p[which(df_state_c2p$cL == unique_c[i]),1])
-  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE)
+  jL <- unique(df_state_c2em[which(df_state_c2em$cL == unique_c[i]),1]) ############################returns nothing when I had "df" instead of "df_state_c2em" because Reservoir Evaporation-UT is not in main df
+  index_c <- which(df$cL == unique_c[i], arr.ind = TRUE)
   real_p <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),3]
   
   for (j in 1: length(unique(real_p))){
@@ -516,19 +530,24 @@ for (i in 1:length(unique_c)){
     #print (df[index_c,4])
     #print (real_p[j])
     if (!real_p[j] %in% df[index_c,4]){ #check if a parameter is in c2p dataframe but not in the main df, if so add it
-      #print ("true")
       ds <- df_state_p2ds[df_state_p2ds$pL == real_p[j], 3] # get the parameter's data sources from p2ds
       # might need to check if the data sources for this parameter in p2ds exists in c2ds in case it is not linked with the component
-      #print (ds)
       # Iterate over each data source
-      for (k in 1:length(unique(ds))){
-        new_row <- data.frame(jL, unique_c[i], "Unknown", real_p[j], ds)
-        names(new_row) <- c("jL", "cL", "emL", "pL", "dsL")
-        df_state <- rbind(df_state, new_row)
+      if (length(unique(ds)) > 0){
+        for (k in 1:length(unique(ds))){
+          new_row <- data.frame(jL, unique_c[i], "Unknown", real_p[j], ds[k])
+          names(new_row) <- c("jL", "cL", "emL", "pL", "dsL")
+          #df_state <- rbind(df_state, new_row)
+          print(length(unique(real_p)))
+          print(length(unique(ds)))
+        }
       }
     }
   }
 }
+
+################ Reservoir Evaporation-UT is gone...more scenarios for that :(
+################ annual reach estimates' data source USGS Geologoical Survey doesnt have usedBy UT
 
 # ####Next we could get the data source mentioned in the indices drop_index, and attach it to unknown em and unknown p
 # # OR check if data source is in c2ds but not in em2ds or p2ds
@@ -545,7 +564,6 @@ for (i in 1:length(unique_c)){
 #     
 #     if ((!direct_ds[j] %in% df_state[index_c,5]) & (!direct_ds[j] %in% df[index_c,5])){
       
-  
 
 
 # Keep unique rows to prevent duplicate rows

@@ -142,6 +142,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                         statement that tracks deposits, withdrawals, and transfers between accounts. Just as a banking
                                         account statement is essential for prudent financial management, a water budget is essential 
                                         for planning and management of water resources."),
+                                 tags$br(),
                                   tags$p(style="text-indent:60px", 
                                         "There are many different ways to prepare water
                                         budgets, with different decisions to be made about defining which inflows, outflows, and transfers
@@ -301,7 +302,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                           tags$br(),
                                           tags$li(tags$b("Data Source"), ": This tab allows a user to interact by clicking on colored nodes to expand paramter(s), estimation method(s), and component(s) that are derived from a specific data source."),
                                           tags$br(),
-                                          tags$li(tags$b("Interstate"), ": This tab allows a user to select a relationship type to view how components are connected to each other from different states. 
+                                          tags$li(tags$b("Inter-state Comparison"), ": This tab allows a user to select a relationship type to view how components are connected to each other from different states. 
                                                   The user can also specify states and flow information to limit the number of componets shown in the visualization.")
                                           )
                                   )
