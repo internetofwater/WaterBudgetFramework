@@ -145,7 +145,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL FROM onto:explicit WHERE {
     ?ds rdfs:label ?dsL.
     }
 
-    FILTER regex(?jL, 'UT')
+    FILTER regex(?jL, 'NM')
 }
 "
 
@@ -171,7 +171,7 @@ SELECT ?jL ?cL ?emL FROM onto:explicit WHERE {
     ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     }
-    FILTER regex(?jL, 'UT')
+    FILTER regex(?jL, 'WY')
 }"
 
 query_state_c2p <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -192,7 +192,7 @@ SELECT ?jL ?cL ?pL FROM onto:explicit WHERE {
     ?p rdfs:label ?pL.
     #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     }
-    FILTER regex(?jL, 'UT')
+    FILTER regex(?jL, 'WY')
 }"
 
 query_state_c2ds <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -215,10 +215,10 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     ?ds wb:usedBy ?state.
     ?state rdfs:label ?stateL.
     
-    FILTER (?stateL = ?jL)
+    #FILTER (?stateL = ?jL)
     }
     
-    FILTER regex(?jL, 'UT')
+    FILTER regex(?jL, 'WY')
 }"
 
 query_state_em2p <- "
@@ -235,11 +235,13 @@ SELECT ?jL ?emL ?pL FROM onto:explicit WHERE {
     ?em rdfs:label ?emL.
     ?em rdf:type wb:EstimationMethod.
     
+    OPTIONAL{
     ?em wb:hasParameter ?p.
     ?p rdf:type wb:Parameter.
     ?p rdfs:label ?pL.
+    }
     
-    FILTER regex(?jL, 'UT')
+    FILTER regex(?jL, 'WY')
 }
 "
 
@@ -250,22 +252,24 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX onto: <http://www.ontotext.com/>
 
-SELECT ?jL ?pL ?dsL FROM onto:explicit WHERE { 
+SELECT ?jL ?pL ?dsL ?stateL FROM onto:explicit WHERE { 
 
     ?p wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?p rdfs:label ?pL.
     ?p rdf:type wb:Parameter.
     
-    
+    OPTIONAL{
     ?p wb:hasDataSource ?ds.
     ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
     ?ds wb:usedBy ?state.
     ?state rdfs:label ?stateL.
+    }
     
-    FILTER regex(?jL, 'UT')
-    FILTER (?stateL = ?jL)
+    
+    FILTER regex(?jL, 'WY')
+    #FILTER (?stateL = ?jL)
 }
 "
 
@@ -276,21 +280,24 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX onto: <http://www.ontotext.com/>
 
-SELECT ?jL ?emL ?dsL FROM onto:explicit WHERE {
+SELECT ?jL ?emL ?dsL ?stateL FROM onto:explicit WHERE {
 
     ?em wb:usedBy ?j.
     ?j rdfs:label ?jL.
     ?em rdfs:label ?emL.
     ?em rdf:type wb:EstimationMethod.
 
+    OPTIONAL {
     ?em wb:hasDataSource ?ds.
     ?ds rdf:type wb:DataSource.
     ?ds rdfs:label ?dsL.
     ?ds wb:usedBy ?state.
     ?state rdfs:label ?stateL.
+    }
+    
 
-    FILTER regex(?jL, 'UT')
-    FILTER (?stateL = ?jL)
+    FILTER regex(?jL, 'WY')
+    #FILTER (?stateL = ?jL)
 }
 "
 
@@ -370,7 +377,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE { #removed from on
       ?state rdfs:label ?stateL.
     }
     
-    FILTER regex(?jL, 'UT')
+    FILTER regex(?jL, 'WY')
     #FILTER regex(?cL, 'Agricultural and Municipal Diversions-UT')
 }
 "
@@ -421,9 +428,9 @@ for (i in 1:length(unique_c)){
     # if ((check_df$pL[1] %in% "Unknown") & (df[index_em,3][1] %in% "Unknown")) {
     #     df[c(index_em),]$pL <- "Unknown"
   
-    print(unique_em[j])
+    #print(unique_em[j])
     
-    print(!("Unknown" %in% check_df$pL))
+    #print(!("Unknown" %in% check_df$pL))
     
     
     #if estimation method is unknown and parameter is also unknown, directly connect to data source using filtering dataframe for data source
@@ -471,6 +478,54 @@ for (i in 1:length(unique_c)){
   }
 }
 
+
+# If some esitmation method of a component doesnt exist but directly linked to data sources or parameter
+# Filter stage 2
+unique_c <- unique(df_state$cL)
+
+for (i in 1:length(unique_c)){
+  jL <- unique(df_state_c2p[which(df_state_c2p$cL == unique_c[i]),1])
+  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
+  unique_em <- unique(df_state_c2em[c(index_c),3]) #get unique estimation methods for this component
+  n_em <- length(unique(unique_em)) #number of unique estimation methods
+  
+  # Iterate through each estimation method
+  for (j in 1:n_em){
+    
+    #index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index of the estimation method
+    #unique_ds <- unique(df_state[c(index_em),5])
+    real_ds <- unique(df_state_em2ds[df_state_em2ds$emL == unique_em[j],3]) #get data sources that are linked to that em in filtering dataframe em2ds
+    n_ds <- length(real_ds) #number of real data sources for that estimation method
+    
+    # Get index for rows that should be dropped, where data sources for that estmation method are not in filtering dataframe em2ds
+    drop_index <- which(df_state$emL %in% unique_em[j] & !df_state$dsL %in% real_ds) #FOR Agricultural and Municipal Diversions-UT
+    
+    # If there is an index that should be dropped, drop it
+    if (length(drop_index ) > 0) {
+      #df_state <- df_state[-c(drop_index),]
+      df_state$emL[drop_index] <- "Unknown"
+      df_state$pL[drop_index] <- "Unknown"
+    }
+    
+    print (drop_index)
+    #df_state <- df_state[-c(drop_index),]
+    #print(unique_ds)
+    # for (k in 1:n_ds){
+    #   keep_index <- which(df_state[c(index_em),5] == real_ds[k], arr.ind=TRUE)
+    #   
+    # }
+    
+    # add the rows in drop index back rows with unknown em and p
+    
+    
+    # if for this estiamtion method, the data sources is in em2ds, keep that
+    #if (df_state[c(index_em), 5])
+  }
+}
+
+
+#------------------------
+
 # If some esitmation method of a component doesnt exist but directly linked to data sources or parameter
 # Filter stage 2
 unique_c <- unique(df_state$cL)
@@ -490,7 +545,7 @@ for (i in 1:length(unique_c)){
     n_ds <- length(real_ds) #number of real data sources for that estimation method
     
     # Get index for rows that should be dropped, where data sources for that estmation method are not in filtering dataframe em2ds
-    drop_index <- which(df_state$emL %in% unique_em[j] & !df_state$dsL %in% real_ds)
+    drop_index <- which(df_state$emL %in% unique_em[j] & !df_state$dsL %in% real_ds) #FOR Agricultural and Municipal Diversions-UT
     
     # If there is an index that should be dropped, drop it
     if (length(drop_index ) > 0) {
