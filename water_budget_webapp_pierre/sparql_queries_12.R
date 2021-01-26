@@ -428,7 +428,7 @@ for (i in 1:length(unique_c)){
     }
     
     # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
-    if (("Unknown" %in% df[index_c,4]) && !("Unknown" %in% check_df$pL)){ ######### 2nd condition returns TRUE TRUE and firstcondition returns FALSE TRUE TRUE...., apparently && only tests the first value.. :(
+    if (("Unknown" %in% df[index_c,4]) & !("Unknown" %in% check_df$pL)){ ######### 2nd condition returns TRUE TRUE and firstcondition returns FALSE TRUE TRUE...., apparently && only tests the first value.. :(
       new_row <- data.frame("",unique_c[i],"Unknown")
       names(new_row) <- c("jL", "cL", "pL")
       check_df <- rbind(check_df, new_row) #add new row with unknowns to the check_df 
@@ -482,9 +482,9 @@ for (i in 1:length(unique_c)){
     
     # If there is an index that should be dropped, drop it
     if (length(drop_index ) > 0) {
-      #df_state <- df_state[-c(drop_index),]
-      df_state$emL[drop_index] <- "Unknown"
-      df_state$pL[drop_index] <- "Unknown"
+      df_state <- df_state[-c(drop_index),]
+      #df_state$emL[drop_index] <- "Unknown"
+      #df_state$pL[drop_index] <- "Unknown"
     }
     
     print (drop_index)
@@ -500,6 +500,7 @@ for (i in 1:length(unique_c)){
     
     # if for this estiamtion method, the data sources is in em2ds, keep that
     #if (df_state[c(index_em), 5])
+    
   }
 }
 
@@ -529,6 +530,33 @@ for (i in 1:length(unique_c)){
     }
   }
 }
+
+# Add a row to directly link a data source to the component (from c2ds), if it is not in em2ds or p2ds
+for (i in 1:length(unique_c)){
+  jL <- unique(df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),1])
+  
+  components_EM <- df_state_c2em[which(df_state_c2em$cL == unique_c[i]),3] #get all the estimation method for the component
+  components_P <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),3] #get all the parameter for the component
+  
+  data_sources_c2ds <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),3] #data sources from c2ds
+  data_sources_em2ds <- df_state_em2ds[which(df_state_em2ds$emL %in% components_EM),3] #data sources from em2ds
+  data_sources_p2ds <- df_state_p2ds[which(df_state_p2ds$pL %in% components_P),3] #data sources from p2ds
+  
+  for (j in 1:length(unique(data_sources_c2ds))){
+    if ((!data_sources_c2ds[j] %in% data_sources_em2ds) & (!data_sources_c2ds[j] %in% data_sources_p2ds)){
+      new_row <- data.frame(jL, unique_c[i], "Unknown", "Unknown", data_sources_c2ds[j])
+      names(new_row) <- c("jL", "cL", "emL", "pL", "dsL")
+      df_state <- rbind(df_state, new_row)
+      print("TRUE")
+    } else {
+      print ("FALSE")
+    }
+    
+  }
+}
+  
+  
+
 
 # ####Next we could get the data source mentioned in the indices drop_index, and attach it to unknown em and unknown p
 # # OR check if data source is in c2ds but not in em2ds or p2ds

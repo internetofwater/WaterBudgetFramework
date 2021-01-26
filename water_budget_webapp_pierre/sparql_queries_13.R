@@ -446,7 +446,7 @@ for (i in 1:length(unique_c)){
     }
     
     # this condition is to work with Irrigated Agriculture Depletions-NMOSE because df's parameter has unknown for an em, but df_state_c2p doesnt have unknown so it doesnt satisfy the 3 logical conditions below in else loop
-    if (("Unknown" %in% df[index_c,4]) && !("Unknown" %in% check_df$pL)){ ######### 2nd condition returns TRUE TRUE and firstcondition returns FALSE TRUE TRUE...., apparently && only tests the first value.. :(
+    if (("Unknown" %in% df[index_c,4]) & !("Unknown" %in% check_df$pL)){ ######### 2nd condition returns TRUE TRUE and firstcondition returns FALSE TRUE TRUE...., apparently && only tests the first value.. :(
       print("2")
       new_row <- data.frame("",unique_c[i],"Unknown")
       names(new_row) <- c("jL", "cL", "pL")
@@ -454,7 +454,7 @@ for (i in 1:length(unique_c)){
       print(check_df)
     } 
     
-    # rows where parameters dont match, drop
+    # rows where parameters match
     index_selected <- which(df$pL %in% check_df$pL & df$emL %in% unique_em[j] & df$cL %in% unique_c[i])
     abc <- df[index_selected, ]
     # above this point looks all good... something is happening below
@@ -462,8 +462,13 @@ for (i in 1:length(unique_c)){
     
     # #Similarly for data source
     check_df <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),]
-    # if ((check_df$dsL[1] %in% "Unknown") & (df[index_em,4][1] %in% "Unknown")) { #probably there is no data source that will be unknown.
-    #   df[c(index_em),]$dsL <- "Unknown"
+    
+    if (("Unknown" %in% df[index_c,5]) & !("Unknown" %in% check_df$dsL)) { #probably there is no data source that will be unknown.
+      new_row <- data.frame("", unique_c[i], "Unknown")
+      names(new_row) <- c("jL", "cL", "dsL")
+      check_df <- rbind(check_df, new_row)
+    }
+      #   df[c(index_em),]$dsL <- "Unknown"
     #   # or else
     # } else {
     # rows where parameters dont match, drop
@@ -502,9 +507,9 @@ for (i in 1:length(unique_c)){
     
     # If there is an index that should be dropped, drop it
     if (length(drop_index ) > 0) {
-      #df_state <- df_state[-c(drop_index),]
-      df_state$emL[drop_index] <- "Unknown"
-      df_state$pL[drop_index] <- "Unknown"
+      df_state <- df_state[-c(drop_index),]
+      #df_state$emL[drop_index] <- "Unknown"
+      #df_state$pL[drop_index] <- "Unknown"
     }
     
     print (drop_index)
@@ -528,47 +533,47 @@ for (i in 1:length(unique_c)){
 
 # If some esitmation method of a component doesnt exist but directly linked to data sources or parameter
 # Filter stage 2
-unique_c <- unique(df_state$cL)
-
-for (i in 1:length(unique_c)){
-  jL <- unique(df_state_c2p[which(df_state_c2p$cL == unique_c[i]),1])
-  index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
-  unique_em <- unique(df_state[c(index_c),3]) #get unique estimation methods for this component
-  n_em <- length(unique(unique_em)) #number of unique estimation methods
-  
-  # Iterate through each estimation method
-  for (j in 1:n_em){
-    
-    #index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index of the estimation method
-    #unique_ds <- unique(df_state[c(index_em),5])
-    real_ds <- unique(df_state_em2ds[df_state_em2ds$emL == unique_em[j],3]) #get data sources that are linked to that em in filtering dataframe em2ds
-    n_ds <- length(real_ds) #number of real data sources for that estimation method
-    
-    # Get index for rows that should be dropped, where data sources for that estmation method are not in filtering dataframe em2ds
-    drop_index <- which(df_state$emL %in% unique_em[j] & !df_state$dsL %in% real_ds) #FOR Agricultural and Municipal Diversions-UT
-    
-    # If there is an index that should be dropped, drop it
-    if (length(drop_index ) > 0) {
-      #df_state <- df_state[-c(drop_index),]
-      df_state$emL[drop_index] <- "Unknown"
-      df_state$pL[drop_index] <- "Unknown"
-    }
-    
-    print (drop_index)
-    #df_state <- df_state[-c(drop_index),]
-    #print(unique_ds)
-    # for (k in 1:n_ds){
-    #   keep_index <- which(df_state[c(index_em),5] == real_ds[k], arr.ind=TRUE)
-    #   
-    # }
-    
-    # add the rows in drop index back rows with unknown em and p
-    
-    
-    # if for this estiamtion method, the data sources is in em2ds, keep that
-    #if (df_state[c(index_em), 5])
-  }
-}
+# unique_c <- unique(df_state$cL)
+# 
+# for (i in 1:length(unique_c)){
+#   jL <- unique(df_state_c2p[which(df_state_c2p$cL == unique_c[i]),1])
+#   index_c <- which(df_state$cL == unique_c[i], arr.ind = TRUE) #get index of a specific component
+#   unique_em <- unique(df_state[c(index_c),3]) #get unique estimation methods for this component
+#   n_em <- length(unique(unique_em)) #number of unique estimation methods
+#   
+#   # Iterate through each estimation method
+#   for (j in 1:n_em){
+#     
+#     #index_em <- which(df_state$emL == unique_em[j], arr.ind = TRUE) #get index of the estimation method
+#     #unique_ds <- unique(df_state[c(index_em),5])
+#     real_ds <- unique(df_state_em2ds[df_state_em2ds$emL == unique_em[j],3]) #get data sources that are linked to that em in filtering dataframe em2ds
+#     n_ds <- length(real_ds) #number of real data sources for that estimation method
+#     
+#     # Get index for rows that should be dropped, where data sources for that estmation method are not in filtering dataframe em2ds
+#     drop_index <- which(df_state$emL %in% unique_em[j] & !df_state$dsL %in% real_ds) #FOR Agricultural and Municipal Diversions-UT
+#     
+#     # If there is an index that should be dropped, drop it
+#     if (length(drop_index ) > 0) {
+#       #df_state <- df_state[-c(drop_index),]
+#       df_state$emL[drop_index] <- "Unknown"
+#       df_state$pL[drop_index] <- "Unknown"
+#     }
+#     
+#     print (drop_index)
+#     #df_state <- df_state[-c(drop_index),]
+#     #print(unique_ds)
+#     # for (k in 1:n_ds){
+#     #   keep_index <- which(df_state[c(index_em),5] == real_ds[k], arr.ind=TRUE)
+#     #   
+#     # }
+#     
+#     # add the rows in drop index back rows with unknown em and p
+#     
+#     
+#     # if for this estiamtion method, the data sources is in em2ds, keep that
+#     #if (df_state[c(index_em), 5])
+#   }
+# }
 
 #df_state <- df_state[-c(drop_index),]
 
@@ -598,6 +603,30 @@ for (i in 1:length(unique_c)){
         }
       }
     }
+  }
+}
+
+# Add a row to directly link a data source to the component (from c2ds), if it is not in em2ds or p2ds
+for (i in 1:length(unique_c)){
+  jL <- unique(df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),1])
+  
+  components_EM <- df_state_c2em[which(df_state_c2em$cL == unique_c[i]),3] #get all the estimation method for the component
+  components_P <- df_state_c2p[which(df_state_c2p$cL == unique_c[i]),3] #get all the parameter for the component
+  
+  data_sources_c2ds <- df_state_c2ds[which(df_state_c2ds$cL == unique_c[i]),3] #data sources from c2ds
+  data_sources_em2ds <- df_state_em2ds[which(df_state_em2ds$emL %in% components_EM),3] #data sources from em2ds
+  data_sources_p2ds <- df_state_p2ds[which(df_state_p2ds$pL %in% components_P),3] #data sources from p2ds
+  
+  for (j in 1:length(unique(data_sources_c2ds))){
+    if ((!data_sources_c2ds[j] %in% data_sources_em2ds) & (!data_sources_c2ds[j] %in% data_sources_p2ds)){
+      new_row <- data.frame(jL, unique_c[i], "Unknown", "Unknown", data_sources_c2ds[j])
+      names(new_row) <- c("jL", "cL", "emL", "pL", "dsL")
+      df_state <- rbind(df_state, new_row)
+      print("TRUE")
+    } else {
+      print ("FALSE")
+    }
+    
   }
 }
 
@@ -693,6 +722,9 @@ SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?stateL FROM onto:explicit WHERE {
     
     ?state rdfs:label ?stateL.
     }
+    
+    #FILTER (?stateL = ?jL) #if uncomment this, then comment the line below that drops rows where stateL != jL
+    
 }
 "
 

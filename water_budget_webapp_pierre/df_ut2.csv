@@ -1786,8 +1786,8 @@ UT,Municipal and Industrial Diversions-UT,UT Division of Water Resources Area-Al
 UT,Municipal and Industrial Diversions-UT,UT Division of Water Resources Area-Altitude Method,Flow,UT Water Rights Database
 UT,Municipal and Industrial Diversions-UT,UT Division of Water Resources Area-Altitude Method,Flow,US Geological Survey (USGS)
 UT,Municipal and Industrial Diversions-UT,UT Division of Water Resources Area-Altitude Method,Flow,Unknown
-UT,Precipitation-UT,,,PRISM
-UT,Precipitation-UT,,,US Bureau of Reclamation AgriMet Stations
+UT,Precipitation-UT,Direct Measurement,Precipitation Value,PRISM
+UT,Precipitation-UT,Direct Measurement,Precipitation Value,US Bureau of Reclamation AgriMet Stations
 UT,Reservoir Evaporation-UT,Historical Data,Evaporation,UT Other Irrigation Company Records
 UT,Reservoir Evaporation-UT,Historical Data,Evaporation,PRISM
 UT,Reservoir Evaporation-UT,Historical Data,Evaporation,USU Research Report 145
@@ -1804,10 +1804,26 @@ UT,Reservoir Evaporation-UT,Historical Data,Rainfall,UT State Archives
 UT,Reservoir Evaporation-UT,Historical Data,Rainfall,US Bureau of Reclamation
 UT,Reservoir Evaporation-UT,Historical Data,Rainfall,UT State Engineer Data
 UT,Reservoir Evaporation-UT,Historical Data,Rainfall,Water Resources Studies
-UT,Groundwater Use-UT,,Groundwater Use,UT Water Rights Database
-UT,Groundwater Use-UT,,Groundwater Use,Municipal and Industrial Diversion Reports
-UT,Groundwater Use-UT,,Groundwater Use,USGS Estimates of Basin Groundwater Flows
-UT,Groundwater Use-UT,,Groundwater Use,USGS Groundwater Reports
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,UT Other Irrigation Company Records
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,PRISM
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,USU Research Report 145
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,Federal Archives
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,UT State Archives
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,US Bureau of Reclamation
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,UT State Engineer Data
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Evaporation,Water Resources Studies
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,UT Other Irrigation Company Records
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,PRISM
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,USU Research Report 145
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,Federal Archives
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,UT State Archives
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,US Bureau of Reclamation
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,UT State Engineer Data
+UT,Reservoir Evaporation-UT,Elevation-Area-Capacity Tables,Rainfall,Water Resources Studies
+UT,Groundwater Use-UT,Direct Measurement,Groundwater Use,UT Water Rights Database
+UT,Groundwater Use-UT,Direct Measurement,Groundwater Use,Municipal and Industrial Diversion Reports
+UT,Groundwater Use-UT,Direct Measurement,Groundwater Use,USGS Estimates of Basin Groundwater Flows
+UT,Groundwater Use-UT,Direct Measurement,Groundwater Use,USGS Groundwater Reports
 UT,Pumped Groundwater-UT,,,Unknown
 UT,Municipal and Industrial Return Flow-UT,,,Unknown
 UT,Natural System Use-UT,,,Unknown
@@ -1878,5 +1894,5 @@ UT,Tributary Inflow-UT,UT Division of Water Resources Area-Altitude Method,Flow,
 UT,Tributary Inflow-UT,UT Division of Water Resources Area-Altitude Method,Flow,UT Water Rights Database
 UT,Tributary Inflow-UT,UT Division of Water Resources Area-Altitude Method,Flow,US Geological Survey (USGS)
 UT,Tributary Inflow-UT,UT Division of Water Resources Area-Altitude Method,Flow,Unknown
-UT,Cropland Precipitation-UT,,,PRISM
-UT,Cropland Precipitation-UT,,,US Bureau of Reclamation AgriMet Stations
+UT,Cropland Precipitation-UT,Direct Measurement,Precipitation Value,PRISM
+UT,Cropland Precipitation-UT,Direct Measurement,Precipitation Value,US Bureau of Reclamation AgriMet Stations
