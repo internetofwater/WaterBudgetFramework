@@ -171,7 +171,7 @@ SELECT ?jL ?cL ?emL FROM onto:explicit WHERE {
     ?em rdf:type wb:EstimationMethod.
     ?em rdfs:label ?emL.
     }
-    FILTER regex(?jL, 'WY')
+    FILTER regex(?jL, 'NM')
 }"
 
 query_state_c2p <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -192,7 +192,7 @@ SELECT ?jL ?cL ?pL FROM onto:explicit WHERE {
     ?p rdfs:label ?pL.
     #?em wb:usedBy ?state. #after adding this line, number of rows increasedby about 100 O_O
     }
-    FILTER regex(?jL, 'WY')
+    FILTER regex(?jL, 'NM')
 }"
 
 query_state_c2ds <- "PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -218,7 +218,7 @@ SELECT ?jL ?cL ?dsL FROM onto:explicit WHERE {
     #FILTER (?stateL = ?jL)
     }
     
-    FILTER regex(?jL, 'WY')
+    FILTER regex(?jL, 'NM')
 }"
 
 query_state_em2p <- "
@@ -241,7 +241,7 @@ SELECT ?jL ?emL ?pL FROM onto:explicit WHERE {
     ?p rdfs:label ?pL.
     }
     
-    FILTER regex(?jL, 'WY')
+    FILTER regex(?jL, 'NM')
 }
 "
 
@@ -268,7 +268,7 @@ SELECT ?jL ?pL ?dsL ?stateL FROM onto:explicit WHERE {
     }
     
     
-    FILTER regex(?jL, 'WY')
+    FILTER regex(?jL, 'NM')
     #FILTER (?stateL = ?jL)
 }
 "
@@ -296,7 +296,7 @@ SELECT ?jL ?emL ?dsL ?stateL FROM onto:explicit WHERE {
     }
     
 
-    FILTER regex(?jL, 'WY')
+    FILTER regex(?jL, 'NM')
     #FILTER (?stateL = ?jL)
 }
 "
@@ -377,7 +377,7 @@ SELECT ?jL ?cL ?emL ?pL ?dsL ?stateL FROM onto:explicit WHERE { #removed from on
       ?state rdfs:label ?stateL.
     }
     
-    FILTER regex(?jL, 'WY')
+    FILTER regex(?jL, 'NM')
     #FILTER regex(?cL, 'Agricultural and Municipal Diversions-UT')
 }
 "
