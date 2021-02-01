@@ -1,9 +1,602 @@
 jL,cL,emL,pL,dsL
-UT,Agricultural and Municipal Diversions,USGS StreamStats,Flow,USGS Stream Gages
-UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
-UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,USGS Stream Gages
-UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,UT Diversion Records from River Commissioners
-UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,UT Municipal Potable and Secondary Diversion Records
-UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,UT Other Irrigation Company Records
-UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,UT Reservoir Storage and Release Records
-UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,UT Water Rights Database
+CA,Agricultural Applied Water,NA,NA,NA
+CA,Applied Water,NA,NA,NA
+CA,Applied Water Reuse/Recycled Water,NA,NA,NA
+CA,Change in Groundwater Storage,NA,NA,NA
+CA,Change in Land System Storage,NA,NA,NA
+CA,Change in Surface Water Storage,NA,NA,NA
+CA,Change in Total System Storage,NA,NA,NA
+CA,Conveyance Evaporation,NA,NA,NA
+CA,Conveyance Seepage,NA,NA,NA
+CA,Evapotranspiration,Crop Coefficient Approach,Crop Growth State Coefficient (Kc),FAO 56 Chapter 6 Single Crop Coefficients (Kc)
+CA,Evapotranspiration,Crop Coefficient Approach,Reference Crop ET (ETo),CA Irrigation Training and Research Center (ITRC) Evapotranspiration Data
+CA,Evapotranspiration,Crop Coefficient Approach,Reference Crop ET (ETo),California Irrigation Management Information System (CIMIS)
+CA,Groundwater Export,NA,NA,NA
+CA,Groundwater Extraction,NA,NA,NA
+CA,Imported Water,NA,NA,NA
+CA,Lake Gain from Groundwater,NA,NA,NA
+CA,Lake Inflow from Streams,NA,NA,NA
+CA,Lake Loss to Groundwater,NA,NA,NA
+CA,Lake Outflow to Streams,NA,NA,NA
+CA,Managed Aquifer Recharge,NA,NA,NA
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,CA DWR Land Use Surveys
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,California Department of Fish and Wildlife (CDFW)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,California Water Plan Portfolio
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,Data from Private Wetlands or Duck Clubs
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,US Fish and Wildlife Services (USFWS)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,CA DWR Land Use Surveys
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,California Department of Fish and Wildlife (CDFW)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,California Water Plan Portfolio
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,Data from Private Wetlands or Duck Clubs
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,US Fish and Wildlife Services (USFWS)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Unit ET of Applied Water,California Water Plan Portfolio
+CA,Precipitation,NA,NA,NA
+CA,Precipitation on Lakes,NA,NA,NA
+CA,Recharge of Applied Water,NA,NA,NA
+CA,Recharge of Precipitation,NA,NA,NA
+CA,Recycled Water Export,NA,NA,NA
+CA,Return Flow,NA,NA,NA
+CA,Runoff,Runoff Curve Number Method,Precipitation,PRISM
+CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Data Exchange Center (CDEC)
+CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Irrigation Management Information System (CIMIS)
+CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Precipitation,California Data Exchange Center (CDEC)
+CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Precipitation,California Irrigation Management Information System (CIMIS)
+CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Short-Wave Solar Radiation,California Data Exchange Center (CDEC)
+CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),Daily Short-Wave Solar Radiation,California Irrigation Management Information System (CIMIS)
+CA,Runoff,USGS Precipitation-Runoff Modeling System (PRMS),"Descriptive Data of Topography, Soils, and Vegetation",USDA Natural Resources Conservation Service Geospatial Web Soil Survey
+CA,Stored Water Export,NA,NA,NA
+CA,Stored Water Extraction,NA,NA,NA
+CA,Stream Gain from Groundwater,NA,NA,NA
+CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Data Exchange Center (CDEC)
+CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Irrigation Management Information System (CIMIS)
+CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Precipitation,California Data Exchange Center (CDEC)
+CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Precipitation,California Irrigation Management Information System (CIMIS)
+CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Short-Wave Solar Radiation,California Data Exchange Center (CDEC)
+CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Short-Wave Solar Radiation,California Irrigation Management Information System (CIMIS)
+CA,Stream Inflow,USGS Precipitation-Runoff Modeling System (PRMS),"Descriptive Data of Topography, Soils, and Vegetation",USDA Natural Resources Conservation Service Geospatial Web Soil Survey
+CA,Stream Loss to Groundwater,NA,NA,NA
+CA,Stream Outflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Data Exchange Center (CDEC)
+CA,Stream Outflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Max and Min Air Temperature,California Irrigation Management Information System (CIMIS)
+CA,Stream Outflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Precipitation,California Data Exchange Center (CDEC)
+CA,Stream Outflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Precipitation,California Irrigation Management Information System (CIMIS)
+CA,Stream Outflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Short-Wave Solar Radiation,California Data Exchange Center (CDEC)
+CA,Stream Outflow,USGS Precipitation-Runoff Modeling System (PRMS),Daily Short-Wave Solar Radiation,California Irrigation Management Information System (CIMIS)
+CA,Stream Outflow,USGS Precipitation-Runoff Modeling System (PRMS),"Descriptive Data of Topography, Soils, and Vegetation",USDA Natural Resources Conservation Service Geospatial Web Soil Survey
+CA,Subsurface Inflow,NA,NA,NA
+CA,Subsurface Outflow,NA,NA,NA
+CA,Surface Water Delivery,NA,NA,NA
+CA,Surface Water Diversions,NA,NA,NA
+CA,Surface Water Exports,NA,NA,NA
+CA,Total Groundwater System Inflow,NA,NA,NA
+CA,Total Groundwater System Outflow,NA,NA,NA
+CA,Total Inflow,NA,NA,NA
+CA,Total Land System Inflow,NA,NA,NA
+CA,Total Land System Outflow,NA,NA,NA
+CA,Total Outflow,NA,NA,NA
+CA,Total Surface Water Inflow,NA,NA,NA
+CA,Total Surface Water Outflow,NA,NA,NA
+CA,Urban Applied Water,Population and Per-Capita Water Use,Industrial Water Use,Water Use Surveys
+CA,Urban Applied Water,Population and Per-Capita Water Use,Population,California Department of Finance
+CA,Urban Applied Water,Population and Per-Capita Water Use,Population,US Census Bureau
+CA,Water Release Caused by Land Subsidence,NA,NA,NA
+CO,Change in Ground Water Storage,NA,NA,NA
+CO,Change in Surface Water Storage,NA,NA,NA
+CO,Crop Consumptive Use,CO Consumptive Use Method,Climate Coefficient (kt),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Climate Coefficient (kt),PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,SCS TR21
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Type,National Agricultural Statistics Service (NASS) Cropland Data Layer
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Type,Satellite and Aerial Photos
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigated Acreage,Historical Data
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigated Acreage,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigated Acreage,National Agricultural Statistics Service (NASS) Cropland Data Layer
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigated Acreage,Satellite and Aerial Photos
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigation Method,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Mean Monthly Air Temperatures (T),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Mean Monthly Air Temperatures (T),Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Supply Source,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Supply Type,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Water Supply,CO Diversion Records
+CO,Crop Consumptive Use,CO Consumptive Use Method,Water Supply,CO Division of Water Resources Gages
+CO,Crop Consumptive Use,CO Consumptive Use Method,Water Supply,USGS Stream Gages
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,PRISM
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Weather Stations
+CO,Exports,Historical Data,Diversions,Colorado Water Conservation Board (CWCB)
+CO,Exports,Historical Data,Diversions,Historical Diversions File
+CO,Gaged Surface Water Inflow,NA,NA,NA
+CO,Gaged Surface Water Outflow,NA,NA,NA
+CO,Ground Water Inflow,NA,NA,NA
+CO,Ground Water Outflow,NA,NA,NA
+CO,Imports,NA,NA,NA
+CO,Livestock Consumptive Use,CO Livestock Method,Average Use Rate,Midwest Plan Service Structures and Environmental Handbook 1977
+CO,Livestock Consumptive Use,CO Livestock Method,Livestock Count,State Agricultural Statistics
+CO,Municipal and Industrial Consumptive Use,CO Municipal and Industrial Method,Population,Colorado Census Bureau
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Diversions,Colorado Water Conservation Board (CWCB)
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Diversions,Historical Diversions File
+CO,Precipitation,NA,NA,NA
+CO,Reservoir Evaporation,Reservoir Estimation Method,Gross Monthly Free Water Surface Evaporation,NOAA Technical Report NWS 33
+CO,Reservoir Evaporation,Reservoir Estimation Method,Monthly Effective Precipitation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Reservoir Evaporation,Reservoir Estimation Method,Monthly Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Reservoir Evaporation,Reservoir Estimation Method,Surface Area of Reservoir,CO GIS Exercise
+CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,CO Division of Water Resources Gages
+CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,USGS Stream Gages
+NM,Commercial,NA,NA,NA
+NM,Commercial: Incomplete Metered,NA,NA,NA
+NM,Commercial: Metered,NA,NA,NA
+NM,Commercial: Schools,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
+NM,Commercial: Schools,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Commercial: Schools,Withdrawal Method,Population,US Census Bureau
+NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Commercial: Schools,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Commercial: Schools,Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Commercial: Schools,Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Commercial: Schools,Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Commercial: Schools,Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Commercial: Schools,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+NM,Commercial: Unmetered,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,PRISM
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Monthly Precipitation Volume,Weather Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Rainfall,PRISM
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,USGS Stream Gages
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,Irrigation Districts
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,US Army Corps of Engineers
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,USGS Stream Gages
+NM,Evaporation from Reservoirs,Pan Approach,Class A Pan Evaporation Data,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Class A Pan Evaporation Data,Weather Stations
+NM,Evaporation from Reservoirs,Pan Approach,Monthly Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Monthly Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Monthly Gross Evaporation Rate,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Rainfall,PRISM
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,USGS Stream Gages
+NM,Industrial,NA,NA,NA
+NM,Irrigated Agriculture,NA,NA,NA
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Climate Coefficient (kt),PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Growth State Coefficient (Kc),SCS TR21
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,SCS TR21
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Type,Field Survey
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Type,USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Streamflow,USGS Stream Gages
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Temperature,US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Water Supply,NM Diversion Records
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Water Supply,USGS Stream Gages
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,US Bureau of Land Management (BLM)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Diversions,NA,NA,NA
+NM,Livestock,NA,NA,NA
+NM,Livestock: Metered,NA,NA,NA
+NM,Livestock: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
+NM,Livestock: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Livestock: Unmetered,Withdrawal Method,Population,US Census Bureau
+NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Livestock: Unmetered,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Livestock: Unmetered,Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Livestock: Unmetered,Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Livestock: Unmetered,Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Livestock: Unmetered,Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Livestock: Unmetered,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+NM,Mining,NA,NA,NA
+NM,Power,NA,NA,NA
+NM,Power: Unreported,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Public Water Supply,NA,NA,NA
+NM,Public Water Supply: Metered,NA,NA,NA
+NM,Public Water Supply: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
+NM,Public Water Supply: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population,US Census Bureau
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Public Water Supply: Unmetered,Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Public Water Supply: Unmetered,Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Public Water Supply: Unmetered,Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Public Water Supply: Unmetered,Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply: Unmetered,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+NM,Self-Supplied Domestic,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),Brown and Caldwell1984
+NM,Self-Supplied Domestic,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NMOSE Technical Report No. 48
+NM,Self-Supplied Domestic,Withdrawal Method,Population,US Census Bureau
+NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,GPS Population Data
+NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,Military Base Population Data
+NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Self-Supplied Domestic,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,GPS Population Data
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,Military Base Population Data
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+UT,Agricultural and Municipal Depletions,NA,NA,NA
+UT,Agricultural and Municipal Diversions,NA,NA,NA
+UT,Agricultural Depletions,UT Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Climate Coefficient (kt),PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Climate Coefficient (kt),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Growth State Coefficient (Kc),USU Research Report 145
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,Weather Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Type,Ground Survey
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Type,Satellite and Aerial Photos
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Weather Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Ground Survey
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Historical Data
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Satellite and Aerial Photos
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Weather Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,Weather Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Water Supply,USGS Stream Gages
+UT,Agricultural Depletions,UT Consumptive Use Method,Water Supply,UT Diversion Records from River Commissioners
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,Weather Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,Emery Water Conservancy District Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,MesoWest Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,PRISM
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,Weather Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,Emery Water Conservancy District Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,MesoWest Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,Emery Water Conservancy District Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,MesoWest Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,Emery Water Conservancy District Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,MesoWest Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,PRISM
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,Weather Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),PRISM
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Crop Growth State Coefficient (Kc),USU Research Report 145
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Emery Water Conservancy District Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Fruit Growers Network Stations (FGNET)
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),MesoWest Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Soil Climate Analysis Network (SCAN)
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Weather Stations
+UT,Area Outflows,NA,NA,NA
+UT,Basin Inflow,NA,NA,NA
+UT,Basin Outflow,NA,NA,NA
+UT,Cropland Precipitation,NA,NA,NA
+UT,Groundwater Use,NA,NA,NA
+UT,Municipal and Industrial Depeltion,NA,NA,NA
+UT,Municipal and Industrial Diversions,NA,NA,NA
+UT,Municipal and Industrial Return Flow,NA,NA,NA
+UT,Natural System Use,NA,NA,NA
+UT,Precipitation,NA,NA,NA
+UT,Pumped Groundwater,NA,NA,NA
+UT,Riparian Depletions,NA,NA,NA
+UT,River Inflow,NA,NA,NA
+UT,River Use By Wet Pasture,NA,NA,NA
+UT,Surface Diversion to Cropland,NA,NA,NA
+UT,Surface Water Flows,NA,NA,NA
+UT,Total Land Return Flow,NA,NA,NA
+UT,Tributary Inflow,NA,NA,NA
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Climate Coefficient (kt),National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Climate Coefficient (kt),PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Growth State Coefficient (Kc),SCS TR21
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,SCS TR21
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Type,Satellite and Aerial Photos
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Irrigated Acreage,Satellite and Aerial Photos
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Water Supply,USGS Stream Gages
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Water Supply,WY Diversion Records
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Water Supply,Wyoming Water Resources Data System (WRDS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Wyoming State Engineer's Office Stations
+WY,Domestic Total Use,Withdrawal Method,Population,US Census Bureau
+WY,Domestic Total Use,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+WY,Domestic Total Use,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+WY,Gaged Stream Inflow,NA,NA,NA
+WY,Gaged Stream Outflow,NA,NA,NA
+WY,Industrial Consumptive Use,NA,NA,NA
+WY,Industrial Total Use,NA,NA,NA
+WY,Industrial: Coalbed Methand Production,WY Industrial Production Method,Monthly Coalbed Methane Gas Production and Produced Water,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Coalbed Methand Production,WY Industrial Production Method,"Monthly Oil, Gas, and Produced Water",Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Coalbed Methand Production,WY Industrial Production Method,Natural Gas Processing Volumes,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Electrical Generation,NA,NA,NA
+WY,Industrial: Mine Production,WY Mine Production Method,Annual Employee Hours,Mine Safety and Health Administration (MSHA)
+WY,Industrial: Mine Production,WY Mine Production Method,Coal Production Quantities,Mine Safety and Health Administration (MSHA)
+WY,Industrial: Miscellaneous,NA,NA,NA
+WY,Industrial: Natural Gas,WY Industrial Production Method,Monthly Coalbed Methane Gas Production and Produced Water,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Natural Gas,WY Industrial Production Method,"Monthly Oil, Gas, and Produced Water",Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Natural Gas,WY Industrial Production Method,Natural Gas Processing Volumes,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Oil and Gas,WY Industrial Production Method,Monthly Coalbed Methane Gas Production and Produced Water,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Oil and Gas,WY Industrial Production Method,"Monthly Oil, Gas, and Produced Water",Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Oil and Gas,WY Industrial Production Method,Natural Gas Processing Volumes,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Irrigation Surface Water Diversions,NA,NA,NA
+WY,Livestock Consumptive Use,NA,NA,NA
+WY,Municipal Consumptive Use,Withdrawal Method,Population,US Census Bureau
+WY,Municipal Consumptive Use,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+WY,Municipal Consumptive Use,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+WY,Municipal Total Use,Withdrawal Method,Population,US Census Bureau
+WY,Municipal Total Use,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+WY,Municipal Total Use,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+WY,Precipitation,NA,NA,NA
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Gross Pan Evaportation (inches),High Plains Climate Center - University of Nebraska
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,National Oceanic and Atmospheric Administration Stations
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,National Weather Service Stations
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,Natural Resources Conservation Service Stations (NRCS)
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,PRISM
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,Remote Automated Weather Stations (RAWS)
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,Snotel Network of Weather Stations
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,US Bureau of Land Management (BLM)
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,US Geological Survey (USGS)
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,Weather Stations
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,WY Department of Environmental Quality (DEQ)
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,Wyoming State Engineer's Office Stations
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,Wyoming Water Resources Data Systems Water and Climate Map Server
+WY,Total Diversions,NA,NA,NA
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Downstream Flow,USGS Stream Gages
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Downstream Flow,Wyoming Water Resources Data System (WRDS)
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Upstream Flow,USGS Stream Gages
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Upstream Flow,Wyoming Water Resources Data System (WRDS)
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Downstream Flow,USGS Stream Gages
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Downstream Flow,Wyoming Water Resources Data System (WRDS)
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Upstream Flow,USGS Stream Gages
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Upstream Flow,Wyoming Water Resources Data System (WRDS)
