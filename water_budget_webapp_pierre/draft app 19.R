@@ -20,20 +20,20 @@ library(d3r)
 # --------------- 2. Loading CSV files --------------- # ####
 
 # ----- 2.1. Importing CSVs for Component tab ----- #
-df_component_full <- read_csv("www/df_component_full2.csv") #dataframe for component summary (including URIs)
-df_component_flow <- read_csv("www/df_component_flow2.csv") #dataframe for component summary including flow and interstate information
-df_component <- read_csv("www/df_component2.csv") #dataframe for d3 chart on component tab
+df_component_full <- read_csv("www/df_component_full3.csv") #dataframe for component summary (including URIs)
+df_component_flow <- read_csv("www/df_component_flow3.csv") #dataframe for component summary including flow and interstate information
+df_component <- read_csv("www/df_component3.csv") #dataframe for d3 chart on component tab
 
 # ----- 2.2. Importing CSVs for State tab ----- #
-df_state <- read_csv("www/df_state2.csv")
+df_state <- read_csv("www/df_state3.csv")
 
 # ----- 2.3. Importing CSVs for Data Source tab ----- #
-df_data_source <- read_csv("www/df_data_source2.csv")
+df_data_source <- read_csv("www/df_data_source3.csv")
 
 # ----- 2.4. Importing CSVs for Data Source tab ----- #
-df_exact_match <- read_csv("www/df_exact_match2.csv") #dataframe for exact matches
-df_subcomponent <- read_csv("www/df_subcomponent2.csv") #dataframe for subcomponents
-df_partial_subcomponent <- read_csv("www/df_partial_subcomponent2.csv") #dataframe for partial subcomponents
+df_exact_match <- read_csv("www/df_exact_match3.csv") #dataframe for exact matches
+df_subcomponent <- read_csv("www/df_subcomponent3.csv") #dataframe for subcomponents
+df_partial_subcomponent <- read_csv("www/df_partial_subcomponent3.csv") #dataframe for partial subcomponents
 
 # --------------- 3. Input choices --------------- # ####
 
@@ -73,7 +73,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
               tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"), #locating CSS file
               tags$script(src = "https://d3js.org/d3.v5.min.js"), #loading D3.js library
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"), #load Underscore.js library
-              tags$script(src = "index_v9.js"), #locating JavaScript file creating D3 charts on tabs Component, State and Data Source
+              tags$script(src = "index_v10.js"), #locating JavaScript file creating D3 charts on tabs Component, State and Data Source
               tags$script(src = "interstate_exact_match.js"), #locating JavaScript file creating round D3 chart for exact match components
               tags$script(src = "interstate_subcomponent.js"), #locating JavaScript file creating round D3 chart for subcomponents
               tags$script(src = "interstate_partial_subcomponent.js") #locating JavaScript file creating round D3 chart for partial subcomponents
@@ -124,7 +124,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$p("  "),
                           tags$h1("What is the Water Budget Navigator?"),
                           tags$br(),
-                          tags$h3(tags$p(style="text-indent:60px", 
+                          tags$h3(tags$p(#style="text-indent:60px", 
                                         "The Water Budget Navigator is a web application developed by the Internet of Water (IoW)
                                         that allows users to compare the water budgeting and water use estimation frameworks used
                                         by a variety of water resources agencies. Here is the general structure of a water budget 
@@ -136,14 +136,14 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                    tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
                 
                 tags$div(class = "text-area",
-                         tags$h3(tags$p(style="text-indent:60px",
+                         tags$h3(tags$p(#style="text-indent:60px",
                                         "A water budget is an accounting of all inflows and
                                         outflows of water within an area of interest. It is similar conceptually to a banking account
                                         statement that tracks deposits, withdrawals, and transfers between accounts. Just as a banking
                                         account statement is essential for prudent financial management, a water budget is essential 
                                         for planning and management of water resources."),
                                  tags$br(),
-                                  tags$p(style="text-indent:60px", 
+                                  tags$p(#style="text-indent:60px", 
                                         "There are many different ways to prepare water
                                         budgets, with different decisions to be made about defining which inflows, outflows, and transfers
                                         to keep track of, how to estimate these flows, using which source data. It can be difficult to
@@ -160,7 +160,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                           tags$li("Utah Division of Water Resources")
                                           )
                                   ),
-                          tags$h3(tags$p(style="text-indent:60px",
+                          tags$h3(tags$p(#style="text-indent:60px",
                                          "The Navigator rests on a standardized representation of these frameworks which is based on the
                                          overall framework of the",
                                          tags$a(href="https://water.ca.gov/-/media/DWR-Website/Web-Pages/Programs/Groundwater-Management/Data-and-Tools/Files/Water-Budget-Handbook.pdf?la=en&hash=30AD0DFD02468603F21C1038E6CC6BFE32381233&hash=30AD0DFD02468603F21C1038E6CC6BFE32381233", 
@@ -171,7 +171,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                          water budgeting using hydrologic concepts. This representation is based around the idea of 
                                          “water budget zones” and “components” (figure below)")),
                           
-                          tags$h3(tags$p(style="text-indent:60px",
+                          tags$h3(tags$p(#style="text-indent:60px",
                                          "A ", tags$b("component"), "is flow of water for which a numerical estimate is provided in a water budget conducted 
                                          by an agency in a ", tags$b("Jurisdiction"), ". Typical components might include “precipitation”, “stream inflow”, 
                                          and “evapotranspiration”. Components are calculated for a particular ", tags$b("water budget zone"), " or three-dimensional
@@ -181,7 +181,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                          tags$b("outflow"), " from one of the three systems to a system outside the water budget zone; or as an ", tags$b("internal transfer"),
                                          " between systems within the water budget zone."
                                          ),
-                                  tags$p(style="text-indent:60px",
+                                  tags$p(#style="text-indent:60px",
                                          "For a given water budgeting framework, each component has one or more ", tags$b("estimation methods"), " - procedures by which 
                                          a numerical estimate for the value of a component is produced in a given water budget framework. For example, 
                                          the estimation method for the component “evapotranspiration” might be “Modified Blaney-Criddle”, the name of a 
@@ -206,6 +206,8 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                  tags$br(),
                  # tags$div(id = "home_container",
                  #          tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
+                 tags$br(),
+                 tags$br(),
                  tags$br(),
                  tags$div(class = "text-area",
                           tags$h1("Why use Water Budget Navigator?"),

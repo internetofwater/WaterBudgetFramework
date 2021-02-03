@@ -112,7 +112,7 @@ write_csv(df_component_flow, "www/df_component_flow3.csv")
 
 # ---- 2. creating dataframe state-wise info ---- #
 
-process_graphDB <- function(state){
+process_graphDB_state <- function(state){
   
     # Query for components that are directly linked to estimation methods, parameters, or data sources
     query_state_c2em <- paste0("PREFIX wb: <http://purl.org/iow/WaterBudgetingFramework/>
@@ -513,11 +513,11 @@ process_graphDB <- function(state){
 }
 
 # Process graph database for NM
-df_state_ca <- process_graphDB("CA")
-df_state_co <- process_graphDB("CO")
-df_state_nm <- process_graphDB("NM")
-df_state_ut <- process_graphDB("UT")
-df_state_wy <- process_graphDB("WY")
+df_state_ca <- process_graphDB_state("CA")
+df_state_co <- process_graphDB_state("CO")
+df_state_nm <- process_graphDB_state("NM")
+df_state_ut <- process_graphDB_state("UT")
+df_state_wy <- process_graphDB_state("WY")
 
 # Combine all state's dataframeinto 1 dataframe
 df_state <- rbind(df_state_ca, df_state_co, df_state_nm, df_state_ut, df_state_wy)
@@ -592,7 +592,8 @@ SELECT ?j ?jL ?c ?cL ?em ?emL ?p ?pL ?ds ?dsL ?stateL FROM onto:explicit WHERE {
 df <- submit_sparql(query,access_options=file)
 
 # Assign NA to empty values
-df[df == ""] <- NA
+#df[df == ""] <- NA
+df[df == ""] <- "Unknown" ######################################## after changing this I didnt re-export, so check this if there are more issues
 
 # Check if the jurisdiction is same as the state usedBy property
 # get index for the rows where usedBy state is not same as jurisdiction 
