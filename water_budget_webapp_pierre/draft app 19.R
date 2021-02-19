@@ -160,6 +160,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                           tags$li("Utah Division of Water Resources")
                                           )
                                   ),
+                          tags$br(),
                           tags$h3(tags$p(#style="text-indent:60px",
                                          "The Navigator rests on a standardized representation of these frameworks which is based on the
                                          overall framework of the",
@@ -170,7 +171,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                          Development. This handbook is not prescriptive, but provides a useful framework to describe 
                                          water budgeting using hydrologic concepts. This representation is based around the idea of 
                                          “water budget zones” and “components” (figure below)")),
-                          
+                          tags$br(),
                           tags$h3(tags$p(#style="text-indent:60px",
                                          "A ", tags$b("component"), "is flow of water for which a numerical estimate is provided in a water budget conducted 
                                          by an agency in a ", tags$b("Jurisdiction"), ". Typical components might include “precipitation”, “stream inflow”, 
@@ -181,6 +182,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                          tags$b("outflow"), " from one of the three systems to a system outside the water budget zone; or as an ", tags$b("internal transfer"),
                                          " between systems within the water budget zone."
                                          ),
+                                  tags$br(),
                                   tags$p(#style="text-indent:60px",
                                          "For a given water budgeting framework, each component has one or more ", tags$b("estimation methods"), " - procedures by which 
                                          a numerical estimate for the value of a component is produced in a given water budget framework. For example, 
