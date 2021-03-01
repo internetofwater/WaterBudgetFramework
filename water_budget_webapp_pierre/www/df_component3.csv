@@ -1,0 +1,1414 @@
+jL,cL,emL,pL,dsL
+CA,Agricultural Applied Water,Cal-SIMETAW Model,Unknown,Cal-SIMETAW Unit Values
+CA,Agricultural Applied Water,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Agricultural Applied Water,Crop ET Approach,Crop ET Requirements,Unknown
+CA,Agricultural Applied Water,Crop ET Approach,ET of Applied Water,Unknown
+CA,Agricultural Applied Water,Crop ET Approach,Groundwater Extraction-CA,Unknown
+CA,Agricultural Applied Water,Crop ET Approach,Irrigation Efficiency,Unknown
+CA,Agricultural Applied Water,Crop ET Approach,Irrigation Recharge,Unknown
+CA,Agricultural Applied Water,Crop ET Approach,Precipitation Volume for Agricultural Area,Unknown
+CA,Agricultural Applied Water,Crop ET Approach,Runoff Volume,Unknown
+CA,Agricultural Applied Water,Unknown,Unknown,CA Local Agency Water Delivery Records
+CA,Agricultural Applied Water,Unknown,Unknown,Existing California Water Plan
+CA,Agricultural Applied Water,Unknown,Unknown,On-farm water use data
+CA,Applied Water,Unknown,Unknown,CA Agricultural Water Management Plans
+CA,Applied Water,Unknown,Unknown,CA DWR Demographic Data
+CA,Applied Water,Unknown,Unknown,CA DWR Irrigation Methods Survey
+CA,Applied Water,Unknown,Unknown,CA DWR Land Use Surveys
+CA,Applied Water,Unknown,Unknown,CA DWR Land Use Viewer
+CA,Applied Water,Unknown,Unknown,CA DWR SGMA Data Viewer
+CA,Applied Water,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Applied Water,Unknown,Unknown,CA Integrated Water Flow Model (IWFM) Demand Calculator
+CA,Applied Water,Unknown,Unknown,CA Urban Water Management Plans
+CA,Applied Water,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Applied Water,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Applied Water,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Applied Water,Unknown,Unknown,California Department of Finance
+CA,Applied Water,Unknown,Unknown,California Pesticide Information Portal
+CA,Applied Water,Unknown,Unknown,California State Groundwater Elevation Monitoring (CASGEM)
+CA,Applied Water,Unknown,Unknown,California Water Plan Portfolio
+CA,Applied Water,Unknown,Unknown,CALSIM2
+CA,Applied Water,Unknown,Unknown,Central Valley Hydrologic Model (CVHM)
+CA,Applied Water,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Applied Water,Unknown,Unknown,SWRCB Water Conservation Portal
+CA,Applied Water,Unknown,Unknown,US Census Bureau
+CA,Applied Water,Unknown,Unknown,USDA CropScape
+CA,Applied Water,Unknown,Unknown,USDA Natural Resources Conservation Service Geospatial Web Soil Survey
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CA Agricultural Water Management Plans
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CA DWR Irrigation Methods Survey
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CA DWR Land Use Surveys
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CA Integrated Water Flow Model (IWFM) Demand Calculator
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CA Recycled Water Data from Industrial Users
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CA Urban Water Management Plans
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,California State Water Resources Control Board (SWRCB) Urban Water Supply Statistics
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,California Water Plan Portfolio
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,California Water Plan Update Data
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,CALSIM2
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,Existing Water Right Information from State Water Resources Control Board (SWRCB)
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Applied Water Reuse/Recycled Water,Unknown,Unknown,SWRCB Water Conservation Portal
+CA,Change in Groundwater Storage,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Change in Groundwater Storage,Change in Groundwater Level,Budget Zone Area,Unknown
+CA,Change in Groundwater Storage,Change in Groundwater Level,Groundwater Elevation,Unknown
+CA,Change in Groundwater Storage,Change in Groundwater Level,Specific Yield,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Conveyance Seepage-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Conveyance Seepage-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Conveyance Seepage-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Conveyance Seepage-CA,California Water Plan Portfolio
+CA,Change in Groundwater Storage,Mass Balance,Conveyance Seepage-CA,CALSIM2
+CA,Change in Groundwater Storage,Mass Balance,Conveyance Seepage-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Export-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Export-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Export-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Export-CA,California Water Plan Portfolio
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Export-CA,CALSIM2
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Export-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Extraction-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Extraction-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Extraction-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Extraction-CA,California Water Plan Portfolio
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Extraction-CA,CALSIM2
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Extraction-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Groundwater Extraction-CA,Unknown
+CA,Change in Groundwater Storage,Mass Balance,Lake Gain from Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Lake Gain from Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Lake Loss to Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Lake Loss to Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Managed Aquifer Recharge-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Managed Aquifer Recharge-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Managed Aquifer Recharge-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Managed Aquifer Recharge-CA,California Water Plan Portfolio
+CA,Change in Groundwater Storage,Mass Balance,Managed Aquifer Recharge-CA,CALSIM2
+CA,Change in Groundwater Storage,Mass Balance,Managed Aquifer Recharge-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Applied Water-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Applied Water-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Applied Water-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Applied Water-CA,California Water Plan Portfolio
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Applied Water-CA,CALSIM2
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Applied Water-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,CA DWR SGMA Data Viewer
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,California Data Exchange Center (CDEC)
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,California Water Plan Portfolio
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Recharge of Precipitation-CA,Unknown
+CA,Change in Groundwater Storage,Mass Balance,Stored Water Extraction-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Stored Water Extraction-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Stored Water Extraction-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Stored Water Extraction-CA,California Water Plan Portfolio
+CA,Change in Groundwater Storage,Mass Balance,Stored Water Extraction-CA,CALSIM2
+CA,Change in Groundwater Storage,Mass Balance,Stored Water Extraction-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Stream Gain from Groundwater-CA,CA DWR SGMA Data Viewer
+CA,Change in Groundwater Storage,Mass Balance,Stream Gain from Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Stream Gain from Groundwater-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Stream Gain from Groundwater-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Stream Gain from Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Stream Loss to Groundwater-CA,CA DWR SGMA Data Viewer
+CA,Change in Groundwater Storage,Mass Balance,Stream Loss to Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Stream Loss to Groundwater-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Stream Loss to Groundwater-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Stream Loss to Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Inflow-CA,CA DWR Bulletin 118: Groundwater Report
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Inflow-CA,CA DWR Water Data Library: Surface Water and Groundwater Data
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Inflow-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Inflow-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Inflow-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Inflow-CA,California Data Exchange Center (CDEC)
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Inflow-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Outflow-CA,CA DWR Bulletin 118: Groundwater Report
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Outflow-CA,CA DWR Water Data Library: Surface Water and Groundwater Data
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Outflow-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Outflow-CA,California Agricultural Land and Water Use Estimates
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Outflow-CA,California Central Valley Simulation (C2VSim)
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Outflow-CA,California Data Exchange Center (CDEC)
+CA,Change in Groundwater Storage,Mass Balance,Subsurface Outflow-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Groundwater Storage,Mass Balance,Total Groundwater System Inflow-CA,Unknown
+CA,Change in Groundwater Storage,Mass Balance,Total Groundwater System Outflow-CA,Unknown
+CA,Change in Groundwater Storage,USGS California Water Science Center - Groundwater Modeling,Unknown,Unknown
+CA,Change in Land System Storage,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Change in Land System Storage,Water Use Models,Change in Soil Moisture,Unknown
+CA,Change in Surface Water Storage,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Change in Surface Water Storage,Mass Balance,Lake Gain from Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Surface Water Storage,Mass Balance,Lake Gain from Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Surface Water Storage,Mass Balance,Lake Inflow from Streams-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Surface Water Storage,Mass Balance,Lake Inflow from Streams-CA,Center for Hydrometeorology and Remote Sensing Data Portal (CHRS)
+CA,Change in Surface Water Storage,Mass Balance,Lake Inflow from Streams-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Surface Water Storage,Mass Balance,Lake Inflow from Streams-CA,Unknown
+CA,Change in Surface Water Storage,Mass Balance,Lake Inflow from Streams-CA,USGS Surface-Water Data for California
+CA,Change in Surface Water Storage,Mass Balance,Lake Loss to Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Surface Water Storage,Mass Balance,Lake Loss to Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Surface Water Storage,Mass Balance,Lake Outflow to Streams-CA,CA Integrated Water Flow Model (IWFM)
+CA,Change in Surface Water Storage,Mass Balance,Lake Outflow to Streams-CA,Center for Hydrometeorology and Remote Sensing Data Portal (CHRS)
+CA,Change in Surface Water Storage,Mass Balance,Lake Outflow to Streams-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Change in Surface Water Storage,Mass Balance,Lake Outflow to Streams-CA,Unknown
+CA,Change in Surface Water Storage,Mass Balance,Lake Outflow to Streams-CA,USGS Surface-Water Data for California
+CA,Change in Total System Storage,Unknown,Unknown,Unknown
+CA,Conveyance Evaporation,Evapotranspiration (ET) Rates,Evapotranspiration-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,CA Integrated Water Flow Model (IWFM)
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,California Agricultural Land and Water Use Estimates
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,California Central Valley Simulation (C2VSim)
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,California Water Plan Portfolio
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,CALSIM2
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Conveyance Evaporation,Mass Balance,Conveyance Seepage-CA,USBR Central Valley Project Refuge Water Delivery Data
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,CA Integrated Water Flow Model (IWFM)
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,California Central Valley Simulation (C2VSim)
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,California Water Plan Portfolio
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,CALSIM2
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,Unknown
+CA,Conveyance Evaporation,Mass Balance,Imported Water-CA,USBR Central Valley Project Refuge Water Delivery Data
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,CA Integrated Water Flow Model (IWFM)
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,California Agricultural Land and Water Use Estimates
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,California Central Valley Simulation (C2VSim)
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,California Water Plan Portfolio
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,CALSIM2
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Conveyance Evaporation,Mass Balance,Surface Water Delivery-CA,USBR Central Valley Project Refuge Water Delivery Data
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,CA Integrated Water Flow Model (IWFM)
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,California Agricultural Land and Water Use Estimates
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,California Central Valley Simulation (C2VSim)
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,California Water Plan Portfolio
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,CALSIM2
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Conveyance Evaporation,Mass Balance,Surface Water Diversions-CA,USBR Central Valley Project Refuge Water Delivery Data
+CA,Conveyance Seepage,Estimate Conveyance Seepage Rate based on Canal Characteristics,Unknown,California Central Valley Simulation (C2VSim)
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,CA Integrated Water Flow Model (IWFM)
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,California Central Valley Simulation (C2VSim)
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,California Water Plan Portfolio
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,CALSIM2
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,Unknown
+CA,Conveyance Seepage,Mass Balance,Imported Water-CA,USBR Central Valley Project Refuge Water Delivery Data
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,CA Integrated Water Flow Model (IWFM)
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,California Agricultural Land and Water Use Estimates
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,California Central Valley Simulation (C2VSim)
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,California Water Plan Portfolio
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,CALSIM2
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Conveyance Seepage,Mass Balance,Surface Water Delivery-CA,USBR Central Valley Project Refuge Water Delivery Data
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,CA Integrated Water Flow Model (IWFM)
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,Cal-SIMETAW Unit Values
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,California Agricultural Land and Water Use Estimates
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,California Central Valley Simulation (C2VSim)
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,California Water Plan Portfolio
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,CALSIM2
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Conveyance Seepage,Mass Balance,Surface Water Diversions-CA,USBR Central Valley Project Refuge Water Delivery Data
+CA,Evapotranspiration,Cal-SIMETAW Model,Unknown,Cal-SIMETAW Unit Values
+CA,Evapotranspiration,Crop Coefficient Approach,Crop Growth State Coefficient (Kc),FAO 56 Chapter 6 Single Crop Coefficients (Kc)
+CA,Evapotranspiration,Crop Coefficient Approach,Reference Crop ET (ETo),CA Irrigation Training and Research Center (ITRC) Evapotranspiration Data
+CA,Evapotranspiration,Crop Coefficient Approach,Reference Crop ET (ETo),Cal-SIMETAW Unit Values
+CA,Evapotranspiration,Unknown,Unknown,CA Agricultural Water Management Plans
+CA,Evapotranspiration,Unknown,Unknown,CA County Agricultural Commissioner Crop Reports
+CA,Evapotranspiration,Unknown,Unknown,CA DWR Bulletin 113: Crop Water Use
+CA,Evapotranspiration,Unknown,Unknown,CA DWR Land Use Surveys
+CA,Evapotranspiration,Unknown,Unknown,CA DWR Land Use Viewer
+CA,Evapotranspiration,Unknown,Unknown,CA DWR SGMA Data Viewer
+CA,Evapotranspiration,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Evapotranspiration,Unknown,Unknown,CA Integrated Water Flow Model (IWFM) Demand Calculator
+CA,Evapotranspiration,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Evapotranspiration,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Evapotranspiration,Unknown,Unknown,California Pesticide Information Portal
+CA,Evapotranspiration,Unknown,Unknown,California State Groundwater Elevation Monitoring (CASGEM)
+CA,Evapotranspiration,Unknown,Unknown,CALSIM2
+CA,Evapotranspiration,Unknown,Unknown,Central Valley Hydrologic Model (CVHM)
+CA,Evapotranspiration,Unknown,Unknown,METRIC-Earth Engine Evapotranspiration Flux
+CA,Evapotranspiration,Unknown,Unknown,MOD 16: MODIS Global Evapotranspiration Project
+CA,Evapotranspiration,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Evapotranspiration,Unknown,Unknown,National Land Cover Data Base (NLCD)
+CA,Evapotranspiration,Unknown,Unknown,NOAA National Centers for Environmental Information - Climate Data Online
+CA,Evapotranspiration,Unknown,Unknown,NOAA National Centers for Environmental Information - Climatological Data Publications
+CA,Evapotranspiration,Unknown,Unknown,NOAA Office of Satellite and Product Operations ALEXI: Atmosphere-Land Exchange Inverse Model
+CA,Evapotranspiration,Unknown,Unknown,North American Land Data Assimilation System (NLDAS-2)
+CA,Evapotranspiration,Unknown,Unknown,NWS Climate Prediction Center Evaporation
+CA,Evapotranspiration,Unknown,Unknown,USDA County Ag Commissioner's Data Listing
+CA,Evapotranspiration,Unknown,Unknown,USDA CropScape
+CA,Evapotranspiration,Unknown,Unknown,USGS Basin Characterization Model
+CA,Evapotranspiration,Unknown,Unknown,Vegetation Condition Explorer (VegScape)
+CA,Evapotranspiration,Unknown,Unknown,Water Use Classification of Landscape Species (WUCOLS)
+CA,Groundwater Extraction,California Central Valley Simulation (C2VSim),Unknown,PRISM
+CA,Groundwater Extraction,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Groundwater Extraction,Unknown,Unknown,CA Previous Reports
+CA,Imported Water,Applied Water Estimation Method,Operational Spill,Unknown
+CA,Imported Water,California Central Valley Simulation (C2VSim),Unknown,PRISM
+CA,Imported Water,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Imported Water,Unknown,Unknown,CA DWR Bulletin 132: Management of the California State Water Project
+CA,Imported Water,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Imported Water,Unknown,Unknown,CALSIM 3
+CA,Imported Water,Unknown,Unknown,CALSIM2
+CA,Imported Water,Unknown,Unknown,Existing Water Right Information from State Water Resources Control Board (SWRCB)
+CA,Imported Water,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Imported Water,Unknown,Unknown,USGS Surface-Water Data for California
+CA,Lake Evaporation,Evaporation Pan Method,Measured Pan Evaporation Rate,Unknown
+CA,Lake Evaporation,Evaporation Pan Method,Pan Coefficient,Unknown
+CA,Lake Evaporation,Evaporation Pan Method,Surface Area of Water Body,Unknown
+CA,Lake Evaporation,Mass Transfer Equations,Mass Transfer Coefficient,Unknown
+CA,Lake Evaporation,Mass Transfer Equations,Saturation Vapor Pressure ,Unknown
+CA,Lake Evaporation,Mass Transfer Equations,Vapor Pressure,Unknown
+CA,Lake Evaporation,Mass Transfer Equations,Wind Function,Unknown
+CA,Lake Evaporation,Unknown,Unknown,CA County Agricultural Commissioner Crop Reports
+CA,Lake Evaporation,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Lake Evaporation,Unknown,Unknown,California Water Plan Portfolio
+CA,Lake Evaporation,Unknown,Unknown,CALSIM2
+CA,Lake Evaporation,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Evaporation,Unknown,Unknown,NOAA National Centers for Environmental Information - Climate Data Online
+CA,Lake Evaporation,Unknown,Unknown,NOAA National Centers for Environmental Information - Climatological Data Publications
+CA,Lake Evaporation,Unknown,Unknown,NWS Climate Prediction Center Evaporation
+CA,Lake Gain from Groundwater,Darcy's Law,Bottom elevation of the lakebed sediments (Hlakebed bottom),Unknown
+CA,Lake Gain from Groundwater,Darcy's Law,Distance between two points with known head (I),Unknown
+CA,Lake Gain from Groundwater,Darcy's Law,Groundwater Level (Haquifer),Unknown
+CA,Lake Gain from Groundwater,Darcy's Law,Surface area of lake (Al),Unknown
+CA,Lake Gain from Groundwater,Darcy's Law,Vertical hydraulic conductivity of the surrounding aquifer (Kv),Unknown
+CA,Lake Gain from Groundwater,Darcy's Law,Water level in lake (Hlake),Unknown
+CA,Lake Gain from Groundwater,Darcy's Law,Wetted perimeter of lake multiplied by the average saturated thickness of aquifer around the lake (Awpl),Unknown
+CA,Lake Gain from Groundwater,Flow Net Analysis,Flow through a vertical plane that extends beneath the shoreline of a surface water body (Q),Unknown
+CA,Lake Gain from Groundwater,Flow Net Analysis,Horizontal hydraulic conductivity of the aquifer at the boundary (K),Unknown
+CA,Lake Gain from Groundwater,Flow Net Analysis,Number of equipotential head drops over the area of interest (n),Unknown
+CA,Lake Gain from Groundwater,Flow Net Analysis,Number of streamtubes across a flow net (M),Unknown
+CA,Lake Gain from Groundwater,Flow Net Analysis,Total head drop across the area of interest (H),Unknown
+CA,Lake Gain from Groundwater,Mass Balance,Change in Lake Storage,Unknown
+CA,Lake Gain from Groundwater,Mass Balance,Lake Evaporation-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Gain from Groundwater,Mass Balance,Lake Evaporation-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Gain from Groundwater,Mass Balance,Lake Evaporation-CA,Unknown
+CA,Lake Gain from Groundwater,Mass Balance,Lake Inflow from Streams-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Gain from Groundwater,Mass Balance,Lake Inflow from Streams-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Gain from Groundwater,Mass Balance,Lake Inflow from Streams-CA,Unknown
+CA,Lake Gain from Groundwater,Mass Balance,Lake Outflow to Streams-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Gain from Groundwater,Mass Balance,Lake Outflow to Streams-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Gain from Groundwater,Mass Balance,Lake Outflow to Streams-CA,Unknown
+CA,Lake Gain from Groundwater,Mass Balance,Precipitation on Lakes-CA,Unknown
+CA,Lake Inflow from Streams,Mass Balance,Lake Evaporation-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Inflow from Streams,Mass Balance,Lake Evaporation-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Inflow from Streams,Mass Balance,Lake Evaporation-CA,Unknown
+CA,Lake Inflow from Streams,Mass Balance,Lake Gain from Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Inflow from Streams,Mass Balance,Lake Gain from Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Inflow from Streams,Mass Balance,Lake Loss to Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Inflow from Streams,Mass Balance,Lake Loss to Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Inflow from Streams,Mass Curve,Unknown,Unknown
+CA,Lake Inflow from Streams,Reservoir Operation Rule Curve,Unknown,Unknown
+CA,Lake Loss to Groundwater,Darcy's Law,Bottom elevation of the lakebed sediments (Hlakebed bottom),Unknown
+CA,Lake Loss to Groundwater,Darcy's Law,Distance between two points with known head (I),Unknown
+CA,Lake Loss to Groundwater,Darcy's Law,Groundwater Level (Haquifer),Unknown
+CA,Lake Loss to Groundwater,Darcy's Law,Surface area of lake (Al),Unknown
+CA,Lake Loss to Groundwater,Darcy's Law,Vertical hydraulic conductivity of the surrounding aquifer (Kv),Unknown
+CA,Lake Loss to Groundwater,Darcy's Law,Water level in lake (Hlake),Unknown
+CA,Lake Loss to Groundwater,Darcy's Law,Wetted perimeter of lake multiplied by the average saturated thickness of aquifer around the lake (Awpl),Unknown
+CA,Lake Loss to Groundwater,Flow Net Analysis,Effective thickness of the aquifer (b),Unknown
+CA,Lake Loss to Groundwater,Flow Net Analysis,Flow through a vertical plane that extends beneath the shoreline of a surface water body (Q),Unknown
+CA,Lake Loss to Groundwater,Flow Net Analysis,Horizontal hydraulic conductivity of the aquifer at the boundary (K),Unknown
+CA,Lake Loss to Groundwater,Flow Net Analysis,Number of equipotential head drops over the area of interest (n),Unknown
+CA,Lake Loss to Groundwater,Flow Net Analysis,Number of streamtubes across a flow net (M),Unknown
+CA,Lake Loss to Groundwater,Flow Net Analysis,Total head drop across the area of interest (H),Unknown
+CA,Lake Loss to Groundwater,Mass Balance,Change in Lake Storage,Unknown
+CA,Lake Loss to Groundwater,Mass Balance,Lake Evaporation-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Loss to Groundwater,Mass Balance,Lake Evaporation-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Loss to Groundwater,Mass Balance,Lake Evaporation-CA,Unknown
+CA,Lake Loss to Groundwater,Mass Balance,Lake Inflow from Streams-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Loss to Groundwater,Mass Balance,Lake Inflow from Streams-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Loss to Groundwater,Mass Balance,Lake Inflow from Streams-CA,Unknown
+CA,Lake Loss to Groundwater,Mass Balance,Lake Outflow to Streams-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Loss to Groundwater,Mass Balance,Lake Outflow to Streams-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Loss to Groundwater,Mass Balance,Lake Outflow to Streams-CA,Unknown
+CA,Lake Loss to Groundwater,Mass Balance,Precipitation on Lakes-CA,Unknown
+CA,Lake Outflow to Streams,Mass Balance,Lake Evaporation-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Outflow to Streams,Mass Balance,Lake Evaporation-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Outflow to Streams,Mass Balance,Lake Evaporation-CA,Unknown
+CA,Lake Outflow to Streams,Mass Balance,Lake Gain from Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Outflow to Streams,Mass Balance,Lake Gain from Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Outflow to Streams,Mass Balance,Lake Loss to Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Lake Outflow to Streams,Mass Balance,Lake Loss to Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Lake Outflow to Streams,Mass Curve,Unknown,Unknown
+CA,Lake Outflow to Streams,Reservoir Operation Rule Curve,Unknown,Unknown
+CA,Managed Aquifer Recharge,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Managed Aquifer Recharge,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Managed Aquifer Recharge,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Managed Aquifer Recharge,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Managed Aquifer Recharge,Unknown,Unknown,California Water Plan Portfolio
+CA,Managed Aquifer Recharge,Unknown,Unknown,CALSIM2
+CA,Managed Aquifer Recharge,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,CA DWR Land Use Surveys
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,California Department of Fish and Wildlife (CDFW)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,California Water Plan Portfolio
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,Data from Private Wetlands or Duck Clubs
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Cultural Practices,US Fish and Wildlife Services (USFWS)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,CA DWR Land Use Surveys
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,California Department of Fish and Wildlife (CDFW)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,California Water Plan Portfolio
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,Data from Private Wetlands or Duck Clubs
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Habitat Acreage,US Fish and Wildlife Services (USFWS)
+CA,Managed Wetland Applied Water,Managed Wetlands Applied Water Estimation,Unit ET of Applied Water,California Water Plan Portfolio
+CA,Managed Wetland Applied Water,Unknown,Unknown,CA Previous Reports
+CA,Managed Wetland Applied Water,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Managed Wetland Applied Water,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Managed Wetland Applied Water,Unknown,Unknown,California Water Plan Water Portfolio Managed Wetlands Water Use Data
+CA,Managed Wetland Applied Water,Unknown,Unknown,Central Valley Hydrologic Model (CVHM)
+CA,Managed Wetland Applied Water,Unknown,Unknown,Local Agency Records
+CA,Managed Wetland Applied Water,Unknown,Unknown,USBR Central Valley Project Refuge Water Delivery Data
+CA,Managed Wetland Applied Water,Unknown,Unknown,USFWS and CDFW Refuge Water Management Plans
+CA,Precipitation,California Central Valley Simulation (C2VSim),Unknown,PRISM
+CA,Precipitation,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Precipitation,Spatial Averaging Techniques,Unknown,Unknown
+CA,Precipitation,Unknown,Unknown,CA Agricultural Water Management Plans
+CA,Precipitation,Unknown,Unknown,CA DWR SGMA Data Viewer
+CA,Precipitation,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Precipitation,Unknown,Unknown,CA Previous Reports
+CA,Precipitation,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Precipitation,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Precipitation,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Precipitation,Unknown,Unknown,California State Groundwater Elevation Monitoring (CASGEM)
+CA,Precipitation,Unknown,Unknown,California Water Plan Portfolio
+CA,Precipitation,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Precipitation,Unknown,Unknown,National Oceanic and Atmospheric Administration Stations
+CA,Precipitation on Lakes,Unknown,Unknown,Unknown
+CA,Recharge of Applied Water,Applied Water Estimation Method,Consumptive Use of Precipitation (EP),Unknown
+CA,Recharge of Applied Water,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Recharge of Precipitation,California Central Valley Simulation (C2VSim),Unknown,PRISM
+CA,Recharge of Precipitation,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Recharge of Precipitation,Constant Percentage,Unknown,Unknown
+CA,Recharge of Precipitation,Unknown,Unknown,CA Agricultural Water Management Plans
+CA,Recharge of Precipitation,Unknown,Unknown,CA DWR SGMA Data Viewer
+CA,Recharge of Precipitation,Unknown,Unknown,CA Previous Reports
+CA,Recharge of Precipitation,Unknown,Unknown,California State Groundwater Elevation Monitoring (CASGEM)
+CA,Recharge of Precipitation,Unknown,Unknown,California Water Plan Portfolio
+CA,Recharge of Precipitation,Unknown,Unknown,Central Valley Hydrologic Model (CVHM)
+CA,Recharge of Precipitation,Unknown,Unknown,National Oceanic and Atmospheric Administration Stations
+CA,Recycled Water Export,Unknown,Unknown,CA Agricultural Water Management Plans
+CA,Recycled Water Export,Unknown,Unknown,CA Urban Water Management Plans
+CA,Recycled Water Export,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Recycled Water Export,Unknown,Unknown,California Water Plan Portfolio
+CA,Recycled Water Export,Unknown,Unknown,CALSIM2
+CA,Recycled Water Export,Unknown,Unknown,Water Recycling Survey (2015)
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,CA Integrated Water Flow Model (IWFM)
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,CA Integrated Water Flow Model (IWFM) Demand Calculator
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,Cal-SIMETAW Unit Values
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,California Agricultural Land and Water Use Estimates
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,California Central Valley Simulation (C2VSim)
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,California Water Plan Portfolio
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,CALSIM2
+CA,Return Flow,Return Flow Estimation Method,Applied Water Reuse/Recycled Water-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,CA Integrated Water Flow Model (IWFM)
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,CA Integrated Water Flow Model (IWFM) Demand Calculator
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,Cal-SIMETAW Unit Values
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,California Agricultural Land and Water Use Estimates
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,California Central Valley Simulation (C2VSim)
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,California Water Plan Portfolio
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,CALSIM2
+CA,Return Flow,Return Flow Estimation Method,Evapotranspiration-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Return Flow,Return Flow Estimation Method,Stream Loss to Groundwater-CA,CA Integrated Water Flow Model (IWFM)
+CA,Return Flow,Return Flow Estimation Method,Stream Loss to Groundwater-CA,California Agricultural Land and Water Use Estimates
+CA,Return Flow,Return Flow Estimation Method,Stream Loss to Groundwater-CA,California Central Valley Simulation (C2VSim)
+CA,Return Flow,Return Flow Estimation Method,Stream Loss to Groundwater-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Return Flow,Return Flow Estimation Method,Stream Loss to Groundwater-CA,USDA Natural Resources Conservation Service Geospatial Web Soil Survey
+CA,Return Flow,Unknown,Unknown,USGS Publications
+CA,Return Flow,Unknown,Unknown,USGS Surface-Water Data for California
+CA,Runoff,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Runoff,Unknown,Unknown,CA Integrated Water Flow Model (IWFM) Demand Calculator
+CA,Runoff,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Runoff,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Runoff,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Runoff,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Runoff,Unknown,Unknown,USGS Publications
+CA,Runoff,Unknown,Unknown,USGS Surface-Water Data for California
+CA,Stored Water Export,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Stored Water Export,Unknown,Unknown,CALSIM2
+CA,Stored Water Export,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stored Water Extraction,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Stored Water Extraction,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Stored Water Extraction,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Stored Water Extraction,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Stored Water Extraction,Unknown,Unknown,California Water Plan Portfolio
+CA,Stored Water Extraction,Unknown,Unknown,CALSIM2
+CA,Stored Water Extraction,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Evaporation,Mass Balance,Stream Inflow-CA,Cal-SIMETAW Unit Values
+CA,Stream Evaporation,Mass Balance,Stream Inflow-CA,California Water Plan Portfolio
+CA,Stream Evaporation,Mass Balance,Stream Outflow-CA,Cal-SIMETAW Unit Values
+CA,Stream Evaporation,Mass Balance,Stream Outflow-CA,California Water Plan Portfolio
+CA,Stream Evaporation,Mass Transfer Equations,Saturation Vapor Pressure ,Unknown
+CA,Stream Evaporation,Mass Transfer Equations,Vapor Pressure,Unknown
+CA,Stream Evaporation,Mass Transfer Equations,Wind Function,Unknown
+CA,Stream Gain from Groundwater,Baseflow Separation Techniques,Unknown,Unknown
+CA,Stream Gain from Groundwater,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Stream Gain from Groundwater,Constant Seepage Percentage,Unknown,Unknown
+CA,Stream Gain from Groundwater,Darcy's Law,Average thickness of streambed (Bstream),Unknown
+CA,Stream Gain from Groundwater,Darcy's Law,Bottom Elevation of Streambed Sediments (Hstreambed bottom),Unknown
+CA,Stream Gain from Groundwater,Darcy's Law,Effective area of flow exchange (Awps),Unknown
+CA,Stream Gain from Groundwater,Darcy's Law,Groundwater Level (Haquifer),Unknown
+CA,Stream Gain from Groundwater,Darcy's Law,Hydraulic conductivity of the streambed material (Ks),Unknown
+CA,Stream Gain from Groundwater,Darcy's Law,Water Stage in stream (Hstream),Unknown
+CA,Stream Gain from Groundwater,Flow Net Analysis,Effective thickness of the aquifer (b),Unknown
+CA,Stream Gain from Groundwater,Flow Net Analysis,Flow through a vertical plane that extends beneath the shoreline of a surface water body (Q),Unknown
+CA,Stream Gain from Groundwater,Flow Net Analysis,Horizontal hydraulic conductivity of the aquifer at the boundary (K),Unknown
+CA,Stream Gain from Groundwater,Flow Net Analysis,Number of equipotential head drops over the area of interest (n),Unknown
+CA,Stream Gain from Groundwater,Flow Net Analysis,Number of streamtubes across a flow net (M),Unknown
+CA,Stream Gain from Groundwater,Flow Net Analysis,Total head drop across the area of interest (H),Unknown
+CA,Stream Gain from Groundwater,Mass Balance,Inflow from contributing or tributary streams,Unknown
+CA,Stream Gain from Groundwater,Mass Balance,Return Flow-CA,CA Integrated Water Flow Model (IWFM)
+CA,Stream Gain from Groundwater,Mass Balance,Return Flow-CA,California Agricultural Land and Water Use Estimates
+CA,Stream Gain from Groundwater,Mass Balance,Return Flow-CA,California Central Valley Simulation (C2VSim)
+CA,Stream Gain from Groundwater,Mass Balance,Return Flow-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Gain from Groundwater,Mass Balance,Return Flow-CA,USDA Natural Resources Conservation Service Geospatial Web Soil Survey
+CA,Stream Gain from Groundwater,Mass Balance,Runoff-CA,CA Integrated Water Flow Model (IWFM)
+CA,Stream Gain from Groundwater,Mass Balance,Runoff-CA,California Agricultural Land and Water Use Estimates
+CA,Stream Gain from Groundwater,Mass Balance,Runoff-CA,California Central Valley Simulation (C2VSim)
+CA,Stream Gain from Groundwater,Mass Balance,Runoff-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Gain from Groundwater,Mass Balance,Runoff-CA,USGS Basin Characterization Model
+CA,Stream Gain from Groundwater,Mass Balance,Streamflow at downstream gauge,Unknown
+CA,Stream Gain from Groundwater,Mass Balance,Streamflow at upstream gauge,Unknown
+CA,Stream Gain from Groundwater,Mass Balance,Surface Water Diversions-CA,CA DWR SGMA Data Viewer
+CA,Stream Gain from Groundwater,Mass Balance,Surface Water Diversions-CA,CA Integrated Water Flow Model (IWFM)
+CA,Stream Gain from Groundwater,Mass Balance,Surface Water Diversions-CA,California Agricultural Land and Water Use Estimates
+CA,Stream Gain from Groundwater,Mass Balance,Surface Water Diversions-CA,California Central Valley Simulation (C2VSim)
+CA,Stream Gain from Groundwater,Mass Balance,Surface Water Diversions-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Inflow,Drainage Area Ratio Method,Drainage area of site of interest (Ay),Unknown
+CA,Stream Inflow,Drainage Area Ratio Method,Drainage area of streamflow gaging station (Ax),Unknown
+CA,Stream Inflow,Drainage Area Ratio Method,Measure streamflow (Xij),Unknown
+CA,Stream Inflow,University of Washington’s Variable Infiltration Capacity Model (VIC).,Unknown,Unknown
+CA,Stream Inflow,Unknown,Unknown,CA DWR SGMA Data Viewer
+CA,Stream Inflow,Unknown,Unknown,CA DWR Water Data Library: Surface Water and Groundwater Data
+CA,Stream Inflow,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Stream Inflow,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Stream Inflow,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Stream Inflow,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Stream Inflow,Unknown,Unknown,California Nevada River Forecast Center
+CA,Stream Inflow,Unknown,Unknown,California Water Plan Portfolio
+CA,Stream Inflow,Unknown,Unknown,CALSIM 3
+CA,Stream Inflow,Unknown,Unknown,CALSIM2
+CA,Stream Inflow,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Inflow,Unknown,Unknown,USGS Publications
+CA,Stream Inflow,Unknown,Unknown,USGS Surface-Water Data for California
+CA,Stream Inflow,USGS DR3M,Unknown,Unknown
+CA,Stream Inflow,Vieux & Associates' Vflo,Unknown,Unknown
+CA,Stream Inflow,Water Resource Associates HYSIM,Unknown,Unknown
+CA,Stream Loss to Groundwater,Baseflow Separation Techniques,Unknown,Unknown
+CA,Stream Loss to Groundwater,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Stream Loss to Groundwater,Constant Seepage Percentage,Unknown,Unknown
+CA,Stream Loss to Groundwater,Flow Net Analysis,Effective thickness of the aquifer (b),Unknown
+CA,Stream Loss to Groundwater,Flow Net Analysis,Flow through a vertical plane that extends beneath the shoreline of a surface water body (Q),Unknown
+CA,Stream Loss to Groundwater,Flow Net Analysis,Horizontal hydraulic conductivity of the aquifer at the boundary (K),Unknown
+CA,Stream Loss to Groundwater,Flow Net Analysis,Number of equipotential head drops over the area of interest (n),Unknown
+CA,Stream Loss to Groundwater,Flow Net Analysis,Number of streamtubes across a flow net (M),Unknown
+CA,Stream Loss to Groundwater,Flow Net Analysis,Total head drop across the area of interest (H),Unknown
+CA,Stream Loss to Groundwater,Mass Balance,Inflow from contributing or tributary streams,Unknown
+CA,Stream Loss to Groundwater,Mass Balance,Return Flow-CA,CA Integrated Water Flow Model (IWFM)
+CA,Stream Loss to Groundwater,Mass Balance,Return Flow-CA,California Agricultural Land and Water Use Estimates
+CA,Stream Loss to Groundwater,Mass Balance,Return Flow-CA,California Central Valley Simulation (C2VSim)
+CA,Stream Loss to Groundwater,Mass Balance,Return Flow-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Loss to Groundwater,Mass Balance,Return Flow-CA,USDA Natural Resources Conservation Service Geospatial Web Soil Survey
+CA,Stream Loss to Groundwater,Mass Balance,Runoff-CA,CA Integrated Water Flow Model (IWFM)
+CA,Stream Loss to Groundwater,Mass Balance,Runoff-CA,California Agricultural Land and Water Use Estimates
+CA,Stream Loss to Groundwater,Mass Balance,Runoff-CA,California Central Valley Simulation (C2VSim)
+CA,Stream Loss to Groundwater,Mass Balance,Runoff-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Loss to Groundwater,Mass Balance,Runoff-CA,USGS Basin Characterization Model
+CA,Stream Loss to Groundwater,Mass Balance,Streamflow at downstream gauge,Unknown
+CA,Stream Loss to Groundwater,Mass Balance,Streamflow at upstream gauge,Unknown
+CA,Stream Loss to Groundwater,Mass Balance,Surface Water Diversions-CA,CA DWR SGMA Data Viewer
+CA,Stream Loss to Groundwater,Mass Balance,Surface Water Diversions-CA,CA Integrated Water Flow Model (IWFM)
+CA,Stream Loss to Groundwater,Mass Balance,Surface Water Diversions-CA,California Agricultural Land and Water Use Estimates
+CA,Stream Loss to Groundwater,Mass Balance,Surface Water Diversions-CA,California Central Valley Simulation (C2VSim)
+CA,Stream Loss to Groundwater,Mass Balance,Surface Water Diversions-CA,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Outflow,Drainage Area Ratio Method,Drainage area of site of interest (Ay),Unknown
+CA,Stream Outflow,Drainage Area Ratio Method,Drainage area of streamflow gaging station (Ax),Unknown
+CA,Stream Outflow,Drainage Area Ratio Method,Measure streamflow (Xij),Unknown
+CA,Stream Outflow,University of Washington’s Variable Infiltration Capacity Model (VIC).,Unknown,Unknown
+CA,Stream Outflow,Unknown,Unknown,CA DWR SGMA Data Viewer
+CA,Stream Outflow,Unknown,Unknown,CA DWR Water Data Library: Surface Water and Groundwater Data
+CA,Stream Outflow,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Stream Outflow,Unknown,Unknown,Cal-SIMETAW Unit Values
+CA,Stream Outflow,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Stream Outflow,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Stream Outflow,Unknown,Unknown,California Nevada River Forecast Center
+CA,Stream Outflow,Unknown,Unknown,California Water Plan Portfolio
+CA,Stream Outflow,Unknown,Unknown,CALSIM 3
+CA,Stream Outflow,Unknown,Unknown,CALSIM2
+CA,Stream Outflow,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Stream Outflow,Unknown,Unknown,USGS Publications
+CA,Stream Outflow,Unknown,Unknown,USGS Surface-Water Data for California
+CA,Stream Outflow,USGS DR3M,Unknown,Unknown
+CA,Stream Outflow,Vieux & Associates' Vflo,Unknown,Unknown
+CA,Stream Outflow,Water Resource Associates HYSIM,Unknown,Unknown
+CA,Subsurface Inflow,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Subsurface Inflow,Darcy's Law,Cross-sectional area subject to boundary flow (Ab),Unknown
+CA,Subsurface Inflow,Darcy's Law,Depth of cross section (b),Unknown
+CA,Subsurface Inflow,Darcy's Law,Distance between two points with known head (I),Unknown
+CA,Subsurface Inflow,Darcy's Law,Hydraulic conductivity of the aquifer boundary (K),Unknown
+CA,Subsurface Inflow,Darcy's Law,Hydraulic gradient through the cross section (i),Unknown
+CA,Subsurface Inflow,Darcy's Law,Known groundwater elevation inside the boundary (hg),Unknown
+CA,Subsurface Inflow,Darcy's Law,Known groundwater elevation outside the boundary (hb),Unknown
+CA,Subsurface Inflow,Darcy's Law,Subsurface flow across the boundary (Qb),Unknown
+CA,Subsurface Inflow,Darcy's Law,Transmissivity of the Aquifer at the boundary (T),Unknown
+CA,Subsurface Inflow,Darcy's Law,Width of cross section (w),Unknown
+CA,Subsurface Inflow,Unknown,Unknown,CA DWR Water Data Library: Surface Water and Groundwater Data
+CA,Subsurface Inflow,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Subsurface Inflow,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Subsurface Inflow,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Subsurface Inflow,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Subsurface Inflow,Unknown,Unknown,USGS Publications
+CA,Subsurface Inflow,USGS California Water Science Center - Groundwater Modeling,Unknown,Unknown
+CA,Subsurface Outflow,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Subsurface Outflow,Darcy's Law,Cross-sectional area subject to boundary flow (Ab),Unknown
+CA,Subsurface Outflow,Darcy's Law,Depth of cross section (b),Unknown
+CA,Subsurface Outflow,Darcy's Law,Distance between two points with known head (I),Unknown
+CA,Subsurface Outflow,Darcy's Law,Hydraulic conductivity of the aquifer boundary (K),Unknown
+CA,Subsurface Outflow,Darcy's Law,Hydraulic gradient through the cross section (i),Unknown
+CA,Subsurface Outflow,Darcy's Law,Known groundwater elevation inside the boundary (hg),Unknown
+CA,Subsurface Outflow,Darcy's Law,Known groundwater elevation outside the boundary (hb),Unknown
+CA,Subsurface Outflow,Darcy's Law,Subsurface flow across the boundary (Qb),Unknown
+CA,Subsurface Outflow,Darcy's Law,Transmissivity of the Aquifer at the boundary (T),Unknown
+CA,Subsurface Outflow,Darcy's Law,Width of cross section (w),Unknown
+CA,Subsurface Outflow,Unknown,Unknown,CA DWR Water Data Library: Surface Water and Groundwater Data
+CA,Subsurface Outflow,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Subsurface Outflow,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Subsurface Outflow,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Subsurface Outflow,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Subsurface Outflow,Unknown,Unknown,USGS Publications
+CA,Subsurface Outflow,USGS California Water Science Center - Groundwater Modeling,Unknown,Unknown
+CA,Surface Water Delivery,Applied Water Estimation Method,Groundwater Extraction-CA,Unknown
+CA,Surface Water Delivery,Unknown,Unknown,USBR Central Valley Project Refuge Water Delivery Data
+CA,Surface Water Diversions,Applied Water Estimation Method,Operational Spill,Unknown
+CA,Surface Water Diversions,Unknown,Unknown,CA DWR SGMA Data Viewer
+CA,Surface Water Diversions,Unknown,Unknown,CA DWR Water Data Library: Surface Water and Groundwater Data
+CA,Surface Water Diversions,Unknown,Unknown,CALSIM 3
+CA,Surface Water Diversions,Unknown,Unknown,USGS Surface-Water Data for California
+CA,Surface Water Exports,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Surface Water Exports,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Surface Water Exports,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Surface Water Exports,Unknown,Unknown,CALSIM 3
+CA,Surface Water Exports,Unknown,Unknown,CALSIM2
+CA,Surface Water Exports,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CA,Surface Water Exports,Unknown,Unknown,USGS Surface-Water Data for California
+CA,Total Groundwater System Inflow,Unknown,Unknown,Unknown
+CA,Total Groundwater System Outflow,Unknown,Unknown,Unknown
+CA,Total Inflow,Unknown,Unknown,Unknown
+CA,Total Land System Inflow,Unknown,Unknown,Unknown
+CA,Total Land System Outflow,Unknown,Unknown,Unknown
+CA,Total Outflow,Unknown,Unknown,Unknown
+CA,Total Surface Water Inflow,Unknown,Unknown,Unknown
+CA,Total Surface Water Outflow,Unknown,Unknown,Unknown
+CA,Urban Applied Water,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Urban Applied Water,Population and Per-Capita Water Use,Industrial Water Use,Water Use Surveys
+CA,Urban Applied Water,Population and Per-Capita Water Use,Population,California Department of Finance
+CA,Urban Applied Water,Population and Per-Capita Water Use,Population,US Census Bureau
+CA,Urban Applied Water,Unknown,Unknown,CA DWR Public Water Supply Statistics Data-Historical
+CA,Urban Applied Water,Unknown,Unknown,CA Previous Reports
+CA,Urban Applied Water,Unknown,Unknown,CA Urban Water Management Plans
+CA,Urban Applied Water,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Urban Applied Water,Unknown,Unknown,California Water Plan Portfolio
+CA,Urban Applied Water,Unknown,Unknown,Central Valley Hydrologic Model (CVHM)
+CA,Urban Applied Water,Unknown,Unknown,Local Agency Records
+CA,Water Release Caused by Land Subsidence,Central Valley Hydrologic Model (CVHM),Unknown,Unknown
+CA,Water Release Caused by Land Subsidence,MODFLOW-OWHM: One Water Hydrologic Flow Model,Unknown,Unknown
+CA,Water Release Caused by Land Subsidence,Unknown,Unknown,CA DWR Extensometer
+CA,Water Release Caused by Land Subsidence,Unknown,Unknown,CA Integrated Water Flow Model (IWFM)
+CA,Water Release Caused by Land Subsidence,Unknown,Unknown,California Agricultural Land and Water Use Estimates
+CA,Water Release Caused by Land Subsidence,Unknown,Unknown,California Central Valley Simulation (C2VSim)
+CA,Water Release Caused by Land Subsidence,Unknown,Unknown,Central Valley Hydrologic Model (CVHM)
+CA,Water Release Caused by Land Subsidence,Unknown,Unknown,MODFLOW-OWHM: One Water Hydrologic Flow Model
+CO,Change in Ground Water Storage,Unknown,Unknown,Unknown
+CO,Change in Surface Water Storage,Unknown,Unknown,US Bureau of Reclamation Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Climate Coefficient (kt),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,SCS TR21
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Irrigation Requirement,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Type,National Agricultural Statistics Service (NASS) Cropland Data Layer
+CO,Crop Consumptive Use,CO Consumptive Use Method,Crop Type,Satellite and Aerial Photos
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Effective Precipitation,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigated Acreage,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigated Acreage,National Agricultural Statistics Service (NASS) Cropland Data Layer
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigated Acreage,Satellite and Aerial Photos
+CO,Crop Consumptive Use,CO Consumptive Use Method,Irrigation Method,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Mean Monthly Air Temperatures (T),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Mean Monthly Air Temperatures (T),Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Potential Consumptive Use,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Precipitation,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Solar Radiation,Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Supply Source,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Supply Type,HydroBase
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Temperature,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Water Supply,CO Diversion Records
+CO,Crop Consumptive Use,CO Consumptive Use Method,Water Supply,CO Division of Water Resources Gages
+CO,Crop Consumptive Use,CO Consumptive Use Method,Water Supply,USGS Stream Gages
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,CO Consumptive Use Method,Wind Run,Weather Stations
+CO,Crop Consumptive Use,CO Irrigated Acreage Assessment,Crop Type,National Agricultural Statistics Service (NASS) Cropland Data Layer
+CO,Crop Consumptive Use,CO Irrigated Acreage Assessment,Crop Type,Satellite and Aerial Photos
+CO,Crop Consumptive Use,CO Irrigated Acreage Assessment,Irrigation Method,HydroBase
+CO,Crop Consumptive Use,CO Irrigated Acreage Assessment,Supply Source,HydroBase
+CO,Crop Consumptive Use,CO Irrigated Acreage Assessment,Supply Type,HydroBase
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Weather Stations
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Weather Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Solar Radiation,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Solar Radiation,Weather Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Temperature,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Wind Run,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Daily Penman-Monteith,Wind Run,Weather Stations
+CO,Crop Consumptive Use,Energy Balance Remote Sensing,Unknown,Unknown
+CO,Crop Consumptive Use,METRIC,Unknown,Unknown
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Weather Stations
+CO,Crop Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,NDVI Remote Sensing,Unknown,Unknown
+CO,Crop Consumptive Use,NDVIstar,Unknown,Unknown
+CO,Crop Consumptive Use,On-Farm Water Balance,Crop Irrigation Requirement,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,On-Farm Water Balance,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,On-Farm Water Balance,Crop Irrigation Requirement,SCS TR21
+CO,Crop Consumptive Use,On-Farm Water Balance,Crop Irrigation Requirement,Weather Stations
+CO,Crop Consumptive Use,On-Farm Water Balance,Water Supply,CO Diversion Records
+CO,Crop Consumptive Use,On-Farm Water Balance,Water Supply,USGS Stream Gages
+CO,Crop Consumptive Use,Original Blaney-Criddle,Mean Monthly Air Temperatures (T),CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,Original Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,Original Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
+CO,Crop Consumptive Use,RESET,Unknown,Unknown
+CO,Crop Consumptive Use,SCS TR21,Unknown,CO Agricultural Meteorology Network Station (COAGM)
+CO,Crop Consumptive Use,SCS TR21,Unknown,Community Collaborative Rain Hail and Snow Network (CoCoRaHS)
+CO,Crop Consumptive Use,SCS TR21,Unknown,National Oceanic and Atmospheric Administration Stations
+CO,Crop Consumptive Use,SCS TR21,Unknown,Remote Automated Weather Stations (RAWS)
+CO,Crop Consumptive Use,SCS TR21,Unknown,Snotel Network of Weather Stations
+CO,Crop Consumptive Use,SCS TR21,Unknown,Weather Stations
+CO,Exports,Historical Data,Diversions,Historical Diversions File
+CO,Gaged Surface Water Inflow,Direct Measurement,Gage Height,CO Division of Water Resources Gages
+CO,Gaged Surface Water Inflow,Direct Measurement,Gage Height,USGS Stream Gages
+CO,Gaged Surface Water Outflow,Direct Measurement,Gage Height,CO Division of Water Resources Gages
+CO,Gaged Surface Water Outflow,Direct Measurement,Gage Height,USGS Stream Gages
+CO,Ground Water Inflow,Unknown,Unknown,Unknown
+CO,Ground Water Outflow,Unknown,Unknown,Unknown
+CO,Imports,Historical Data,Diversions,Historical Diversions File
+CO,Livestock Consumptive Use,CO Livestock Method,Livestock Count,State Agricultural Statistics
+CO,Municipal and Industrial Consumptive Use,CO Municipal and Industrial Method,Consumptive Ratio,Unknown
+CO,Municipal and Industrial Consumptive Use,CO Municipal and Industrial Method,Gross Usage,Unknown
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Diversions,Historical Diversions File
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Native Vegetation Coefficient,Unknown
+CO,Native Vegetation Consumptive Use,CO Native Vegetation Method,Return Flow,Unknown
+CO,Reservoir Evaporation,Reservoir Estimation Method,Gross Monthly Free Water Surface Evaporation,NOAA Technical Report NWS 33
+CO,Reservoir Evaporation,Reservoir Estimation Method,Monthly Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+CO,Reservoir Evaporation,Reservoir Estimation Method,Surface Area of Reservoir,CO GIS Exercise
+CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,CO Division of Water Resources Gages
+CO,Ungaged Surface Water Inflow,Natural Flow Gain Distribution,Gage Height,USGS Stream Gages
+NM,Commercial,Interpolation from Other Records,Unknown,NM Office of the State Engineer (NMOSE)
+NM,Commercial,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Commercial,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),NM Office of the State Engineer (NMOSE)
+NM,Commercial,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,National Agricultural Statistics Service
+NM,Commercial,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,New Mexico Interstate Stream Commission (NMISC)
+NM,Commercial,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,NM Office of the State Engineer (NMOSE)
+NM,Commercial,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,USDA Cropland Data Layer (CDL)
+NM,Commercial,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,USDA Farm Service Agency
+NM,Commercial,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),PRISM
+NM,Commercial,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Commercial,NM Irrigation Withdrawals,Monthly Precipitation Volume,PRISM
+NM,Commercial,NM Irrigation Withdrawals,Monthly Precipitation Volume,Weather Stations
+NM,Commercial,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Commercial,Unknown,Unknown,US Bureau of Reclamation Stations
+NM,Commercial,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NM Office of the State Engineer (NMOSE)
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Consumptive Irrigation Requirement (CIR),NM Office of the State Engineer (NMOSE)
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,National Agricultural Statistics Service
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,New Mexico Interstate Stream Commission (NMISC)
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,NM Office of the State Engineer (NMOSE)
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,USDA Cropland Data Layer (CDL)
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Gross Actively Irrigated Acreage,USDA Farm Service Agency
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),PRISM
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Monthly Precipitation Volume,PRISM
+NM,Commercial: Golf Courses,NM Irrigation Withdrawals,Monthly Precipitation Volume,Weather Stations
+NM,Commercial: Incomplete Metered,Interpolation from Other Records,Unknown,NM Office of the State Engineer (NMOSE)
+NM,Commercial: Metered,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Commercial: Schools,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NM Office of the State Engineer (NMOSE)
+NM,Commercial: Unmetered,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Annual Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Annual Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Empirical Data for Small Reservoirs,Reservoir Surface Area,USGS Stream Gages
+NM,Evaporation from Reservoirs,Pan Approach,Annual Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Annual Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,Irrigation Districts
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,US Army Corps of Engineers
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Average Monthly Reservoir Gage Height,USGS Stream Gages
+NM,Evaporation from Reservoirs,Pan Approach,Class A Pan Evaporation Data,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Monthly Evaporation,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Monthly Evaporation,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Monthly Gross Evaporation Rate,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Rainfall,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,Irrigation Districts
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,National Oceanic and Atmospheric Administration Stations
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,New Mexico Interstate Stream Commission (NMISC)
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,US Army Corps of Engineers
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,US Bureau of Reclamation Stations
+NM,Evaporation from Reservoirs,Pan Approach,Reservoir Surface Area,USGS Stream Gages
+NM,Industrial,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Irrigated Agriculture,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Solar Radiation,National Weather Service Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,Daily Penman-Monteith,Solar Radiation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Solar Radiation,PRISM
+NM,Irrigated Agriculture,Daily Penman-Monteith,Solar Radiation,Weather Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Solar Radiation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,Daily Penman-Monteith,Wind Run,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Wind Run,PRISM
+NM,Irrigated Agriculture,Daily Penman-Monteith,Wind Run,Weather Stations
+NM,Irrigated Agriculture,Daily Penman-Monteith,Wind Run,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,Energy Balance Remote Sensing,Unknown,Unknown
+NM,Irrigated Agriculture,Indicator Gage Approach,Streamflow,USGS Stream Gages
+NM,Irrigated Agriculture,METRIC,Unknown,Unknown
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Climate Coefficient (kt),PRISM
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Weather Service Stations
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),New Mexico Climate Center Stations
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Irrigated Agriculture,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Climate Coefficient (kt),PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Irrigation Requirement,National Weather Service Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Irrigation Requirement,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Irrigation Requirement,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Irrigation Requirement,PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Irrigation Requirement,Weather Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Irrigation Requirement,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Type,Field Survey
+NM,Irrigated Agriculture,NM Consumptive Use Method,Crop Type,USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Effective Precipitation,National Weather Service Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Effective Precipitation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Effective Precipitation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Effective Precipitation,PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Effective Precipitation,Weather Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Effective Precipitation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),National Weather Service Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),New Mexico Climate Center Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Potential Consumptive Use,National Weather Service Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Potential Consumptive Use,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Potential Consumptive Use,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Potential Consumptive Use,PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Potential Consumptive Use,Weather Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Potential Consumptive Use,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Precipitation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Precipitation,National Weather Service Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Precipitation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Precipitation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Precipitation,PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Precipitation,Weather Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Precipitation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Solar Radiation,National Weather Service Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Solar Radiation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Solar Radiation,PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Solar Radiation,Weather Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Solar Radiation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Streamflow,USGS Stream Gages
+NM,Irrigated Agriculture,NM Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Water Supply,NM Diversion Records
+NM,Irrigated Agriculture,NM Consumptive Use Method,Water Supply,USGS Stream Gages
+NM,Irrigated Agriculture,NM Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,NM Consumptive Use Method,Wind Run,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Wind Run,PRISM
+NM,Irrigated Agriculture,NM Consumptive Use Method,Wind Run,Weather Stations
+NM,Irrigated Agriculture,NM Consumptive Use Method,Wind Run,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,NM Irrigated Acreage Assessment,Crop Type,Field Survey
+NM,Irrigated Agriculture,NM Irrigated Acreage Assessment,Crop Type,USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture,NM Spreadsheet-Based Consumptive Use Model,Unknown,Unknown
+NM,Irrigated Agriculture,Original Hargreaves,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,Original Hargreaves,Solar Radiation,National Weather Service Stations
+NM,Irrigated Agriculture,Original Hargreaves,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,Original Hargreaves,Solar Radiation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,Original Hargreaves,Solar Radiation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture,Original Hargreaves,Temperature,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,SCS TR21,Unknown,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture,SCS TR21,Unknown,National Weather Service Stations
+NM,Irrigated Agriculture,SCS TR21,Unknown,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture,SCS TR21,Unknown,New Mexico Climate Center Stations
+NM,Irrigated Agriculture,SCS TR21,Unknown,PRISM
+NM,Irrigated Agriculture,SCS TR21,Unknown,Weather Stations
+NM,Irrigated Agriculture,SCS TR21,Unknown,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Solar Radiation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Solar Radiation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Solar Radiation,PRISM
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Solar Radiation,Weather Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Solar Radiation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Wind Run,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Wind Run,PRISM
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Wind Run,Weather Stations
+NM,Irrigated Agriculture Depletions,Daily Penman-Monteith,Wind Run,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,Energy Balance Remote Sensing,Unknown,Unknown
+NM,Irrigated Agriculture Depletions,Indicator Gage Approach,Streamflow,USGS Stream Gages
+NM,Irrigated Agriculture Depletions,METRIC,Unknown,Unknown
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Climate Coefficient (kt),PRISM
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Weather Service Stations
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Irrigated Agriculture Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Climate Coefficient (kt),PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Irrigation Requirement,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Type,Field Survey
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Crop Type,USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Effective Precipitation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Mean Monthly Air Temperatures (T),Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Potential Consumptive Use,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Precipitation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Solar Radiation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Streamflow,USGS Stream Gages
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Water Supply,NM Diversion Records
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Water Supply,USGS Stream Gages
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,PRISM
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,Weather Stations
+NM,Irrigated Agriculture Depletions,NM Consumptive Use Method,Wind Run,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,NM Irrigated Acreage Assessment,Crop Type,Field Survey
+NM,Irrigated Agriculture Depletions,NM Irrigated Acreage Assessment,Crop Type,USDA Cropland Data Layer (CDL)
+NM,Irrigated Agriculture Depletions,NM Spreadsheet-Based Consumptive Use Model,Unknown,Unknown
+NM,Irrigated Agriculture Depletions,Original Hargreaves,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,Original Hargreaves,Solar Radiation,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,Original Hargreaves,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,Original Hargreaves,Solar Radiation,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,Original Hargreaves,Solar Radiation,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Depletions,Original Hargreaves,Temperature,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,SCS TR21,Unknown,National Oceanic and Atmospheric Administration Stations
+NM,Irrigated Agriculture Depletions,SCS TR21,Unknown,National Weather Service Stations
+NM,Irrigated Agriculture Depletions,SCS TR21,Unknown,Natural Resources Conservation Service Stations (NRCS)
+NM,Irrigated Agriculture Depletions,SCS TR21,Unknown,New Mexico Climate Center Stations
+NM,Irrigated Agriculture Depletions,SCS TR21,Unknown,PRISM
+NM,Irrigated Agriculture Depletions,SCS TR21,Unknown,Weather Stations
+NM,Irrigated Agriculture Depletions,SCS TR21,Unknown,Western Regional Climate Center (WRCC) Stations
+NM,Irrigated Agriculture Diversions,Unknown,Unknown,Irrigation Districts
+NM,Irrigated Agriculture Diversions,Unknown,Unknown,New Mexico Interstate Stream Commission (NMISC)
+NM,Livestock,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Livestock,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NM Office of the State Engineer (NMOSE)
+NM,Livestock,Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Livestock: Metered,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Livestock: Unmetered,Withdrawal Method,Livestock Population,New Mexico Department of Agriculture
+NM,Mining,Direct Report,Unknown,Unknown
+NM,Mining,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Mining: Reported,Direct Report,Unknown,Unknown
+NM,Mining: Unreported,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Power,Direct Report,Unknown,Unknown
+NM,Power,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Power: Reported,Direct Report,Unknown,Unknown
+NM,Power: Unreported,Personal Outreach,Water Use Estimate,Facility Director or Operator
+NM,Public Water Supply,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Public Water Supply,Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Public Water Supply: Metered,Metered,Flow,NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply: Metered,Unknown,Unknown,NMOSE’s Water Use and Conservation Bureau (WUCB) Survey
+NM,Public Water Supply: Unmetered,Withdrawal Method,Gallons Per Capita Per Day (GPDPC),NM Office of the State Engineer (NMOSE)
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,New Mexico Environment Department (NMED)
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Public Water Supply: Unmetered,Withdrawal Method,Population Served by Public Water Supply,US Census Bureau
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,New Mexico Environment Department (NMED)
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,University of New Mexico Geospatial and Population Studies (UNM GPS)
+NM,Self-Supplied Domestic,Withdrawal Method,Self Supplied Domestic Population,US Census Bureau
+UT,Agricultural and Municipal Depletions,Unknown,Unknown,Unknown
+UT,Agricultural and Municipal Diversions,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,Agricultural and Municipal Diversions,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Agricultural and Municipal Diversions,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Agricultural and Municipal Diversions,USGS StreamStats,Flow,USGS Stream Gages
+UT,Agricultural and Municipal Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Agricultural Potential Consumptive Use-UT,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Agricultural Potential Consumptive Use-UT,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Effective Precipitation,MesoWest Stations
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,Crop Irrigation Requirement Estimation Method,Effective Precipitation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Solar Radiation,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Solar Radiation,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,Daily Penman-Monteith,Solar Radiation,MesoWest Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Solar Radiation,PRISM
+UT,Agricultural Depletions,Daily Penman-Monteith,Solar Radiation,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,Daily Penman-Monteith,Solar Radiation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Temperature,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Temperature,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,Daily Penman-Monteith,Temperature,MesoWest Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Temperature,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,Daily Penman-Monteith,Temperature,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Vapor Pressure,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Vapor Pressure,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,Daily Penman-Monteith,Vapor Pressure,MesoWest Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Vapor Pressure,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,Daily Penman-Monteith,Vapor Pressure,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Wind Run,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Wind Run,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,Daily Penman-Monteith,Wind Run,MesoWest Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Daily Penman-Monteith,Wind Run,PRISM
+UT,Agricultural Depletions,Daily Penman-Monteith,Wind Run,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,Daily Penman-Monteith,Wind Run,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,Energy Balance Remote Sensing,Unknown,Unknown
+UT,Agricultural Depletions,Inflow-Outflow Approach,Unknown,Unknown
+UT,Agricultural Depletions,METRIC,Unknown,Unknown
+UT,Agricultural Depletions,Modified Blaney-Criddle,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Modified Blaney-Criddle,Climate Coefficient (kt),PRISM
+UT,Agricultural Depletions,Modified Blaney-Criddle,Climate Coefficient (kt),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Emery Water Conservancy District Stations
+UT,Agricultural Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),MesoWest Stations
+UT,Agricultural Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+UT,Agricultural Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Agricultural Potential Consumptive Use-UT,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Agricultural Potential Consumptive Use-UT,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Agricultural Potential Consumptive Use-UT,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Climate Coefficient (kt),PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Climate Coefficient (kt),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Irrigation Requirement,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Type,Ground Survey
+UT,Agricultural Depletions,UT Consumptive Use Method,Crop Type,Satellite and Aerial Photos
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Effective Precipitation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Ground Survey
+UT,Agricultural Depletions,UT Consumptive Use Method,Irrigated Acreage,Satellite and Aerial Photos
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Mean Monthly Air Temperatures (T),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Solar Radiation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Temperature,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Vapor Pressure,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Water Supply,USGS Stream Gages
+UT,Agricultural Depletions,UT Consumptive Use Method,Water Supply,UT Diversion Records from River Commissioners
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,Emery Water Conservancy District Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,Fruit Growers Network Stations (FGNET)
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,MesoWest Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,PRISM
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,Soil Climate Analysis Network (SCAN)
+UT,Agricultural Depletions,UT Consumptive Use Method,Wind Run,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Depletions,UT Irrigated Acreage Assessment,Crop Type,Ground Survey
+UT,Agricultural Depletions,UT Irrigated Acreage Assessment,Crop Type,Satellite and Aerial Photos
+UT,Agricultural Depletions,UT Irrigated Acreage Assessment,Irrigation Method,Unknown
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,PRISM
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Solar Radiation,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Temperature,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Vapor Pressure,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,PRISM
+UT,Agricultural Potential Consumptive Use,Daily Penman-Monteith,Wind Run,US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),PRISM
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),US Bureau of Reclamation AgriMet Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+UT,Agricultural Potential Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),US Bureau of Reclamation AgriMet Stations
+UT,Area Outflows,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,Area Outflows,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Area Outflows,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Area Outflows,USGS StreamStats,Flow,USGS Stream Gages
+UT,Area Outflows,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,Basin Inflow,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,Basin Inflow,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Basin Inflow,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Basin Inflow,USGS StreamStats,Flow,USGS Stream Gages
+UT,Basin Inflow,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,Basin Outflow,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,Basin Outflow,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Basin Outflow,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Basin Outflow,USGS StreamStats,Flow,USGS Stream Gages
+UT,Basin Outflow,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,Cropland Precipitation,Direct Measurement,Precipitation Value,US Bureau of Reclamation AgriMet Stations
+UT,Cropland Precipitation,Unknown,Unknown,PRISM
+UT,Groundwater Use,Direct Measurement,Groundwater Use,Municipal and Industrial Diversion Reports
+UT,Groundwater Use,Direct Measurement,Groundwater Use,USGS Estimates of Basin Groundwater Flows
+UT,Groundwater Use,Direct Measurement,Groundwater Use,USGS Groundwater Reports
+UT,Groundwater Use,Direct Measurement,Groundwater Use,UT Water Rights Database
+UT,Municipal and Industrial Depeltion,Unknown,Unknown,Unknown
+UT,Municipal and Industrial Diversions,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Municipal and Industrial Diversions,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Municipal and Industrial Diversions,USGS StreamStats,Flow,USGS Stream Gages
+UT,Municipal and Industrial Diversions,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,Municipal and Industrial Return Flow,Unknown,Unknown,Unknown
+UT,Natural System Use,Unknown,Unknown,Unknown
+UT,Precipitation,Direct Measurement,Precipitation Value,US Bureau of Reclamation AgriMet Stations
+UT,Precipitation,Unknown,Unknown,PRISM
+UT,Pumped Groundwater,Unknown,Unknown,Unknown
+UT,River Inflow,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,River Inflow,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,River Inflow,Unknown,Unknown,UT Other Irrigation Company Records
+UT,River Inflow,USGS StreamStats,Flow,USGS Stream Gages
+UT,River Inflow,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,River Use By Wet Pasture,Unknown,Unknown,Unknown
+UT,Surface Diversion to Cropland,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,Surface Diversion to Cropland,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Surface Diversion to Cropland,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Surface Diversion to Cropland,USGS StreamStats,Flow,USGS Stream Gages
+UT,Surface Diversion to Cropland,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,Surface Water Flows,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,Surface Water Flows,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Surface Water Flows,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Surface Water Flows,USGS StreamStats,Flow,USGS Stream Gages
+UT,Surface Water Flows,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+UT,Total Land Return Flow,Unknown,Unknown,Unknown
+UT,Tributary Inflow,Unknown,Unknown,UT Diversion Records from River Commissioners
+UT,Tributary Inflow,Unknown,Unknown,UT Municipal Potable and Secondary Diversion Records
+UT,Tributary Inflow,Unknown,Unknown,UT Other Irrigation Company Records
+UT,Tributary Inflow,USGS StreamStats,Flow,USGS Stream Gages
+UT,Tributary Inflow,UT Division of Water Resources Area-Altitude Method,Unknown,Unknown
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,National Weather Service Stations
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Effective Precipitation,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,National Weather Service Stations
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,Crop Irrigation Requirement Estimation Method,Potential Consumptive Use,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Solar Radiation,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Solar Radiation,National Weather Service Stations
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Solar Radiation,PRISM
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Temperature,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Temperature,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Vapor Pressure,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Vapor Pressure,National Weather Service Stations
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Vapor Pressure,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Wind Run,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Wind Run,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,Daily Penman-Monteith,Wind Run,PRISM
+WY,Agricultural Consumptive Use,Energy Balance Remote Sensing,Unknown,Unknown
+WY,Agricultural Consumptive Use,METRIC,Unknown,Unknown
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Climate Coefficient (kt),PRISM
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Crop Growth State Coefficient (Kc),SCS TR21
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),National Weather Service Stations
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle,Mean Monthly Air Temperatures (T),PRISM
+WY,Agricultural Consumptive Use,Modified Blaney-Criddle with ET Elevation Adjustment,Crop Growth State Coefficient (Kc),SCS TR21
+WY,Agricultural Consumptive Use,On-Farm Water Balance,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,On-Farm Water Balance,Crop Irrigation Requirement,SCS TR21
+WY,Agricultural Consumptive Use,On-Farm Water Balance,Water Supply,USGS Stream Gages
+WY,Agricultural Consumptive Use,Original Hargreaves,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Original Hargreaves,Solar Radiation,National Weather Service Stations
+WY,Agricultural Consumptive Use,Original Hargreaves,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,Original Hargreaves,Solar Radiation,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,Original Hargreaves,Solar Radiation,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,Original Hargreaves,Temperature,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,Original Hargreaves,Temperature,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,Original Hargreaves,Temperature,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,National Weather Service Stations
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,PRISM
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,SCS TR21,Unknown,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Climate Coefficient (kt),National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Climate Coefficient (kt),National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Climate Coefficient (kt),PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Growth State Coefficient (Kc),SCS TR21
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,SCS TR21
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Irrigation Requirement,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Crop Type,Satellite and Aerial Photos
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Effective Precipitation,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Irrigated Acreage,Satellite and Aerial Photos
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Mean Monthly Air Temperatures (T),Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Potential Consumptive Use,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Solar Radiation,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Temperature,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,National Weather Service Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Vapor Pressure,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Water Supply,USGS Stream Gages
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Water Supply,WY Diversion Records
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Water Supply,Wyoming Water Resources Data System (WRDS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,National Climatic Data Center's Climatography of the United States No. 81
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,National Oceanic and Atmospheric Administration Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Natural Resources Conservation Service Stations (NRCS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,PRISM
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Remote Automated Weather Stations (RAWS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Snotel Network of Weather Stations
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,US Bureau of Land Management (BLM)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,US Geological Survey (USGS)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,WY Department of Environmental Quality (DEQ)
+WY,Agricultural Consumptive Use,WY Consumptive Use Method,Wind Run,Wyoming State Engineer's Office Stations
+WY,Agricultural Consumptive Use,WY Irrigated Acreage Assessment,Crop Type,Satellite and Aerial Photos
+WY,Domestic Total Use,Withdrawal Method,Population,US Census Bureau
+WY,Gaged Stream Inflow,Direct Measurement,Gage Height,USGS Stream Gages
+WY,Gaged Stream Inflow,Direct Measurement,Gage Height,Wyoming Water Resources Data System (WRDS)
+WY,Gaged Stream Outflow,Direct Measurement,Gage Height,USGS Stream Gages
+WY,Gaged Stream Outflow,Direct Measurement,Gage Height,Wyoming Water Resources Data System (WRDS)
+WY,Industrial: Coalbed Methand Production,WY Industrial Production Method,Monthly Coalbed Methane Gas Production and Produced Water,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Electrical Generation,Direct Measurement,Electrical Generation Data,US Energy Information Administration (USEIA)
+WY,Industrial: Mine Production,WY Mine Production Method,Annual Employee Hours,Mine Safety and Health Administration (MSHA)
+WY,Industrial: Mine Production,WY Mine Production Method,Coal Production Quantities,Mine Safety and Health Administration (MSHA)
+WY,Industrial: Natural Gas,WY Industrial Production Method,Natural Gas Processing Volumes,Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Industrial: Oil and Gas,WY Industrial Production Method,"Monthly Oil, Gas, and Produced Water",Wyoming Oil and Gas Conservation Commission (WYOGCC)
+WY,Irrigation Surface Water Diversions,Direct Measurement,Diversions,WY Diversion Data from Water Users
+WY,Irrigation Surface Water Diversions,Direct Measurement,Diversions,WY Office of the State Engineer
+WY,Livestock Consumptive Use,Unknown,Unknown,Unknown
+WY,Municipal Consumptive Use,Withdrawal Method,Population,US Census Bureau
+WY,Municipal Total Use,Withdrawal Method,Population,US Census Bureau
+WY,Precipitation,Direct Measurement,Precipitation Value,National Climatic Data Center's Climatography of the United States No. 81
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Gross Pan Evaportation (inches),High Plains Climate Center - University of Nebraska
+WY,Reservoir Evaporation,Pan Method (Net Evaporation),Precipitation,Wyoming Water Resources Data Systems Water and Climate Map Server
+WY,Total Diversions,Direct Measurement,Diversions,WY Diversion Data from Water Users
+WY,Total Diversions,Direct Measurement,Diversions,WY Office of the State Engineer
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Downstream Flow,USGS Stream Gages
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Downstream Flow,Wyoming Water Resources Data System (WRDS)
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Upstream Flow,USGS Stream Gages
+WY,Ungaged Stream Gains,Wyoming Gain/Loss Estimation Method,Upstream Flow,Wyoming Water Resources Data System (WRDS)
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Downstream Flow,USGS Stream Gages
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Downstream Flow,Wyoming Water Resources Data System (WRDS)
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Upstream Flow,USGS Stream Gages
+WY,Ungaged Stream Losses,Wyoming Gain/Loss Estimation Method,Upstream Flow,Wyoming Water Resources Data System (WRDS)

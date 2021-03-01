@@ -122,7 +122,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$p("  "),
                           tags$br(),
                           tags$p("  "),
-                          tags$h1("What is Water Budget Navigator?"),
+                          tags$h1("What is the Water Budget Navigator?"),
                           tags$br(),
                           tags$h3("Water Budget Navigator is a web application developed by Internet of Water (IoW). It allows users to explore water budget frameworks
                                  across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
@@ -220,21 +220,22 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                   tags$ul(type="disc",
                                           tags$br(),
                                           tags$li(tags$b("Component"), ": This tab provides information on a specific component. A user can select a component from a state to view its 
-                                                  flow source, flow sink, flow type, estimation method(s), parameter(s), and data source(s). This tab also informs about the component's interstate relationship such as its subcomponents, 
+                                                  flow source, flow sink, flow type, estimation method(s), parameter(s), and data source(s). This tab also displays a component's relationship with other components such as its subcomponents, 
                                                   partial subcomponents or exact matches."),
                                           tags$br(),
-                                          tags$li(tags$b("State"), ": This tab allows a user view and interact with a specifc state's water budget framework. The user can click on colored nodes to see 
+                                          tags$li(tags$b("State"), ": This tab allows a user to view and interact with a specifc state's water budget framework. The user can click on colored nodes to see a state's 
                                                   components, estimation methods, parameters, and data sources, in that order."),
                                           tags$br(),
-                                          tags$li(tags$b("Data Source"), ": This tab allows a user to interact by clicking on colored nodes to view paramter(s), estimation method(s), and component(s) that are derived from a specific data source."),
+                                          tags$li(tags$b("Data Source"), ": This tab allows a user to interact by clicking on colored nodes to expand paramter(s), estimation method(s), and component(s) that are derived from a specific data source."),
                                           tags$br(),
                                           tags$li(tags$b("Interstate"), ": This tab allows a user to select a relationship type to view how components are connected to each other from different states. 
                                                   The user can also specify states and flow information to limit the number of componets shown in the visualization.")
                                           )
                                   )
-                          ),
-                 tags$div(class = "text-area",
-                          tags$h3("More coming soon...")),
+                          )
+                 # ,
+                 # tags$div(class = "text-area",
+                 #          tags$h3("More coming soon...")),
                  ),
           ),
           
@@ -366,12 +367,12 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
     # ------- 4.2.5 Tab - Interstate - Begin 
     
-    tabPanel(title = "Interstate",
+    tabPanel(title = "Inter-state comparison",
              tags$div(class = "banner", 
                       tags$img(class = "banner-img-state", #tab banner image
                                src = "image_7.jpg"),
                       tags$div(class = "banner-text",
-                               tags$p(class = "h1-interstate", "Search interstate relationships"), #tab banner title
+                               tags$p(class = "h1-interstate", "Search inter-state relationships"), #tab banner title
                                tags$p(class = "h3", "Explore the relationships among water budget components 
                                               within and among states")#tab banner sub-title
                       )),
@@ -380,7 +381,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                            tags$b("See All Components", style = "font-size: 130%"), #title for 'See all Components'
                            tags$p(" "),
                            # User instructions to see all components
-                           tags$p("1. Choose the type of interstate relationship among water budget components"),
+                           tags$p("1. Choose the type of inter-state relationship among water budget components"),
                            tags$p('2. Click on the button below to include all components'),
                            tags$p('3. Hover over a component to explore relationships')
                            )
@@ -388,7 +389,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
              column(width = 12,
                     column(width = 3,
                            selectInput(inputId = "interstate2", #users select an interstate relationship
-                                       label = "Select interstate relationship",
+                                       label = "Select inter-state relationship",
                                        choices = interstate_choices)),
                     column(width = 2,
                            actionButton(inputId = "runButton4.1", #button to see D3 output
@@ -402,7 +403,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                            tags$b("See Selected Components", style = "font-size: 130%"),
                            tags$p(" "),
                            # User instructions to see selected components
-                           tags$p('1. Choose the type of interstate relationship among water budget components above'),
+                           tags$p('1. Choose the type of inter-state relationship among water budget components above'),
                            tags$p('2. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
                            tags$p('3. Select the states of interest'),
                            tags$p('4. Filter the components by flow type, flow source and flow sink'),
@@ -562,13 +563,15 @@ server <- function(input, output, session){
           trimws()
         split_uri <- unlist(strsplit(get(uri_list[i]), "[,]")) %>%
           trimws()
-        # the first condition is only letting a maximum of 2 values show up for each...change it later
-        output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
-                                              '<a href="', split_uri[1],'" target="_blank">',
-                                              split_value[1], "</a>", 
-                                              '<a href="', split_uri[2], '" target="_blank">',
-                                              ",",
-                                              split_value[2], "</a>"))
+        # several "paste" functions are nested to separate the property name and put commas after each value but not after the last value
+        output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>", 
+                                                            paste(
+                                                                  paste(
+                                                                        '<a href="', split_uri,'" target="_blank">',
+                                                                          split_value, "</a>"),
+                                                                          sep=", ", collapse=", "),
+                                                            sep="")
+                                              )
       }else if (get(summary_list[i]) == "NA") {
         output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
                                                     get(summary_list[i])))

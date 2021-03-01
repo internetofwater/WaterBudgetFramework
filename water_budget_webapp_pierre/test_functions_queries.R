@@ -1189,3 +1189,16 @@ hello <- function (a){
 }
 
 hello(component)
+
+##### January 4th
+
+# print list values separated by commas test
+split_uri <- c("abc.com", "baba.com", "chika.com")
+split_value <- c("abc", "baba", "chika")
+
+n <- length(split_uri)
+
+a <- paste( paste(split_uri, split_value),
+            sep=", ", collapse = ", "
+)
+a

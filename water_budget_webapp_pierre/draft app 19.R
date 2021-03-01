@@ -20,20 +20,20 @@ library(d3r)
 # --------------- 2. Loading CSV files --------------- # ####
 
 # ----- 2.1. Importing CSVs for Component tab ----- #
-df_component_full <- read_csv("www/df_component_full2.csv") #dataframe for component summary (including URIs)
-df_component_flow <- read_csv("www/df_component_flow2.csv") #dataframe for component summary including flow and interstate information
-df_component <- read_csv("www/df_component2.csv") #dataframe for d3 chart on component tab
+df_component_full <- read_csv("www/df_component_full3.csv") #dataframe for component summary (including URIs)
+df_component_flow <- read_csv("www/df_component_flow3.csv") #dataframe for component summary including flow and interstate information
+df_component <- read_csv("www/df_component3.csv") #dataframe for d3 chart on component tab
 
 # ----- 2.2. Importing CSVs for State tab ----- #
-df_state <- read_csv("www/df_state2.csv")
+df_state <- read_csv("www/df_state3.csv")
 
 # ----- 2.3. Importing CSVs for Data Source tab ----- #
-df_data_source <- read_csv("www/df_data_source2.csv")
+df_data_source <- read_csv("www/df_data_source3.csv")
 
 # ----- 2.4. Importing CSVs for Data Source tab ----- #
-df_exact_match <- read_csv("www/df_exact_match2.csv") #dataframe for exact matches
-df_subcomponent <- read_csv("www/df_subcomponent2.csv") #dataframe for subcomponents
-df_partial_subcomponent <- read_csv("www/df_partial_subcomponent2.csv") #dataframe for partial subcomponents
+df_exact_match <- read_csv("www/df_exact_match3.csv") #dataframe for exact matches
+df_subcomponent <- read_csv("www/df_subcomponent3.csv") #dataframe for subcomponents
+df_partial_subcomponent <- read_csv("www/df_partial_subcomponent3.csv") #dataframe for partial subcomponents
 
 # --------------- 3. Input choices --------------- # ####
 
@@ -73,7 +73,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
               tags$link(rel = "stylesheet", type = "text/css", href = "styles.css"), #locating CSS file
               tags$script(src = "https://d3js.org/d3.v5.min.js"), #loading D3.js library
               tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.10.2/underscore.js"), #load Underscore.js library
-              tags$script(src = "index_v9.js"), #locating JavaScript file creating D3 charts on tabs Component, State and Data Source
+              tags$script(src = "index_v10.js"), #locating JavaScript file creating D3 charts on tabs Component, State and Data Source
               tags$script(src = "interstate_exact_match.js"), #locating JavaScript file creating round D3 chart for exact match components
               tags$script(src = "interstate_subcomponent.js"), #locating JavaScript file creating round D3 chart for subcomponents
               tags$script(src = "interstate_partial_subcomponent.js") #locating JavaScript file creating round D3 chart for partial subcomponents
@@ -122,21 +122,99 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                           tags$p("  "),
                           tags$br(),
                           tags$p("  "),
-                          tags$h1("What is Water Budget Navigator?"),
+                          tags$h1("What is the Water Budget Navigator?"),
                           tags$br(),
-                          tags$h3("Water Budget Navigator is a web application developed by Internet of Water (IoW). It allows users to explore water budget frameworks
-                                 across the United States. A state's water budget framework primarily consists of a jurisdiction, components,
-                                 estimation methods, parameters and data sources in an ordered manner. The components have additional properties describing
-                                  their flow information and relationships with other components within and across states. Here is the framework we use for this tool.
-                                  Definition for each term of our framework is provided below."),
+                          tags$h3(tags$p(#style="text-indent:60px", 
+                                        "The Water Budget Navigator is a web application developed by the Internet of Water (IoW)
+                                        that allows users to compare the water budgeting and water use estimation frameworks used
+                                        by a variety of water resources agencies. Here is the general structure of a water budget 
+                                        framework used in this tool:")
+                                  ),
                           tags$br()
                           ),
-                 tags$div(id = "home_container",
-                          tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
+                tags$div(id = "home_container",
+                   tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
+                
+                tags$div(class = "text-area",
+                         tags$h3(tags$p(#style="text-indent:60px",
+                                        "A water budget is an accounting of all inflows and
+                                        outflows of water within an area of interest. It is similar conceptually to a banking account
+                                        statement that tracks deposits, withdrawals, and transfers between accounts. Just as a banking
+                                        account statement is essential for prudent financial management, a water budget is essential 
+                                        for planning and management of water resources."),
+                                 tags$br(),
+                                  tags$p(#style="text-indent:60px", 
+                                        "There are many different ways to prepare water
+                                        budgets, with different decisions to be made about defining which inflows, outflows, and transfers
+                                        to keep track of, how to estimate these flows, using which source data. It can be difficult to
+                                        meaningfully compare the numbers used by different agencies in their water budgets due to this
+                                        variability. The purpose of the water budget navigator is to represent any water budgeting
+                                        approach in a standard format that allows different approaches to be compared Currently, 
+                                        the navigator allows comparison of water budget frameworks published by:")
+                                  ),
+                          tags$h3(tags$ul(type="disc",
+                                          tags$li("California Department of Water Resources"),
+                                          tags$li("New Mexico Office of the State Engineer"),
+                                          tags$li("Colorado’s Decision Support Systems"),
+                                          tags$li("Wyoming Water Development Office"),
+                                          tags$li("Utah Division of Water Resources")
+                                          )
+                                  ),
+                          tags$br(),
+                          tags$h3(tags$p(#style="text-indent:60px",
+                                         "The Navigator rests on a standardized representation of these frameworks which is based on the
+                                         overall framework of the",
+                                         tags$a(href="https://water.ca.gov/-/media/DWR-Website/Web-Pages/Programs/Groundwater-Management/Data-and-Tools/Files/Water-Budget-Handbook.pdf?la=en&hash=30AD0DFD02468603F21C1038E6CC6BFE32381233&hash=30AD0DFD02468603F21C1038E6CC6BFE32381233", 
+                                                target="_blank",
+                                                tags$u("California Department of Water Resources Handbook")),
+                                         "for Water Budget 
+                                         Development. This handbook is not prescriptive, but provides a useful framework to describe 
+                                         water budgeting using hydrologic concepts. This representation is based around the idea of 
+                                         “water budget zones” and “components” (figure below)")),
+                          tags$br(),
+                          tags$h3(tags$p(#style="text-indent:60px",
+                                         "A ", tags$b("component"), "is flow of water for which a numerical estimate is provided in a water budget conducted 
+                                         by an agency in a ", tags$b("Jurisdiction"), ". Typical components might include “precipitation”, “stream inflow”, 
+                                         and “evapotranspiration”. Components are calculated for a particular ", tags$b("water budget zone"), " or three-dimensional
+                                         area of interest where water might exist in one of three systems: ", tags$b("surface water"), " (e.g. rivers and lakes), 
+                                         the ", tags$b("land"), " (e.g. in agricultural fields or enclosed storage tanks), or ", tags$b("groundwater")," . Components must flow as
+                                         an ", tags$b("inflow"), " from a, ", tags$b("flow source"), " outside the water budget zone into a ", tags$b("flow sink"), " of one of three systems; as an ",
+                                         tags$b("outflow"), " from one of the three systems to a system outside the water budget zone; or as an ", tags$b("internal transfer"),
+                                         " between systems within the water budget zone."
+                                         ),
+                                  tags$br(),
+                                  tags$p(#style="text-indent:60px",
+                                         "For a given water budgeting framework, each component has one or more ", tags$b("estimation methods"), " - procedures by which 
+                                         a numerical estimate for the value of a component is produced in a given water budget framework. For example, 
+                                         the estimation method for the component “evapotranspiration” might be “Modified Blaney-Criddle”, the name of a 
+                                         particular mathematical equation. Each estimation method in turn, requires one or more ", tags$b("parameters"), " - discrete 
+                                         quantities or measures that are required by an estimation method. For example, the “Modified Blaney-Criddle” 
+                                         estimation method requires the parameters “mean daily temperature” and “mean daily percentage of annual daytime 
+                                         hours”. Each parameter might be calculated from a variety of different ", tags$b("data sources"), " , such as particular weather 
+                                         stations or remote sensing data products."
+                                         ),
+                                  tags$br()
+                                  
+                                  #,
+                                  # tags$p(style="text-indent:60px",
+                                  #        "Here is the general structure of the water budget framework used for this tool. Descriptions and definitions for each term of the framework is provided below."
+                                  #        )
+                                  
+                                  )
+                          ),
+                 tags$div(style = "text-align: center;",
+                          tags$img(src = "water budget representation.png")
+                          ),
+                 tags$br(),
+                 # tags$div(id = "home_container",
+                 #          tags$img(src = "home_d3.svg")), #svg containing the visualization for water budget framework
+                 tags$br(),
+                 tags$br(),
                  tags$br(),
                  tags$div(class = "text-area",
                           tags$h1("Why use Water Budget Navigator?"),
-                          tags$h3("Explain why is it important. One-stop place for water budget stuff, first of its kind, each term linked to its definition etc"),
+                          tags$h3("The water budget navigator allows users to compare the various components used by different water budget frameworks in various states, both in terms of 
+                                  their definitions as well as their estimation methods, and data sources."),
                           tags$br(),
                           tags$br(),
                           tags$br(),
@@ -220,21 +298,22 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                                   tags$ul(type="disc",
                                           tags$br(),
                                           tags$li(tags$b("Component"), ": This tab provides information on a specific component. A user can select a component from a state to view its 
-                                                  flow source, flow sink, flow type, estimation method(s), parameter(s), and data source(s). This tab also informs about the component's interstate relationship such as its subcomponents, 
+                                                  flow source, flow sink, flow type, estimation method(s), parameter(s), and data source(s). This tab also displays a component's relationship with other components such as its subcomponents, 
                                                   partial subcomponents or exact matches."),
                                           tags$br(),
-                                          tags$li(tags$b("State"), ": This tab allows a user view and interact with a specifc state's water budget framework. The user can click on colored nodes to see 
+                                          tags$li(tags$b("State"), ": This tab allows a user to view and interact with a specifc state's water budget framework. The user can click on colored nodes to see a state's 
                                                   components, estimation methods, parameters, and data sources, in that order."),
                                           tags$br(),
-                                          tags$li(tags$b("Data Source"), ": This tab allows a user to interact by clicking on colored nodes to view paramter(s), estimation method(s), and component(s) that are derived from a specific data source."),
+                                          tags$li(tags$b("Data Source"), ": This tab allows a user to interact by clicking on colored nodes to expand paramter(s), estimation method(s), and component(s) that are derived from a specific data source."),
                                           tags$br(),
-                                          tags$li(tags$b("Interstate"), ": This tab allows a user to select a relationship type to view how components are connected to each other from different states. 
+                                          tags$li(tags$b("Inter-state Comparison"), ": This tab allows a user to select a relationship type to view how components are connected to each other from different states. 
                                                   The user can also specify states and flow information to limit the number of componets shown in the visualization.")
                                           )
                                   )
-                          ),
-                 tags$div(class = "text-area",
-                          tags$h3("More coming soon...")),
+                          )
+                 # ,
+                 # tags$div(class = "text-area",
+                 #          tags$h3("More coming soon...")),
                  ),
           ),
           
@@ -366,12 +445,12 @@ ui <- fluidPage(id = "page", theme = "styles.css",
 
     # ------- 4.2.5 Tab - Interstate - Begin 
     
-    tabPanel(title = "Interstate",
+    tabPanel(title = "Inter-state comparison",
              tags$div(class = "banner", 
                       tags$img(class = "banner-img-state", #tab banner image
                                src = "image_7.jpg"),
                       tags$div(class = "banner-text",
-                               tags$p(class = "h1-interstate", "Search interstate relationships"), #tab banner title
+                               tags$p(class = "h1-interstate", "Search inter-state relationships"), #tab banner title
                                tags$p(class = "h3", "Explore the relationships among water budget components 
                                               within and among states")#tab banner sub-title
                       )),
@@ -380,7 +459,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                            tags$b("See All Components", style = "font-size: 130%"), #title for 'See all Components'
                            tags$p(" "),
                            # User instructions to see all components
-                           tags$p("1. Choose the type of interstate relationship among water budget components"),
+                           tags$p("1. Choose the type of inter-state relationship among water budget components"),
                            tags$p('2. Click on the button below to include all components'),
                            tags$p('3. Hover over a component to explore relationships')
                            )
@@ -388,7 +467,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
              column(width = 12,
                     column(width = 3,
                            selectInput(inputId = "interstate2", #users select an interstate relationship
-                                       label = "Select interstate relationship",
+                                       label = "Select inter-state relationship",
                                        choices = interstate_choices)),
                     column(width = 2,
                            actionButton(inputId = "runButton4.1", #button to see D3 output
@@ -402,7 +481,7 @@ ui <- fluidPage(id = "page", theme = "styles.css",
                            tags$b("See Selected Components", style = "font-size: 130%"),
                            tags$p(" "),
                            # User instructions to see selected components
-                           tags$p('1. Choose the type of interstate relationship among water budget components above'),
+                           tags$p('1. Choose the type of inter-state relationship among water budget components above'),
                            tags$p('2. Choose "SELECT ALL" and "CLEAR ALL" to select and clear all choices in the fields below'),
                            tags$p('3. Select the states of interest'),
                            tags$p('4. Filter the components by flow type, flow source and flow sink'),
@@ -562,13 +641,15 @@ server <- function(input, output, session){
           trimws()
         split_uri <- unlist(strsplit(get(uri_list[i]), "[,]")) %>%
           trimws()
-        # the first condition is only letting a maximum of 2 values show up for each...change it later
-        output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
-                                              '<a href="', split_uri[1],'" target="_blank">',
-                                              split_value[1], "</a>", 
-                                              '<a href="', split_uri[2], '" target="_blank">',
-                                              ",",
-                                              split_value[2], "</a>"))
+        # several "paste" functions are nested to separate the property name and put commas after each value but not after the last value
+        output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>", 
+                                                            paste(
+                                                                  paste(
+                                                                        '<a href="', split_uri,'" target="_blank">',
+                                                                          split_value, "</a>"),
+                                                                          sep=", ", collapse=", "),
+                                                            sep="")
+                                              )
       }else if (get(summary_list[i]) == "NA") {
         output[[summary_properties[i]]] <- renderText(paste("<b>", properties_display[i], "</b>",
                                                     get(summary_list[i])))
